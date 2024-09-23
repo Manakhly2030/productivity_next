@@ -1,3 +1,257 @@
+from . import __version__ as app_version
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%02yX>;nx75(mCVG6`U5WkYxY=XhYNbE*{5!g%_(AsM4`)c^@gYlc0q{>bvm1OkvU9HpS-gEBhmS`K=<#$Gbim3&LudB8iT8hdE)+N+T!*(w%K5zhpwhLmL3;l?5BKMMUE(4YUx-W%B<T(nXhq3~_i^u{Z19@M9iX#Bdcz^M-b;&V`XX$n*a;yzi-qfT>C~%CW^Ntol&l0#;0-|Mb-!CptkIHBfqX^*iz1Rz6!Qmpl;IL|F0#EiLU9baP28Ip3M<FjMF!Bw7gOSDop6BDjd5v#eZbyv}{FV=Ul?T5_(jC*F7SHAjc3q~K#o`-^q8FiJ8_*1(9PmOEhN{B~T55Q=-R3{yy|EV`c<a_0Me}F8BF8{eG6P)^H5Z0vWJgYFc$4N4@j8e3d{u6i^7B!CM{KzQGUeArpA>5588HY%iwh#)dAt$=plFJs{>%)Ukql#CiU!LIz~@0E!t^@gc&JdcEkgvzw(lwwg63sqUWI<boxw6NguE8Bf)SXKZfFX$&Gg!#l)oSM?{53gk1zhdtYtqG#>Bj!1!5d%P}1Bel(h6Z_ESf&o5Z&2gFLU;Sp>8j)jmDa?fH5T>6PXkXw{C$c_)tR%D|R<mXR%qRZLe8;Atnnq|_QogBbCFUdZjI&D^b>k8<9ihB!LxmxmJ3qhLKE=x*h%)8s3TGs0@Kd03I(ck;LM8h;-4r-;vM{MWEUCNm?lu}bzMvP}`FHYe-d$Jq?isE|;adnV@=YkS7-P~Gu<a6c_ig}ZO(wchuU(jN93muzE40lk`X+Zk(Ow>h_E6&!I(B(4kb9+q{ehG~&5idE}ihM%4A^}>n`Lk%Mbs9G2sKyyyh_S8U0Dh-6-t2gS((~9_mUaP$W{Cj$$oMC-kDOQ$OZ!^b#Mx2#p;^nzTAL~P0B_Z9L^(&nA?dzKV=;%LN_)kHe*Z36aySZI;Nw_3i6iRRSs&^RX{{?0LcQjv8W&;W$j2+LLFEbs|gDPFEu2K`sxywAF(W$lwwo*Zz#bQ7^Z<X$uyA)mMOa8pJSAq40KwT@v0fAbL8_eFz5x#v#e7KOT$n+G$IDJBLWknTzJ4#K#x#YH-*KIu{^T^)Mna|NjOQwWoM>$CGbO<0vC5)}2pqZp>DxXbyvNni{xlrHTkt(}<BG^4SKXcft9Q)6I;D0naVDh_e4u=a-)_g}3V@<am%Z^>(+FE**-?MVg9IRhnYCHOa<&;v$eWF(st>u(;63ehIJ>T@atyx-S=4K9Q8k4p1WVW8~hsXMp#oXjIiYsLvFnC|~dyYTVcQq8-)!%~DNBWn+u(J*+6o2vny3eTFF?vw8eYU;Q$A_eyc9z<$iShlE!OD7dhitF9<HmK?G$wWVS%um4@v)%Fv%R7WR@q^216;|hX0GDNbPd^h{+Ix=mLPe+c6*b_sMSG!{u-c?^321B!KQc;Dqo=n%cwPP&-&$ayh@`I=P>9aJ&9=IOAF8aFyM5M?6g8preDhAcIM#?W7QwVknWiMHx*U(5T(#*Yu|f}YxnMh7`r{%oD;o@?M_LWENSj_BFpLb=9-8)cs6tLxpIA(IiOGGV-qj*yiwvjjn&&Er$S;%H5TJ+ZdY7BXYtYfI>~tR9A(ah4!`O+XaG{*#>uY7cLnqD>=^qxtz~A}om+SW^`sQW!du&<bIX}#A2)X+j8d{@t78JxF^!IULxOVJhIfK53cb!_<@RaaSX$ZfBRb^bD4ve96y3Q^?Dq9aFJ&iQdlEO>s}hEmh8#0%%!>7!wKc1flArm#2Csj88a_)D?iz=8iMBD8`w1kvCQmbDQ#?^h7w<hWLp~(*AYeD(Fr;7N)A2U0&|8LUE^U8x_fj`XQD!qF>q@r)H_mu+T_N=CcrEVPD^gniLGCFsLD67E$zwstxmu*D5;$K@{gPH@+F00P(am8~BF$j>+d*={cOOjTK<uan$9WHFo^AImL@d5DC8TmI4EeeBqb)zrlz#;rD(I3jMaPW^hVK>3UZzRU@n(Zz<$h+gO%+8#$e9d<zfa3PeCQMX9`ST|BBpb0MmZvt@cMK2{+xtf4<9D|9|-M#7KZ*=W9bB;<O=+D!EYF+gT21ND%tE^t()RS$k!rEhofTx5pOzK;S0fBq&3$+{%~MPLYJ^<^+R1L@$vp=s3!-;`&~-Vc<a|w<YY^X$rqf%@!<@1)5C$_E1SGBZ>tz)gF<Ea;VrL+*Na~Pb8^v$')).decode())
+app_name = "productivity_next"
+app_title = "Productivity Next"
+app_publisher = "Finbyz Tech Pvt Ltd"
+app_description = "Productivity Next"
+app_email = "info@finbyz.com"
+app_license = "GPL 3.0"
+
+on_session_creation = "productivity_next.session.on_session_creation"
+
+# Includes in <head>
+# ------------------
+app_include_js = [
+    "https://cdn.plot.ly/plotly-latest.min.js",
+    "https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js",
+    "assets/productivity_next/productivity_next/setup.js",
+]
+# setup_wizard_requires = "assets/productivity_next/setup.js"
+# include js, css files in header of desk.html
+# app_include_css = "/assets/productivity_next/css/productivity_next.css"
+# app_include_js = "/assets/productivity_next/js/productivity_next.js"
+
+# include js, css files in header of web template
+# web_include_css = "/assets/productivity_next/css/productivity_next.css"
+# web_include_js = "/assets/productivity_next/js/productivity_next.js"
+
+# include custom scss in every website theme (without file extension ".scss")
+# website_theme_scss = "productivity_next/public/scss/website"
+
+# include js, css files in header of web form
+# webform_include_js = {"doctype": "public/js/doctype.js"}
+# webform_include_css = {"doctype": "public/css/doctype.css"}
+
+# include js in page
+# page_js = {"page" : "public/js/file.js"}
+
+# include js in doctype views
+doctype_js = {
+    "Lead": "public/js/doctype_js/lead.js",
+    "Customer": "public/js/doctype_js/customer.js",
+    "Opportunity": "public/js/doctype_js/opportunity.js",
+}
+# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+# Home Pages
+# ----------
+
+# application home page (will override Website Settings)
+# home_page = "login"
+
+# website user home page (by Role)
+# role_home_page = {
+# 	"Role": "home_page"
+# }
+
+# Generators
+# ----------
+
+# automatically create page for each record of this doctype
+# website_generators = ["Web Page"]
+
+# Jinja
+# ----------
+
+# add methods and filters to jinja environment
+# jinja = {
+# 	"methods": "productivity_next.utils.jinja_methods",
+# 	"filters": "productivity_next.utils.jinja_filters"
+# }
+
+# Installation
+# ------------
+
+# before_install = "productivity_next.install.before_install"
+# after_install = "productivity_next.setup.install.after_install"
+
+# Uninstallation
+# ------------
+
+# before_uninstall = "productivity_next.uninstall.before_uninstall"
+# after_uninstall = "productivity_next.uninstall.after_uninstall"
+
+# Integration Setup
+# ------------------
+# To set up dependencies/integrations with other apps
+# Name of the app being installed is passed as an argument
+
+# before_app_install = "productivity_next.utils.before_app_install"
+# after_app_install = "productivity_next.utils.after_app_install"
+
+# Integration Cleanup
+# -------------------
+# To clean up dependencies/integrations with other apps
+# Name of the app being uninstalled is passed as an argument
+
+# before_app_uninstall = "productivity_next.utils.before_app_uninstall"
+# after_app_uninstall = "productivity_next.utils.after_app_uninstall"
+
+# Desk Notifications
+# ------------------
+# See frappe.core.notifications.get_notification_config
+
+# notification_config = "productivity_next.notifications.get_notification_config"
+
+# Permissions
+# -----------
+# Permissions evaluated in scripted ways
+
+# permission_query_conditions = {
+# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# }
+#
+# has_permission = {
+# 	"Event": "frappe.desk.doctype.event.event.has_permission",
+# }
+
+# DocType Class
+# ---------------
+# Override standard doctype classes
+
+# override_doctype_class = {
+# 	"ToDo": "custom_app.overrides.CustomToDo"
+# }
+
+# Document Events
+# ---------------
+# Hook on document methods and events
+
+doc_events = {
+    "Contact": {
+"validate": "productivity_next.productivity_next.doc_events.contact.validate",
+    },
+}
+
+# Scheduled Tasks
+# ---------------
+
+scheduler_events = {
+    "all": [
+"productivity_next.schedule.bg_employee_log_generation",
+"productivity_next.schedule.schedule_comments",
+"productivity_next.schedule.create_productify_work_summary_today",
+"productivity_next.schedule.set_challenge",
+    ],
+    "cron": {
+"0 1 * * *": [
+    "productivity_next.schedule.create_productify_work_summary",
+    "productivity_next.schedule.delete_productify_error_logs",
+    "productivity_next.schedule.delete_screenshots",
+    "productivity_next.schedule.delete_application_logs",
+],
+"0 0 * * *": [
+    "productivity_next.schedule.submit_timesheet_created_by_productify",
+],
+# "5 4 * * sun" :[
+#     "productivity_next.schedule.send_weekly_report",
+# ]
+    },
+}
+# 	"all": [
+# 		"productivity_next.tasks.all"
+# 	],
+# 	"daily": [
+# 		"productivity_next.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"productivity_next.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"productivity_next.tasks.weekly"
+# 	],
+# 	"monthly": [
+# 		"productivity_next.tasks.monthly"
+# 	],
+# }
+
+# Testing
+# -------
+
+# before_tests = "productivity_next.install.before_tests"
+
+# Overriding Methods
+# ------------------------------
+#
+# override_whitelisted_methods = {
+# 	"frappe.desk.doctype.event.event.get_events": "productivity_next.event.get_events"
+# }
+#
+# each overriding function accepts a `data` argument;
+# generated from the base implementation of the doctype dashboard,
+# along with any modifications made in other Frappe apps
+# override_doctype_dashboards = {
+# 	"Task": "productivity_next.task.get_dashboard_data"
+# }
+
+# exempt linked doctypes from being automatically cancelled
+#
+# auto_cancel_exempted_doctypes = ["Auto Repeat"]
+
+# Ignore links to specified DocTypes when deleting documents
+# -----------------------------------------------------------
+
+# ignore_links_on_delete = ["Communication", "ToDo"]
+
+# Request Events
+# ----------------
+# before_request = ["productivity_next.utils.before_request"]
+# after_request = ["productivity_next.utils.after_request"]
+
+# Job Events
+# ----------
+# before_job = ["productivity_next.utils.before_job"]
+# after_job = ["productivity_next.utils.after_job"]
+
+# User Data Protection
+# --------------------
+
+# user_data_fields = [
+# 	{
+# 		"doctype": "{doctype_1}",
+# 		"filter_by": "{filter_by}",
+# 		"redact_fields": ["{field_1}", "{field_2}"],
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_2}",
+# 		"filter_by": "{filter_by}",
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_3}",
+# 		"strict": False,
+# 	},
+# 	{
+# 		"doctype": "{doctype_4}"
+# 	}
+# ]
+
+# Authentication and authorization
+# --------------------------------
+
+# auth_hooks = [
+# 	"productivity_next.auth.validate"
+# ]{task} - {issue}
+
+fixtures = [
+    {"dt": "Custom Field", "filters": [["fieldname", "=", "is_created_by_productify"]]},
+    {
+"dt": "Activity Type",
+"filters": [
+    ["name", "in", ["Project", "Task", "Issue"]]
+]
+    }
+]

@@ -40,16 +40,16 @@
 @media (max-width: 768px) {
     .chart-column-container,
     .dynamic-spacing {
-        padding: 1vh 1vw;
+padding: 1vh 1vw;
     }
 
     .performance-graphs,
     .recent-activity {
-        flex-direction: column;
+flex-direction: column;
     }
 
     .chart-column-container {
-        margin-right: 0;
+margin-right: 0;
     }
 }
 
