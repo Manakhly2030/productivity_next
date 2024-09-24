@@ -131,7 +131,7 @@ doctype_js = {
 
 doc_events = {
     "Contact": {
-"validate": "productivity_next.productivity_next.doc_events.contact.validate",
+        "validate": "productivity_next.productivity_next.doc_events.contact.validate",
     },
 }
 
@@ -140,24 +140,24 @@ doc_events = {
 
 scheduler_events = {
     "all": [
-"productivity_next.schedule.bg_employee_log_generation",
-"productivity_next.schedule.schedule_comments",
-"productivity_next.schedule.create_productify_work_summary_today",
-"productivity_next.schedule.set_challenge",
+        "productivity_next.schedule.bg_employee_log_generation",
+        "productivity_next.schedule.schedule_comments",
+        "productivity_next.schedule.create_productify_work_summary_today",
+        "productivity_next.schedule.set_challenge",
     ],
     "cron": {
-"0 1 * * *": [
-    "productivity_next.schedule.create_productify_work_summary",
-    "productivity_next.schedule.delete_productify_error_logs",
-    "productivity_next.schedule.delete_screenshots",
-    "productivity_next.schedule.delete_application_logs",
-],
-"0 0 * * *": [
-    "productivity_next.schedule.submit_timesheet_created_by_productify",
-],
-# "5 4 * * sun" :[
-#     "productivity_next.schedule.send_weekly_report",
-# ]
+        "0 1 * * *": [
+            "productivity_next.schedule.create_productify_work_summary",
+            "productivity_next.schedule.delete_productify_error_logs",
+            "productivity_next.schedule.delete_screenshots",
+            "productivity_next.schedule.delete_application_logs",
+        ],
+        "0 0 * * *": [
+            "productivity_next.schedule.submit_timesheet_created_by_productify",
+        ],
+        # "5 4 * * sun" :[
+        #     "productivity_next.schedule.send_weekly_report",
+        # ]
     },
 }
 # 	"all": [
@@ -249,9 +249,9 @@ scheduler_events = {
 fixtures = [
     {"dt": "Custom Field", "filters": [["fieldname", "=", "is_created_by_productify"]]},
     {
-"dt": "Activity Type",
-"filters": [
-    ["name", "in", ["Project", "Task", "Issue"]]
-]
+        "dt": "Activity Type",
+        "filters": [
+            ["name", "in", ["Project", "Task", "Issue"]]
+        ]
     }
 ]

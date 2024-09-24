@@ -55,31 +55,31 @@
 
 @media (max-width: 480px) {
     .progress, .sidebar-image {
-width: 100%; /* Full width for very small screens */
+        width: 100%; /* Full width for very small screens */
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
     .progress, .sidebar-image {
-width: 100%; /* Adjust as needed for small to medium screens */
+        width: 100%; /* Adjust as needed for small to medium screens */
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .progress, .sidebar-image {
-width: 100%; /* Adjust as needed for medium to large screens */
+        width: 100%; /* Adjust as needed for medium to large screens */
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
     .progress, .sidebar-image {
-width: 100%; /* Adjust as needed for large screens */
+        width: 100%; /* Adjust as needed for large screens */
     }
 }
 
 @media (min-width: 1441px) {
     .progress, .sidebar-image {
-width: 100%; /* Adjust as needed for very large screens */
+        width: 100%; /* Adjust as needed for very large screens */
     }
 }
 
@@ -100,29 +100,29 @@ width: 100%; /* Adjust as needed for very large screens */
 
 @media (max-width: 768px) {
     .short{
-height: 450px;
+        height: 450px;
     }
     .short .up{
-margin-top: 0px;
+        margin-top: 0px;
     }
     .container {
-padding-left: 21px;
-padding-right: 2px;
+        padding-left: 21px;
+        padding-right: 2px;
     }
 
     .chart-column-container,
     .dynamic-spacing {
-padding: 1vh 1vw;
+        padding: 1vh 1vw;
     }
 
     .performance-graphs,
     .recent-activity {
-flex-direction: column;
+        flex-direction: column;
     }
 
     .chart-column-container {
-margin-right: 0.5rem;
-flex: auto;
+        margin-right: 0.5rem;
+        flex: auto;
     }
 
 }
@@ -243,7 +243,7 @@ flex: auto;
 
 @media only screen and (max-width: 600px) {
     .table {
-font-size: 11px;
+        font-size: 11px;
     }
 }
 

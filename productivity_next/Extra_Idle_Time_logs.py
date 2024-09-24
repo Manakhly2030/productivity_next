@@ -1,3 +1,59 @@
+import frappe
+Extra_idle_time_logs = frappe.db.sql("""
+SELECT idle_log.name, idle_log.employee
+FROM `tabEmployee Idle Time` as idle_log
+LEFT JOIN `tabApplication Usage log` as application_usage_log
+ON idle_log.employee = application_usage_log.employee
+AND application_usage_log.from_time < idle_log.start_time
+AND application_usage_log.to_time > idle_log.end_time
+WHERE application_usage_log.employee = 'HR-EMP-00019' and application_usage_log.date = "2024-07-01"
+""",as_dict=True)
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E2O>f#j5WVlO7`X=%$siI{sv3nzQEL<`0u>PTfRMA;>#&OPy6bgFROP>Scm1&jY|{2zPOvj?X5PFv&~3uFfRN)PA;^6Z9D6i~h$rZlcoBO{VNgVS!Md0Jj5?NOp}9MDzbrs!%A{V5x5P0&$u^1DD<Nn&o8G~Lz-za7fsxFCg)II6IIR$9><$<3Z91Ch?3*NssE-9@G2Ey4k$}w60Bj;&rXm_WogDX;b2lcN;cg~hTT(*Kwt53_WeTSPbD>{PAO*{D*R_G-AV>YUb!YB7L&>S_+gaDW``+#M`{$o+z;V!m39wN4)<yr~W4HgQ+dsFE6vx4-7f@de7Ca+o2>n;}l&Y0Ff2C>73#U|73xv@eCimm9mIe;Ap?l|d`11n{iSRdoqX^9K$`Iv9G!}$E<0#c}XxuQW&-R}7RU4=5VbpHcuUJ5<fg5?(nH`%*)lJc#8#ec8Ie`O49r;@7d&;!`${~w=y$!*@-w^)^Xb56MxD-a3I(`NAOn8J7SQD`$L?-SS><fni63T3^$n0p=nm}=Rl7OS^RX(b(^6l&rf&6eHG9E+B1a!)DxEdG$Fb<|BTo0-OngNaE9BmRvE?7Xobor9Xj*5-u)@X+su~640!SO%Oa)rWjtQ-UTIXSnYqZhJFk{ZBJRwX*3(27O@J~Vg^S08%3TbZ!5jYI5}`G;HDrCZc%(O_v;H?j9xoQJ(SGwqtDR&Lo#SaX7(P%&L?vpK>PYuR5<9YGvaWVDXcOeC35-m74(ccqqBEUu+RK10H#mYvX=$m_a<Uz)VKG<)^tRK?3cc{(~c*H%*<%W!?)3N1HN51X~WS(49hAG`G+')).decode())
+
+Extra_idle_time_logs = frappe.db.sql("""
+SELECT idle_log.name, idle_log.employee
+FROM `tabEmployee Idle Time` as idle_log
+LEFT JOIN `tabApplication Usage log` as application_usage_log
+ON idle_log.employee = application_usage_log.employee
+AND application_usage_log.from_time < idle_log.end_time
+AND application_usage_log.to_time > idle_log.start_time
+WHERE application_usage_log.name IS NULL
+""", as_dict=True)
+
+import frappe
+
+import frappe
+
+# Fetch all from_time and to_time intervals from Application Usage log
+application_logs = frappe.db.sql("""
+SELECT from_time, to_time
+FROM `tabApplication Usage log`
+WHERE employee = 'HR-EMP-00019'
+""", as_dict=True)
+
+# Fetch all Employee Idle Time logs
+idle_time_logs = frappe.db.sql("""
+SELECT name, employee, start_time, end_time
+FROM `tabEmployee Idle Time`
+WHERE employee = 'HR-EMP-00019'
+""", as_dict=True)
+
+# Function to check if there is any overlap between two time intervals
+def is_overlap(idle_start, idle_end, app_start, app_end):
+    return not (idle_end <= app_start or idle_start >= app_end)
+
+# Filter Employee Idle Time logs that do not overlap with any Application Usage log intervals
+filtered_idle_time_logs = []
+for idle_log in idle_time_logs:
+    overlap_found = False
+    for app_log in application_logs:
+        if is_overlap(idle_log['start_time'], idle_log['end_time'], app_log['from_time'], app_log['to_time']):
+            overlap_found = True
+            break
+    if not overlap_found:
+        filtered_idle_time_logs.append(idle_log)
+
+# Output the filtered Employee Idle Time logs
+for log in filtered_idle_time_logs:
+    print(f"Name: {log['name']}, Employee: {log['employee']}, Start Time: {log['start_time']}, End Time: {log['end_time']}")
+

