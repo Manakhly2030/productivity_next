@@ -1,3 +1,198 @@
+# Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%0Q(OK;ma5Wf3YaM?p_z*W*>PeEjK(Fb~Hi#=q4T@-~NTeQPg5>=8);tl-YcZT9i52p#5U0{7Mq~UNLA7{Ri^o+a~&0g}|l_vAeg1kI?`RkIr<Mn#~H@Re+EAsobCLeS`^12`!QESQ9trk+vo{@J#l9F#&tr+3;R>&&XT+~a_lq?6CV$7{4`c}_i3$Gd>HQCC%Y1nKlMP;v(N))V23bAP`R%@sD#@^44Z)`O$RZ`?S_ts4$8HkwX)r9s?v6Uw9*=)8cbEU}Jswu^uF~DJym*w0=u{fU*_!VqRuJe+kgSlem*2?k6x1<)Dpfo|a@{J|{Q|~@a38f<`SLBnZSulmaPD3*Al!0Bo<r@=fR*KzxG4tUZQyD}D@RHO)QL~#21atZ++C@Hy9bLrfbRm=+PX&u0zW)U?8ARN!zp{<aG`odN3H?j7q-LxjTG%Lw%NXD%cL$nu$1sl!hX7cqhLHTEgH~x#F$q{%{46kuH4HXm7d;g)l(mY<0AjIDc1&kb4lSEgS2%Rp!NlzSl2F{1@gl+&4eEWvFp1wvCN=FXxmL)Wjx$bdSsqcZ^9t3Cf4uG|0Il$}8EngZrxL!ag=AU7WW|+&I#S@^Qnr2XD!*n}wMO`=kplGf-WM^3VUNyaG0|HgW_HV!R&)Bg+u-80`xpJ1@tx-kpes}RN4EENOQu^{lP$fo%gL5YWs!ywJ2^QJzXSwgS0LQ65bGH?gu}DevG->KC@MVA2clqfLmE}YR{;ehokU@B`xFXx?Rfap=c=wP8Ik8JqO=T=VJW*B@4SNm?~_v8Fgfp$QKSqV0ev7UUhf7JWJ5Z+;MI;Oxk>3MusYM~6hbT7jpo-}@3R`Z`_wr*g#b^DJv5j!V03j7vCzo3X!TA!p>JpJ0j{ydSn*VjJ8KVcD;bjF(>ZqbhOVtaN+;XFkg_SIC2{1GZ97KHT3L<@%+0VNy-ZKs;Jsg<+_384iJ==Q?k-enrv|zChmdHmmCSvydl8UqQ9S?n@%bKp<o)~esybIHB3#voZ>-MpHB<{)q!(+sx>&E?a0PP>j`5saoUT_F&FaorH~O9W;o`JeQ4dD6(s5Fh@a5Y-FTwh}hYR|$Rz2*9;sG6!i=13ZwoOm&rq1MWVs~05fIaz&&|~(82i3XAHMtw(dKj58L*JhnFmnuA#Jh`O!C~5=<koD96U~gQ0Rsmfjl%7?x<^*{AZQn+YHT(%n6!;~r0nV5_3rRT5gTOd^O67197YPz&lihj&%$8>0O#M&=T~+>++1-DOrS6^1f>hm9ZnZ$_rwN|Q%k>WBunV8tdYFR<vwe!pwW7gO00Rw%(f<nX<>NAUe7GpHVRgMZ&@4RVg*@0oRFsvDGkB-#a@tUKjd(FgV57aE>o&Lr*tw=za=D`M!ENwyOkg`8K<-qK$b!JRjf^mr0zk6{DBDp8CfMfO+2}2$o};cbZy*w@tAn{>iO*obLiVXP-0_^mtZ`-pdFFD%i(`$!N)pnC0ZU?>P&3|O6INSjCOCtUWm=kYw|g;invL-=#Y`%4woZ5x<%Nk%$6^`fi=nyOiabw=anBhIv;Tf1~~!r*^d-sJkMex3tsW4>!MF))Q3WsKVmtf3LH1l!d_<>I;g*xgwLGk+5HxLP7_u_zEhSC%ZOB6z04=t-HWhxx<(mEd?g{|C9l7A4=YE`78TT&uGP=)I|phsq1Eop6)s^!kZat$)H`$w2b)oB@*(ehvA&%vD0W|a)DED9f$4ecDpxRbS#7DHNa%fo$bRqW(b#d$ohI)=VTE_P?taM35g+^4x%88_rr`Zq8|Jmb2hOm5CO<V+9x=4;osa>EbO=fxn1@fVfSA7uixG6;^6``JH6nR@^8J5GW^!oyuXS!{E+*Q{*~3Rue=~01@bw~%av14_uNG;Df28&E{9^DP57>L@?7tc-@ld$G`=)j~XU7{6f8+7-L}VL@Gs$q_-iNT*3LeohBaaQqZF|%h=-Snc0o-6(S=6qq>~rkAPqM{2$%`UuYyLg{mgzs3F3D$#+u(w-@S&6TUc%{;M&F3(m&Jq!UKi~4kq%5ZfVF=BrwIsy')).decode())
+# import frappe
+from frappe.model.document import Document
+import frappe
+from frappe.utils.data import format_datetime
+from frappe.utils import format_duration
+
+
+class EmployeeFincall(Document):
+    def validate(self):
+        if not self.contact or self.contact == "" or self.contact is None:
+            self.create_notification_log()
+
+    def create_notification_log(self):
+        doc = frappe.new_doc("Notification Log")
+        if self.client and self.client != "":
+            subject_text = "You need to create contact for {}".format(self.client)
+        else:
+            subject_text = "You need to create contact for {}".format(self.customer_no)
+
+        doc.subject = subject_text
+        doc.for_user = frappe.db.get_value("Employee", self.employee, "user_id")
+        doc.type = "Alert"
+        doc.document_type = "Employee Fincall"
+        doc.document_name = self.name
+        doc.from_user = frappe.db.get_value("Employee", self.employee, "user_id")
+        doc.flags.ignore_permissions = True
+        doc.save()
+
+
+    @property
+    def get_contact_name(self):
+        if frappe.db.exists("Contact", self.contact):
+            contact = frappe.get_doc("Contact", self.contact)
+            return f"{contact.first_name or ''} {contact.last_name if contact.last_name else ''}"
+        return None
+
+    def get_comment(self):
+        if frappe.db.exists("Comment", self.comment):
+            comment = frappe.get_doc("Comment", self.comment)
+            return comment
+        return None
+
+    @property
+    def get_svg(self) -> str:
+        call_type = self.calltype.lower()
+        if call_type == "incoming":
+            return '<img src="/assets/productivity_next/calltype/svg/incomming.png">'
+        elif call_type == "outgoing":
+            return '<img src="/assets/productivity_next/calltype/svg/outgoing.png">'
+        elif call_type == "missed":
+            return '<img src="/assets/productivity_next/calltype/svg/missed.png">'
+        elif call_type == "rejected":
+            return '<img src="/assets/productivity_next/calltype/svg/rejected.png">'
+        return ""
+
+    def get_comment_text(self, employee_fincall_url) -> str:
+        if self.get_contact_name is None:
+            return ""
+        call_time = format_duration(self.duration)
+        formatted_datetime = format_datetime(self.call_datetime, "dd-MM-yyyy HH:mm:ss")
+        spoken_about = f"<br><b>Discussed: </b><p>{self.spoke_about}</p>" if self.spoke_about else ""
+        TEXT = (
+            f"<b>{self.employee_name}</b> <a href='{employee_fincall_url}'>{self.get_svg}</a> "
+            f"<b>{self.get_contact_name}</b> at {formatted_datetime} "
+            f"for {call_time} {spoken_about}"
+        )
+        return TEXT
+
+    def before_save(self):
+        comment = self.get_comment()
+        if not comment:
+            return
+
+        comment.update(
+            {
+                "content": self.get_comment_text(self.get_url()),
+            }
+        )
+        comment.save()
+
+
+@frappe.whitelist()
+def update_contact(
+    client_no, update_client, is_primary_phone, is_primary_mobile_no, party_type, party
+):
+    frappe.enqueue(
+        enqueue_update_contact,
+        client_no=client_no,
+        update_client=update_client,
+        is_primary_phone=is_primary_phone,
+        is_primary_mobile_no=is_primary_mobile_no,
+        party_type=party_type,
+        party=party,
+        queue="long",
+        job_name="Contact Updation",
+    )
+
+
+def enqueue_update_contact(
+    client_no, update_client, is_primary_phone, is_primary_mobile_no, party_type, party
+):
+    contact_doc = frappe.get_doc("Contact", update_client)
+    is_primary_phone = True if is_primary_phone == "1" else False
+    is_primary_mobile_no = True if is_primary_mobile_no == "1" else False
+
+    if client_no != "0" and client_no not in [
+        row.phone for row in contact_doc.phone_nos
+    ]:
+        if is_primary_phone or is_primary_mobile_no:
+            for row in contact_doc.phone_nos:
+                row.is_primary_phone = 0
+                row.is_primary_mobile_no = 0
+
+        contact_doc.append(
+            "phone_nos",
+            {
+                "phone": client_no,
+                "is_primary_phone": 1 if is_primary_phone else 0,
+                "is_primary_mobile_no": 1 if is_primary_mobile_no else 0,
+            },
+        )
+
+    if (
+        party_type
+        and party
+        and party not in [row.link_name for row in contact_doc.links]
+    ):
+        contact_doc.append("links", {"link_doctype": party_type, "link_name": party})
+
+    contact_doc.flags.ignore_permissions = True
+    contact_doc.save()
+    frappe.msgprint("Contact has been updated.")
+
+
+@frappe.whitelist()
+def create_contact(
+    is_primary_mobile_no,
+    is_primary_phone,
+    client_no,
+    first_name,
+    party_type,
+    party,
+    last_name=None,
+    salutation=None,
+):
+    frappe.enqueue(
+        enqueue_create_contact,
+        is_primary_mobile_no=is_primary_mobile_no,
+        is_primary_phone=is_primary_phone,
+        client_no=client_no,
+        first_name=first_name,
+        party_type=party_type,
+        party=party,
+        last_name=last_name,
+        salutation=salutation,
+        queue="long",
+        job_name="Contact Creation",
+    )
+
+
+def enqueue_create_contact(
+    is_primary_mobile_no,
+    is_primary_phone,
+    client_no,
+    first_name,
+    party_type,
+    party,
+    last_name=None,
+    salutation=None,
+):
+    contact_doc = frappe.new_doc("Contact")
+    contact_doc.salutation = salutation
+    contact_doc.first_name = first_name
+    contact_doc.last_name = last_name
+    contact_doc.append("links", {"link_doctype": party_type, "link_name": party})
+    if client_no != "0":
+        contact_doc.append(
+            "phone_nos",
+            {
+                "phone": client_no,
+                "is_primary_mobile_no": is_primary_mobile_no,
+                "is_primary_phone": is_primary_phone,
+            },
+        )
+
+    contact_doc.flags.ignore_permissions = True
+    contact_doc.save()
+    contact_doc_resave = frappe.get_doc("Contact", contact_doc.name)
+    contact_doc_resave.flags.ignore_permissions = True
+    contact_doc_resave.save()
+    frappe.msgprint("Contact has been created.")
+    
+def on_doctype_update():
+    frappe.db.add_unique("Employee Fincall", ["date", "employee", "call_datetime","customer_no"])
+    frappe.db.add_index("Employee Fincall", ["date", "employee", "calltype"])

