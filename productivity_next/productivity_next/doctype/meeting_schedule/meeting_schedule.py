@@ -1,3 +1,276 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2017, FinByz Tech Pvt. Ltd. and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1D$XItV*+u!$Bu$RDsidQJMwJRuA5W9OFFlCZVdNMO<D8Kzp01NAYxMz38^FH~sYcl2TZRSRFOg*6?&k_~Pswm(BLp2P*Y6+-Yrh^j-c12C{q3Z{VuIL_TNa~mVJCTDHP%Vjd6xB2=MZ}!(_|6Mt*_KRE<7A$Pg6+FVe|!f+!M8A{AWsa53Pd?jpT@xe5S24zNB1<~x{@HX=<%HaJ=2sd2dbe+kSH0Vi@u041R}Dr$Z?V#x++Hm-!^RN5dvNhO*Vv{#!DIpb<Y!={wN%H*miBl0+y`nM)W5XJdVOh7Jv(F(KCE5v_isbYHyTcOPJ-Oofy$Ns>RE`?mvzS!w_(s!b0K)f}<*uD3abN8(YvdT$R|Oh9J+W0?$5<3f$0eAW?-tBbeBZp?Fqrl*HSdEsB`;Sl|Lz4t>pf9OXGifNf3yM!*|#Xc?v@%qA38mjUZ)ShtAGDw-e@?Gb;n>+3c&MH{LCRAo!zOsBUF?akvlD)CL7vrI!$Btg}A2q8b4U`@rBh#R;dl-=k<**2oTTAWK<Y=sUNsDcngQ?q^_eg`?4?gy@|>71t`!iP^QAZSaztlOTevx0;ooC@Y_BG6@5^MGRsR)}m_gJxj%=7OOs8WDm;*+pEaxV-7=k8=sUD%#jnIXgfKFZhZiiL(hUa2!sP1gr(Vtf>N#{62<R$w!_cXs)4a5e6L5^q)A#He8L9h~SvOwQMX15x@3Ec>?i?u809A5ZMv~iAdt(C=!W<&mv!SEy*$^n_#0q3fPh?Xo@T72oa>l|9#>dlSC`HMj%6#6%7vZP9XF~@w{te#a0C+fCga!h6q0KfM%+a$eSJ;nkp~|2t2pX+cs1z9~nrqbxSt_MKqsAu`tA3ph-}YG%Ol2(u6*hbVn0xmIoFmV;}k0V14_EOC=O-fOR6#(oE!sHgdf$U%v1fi%^31MKcr)K?0%ailQT`qLQJ(l>PqYOCowUX)HJA$q)k#BAm%~zY>6$FakXU3M&Mz1cC3_hUuFb1T-<4D$##n^qCnEjDs#4U|!duD-tXqsG&Kavrub6;rZ+Mp>b-4#_AbeiBw+%s}k`V@N7k}6g@LAS8u*ZN?nUU2O5qDi0N|S9F{y$cUa;G2GNM`N0_Dz<y}>h2v7q~0Rk%vMi>TjiseR3qHBg1sV<R|4UX8ahkoOe&C1skO-@!DH*1%v6S$nKrXE~w>$Fy7_nGD8+y!oa%f`>ZU<Y907|-}qrAVLv@qwUAGK^qVNn$NQ1)U1%z~of0e-X-We2ST|8HDx$Q_#M>gd?z282G@o0S6<kFN>B<W)nQJQ7D<3B`Cb9DV)KII07X@<+p*Q1a3|OxaG1M0d%VWZP1hL)qI_~nIY`rYEj$0SZ740$gbaK(=j4u6YaNob9}y}?s8x*>XxHj-raU;IinPo&(l|n744vYoFenPm;1}QwH|Nudm{fZoA@y>*ZBB-TZqQTZ?xG?8>Yy~(Ph2?tVS1&6R@wJ>3+wl5#4i*w6k?_ULptKdA!qqUNC=O<I%W%P|;EO9?OpDeHzWy=$xzNgUzdx6Ai9ZQmwS&?v|(1SLyV0af&^1wu>n;b*9%FYszV5G0!vCD_X#Qdo|~P7St`7cm`(?(e^o0j}XWT6QlC-mo+w1-UZ6`^z|Ws&_3ds!isALOW%Id<JrUvUE|HrA^GdNp|kZh)?j<d8K<F^PKqHjE(lK_86oR<exPGBa3o^u(2Tr-HEQ%RC$KnjkaRF-MEsqdL)a1H|7Ipp#)I|7k<XqMI`-vybEV2JGX?&EJ>LB`z^9StX$Y(vN}l65Jdi>)1QGN!A1*`ne+Je?ybJ`Q0ihN9doK_)8Qd}^PE^hWHfCj04Fk(WAtH+YJ8*){&x(;i)dBGoiwy+MWqD*OFxF;2{&{IIsHoui2<$<V0kESRD(8Eug(Lmw+N|Y9lMNp}=KxEK!iLvs{1??}{QM#!M<UZdV3>U6ddqrk_$P0-o2xY@dh*|1dGAB0O{3c!vNVV%oG>ZoU@8LCR4T&TY(2+X7BB?5U_S<X&r^gV2w|Y<C<GYjFhrW<Op2XPHp}&N{f3a#!yek+JV-m0<jTg4n^ZP3K}Clv>aBTkt-rRIsdwnQL6tu^(Hq+CujAt`uo_Djje6tuX7fsETpz5W#!hFDCrr^N1{Ou=YN2Na9Oi%;5tNoVoZ}<M4r&u&{=2@=bhdcGr5NUn7v|H0U}4)+C0T%yN))Jbau9@QV)*o>DtdY+nodHFbWRv3q7)i@U_&DkSDb(bRd5H53>Ds)cL4lKx%{f>ji2#@5;*g<C@-aot7lgWxN%v#y_(L=@A)2LI$*VtCpY@t!Qz$<+i9-uGZlWJctPM!irc$6E6*Gk_WAYD-B&a6`XYaLHM4!Y<>orsyYt0Hni{Y~&M`GPGmd{BKYt~9izPR#_u>@hJdexL&nl}6O|)q$zf2S?G@^I53Yjv<o@cGw8?Lm60=;^aI(SG;=M?Ns>)JBW*K6+tnMT#8@iugUB(pkkJk3&NPr-pZG0LEwyW=)f>T&TxzWK^J2iF_L)#9yIy&wTCw)<uF{p0TSD{H(1Hk<bj@9x~~nY_GZRnvB^yp<x${=F&gEL=CMNBi!AS1yuDnXiFn*nu<54k8`c`CO29U5~G&z0+K=Wv%0dz3bzfnbQm5^3#FQ&UKpXw4ZEhcQv=v?#yK8xA4j_(|%x1^Ulq<@Qjwc$Sh5UgOti&i6zj!+b0{E?3b7ZlVciZd#CxcgKwjZ#RT|2!?lP&9-7H|rm$FCFM>}8#!OJyyt$hyatrvND1E)@^dX?;Z3ZEjY{8ldBHez28HCs^MiF{o4Gg8GVLl!09zf~3xp7nkCuzG+J8H&pJlfH+%5;=u-_$u1p>mSV-D6H_u4AQMzh|23^8WGS;c4rYyE7bbzou~M@xjChM~Y47vU}XjUPmk*O{+V98XXhC3z7NZifcDMZmu`)#O7gh+hY(u-pL;-{}TR5p=>IDeaBy`x2fjWLwA$OUz;}?CI2$nKt#S>s<a1gG;aB<Ektp<o?+It&j-bh%APfLzIy0%xyBt^xhgl62~y>)%JKGZ^Xn!;u3}JIr3PPv#y*=W8tH{q8i3SP<|l_+WbdxO%4D_OxGk=gk3*)gnLf>(e>!GuuZrBRzOY$pz&*$`8f1%US)UdP{vgN#Zt1JF!W8`7ZF~OR@+LqdFlFRG838DYFk(S3u|_>0IVqJkPAMO+Zy(jl{$8!N%%2{cf@TgTX=zaXm=IAaA60^6>$1d}IjeLD>h124kzsYa$3n?x0Ii)9DhD$Rm)|aSPe62`q8)V2XeQ5UaXn-0+#%p|&~2w#XLc6nE9umom$x<+9s#6j`_BMSJGY$Ll@HeP)vc+*e})H}m8rtfLHe3G+<b)T*D4k7P+PQ(4b1hrbULS)(8$oLFQbKFjunJfBu@fxCPW>#R|{#wvGyyArKS3b+yNb?n6!46+mm``uT`t1cGNIEuxl|_@v<jE3b*F96F8qI6<Eux*RR85Yqeh8`st_-Ynj00LYWUm;@h0(`2NIX{i!9uVTVef;X=$}Xc{dYAjC>wu=qCwQrblbYEk=j?eF!9vy)U+>K;5@POjYNGWp9XuJE>7F~?%e@^XfTs^^isB?HIBswq0iHFa52rQq|sS*~K)f<#Ebsw$5SXd(zBsAzX`CIqTh&BmCk!u;)Vs&}}E%6)^{``>MB(5ehYH(Tl{ANjs{Q?i5WLT`7|)9ne+p<S_1E5Z8WZWJ@!A|@+;`zg@KexDEp*er*oJ#aZwl637vTc2WwllcRV+5UX0osPA?&wrhVVrAi4Jjn(&I?Fektdl?Kn(&9w;y#A}Zbc4^X0k$tmc)3W11T5$=77PQ0%&n80t=-KZG|`1|DQwjUSa+N4$&tg%)A^_ss-jgeGHa@v~pHCFB}(hJv}jj1iHJ$<>QS5lDt}I?vf5>&$?tuk#mVVy?JOVOt}WPb8fdPmYP5ShANlQ4$_lrHBu{#a>{74zNqKPNOGa0grQ<Z`pT6>laJgN+Qrb!=uxp2Bvz{zD6>3o5(AHMqFpd~99WSDjDQiz$=aAlWryqlp}BaT`11_yqQ;=^p~arFLy(DD2uHjkWnK{McV5i=D+Qygd}?~7bx?1l>Y1HQ{~%Z2@)tKN3vTr!Upq~27gBdWUBHwB(^6F(BVq-HE9jaaa}j?~Z)zF9YenRogcGc<5<QXLOK;9+QfF%<Os=#S4w>Rca=-DD1k#|LLnK;`$8V*%sAG9k*NFl7$7oN0L?0F=e}FNFZ){G73}dkD+WNP*G0_##X#XScKv9P}fQJ?Y21a9N*ysr5N8avuiy8)wwlHjl*KzrKh#PCM2_o$Xet(0=5emq=j&uLfoMHYNq^75mb`*16Z!^ilSX_!*rqha84n)rQ(3_GUQ0lIyTJ3Bre^APwjw@{~k!V`WVD*@}XnhR^;h-w!*e*saI!6$2-dNNDB5<OB1ho2wd6=;DUynOm9{}o9@w;*7F+HQJfyTHa{|>0*Plj2wm(z@%Wx(}`sYSW;{|3of7i6Ghm=0)Jz|moMY1FR}efjcsCyKZWg<$ED;d6$}aUgU|RdP%#gG}P|=`fqXtP{5nh-kQWVj7^|ox*Vi80eZL!Z6?jK~NMk&UDfmcf8@y{4Qx4;mFjooK&stSFfA>TS=9Lv%QOo{?m0iO}2q<`+7hOR`VrRQayE8GlJ1+n%|Y88Dsn3-|Cj|hw+=d<D@!Yu^&!$#7;4#Uz%g2Y5rx3<{d;|Cj8=5J9#}u?($D>D#8@3c{}BF+Bv*iW%8{9y?X#5CgIcA-{k`TyWSDsKX5-Um_OO7xqX)3-w;pMrmv^B&PvN8648H;?Vq={hcb0;)jG;s_WXQ)#hxStcG_xB4r<jkrdz(=x?+0{#Y7=+_k!b@t+V5!sgK6q0Mho7V&Uje-N>KaKi^`Dle|Na_qVLVvnok{y}qkuk51UFtt8fZ+Jt_z;I9!j)+RIg%Oy3BkGxb~y;@^ROlJQ|7__z@L|UnqBl>i{ez<%$0sFbTbt~|^vR2Dp+zO>m{jBoQn;O&}d*$V=(ps4-7PF|)s9qJ-LRWeG^AL#uGVM^YSO8Rqgh(?Y_pyKazt@I~>LiZsnMS@a#GEASqGyJh4D`q~%|rpGgJ%;_v@@F!p@xBjUV5b;i>@}R>?XYjaehaa){f6_v)<j|?nXlt9*XCM^5yBxhQZoFdd3v3i-)qEYXCVsSvfCl07TX*mImDOY-_uIxt!nFcN_Lrn{V76C+8(uI{`)aw6QV0RK_>wWe6Jlfpc}#zTex*g_p_J;@YCUec#HJ&u^R6wT`mVb_Uc{_utsSHnBP0Fg@saj?F8q9DD4PhL&@2bqZx@BYJc7+7$|+U^{{65mR?f<e8%W)LxVKcvip;&*8un_-JZ5>?M74q~nMj0pz0S)O8KfB4(T<qI~~p;)daP0;=c(#Z*KS8(v@paktT7v7-=$bhbtX`Y*Yt0|q9&xtprar;DrSo9C6KYOP|YgPE0lp1(k;WbUkR(%es$HC?`DF8#B$JXzQhvW3>o*DK9X8LP0nbb-^Go3@miYMw2ZliNmm?fyVnIXBfhe{fX2OCO-+`QlM~Q%k2<Mp-z+_R$qmtJ?Y6RLyI{N(TjLj_^~$(#5%8mv^ts71phL7j}L-TbW;VIs+^|Cz_7V;tX#Z0>s@wn8s>vH<$bKZckh;JX>cNUrg^V^(;0U#Dxh{@f=xEc@IOvDj#i`IJLH1$TwLe?hN{5rlmn!l8Fjsi(^43xVj!$0~WOe$m4GQVKzamxMkJahsUN$a%y+e$k$E+xt|dHo?!Yl`hKrDnvgz2+c#zXjzdEP`iJQY944y7^AQCDO%-&tm#d1qNjzhY@>Sebf;Q_vFAeE1g%Kxax+ZhNRpsObxQWaM@93e(wA&Xm%t>j`n9z7(SgiIJ!wsp<Zym2y_Smw;6!LCy=ITWU%#V*Z20LF)Qe^uoH83g8{fPMcqY)Uz9VhF{o{2A0rF3d$=W=b!TDm5^UZG<L5KxvaU1TLmlPxE91fpGMtSEj6x*@}CqWkY|EpBZ%yuSn1;Y}WPUPOQ7VZY!1c34*b`%AMGn30+=bRY_<?0a#eZwtIKTkVIJLx!0V;73?P8AC^=q}U4P1&fzi9XZ&3=2qHzFT8>g{aC4|944^v|1iCQ_M2*{s#}|K(pRNiQV|Z1PA;T&vXU!ymaaCddwlm4z@xi4Fa;HVbi56O$(~@_K*6FSlaO$pk4;<7(1y*@mw4I)@uLV^w4kA=1bT+<0~W{f5=#Shk<Tg(yR3#Dna_5G5c`^nG4kz@uoeisVKG+ML(Q~lSbRca6#RO?$wan|MuI`tk%sUDYY4-oO^)2;XGos;ht4}6YxP?-r<W{iWTxvqTKwmgKq`MN?N;&jOeN?va^>TVqw2{uB1trVV_;^vCLg4g;TnL7o>@9t>Q7uyaU8Q>b><aI1g>l$4J(SIpit$x42{F-q?jGaPrW5*<A%vgzwrAjmZ29eK^bwt=Aq7ut{4WQ>+-)D9L(8*q4_{?MOnd6;UmxaH!mUBf{UdP>u%`tj>=jX;@`YP-xAO!?dxwUXP5-{757X1{iql{*KjPzX-cHfEL{j3fsF_qYx^f1M%hqe?U$}*{mzp2<$X`@Y#a0QgSm$xFpY|jd%t@y0h)#e+29$|cN{gKZERq!ci?_>1$dZ*537L<4E#Gcue7w03-<B0cKOhSVvFO>vd^bAqo80yS$&Al^WWh2pWW+W{@sN9+6N^^L}UAbxqht<{5yH5kK5-u;_b0iy9k$$n9}xn$hJR&6hvx~4AvPh(0y^|KPw3%;QgO8{J)omxN}BD_Jgn{7Ek$7GQV#8XC+|>tpAgO-ysF9TD_0krLx$Uf=bcmtj{3@<$4OQUS|vBNNOkjt!kDj>T0ez^&b|7Q6PUdndm3VXc6sPuQ;6f*pt;yRffvpWvbDuGN?AY*aL~iR}YW5RBBpdWGt?!oGU4OXiEX&L8zG_C;nOsl;2s^dp47Yof<59%N2NhxU<i$2M;eBqh)_fs^B@n`X^HbkxD~=y4ikS_XSi#y3_sX((k=D{fz9AVV_Mu-S44E%MTjw#C@7*KQH@MLYXG1-E#^fq?Hu}2cY<L2eLFaZo`6A;6fZq4zhX4R|pna<$2}tfq0ZBY7TFtJWZ<E8ZVT2w@&<+oQh-km3HHruT%^96I?ri*cZsvc-f)39?5!Fh$aoD(?hKyH|N)x_Wf!uzdk)CNb!|WmdA1Z2ARg>fz`N{dUte7%yQ?n^G>L`H_|2#sLK{pM>89Ge1xK%Uy<Jlm2PrS8|jP;QZ>?Uv>(;}mwGksC-(N*<7o)mFM$sdXpE(@kE)ki+xV2K_sv|Yr~5u{m^Ky+A8MMavs_H>32DSQGG{R{V)@cz+`Z85@^O#GgM2ePxy^d)ioCheOp;xE&lDC(p*hwOr@w{KPFqTm1#7AX$@F?DNlv@BWcr6qBUkpbu<yuZ!=xbl#U{5cbZHy6OsR^e_3ET>?@)#qn6Jkj@z2z`wq%83Xge~mvWlu2zHi0{ifOzu+PeIpO%+EORLdrTpAJ6IMvs3|j~Y)rhaEirp2&o{tUETc5RVninoyUaow)CrbqQN8Z-T(~Lmxy?DMU})cMIK7K$u(4jQZgF%ldnu%dQqhiI!l6$d)x|24;qH*-(QV3`0%Bsu#ws8fO!|BS>HV51`|8^8')).decode())
+from __future__ import unicode_literals
+
+import datetime
+import json
+import os
+import re
+import smtplib
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.utils import COMMASPACE, formatdate
+
+import frappe
+from frappe import _, db, msgprint
+from frappe.contacts.doctype.address.address import get_default_address, render_address
+from frappe.contacts.doctype.contact.contact import get_contact_details, get_default_contact
+from frappe.core.doctype.communication.email import make
+from frappe.email.smtp import SMTPServer
+from frappe.model.document import Document
+from frappe.model.mapper import get_mapped_doc
+from frappe.utils import get_datetime
+from frappe.utils.user import get_user_fullname
+
+
+class MeetingSchedule(Document):
+	@frappe.whitelist()
+	def send_invitation(self):	
+		if not self.email_id:
+			msgprint(_("Please enter email id"))
+			return
+
+		CRLF = "\r\n"
+		default_sender_name, default_sender =frappe.db.get_value('Email Account',{'default_outgoing':1},['name','email_id'])
+		if not default_sender:
+			frappe.throw("Please Setup Default Outgoing Email Account.")
+		organizer = "ORGANIZER;CN=" +default_sender+":mailto:"+default_sender
+		dtstamp = datetime.datetime.now().strftime("%Y%m%dT%H%M%S")
+		dtstart = get_datetime(self.scheduled_from).strftime("%Y%m%dT%H%M%S")
+		dtend = get_datetime(self.scheduled_to).strftime("%Y%m%dT%H%M%S")
+		attendees=[]
+		if self.cc_to:
+			cc = self.cc_to.replace(' ','')
+			attendees = cc.split(',')
+		attendees.append(self.email_id)
+		subject = "Scheduled Meeting on %s " % get_datetime(self.scheduled_from).strftime("%A %d-%b-%Y")
+		cleanr = re.compile('<.*?>')
+		attendee = ""
+		for att in attendees:
+			attendee += "ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE"+CRLF+" ;CN="+att+";X-NUM-GUESTS=0:mailto:"+att+CRLF
+		ical = "BEGIN:VCALENDAR"+CRLF+"""PRODID:-//Google Inc//Google Calendar 70.9054//EN"""+CRLF+"VERSION:2.0"+CRLF+"CALSCALE:GREGORIAN"+CRLF
+		ical+="METHOD:REQUEST"+CRLF+"BEGIN:VEVENT"+CRLF+"DTSTART:"+dtstart+CRLF+"DTEND:"+dtend+CRLF+"DTSTAMP:"+dtstamp+CRLF+organizer+CRLF
+		ical+= "UID:FIXMEUID"+dtstamp+CRLF
+		ical+= attendee+"CREATED:"+dtstamp+CRLF
+		# if self.invitation_message:
+		# 	ical+= "DESCRIPTION:"+re.sub(cleanr, '', self.invitation_message) +CRLF
+		ical+="LAST-MODIFIED:"+dtstamp+CRLF+"LOCATION:"+CRLF+"SEQUENCE:0"+CRLF+"STATUS:CONFIRMED"+CRLF
+		ical+= "SUMMARY:"+subject+CRLF
+		ical+="TRANSP:OPAQUE"+CRLF+"END:VEVENT"+CRLF+"END:VCALENDAR"+CRLF
+
+		msg = MIMEMultipart('alternative')
+		msg['Reply-To']=self.email_id
+		msg['Date'] = formatdate(localtime=True)
+		msg['Subject'] = subject
+		msg['From'] = self.email_id
+		msg['To'] = ",".join(attendees)
+		msg.add_header('Content-class', 'urn:content-classes:calendarmessage')
+
+		email_body = ""
+		# part_email = MIMEText(ical,'calendar;method=REQUEST')
+		if self.invitation_message:
+			email_body = MIMEText(self.invitation_message, 'html')
+
+		msg.attach(email_body)
+		msgAlternative = MIMEMultipart('alternative')
+
+		# ical_atch = MIMEBase('text/calendar',' ;name="%s"'%"invite.ics")
+		ical_atch = MIMEBase('text', 'calendar', **{'method' : 'REQUEST', 'name' : 'invite.ics'})
+		ical_atch.set_payload(ical)
+		encoders.encode_base64(ical_atch)
+		ical_atch.add_header('Content-class', 'urn:content-classes:calendarmessage')
+		ical_atch.add_header('Content-Disposition', 'attachment; filename="%s"'%("invite.ics"))
+
+		# msgAlternative.attach(part_email)
+		msgAlternative.attach(ical_atch)
+		msg.attach(msgAlternative)
+
+
+		smtpserver = SMTPServer()
+		smtpserver.setup_email_account(self.doctype, sender=self.email_id)
+		smtpserver.sess.sendmail(default_sender, attendees, msg.as_string())
+		# frappe.sendmail(recipients=self.email_id, subject=subject, cc=self.cc_to,
+		# message=msg,reference_doctype=self.doctype,reference_name=self.name,now=True)
+		# r = make(recipients=self.email_id,
+		# 	subject=subject, 
+		# 	cc = self.cc_to,
+		# 	content=msg.as_string(),
+		# 	sender=frappe.session.user,
+		# 	doctype=self.doctype, 
+		# 	name=self.name,
+		# 	send_email=True)
+		
+		msgprint(_("Mail sent successfully"))
+
+		doc = frappe.new_doc("Communication")
+		doc.subject = subject
+		doc.communication_medium = "Email"
+		doc.sender = default_sender
+		doc.recipients = self.email_id
+		doc.cc = self.cc_to
+		doc.content = self.invitation_message
+		doc.communication_type = "Communication"
+		doc.status="Linked"
+		doc.sent_or_received = "Sent"
+		doc.sender_full_name = get_user_fullname(frappe.session.user)
+		doc.reference_doctype = self.doctype
+		doc.reference_name = self.name
+		doc.reference_owner = frappe.session.user
+		doc.user = frappe.session.user
+		doc.email_account = default_sender_name
+		doc.save(ignore_permissions=True)
+
+@frappe.whitelist()
+def make_meeting(source_name, target_doc=None):	
+	doclist = get_mapped_doc("Meeting Schedule", source_name, {
+			"Meeting Schedule":{
+				"doctype": "Meeting",
+				"field_map": {
+					"name": "schedule_ref",
+					"scheduled_from": "meeting_from",
+					"scheduled_to": "meeting_to",
+				},
+				"field_no_map": [
+					"naming_series",
+					"lead",
+					"customer",
+					"opportunity"
+				]
+			}
+	}, target_doc)	
+	return doclist
+	
+@frappe.whitelist()
+def get_events(start, end, filters=None):
+	"""Returns events for Gantt / Calendar view rendering.
+	:param start: Start date-time.
+	:param end: End date-time.
+	:param filters: Filters (JSON).
+	"""
+	filters = json.loads(filters)
+	from frappe.desk.calendar import get_event_conditions
+	conditions = get_event_conditions("Meeting Schedule", filters)
+
+	data = frappe.db.sql("""
+			select 
+				name, scheduled_from, scheduled_to, organisation
+			from 
+				`tabMeeting Schedule`
+			where
+				(scheduled_from <= %(end)s and scheduled_to >= %(start)s) {conditions}
+			""".format(conditions=conditions),
+				{
+					"start": start,
+					"end": end
+				}, as_dict=True, update={"allDay": 0})
+
+	if not data:
+		return []
+		
+	data = [x.name for x in data]
+
+	return frappe.db.get_list("Meeting Schedule",
+		{ "name": ("in", data), "docstatus":1},
+		["name", "scheduled_from", "scheduled_to", "organization"]
+	)			
+
+@frappe.whitelist()
+def get_party_details(party=None, party_type="Customer", ignore_permissions=True):
+
+	if not party:
+		return {}
+
+	if not frappe.db.exists(party_type, party):
+		frappe.throw(_("{0}: {1} does not exists").format(party_type, party))
+
+	return _get_party_details(party, party_type, ignore_permissions)
+
+def _get_party_details(party=None, party_type="Customer", ignore_permissions=False):
+
+	out = frappe._dict({
+		party_type.lower(): party
+	})
+
+	if not ignore_permissions and not frappe.has_permission(party_type, "read", party):
+		frappe.throw(_("Not permitted for {0}").format(party), frappe.PermissionError)
+
+	set_organisation_details(out, party, party_type)
+	
+	party = frappe.get_doc(party_type, party)
+	
+	set_address_details(out, party, party_type)
+	set_contact_details(out, party, party_type)
+	set_other_values(out, party, party_type)
+
+	return out
+
+def set_organisation_details(out, party, party_type):
+	
+	organisation = None
+	
+	if party_type == 'Lead':
+		organisation = frappe.db.get_value("Lead", {"name": party}, "company_name")
+	elif party_type == 'Customer':
+		organisation = frappe.db.get_value("Customer", {"name": party}, "customer_name")
+	elif party_type == 'Opportunity':
+		organisation = frappe.db.get_value("Opportunity", {"name": party}, "customer_name")
+	elif party_type == 'Supplier':
+		organisation = frappe.db.get_value("Supplier", {"name": party}, "supplier_name")
+	elif party_type == 'Sales Partner':
+		organisation = frappe.db.get_value("Sales Partner", {"name": party})
+		
+	out.update({'organisation': organisation})
+	
+def set_address_details(out, party, party_type):
+	billing_address_field = "customer_address" if party_type == "Lead" \
+		else party_type.lower() + "_address"
+	out[billing_address_field] = get_default_address(party_type, party.name)
+	
+	# address display
+	out.address_display = get_address_display(out[billing_address_field])
+
+def set_contact_details(out, party, party_type):
+
+	# organization_lead removed in V14
+	# if party_type == "Lead":
+	# 	if not party.organization_lead:
+	# 		out.update({
+	# 			"contact_person": None,
+	# 			"contact_display": party.lead_name,
+	# 			"contact_email": party.email_id,
+	# 			"contact_mobile": party.mobile_no,
+	# 			"contact_phone": party.phone,
+	# 		})
+	# 		return
+	if party_type == "Opportunity":
+		out.update({
+				"contact_display": party.party_name,
+				"contact_person": party.contact_person,
+				"contact_email": party.contact_email,
+				"contact_mobile": party.contact_mobile,
+		})
+			
+	out.contact_person = get_default_contact(party_type, party.name)
+	
+	if out.contact_person:
+		out.update(get_contact_details(out.contact_person))
+
+def set_other_values(out, party, party_type):
+	# copy
+	if party_type=="Customer":
+		to_copy = ["customer_name", "customer_group", "territory", "language"]
+	else:
+		to_copy = ["supplier_name", "supplier_type", "language"]
+	for f in to_copy:
+		out[f] = party.get(f)
+	
+
+@frappe.whitelist()
+def get_address_display(address_dict: dict | str | None) -> str | None:
+	return render_address(address_dict, False)
+
+

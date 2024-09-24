@@ -1,3 +1,26 @@
+# Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E6ZByGu5dQ98A*Ke~33zNnfCL;&ij$O34DJkJ=+tm;l1@75PC7{^$%Wruo02rbXT}hkdZylwmUs0$yL->>$qcz?1O(+i3sq`T?s8LzJaP@{2_8m90x6}8Z~&DFVjCvXj!Nd(OK_Uo0Tj$<6af+2SlM5^1Pg(KvK+VyTNyA}g40za5D+la%~G6kQ`&jvn|A5WBZR)gBO3^T5*`AAgc*H#hGNJ=kp~P(8!DNBFd(H;2{9n0;n*>vDuE#OBi~bz;s955sB3RZC1Yfmm`1F8LX{oZB(Y6}S(;){m4un2KN)xCm@orL=6gX9a3>)mH3OrqB~kTqKgj|saV+eq-1c0FQT=PAv5ix98BveazW$t~e(rOc<Q~iOP^riR&eLBI@q6K^sZDAf!#YW+jAS*XW{i}R!rVeA#u-Ypv|0#?L<lqKV&8(qqy*s{<n_o-DG8Y3&`mts3}I-hDztptw(`s}EeCPs!psed0Flen$iV@jEEP^HJUa@j6;vMl>~z|@XU&uDFP}U8tNp`wt)owae$)C`snu$$#;_1Yi+OgKg;-k5T9^g55#}rCcC(dNr#*_2-HpAI*5(-N8$(+r;t9qxLRROI$c0>f@4af3clPj7qtz76rQ~lay7r$31|!gyr~7U*m5p9`i*9#T%(F@%)-8P9;ab&0{^1>e+3S@D)VxSO?hPL3n>b|GMPddI7iW5LrWa@Wn}NBeT@UKxS%?XXKoOH9i2GQ!o3$xopygT|v@;)-nX2^&G5BUV8JkuKB0J=21{E0F6YKgN-Fe4(QXYQWu-)=;d#4fix7>rn?uX%Lc6=`5^1<t#oAuSo_EB#~io<SpbMmR${qy`P-*Ow3iQuCIE;gWrS}xRbidw$>->M}D6y(T?pdg7$MIaoUj&568fv`w)i8-3ot|unpafz7J>1WZ6`NKa&Lnizm)|45R`dbkH)v)^>ftkOWO)AeVl?nf6P@l0qg980qiMX#sv$gG5nN|(KV&t~xsBuSxZiaL@K0Z2Y_KE0M3X9a(^qUl6BqFz3IY(q>TRDqbsT&XfBw$)8M*~FvX>R<Chx4&4bas1<ku{4ob)pz2Ifn^z1Dq=2hA|q^nZ~9r1*1`QE*LF04quG;q~3c_xxesp?xoO!0d}dy6d+#Wc~u?Pn(@|HFCJPgcg#IN{YPfzaoPC+a&<ptzqkH)xVdp0f{5}laoxxKB3=E*Hr;qD)av0E@3xKC_b$AEN}?B{Gr%am_3MTq54CDEk*lZn>f`!Vr$)oe#?t!rz-swjUkoM6eg*x5;D)cua%=6hzjM8I{nOg!i;gX6Z0*Vv9lh+>%h7Pt+TU6~Xn}42&>d{Z<8JM^yoL@=+v>x5Qhs}}bw1@v{1*ockqZ')).decode())
+# import frappe
+from frappe.model.document import Document
+from frappe.utils import time_diff_in_seconds,get_datetime
+import frappe
+import datetime
+
+
+class URLAccessLog(Document):
+    def validate(self):
+        from_time = get_datetime(self.from_time)
+        to_time = get_datetime(self.to_time)
+        if frappe.db.exists("URL Access Log",{"employee":self.employee,"from_time":from_time,"to_time":to_time,"url":self.url}) or frappe.db.exists("URL Access Log",{"employee":self.employee,"from_time":from_time,"to_time":to_time-datetime.timedelta(seconds=1),"url":self.url}):
+            frappe.throw("URL Access Log already exists for this time period.")
+        if frappe.db.exists("URL Access Log",{"employee":self.employee,"from_time":from_time,"to_time":to_time+datetime.timedelta(seconds=1),"url":self.url}):
+            name=frappe.get_doc("URL Access Log",{"employee":self.employee,"from_time":from_time,"to_time":to_time+datetime.timedelta(seconds=1),"url":self.url},pluck="name")
+            frappe.delete_doc("URL Access Log",name)
+        self.url = self.url or ''
+        url_split = self.url.split('/')
+        if len(url_split) > 3:
+            self.domain=self.url.split('/')[2]
+        self.duration = time_diff_in_seconds(to_time, from_time)
+        if self.duration <=9:
+            raise frappe.ValidationError("To time should be greater than from time and diffrance should be greater than equal 10 seconds.")

@@ -1,3 +1,171 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2017, FinByz Tech Pvt. Ltd. and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c$}>mYi}F5@w4<RrW+izs+E<UqG(UBjJC1U=8$uO#K3(>g3W4|vY70WI+ANgG5p^<!^gfPB}H*TY;%Xh;k+Mw0#E<^6mnT`al3%pte^g!Amb<STyA%Y-);=V`4pa=p8ahGFSz*E?i<{&d;@RpOaiY=kw7L2q#%sqtJ+AV@$d_&pyW9dngJJUsjAFyDQ2)OS%xspSlCa@S2G^3m8>95*R`n?OH<(0Rw@Iv;K&<GOKzCTN<H@QwaT_z=1#eFQXyWM6f&<XCQKl3>A$<EVXxA+Tg8Q$L9v=a8fbskQuHX-hL<`V%I$$$W{S)(yFjMPQe>6?s#Td9nUc&iA@5VdGd%2uFVvB}f~l=wUrmzbxvYiJ$u?7F7cQd{7LXRqWXOf%YpY~Y=Z4>L+_A^^A*cwmBegKRPu!+D->{-C_W{T68s}xEHT>!h#6gwQ#duV(HQZ$-CvjrU$~6H;d=0ctP(@6MtW5n~K$|1GCDm;v_&4hfu!QKPM-8_`9Wss^lES)J3$x_#>I^CDu^qR^mIE>~yX-)xL<p}VT9&9|lAJlqkuFo(vPt^`Xp7A%yf)><5YNI}v`Vgc$x<PQcy43w_90rq^)@SaEnZd>ilKc1UagI+m`Xi-57AO6vt2ka0Jr!98(Cxr(-t=F*eH0D^~=Ue0czyJYj_{|;vnkC$DG+Hc^{{7<oyC}BwV7iL4{(%3O!<tjuX5FUJymvkEUePaZu%k<zLc@3+p00=i3ZpEG866aN>?p8W@VuvIO`)L@dbFXO<h%YwyIe7uWHgpwrF)BfpDor00y-23BoLxx++R)LYDz&Kz8T*)W)dBe|?lrd_Jo7LAF~iD-9h0{MoQ1(<AQJu8sHJgUjD-hV_OW+><%BkDbd4pR>{?L(7>U!>Bz@UUU80{X-0Bg7A9k5k|pvQn|E*f}}z+jEjc)5KMg_{goZW9+1qnypv#)sPT7qBuscYYB;dQX)EenrBD@sgGq?2={gPe^_YLxg%}(Y%W`dT2!nO{d*ZlQDl|+?&{Um^BcPyRf#J?RnPsp-$q)@7jIwx>W+NE>wO4)g37{vdHwQwZxdt13IT6>LVSW;!Ru@MP3e@X?h+gqmcnoUxq5r$Xdy=99!vNsZnW&u)aakrmk{?EhjT*ggoXyf>PiC_T@)K^dfF0ntiYcL$vT1V?qPw{C`L`nJ);fO=?oq$%A`wkvgoCVSs%m5&c2a;H^_&3$NbeH5?_d9qb?}!(aJzSPvGU6yh&lc!=IymNDkM(X9hOVAPZ%hk_S^tDj&Sx^*0x>LokMo_(JN6K8Ps!EV+oCLf@|^=NW7iTQ8$I(wzGP^9R3pfBNw;y6AqL&$Ek(<vsKW7&qVL>7%`Cx}Qtdom6r}*^f<L*<_ewnmdbH(I1;>Y>vm;&SkOqARZ12{}@fX)vwc`EKx15@QTRlE)?TKfr}@xjsP~oMd~8fx~cVfin-_h>?gRlmTwR#a<ui*_VO8IRKatzJPXZCxVzKPxTbR1Y@r3(Fx`^`qQFAb)plr?<LHL;MZ&^;)~4*-)l*hb)eIC8xJEA||9oS4xS<>HbiT>NZ67sqIl9!Yz>K!oe2!hKDMhO5RmDx)Yt|ZD9j}#E#Z+6-;cM2`muU77S!9m3@t7L>9t?<t;E%JYS1K$U*u?uv-D&5WW+Yg^CKX#J9DcMhX1kcrv8hkiT&#BAuoa#cOn-TT15q_6mHqVW)Ki&9aMBBWv|S^WYjL?oi)lu!Wpu8MlH&HFiL?{E^d!27P8u2~5rx$P&gULCI%z55WfAsE1`vqb@qtcvYH?l*i?Y|SA@!BIXqfiQks2}T$}DH`<b#;Zz@d>|8e9Gmf*dg2|02>KDG`d2SFOJZhSQzQ;|QxG4MtYxyh_kjsZ&J6u61!EcX(}>`Ey|xXCYfd8+Ex2R1)R^k+akfb%Amlv_nK67%f(x0Xv$sf^>D-M_f_XXk5sPm))_L-wKI?Ix4y1_OM>wsM<!u50j(G6h#*0wU!6l6_YY8UN^-}2WOI|Y&XNfr4%e0qM2F=swhDZ;d_X;sx=oh2<a`$`I_fCoY>zPo(;}s_0)5})$SNB_5MR_g8B3<q=D|SFkZT(cxWdO3*ScwHFad4Qn$n$2%;kdn~8RxV0YN<PrrM{{DC*w^!nR|;bdYffUPCL?uOv^yezQ=Wu#Wxyt<?J9yi|<%}9e6#uF3?iBrq1C(|&-pd!DbeX(%aUcF?5V=dz3qE(8+-*9w0e$F*1=%&i(G|bSJMw3`JvR2DeY|go;4WpH2sPw|YawWs3qlJUYcPTylOGE0fKR2{!*(LU~{pToB@?v)`-wZ;K+6mv;wFzfp)jDx)>!?j}Mbau2PA2daCMO8QE^Lct<Ouag>}4sAvFui=T_<{@9)iCPmD_xVJ3IPp*5PcUAHVW&ti8G7TmO<V$nvhC9H=9Vg%fvw_uXI;#)HvhFC}9S-{}te`-gh`(B*e7{!t`+|3$-hN=Np8{6vQ-`Yc35$wb@+%?}3I=@ic4+2I-gjeG6QiUKl2YYg9eX<Na-8a>#I|KShbZ@6JJoTES_4SA$h4oW~4pOJZIu;wLlub0=D_DL%2iQh6x?;0Go9W4Hh<PFT>d4}>7nSwjc?r}^K1*5J%8IKmIqpWhyw19W?$Hv!FitlzGPb}a{6o>XaD+_qx77+jP?)CLFu}qCePy9YQA3ZB4rOXN)dmtLM`^-#zVv+}DJFl`naxj89IWiWZcI}hW5T)CyHn)w#o9V%~1V5HIr*sbq{bz)B#)a++;S559;iMT49~KB;CmFjF@6Y%sFb?;Fmp41wTg%`~4-c(qkA7AU??LU(vRzJH{QGc?ES+fKEbUW6gx4Ynf7|cJc9Noin?b!Lb1xsFtSm3H9ipB-k`8?#3{S?&I-Yw`YZUzct9yDNH~dN^h~OXbu*dEXEY{(B+3*1(JBlnIj<`S@()lSiqRpd4v^axDLVfQraj&b`?zfTj)ioJ?TcbtD_4L1(<Etw')).decode())
+from __future__ import unicode_literals
+import frappe
+from frappe.model.document import Document
+from frappe import msgprint, db, _
+import json
+from frappe.utils import cint, getdate, get_fullname, get_url_to_form,now_datetime, get_datetime
+# from erpnext.accounts.party import get_party_details
+from productivity_next.productivity_next.doctype.meeting_schedule.meeting_schedule import get_party_details
+
+class Meeting(Document):
+	def validate(self):
+		if self.internal_meeting :
+			self.organization = "Internal Meeting"
+		if self.party_type and self.party:
+			data = get_party_details(party_type=self.party_type,party=self.party)
+			if data:
+				self.contact_person = data.contact_person
+				self.email_id = data.contact_email
+				self.mobile_no = data.contact_mobile
+				self.contact = data.contact_dispaly
+				self.address = data.customer_address
+				self.address_display = data.address_display
+				self.organization = data.organisation
+
+		if self.meeting_from and self.meeting_to:
+			if self.meeting_from > self.meeting_to:
+				frappe.throw(_("Meeting To Date must be after Meeting From Date"))
+		
+		self.check_min_participants()
+		# Convert meeting_from and meeting_to to datetime objects
+		meeting_from = get_datetime(self.meeting_from)
+		meeting_to = get_datetime(self.meeting_to)
+		# Check employee duplication in the 'meeting_company_representative' child table
+		employee_list = []
+		for representative in self.meeting_company_representative:
+			if representative.employee in employee_list:
+				frappe.throw(_("Employee {0} ({1}) is already in this meeting.").format(representative.employee, representative.employee_name))
+			employee_list.append(representative.employee)
+		# Check overlapping meetings for each representative in the 'meeting_company_representative' child table
+			overlapping_employee_meetings = frappe.db.sql("""
+				SELECT
+					m.name, m.meeting_from, m.meeting_to
+				FROM
+					`tabMeeting` m
+				JOIN
+					`tabMeeting Company Representative` cr ON cr.parent = m.name
+				WHERE
+					cr.employee = %(employee)s
+					AND (m.meeting_from <= %(meeting_to)s AND m.meeting_to >= %(meeting_from)s)
+					AND m.name != %(name)s
+					AND m.docstatus = 1
+			""", {
+				'meeting_from': meeting_from,
+				'meeting_to': meeting_to,
+				'employee': representative.employee,
+				'name': self.name
+			})
+			
+			# If there are overlapping meetings for the representative, throw a validation error
+			if overlapping_employee_meetings:
+				employee_meeting_links = "\n".join(
+					[f'<a href="/app/meeting/{meeting[0]}">{meeting[0]}</a>' for meeting in overlapping_employee_meetings]
+				)
+				frappe.throw(f"Employee {representative.employee} already has a meeting during this time period:\n{employee_meeting_links}")
+
+		if self.party_type == "Lead":
+			customer = frappe.db.sql("""select lead_name, name from `tabCustomer` where lead_name = %s""", self.party, as_dict=1)
+			if customer:
+				self.party = customer[0].name
+				self.party_type = "Customer"
+				frappe.msgprint("This Lead was already converted to Customer. Now the Party Type is changed to Customer")
+			else:
+				pass
+
+	def on_submit(self):
+		user_name = frappe.db.get_value("Employee",{"user_id":frappe.session.user},"employee_name")
+		url = get_url_to_form("Meeting", self.name)
+		# url = "http://erp.finbyz.in/desk#Form/Lead%20Meeting/" + self.name
+		if user_name:
+			discussed = "<strong><a href="+url+">"+self.name+"</a>: </strong>"+ user_name + " Met "+ str(self.contact_person) + " On "+ self.meeting_from +"<br>" + self.discussion.replace('\n', "<br>")
+		else:
+			discussed = "<strong><a href="+url+">"+self.name+"</a>: </strong>"+ frappe.session.user + " Met "+ str(self.contact_person)+ " On "+ self.meeting_from +"<br>" + self.discussion.replace('\n', "<br>")
+
+		cm = frappe.new_doc("Comment")
+		cm.subject = self.name
+		cm.comment_type = "Comment"
+		cm.content = discussed
+		cm.reference_doctype = self.party_type
+		cm.reference_name = self.party
+		cm.comment_email = frappe.session.user
+		cm.comment_by = user_name
+		cm.save(ignore_permissions=True)
+		if self.party_type == "Lead":
+			target_lead = frappe.get_doc("Lead", self.party)
+			target_lead.status = "Meeting Done"
+			target_lead.turnover = self.turnover
+			target_lead.business_specifics = self.business_specifics
+			target_lead.contact_by = self.contact_by
+			target_lead.contact_date = self.contact_date
+			if not target_lead.email_id:
+				target_lead.email_id = self.email_id
+			if not target_lead.lead_name:
+				target_lead.lead_name = self.contact_person
+			if not target_lead.mobile_no:
+				target_lead.mobile_no = self.mobile_no
+			target_lead.save(ignore_permissions=True)
+		
+		# When submit the Meeting then will create the Event
+		for d in self.get('actionables'):
+			if d.expected_completion_date:
+				date_obj = get_datetime(d.expected_completion_date)
+				starts_on = date_obj.replace(hour=0, minute=0, second=0, microsecond=0)
+				ends_on = date_obj.replace(hour=23, minute=59, second=59, microsecond=999999)
+				new_event = frappe.get_doc(dict(
+					doctype = 'Event',
+					subject = d.actionable +' - '+ d.responsible,
+					event_category = "Meeting",
+					event_type = d.event_type,
+					starts_on = starts_on,
+					ends_on = ends_on,
+					description = self.discussion
+				))
+				new_event.append('event_participants', {
+					'reference_doctype': "Meeting", 'reference_docname': self.name
+					})
+				new_event.save(ignore_permissions=True)
+		self.check_min_participants()
+
+
+	def check_min_participants(self):
+		if self.internal_meeting == 1:
+			if len(self.get('meeting_company_representative')) < 2:
+				frappe.throw(_("Please add atleast two Participants"))
+
+@frappe.whitelist()
+def get_events(start, end, filters=None):
+	"""Returns events for Gantt / Calendar view rendering.
+	:param start: Start date-time.
+	:param end: End date-time.
+	:param filters: Filters (JSON).
+	"""
+	#filters = json.loads(filters)
+	from frappe.desk.calendar import get_event_conditions
+	conditions = get_event_conditions("Meeting", filters)
+
+	data = frappe.db.sql("""
+			select 
+				name, meeting_from, meeting_to, organization, party
+			from 
+				`tabMeeting`
+			where
+				(meeting_from <= %(end)s and meeting_to >= %(start)s) {conditions}
+			""".format(conditions=conditions),
+				{
+					"start": start,
+					"end": end
+				}, as_dict=True, update={"allDay": 0})
+
+	if not data:
+		return []
+		
+	data = [x.name for x in data]
+
+	return frappe.db.get_list("Meeting",
+		{ "name": ("in", data), "docstatus":1 },
+		["name", "meeting_from", "meeting_to", "organization", "party"]
+	)

