@@ -1,1 +1,96 @@
-const a0_0x5a226c=a0_0x3c09;(function(_0x1f986e,_0x37e968){const _0x584e9b=a0_0x3c09,_0x1efd81=_0x1f986e();while(!![]){try{const _0x350bb2=-parseInt(_0x584e9b(0x13a))/0x1*(-parseInt(_0x584e9b(0x12d))/0x2)+parseInt(_0x584e9b(0x132))/0x3+parseInt(_0x584e9b(0x129))/0x4+parseInt(_0x584e9b(0x14c))/0x5+-parseInt(_0x584e9b(0x135))/0x6*(-parseInt(_0x584e9b(0x138))/0x7)+-parseInt(_0x584e9b(0x13c))/0x8+-parseInt(_0x584e9b(0x152))/0x9*(parseInt(_0x584e9b(0x158))/0xa);if(_0x350bb2===_0x37e968)break;else _0x1efd81['push'](_0x1efd81['shift']());}catch(_0x13683d){_0x1efd81['push'](_0x1efd81['shift']());}}}(a0_0x4025,0xd1ce9));const a0_0x44015d=(function(){const _0x2c669a=a0_0x3c09,_0x478f1c={'Djmlx':function(_0x388ad9,_0x2bfea7){return _0x388ad9===_0x2bfea7;},'EMVMA':_0x2c669a(0x147),'QguAH':_0x2c669a(0x14b)};let _0x34a8b7=!![];return function(_0x1785f2,_0x38fc62){const _0x4f879a=_0x34a8b7?function(){const _0x371bd3=a0_0x3c09;if(_0x38fc62){if(_0x478f1c[_0x371bd3(0x156)](_0x478f1c[_0x371bd3(0x151)],_0x478f1c[_0x371bd3(0x159)]))_0x4f4e37[_0x371bd3(0x14e)]({'employee':_0x1710c1[_0x371bd3(0x150)],'fincall':0x1,'application_usage':0x1,'sales_person':0x1});else{const _0x58439e=_0x38fc62['apply'](_0x1785f2,arguments);return _0x38fc62=null,_0x58439e;}}}:function(){};return _0x34a8b7=![],_0x4f879a;};}()),a0_0x19ec81=a0_0x44015d(this,function(){const _0x4f8e0b=a0_0x3c09,_0x1e69ed={'yrjIc':_0x4f8e0b(0x134)};return a0_0x19ec81[_0x4f8e0b(0x162)]()[_0x4f8e0b(0x146)](_0x1e69ed[_0x4f8e0b(0x14d)])['toString']()['constructor'](a0_0x19ec81)[_0x4f8e0b(0x146)](_0x4f8e0b(0x134));});a0_0x19ec81(),frappe['ui']['form']['on'](a0_0x5a226c(0x163),{'refresh'(_0x82b6d){const _0x2f1539=a0_0x5a226c,_0x46e384={'bFTZY':_0x2f1539(0x122),'EqymY':'issue','ACvCX':function(_0x20fd9c,_0x5024d7){return _0x20fd9c===_0x5024d7;},'UaqzV':'VVmis','qUkDI':'mobile_no','DiWvO':_0x2f1539(0x121),'dlDut':_0x2f1539(0x12b),'bcJyT':function(_0xc5397,_0x4cde1b){return _0xc5397!==_0x4cde1b;},'QoJqJ':'zNTTd','FhYCh':_0x2f1539(0x165),'LikJW':'erpnext_url','hIANR':_0x2f1539(0x11f),'AsGHZ':_0x2f1539(0x15d),'rCOiW':_0x2f1539(0x11e),'XOKdf':_0x2f1539(0x150),'veGPi':_0x2f1539(0x13b)};_0x82b6d['set_query'](_0x46e384[_0x2f1539(0x167)],_0x46e384[_0x2f1539(0x137)],function(_0x24c1ff,_0x250fbf,_0x406c45){const _0x1e3e41=_0x2f1539;return{'filters':{'status':_0x1e3e41(0x12a)}};});if(_0x82b6d[_0x2f1539(0x12c)][_0x2f1539(0x16a)]){if(_0x46e384[_0x2f1539(0x161)]('zNTTd',_0x46e384['QoJqJ'])){if(_0x877e41['doc']['list_of_users'][_0x2f1539(0x149)](_0x27b316=>_0x27b316[_0x2f1539(0x12b)]===_0xffea0c[_0x2f1539(0x150)]))return;_0x3f70e7[_0x2f1539(0x14e)]({'employee':_0x53af4b['name'],'fincall':0x1,'application_usage':0x1,'sales_person':0x1,'user_id':_0x1b17fb[_0x2f1539(0x141)]});}else _0x82b6d[_0x2f1539(0x13e)](_0x46e384[_0x2f1539(0x142)],frappe['session']['user_email']),_0x82b6d[_0x2f1539(0x13e)](_0x46e384[_0x2f1539(0x15f)],window[_0x2f1539(0x15a)][_0x2f1539(0x131)]),_0x82b6d[_0x2f1539(0x13e)](_0x46e384[_0x2f1539(0x154)],frappe[_0x2f1539(0x153)][_0x2f1539(0x139)](_0x2f1539(0x160))||''),frappe['db'][_0x2f1539(0x133)](_0x46e384[_0x2f1539(0x16b)],{'name':frappe[_0x2f1539(0x125)][_0x2f1539(0x169)]},_0x46e384['qUkDI'])[_0x2f1539(0x12f)](_0x537d2e=>{const _0x155b3=_0x2f1539;_0x46e384[_0x155b3(0x13d)](_0x46e384['UaqzV'],_0x46e384[_0x155b3(0x14a)])?_0x82b6d[_0x155b3(0x13e)](_0x46e384['qUkDI'],_0x537d2e[_0x155b3(0x120)]):(_0x360042[_0x155b3(0x12c)][_0x155b3(0x16c)]?_0x1682f3['toggle_display'](_0x46e384['bFTZY'],!![]):(_0x17aefb[_0x155b3(0x15b)](_0x46e384[_0x155b3(0x168)],![]),_0x548368[_0x155b3(0x13e)](_0x46e384['bFTZY'],0x0)),_0x384c1e[_0x155b3(0x126)](_0x46e384[_0x155b3(0x15e)]));}),_0x46e384[_0x2f1539(0x13d)](_0x82b6d[_0x2f1539(0x12c)][_0x2f1539(0x121)][_0x2f1539(0x128)],0x0)&&frappe['db'][_0x2f1539(0x127)](_0x46e384[_0x2f1539(0x166)],{'fields':[_0x46e384[_0x2f1539(0x15c)]],'filters':{'status':_0x2f1539(0x12a),'user_id':['is',_0x46e384[_0x2f1539(0x12e)]]},'order_by':_0x46e384[_0x2f1539(0x15c)]})['then'](_0x222e94=>{const _0x2de21a=_0x2f1539;let _0x1df4fc=[];_0x222e94['forEach'](_0x185b73=>{const _0x56bafb=a0_0x3c09;_0x1df4fc[_0x56bafb(0x14e)]({'employee':_0x185b73['name'],'fincall':0x1,'application_usage':0x1,'sales_person':0x1});}),_0x82b6d[_0x2de21a(0x13e)](_0x46e384['DiWvO'],_0x1df4fc);});}_0x82b6d[_0x2f1539(0x126)](_0x46e384[_0x2f1539(0x15e)]),_0x82b6d['trigger'](_0x46e384[_0x2f1539(0x168)]);},'project'(_0x5718a4){const _0x132982=a0_0x5a226c,_0x2bfef7={'gZyTk':_0x132982(0x122)};_0x5718a4[_0x132982(0x126)](_0x2bfef7['gZyTk']);},'task'(_0x446149){const _0x57e3a9=a0_0x5a226c,_0x43d066={'gQRko':_0x57e3a9(0x122),'aDPHT':_0x57e3a9(0x164)};_0x446149[_0x57e3a9(0x12c)]['project']?_0x446149[_0x57e3a9(0x15b)](_0x43d066['gQRko'],!![]):(_0x446149['toggle_display'](_0x43d066[_0x57e3a9(0x123)],![]),_0x446149[_0x57e3a9(0x13e)](_0x43d066[_0x57e3a9(0x123)],0x0)),_0x446149[_0x57e3a9(0x126)](_0x43d066[_0x57e3a9(0x136)]);},'issue'(_0x575e84){const _0x198f08=a0_0x5a226c,_0x4a3f84={'qZMMx':'issue'};_0x575e84[_0x198f08(0x12c)][_0x198f08(0x16c)]&&_0x575e84[_0x198f08(0x12c)][_0x198f08(0x122)]?_0x575e84[_0x198f08(0x15b)](_0x4a3f84[_0x198f08(0x145)],!![]):(_0x575e84['toggle_display'](_0x4a3f84['qZMMx'],![]),_0x575e84['set_value'](_0x4a3f84[_0x198f08(0x145)],0x0));},'get_users'(_0x96285b){const _0x5ed928=a0_0x5a226c,_0x44dd8a={'dMCZu':'name','lfWcO':_0x5ed928(0x141),'GehXw':_0x5ed928(0x16d),'ZrWpY':_0x5ed928(0x144),'FYwmM':_0x5ed928(0x148),'FMZXv':_0x5ed928(0x12a),'zJfbb':_0x5ed928(0x13b)};frappe['db'][_0x5ed928(0x127)](_0x5ed928(0x11e),{'fields':[_0x44dd8a[_0x5ed928(0x13f)],_0x44dd8a[_0x5ed928(0x157)],_0x44dd8a[_0x5ed928(0x14f)],_0x44dd8a[_0x5ed928(0x155)],_0x44dd8a[_0x5ed928(0x130)]],'filters':{'status':_0x44dd8a[_0x5ed928(0x143)],'user_id':['is',_0x44dd8a[_0x5ed928(0x124)]]},'order_by':_0x44dd8a[_0x5ed928(0x13f)]})['then'](_0xb19aa1=>{const _0x1123d6=_0x5ed928;let _0x115455=[];_0xb19aa1[_0x1123d6(0x140)](_0x142e9d=>{const _0x344b3f=_0x1123d6;if(_0x96285b[_0x344b3f(0x12c)]['list_of_users'][_0x344b3f(0x149)](_0x5142df=>_0x5142df[_0x344b3f(0x12b)]===_0x142e9d[_0x344b3f(0x150)]))return;_0x115455[_0x344b3f(0x14e)]({'employee':_0x142e9d[_0x344b3f(0x150)],'fincall':0x1,'application_usage':0x1,'sales_person':0x1,'user_id':_0x142e9d[_0x344b3f(0x141)]});}),_0x96285b[_0x1123d6(0x13e)](_0x1123d6(0x121),[..._0x96285b['doc'][_0x1123d6(0x121)],..._0x115455]);});}});function a0_0x3c09(_0x469a69,_0x292243){const _0x58e80b=a0_0x4025();return a0_0x3c09=function(_0x19ec81,_0x44015d){_0x19ec81=_0x19ec81-0x11e;let _0x4025df=_0x58e80b[_0x19ec81];return _0x4025df;},a0_0x3c09(_0x469a69,_0x292243);}function a0_0x4025(){const _0x191b87=['XOKdf','User','EqymY','LikJW','company','bcJyT','toString','Productify\x20Subscription','issue','email','rCOiW','dlDut','bFTZY','user','__islocal','AsGHZ','project','first_name','Employee','organization_name','mobile_no','list_of_users','task','gQRko','zJfbb','session','trigger','get_list','length','844352nDLHbS','Active','employee','doc','4XZnbUK','veGPi','then','FYwmM','origin','4170324AukhiW','get_value','(((.+)+)+)+$','1956MerMXA','aDPHT','DiWvO','23317IBDxgi','get_user_default','32309qJAXig','set','1702840DggTSx','ACvCX','set_value','dMCZu','forEach','user_id','FhYCh','FMZXv','middle_name','qZMMx','search','PUXqY','last_name','find','UaqzV','MTPeL','1207550tTWTiu','yrjIc','push','GehXw','name','EMVMA','8644527dmbKeZ','defaults','hIANR','ZrWpY','Djmlx','lfWcO','20mWDSzW','QguAH','location','toggle_display'];a0_0x4025=function(){return _0x191b87;};return a0_0x4025();}
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.ui.form.on("Productify Subscription", {
+    refresh(frm) {
+        frm.set_query('employee', 'list_of_users', function (doc, cdt, cdn) {
+            return {
+                filters: {
+                    'status': 'Active'
+                }
+            }
+        });
+        if (frm.doc.__islocal) {
+            frm.set_value('email', frappe.session.user_email);
+            frm.set_value('erpnext_url', window.location.origin);
+            frm.set_value('organization_name', frappe.defaults.get_user_default('company') || '');
+
+            frappe.db.get_value('User', { 'name': frappe.session.user }, 'mobile_no').then((value) => {
+                frm.set_value('mobile_no', value.mobile_no);
+            });
+            
+            if (frm.doc.list_of_users.length === 0) {
+                frappe.db.get_list('Employee', {
+                    fields: ['name'],
+                    filters: {
+                        'status': 'Active',
+                        "user_id": ["is", "set"]
+                    },
+                    order_by: 'name'
+                }).then((employees) => {
+                    let table_data = [];
+                    employees.forEach((employee) => {
+                        table_data.push({
+                            'employee': employee.name,
+                            'fincall': 1,
+                            'application_usage': 1,
+                            'sales_person': 1
+                        });
+                    });
+                    frm.set_value('list_of_users', table_data);
+                });
+            }
+        }
+        frm.trigger('issue');
+        frm.trigger('task');
+    },
+    
+    project(frm) {
+        frm.trigger('task');
+    },
+   
+    task(frm) {
+        if (frm.doc.project) {
+            frm.toggle_display('task', true);
+        }
+        else {
+            frm.toggle_display('task', false);
+            frm.set_value('task', 0);
+        }
+        frm.trigger('issue');
+    },
+    issue(frm) {
+        if (frm.doc.project && frm.doc.task) {
+            frm.toggle_display('issue', true);
+        }
+        else {
+            frm.toggle_display('issue', false);
+            frm.set_value('issue', 0);
+        }
+    },
+    get_users(frm) {
+        frappe.db.get_list('Employee', {
+            fields: ['name', 'user_id', 'first_name',"middle_name","last_name"],
+            filters: {
+                'status': 'Active',
+                "user_id": ["is", "set"]
+            },
+            order_by: 'name'
+        }).then((employees) => {
+            let table_data = [];
+            employees.forEach((employee) => {
+                if (frm.doc.list_of_users.find((user) => user.employee === employee.name)) {
+                    return;
+                }
+                table_data.push({
+                    'employee': employee.name,
+                    'fincall': 1,
+                    'application_usage': 1,
+                    'sales_person': 1,
+                    'user_id': employee.user_id,
+                }); 
+            });
+            frm.set_value('list_of_users', [...frm.doc.list_of_users, ...table_data]);
+        });
+    },
+});

@@ -1,1 +1,15 @@
-var a0_0x32e895=a0_0x3861;function a0_0x3861(_0x18ad51,_0x5c22c6){var _0xb26bbe=a0_0x31d6();return a0_0x3861=function(_0x56a205,_0x1f7c74){_0x56a205=_0x56a205-0xfe;var _0x31d695=_0xb26bbe[_0x56a205];return _0x31d695;},a0_0x3861(_0x18ad51,_0x5c22c6);}(function(_0x4adf74,_0x4fef69){var _0x1d5be3=a0_0x3861,_0x88e1c0=_0x4adf74();while(!![]){try{var _0xaf1fdb=-parseInt(_0x1d5be3(0x104))/0x1+parseInt(_0x1d5be3(0x101))/0x2*(-parseInt(_0x1d5be3(0x103))/0x3)+-parseInt(_0x1d5be3(0x102))/0x4*(-parseInt(_0x1d5be3(0x111))/0x5)+parseInt(_0x1d5be3(0x109))/0x6*(-parseInt(_0x1d5be3(0x10f))/0x7)+-parseInt(_0x1d5be3(0x110))/0x8+parseInt(_0x1d5be3(0x106))/0x9*(parseInt(_0x1d5be3(0xff))/0xa)+parseInt(_0x1d5be3(0x107))/0xb;if(_0xaf1fdb===_0x4fef69)break;else _0x88e1c0['push'](_0x88e1c0['shift']());}catch(_0x1f87bc){_0x88e1c0['push'](_0x88e1c0['shift']());}}}(a0_0x31d6,0xb7890));var a0_0x1f7c74=(function(){var _0x10c11c=!![];return function(_0xd7837d,_0x47c578){var _0x4de6b1=_0x10c11c?function(){var _0x1740d6=a0_0x3861;if(_0x47c578){var _0x31ac1c=_0x47c578[_0x1740d6(0x10b)](_0xd7837d,arguments);return _0x47c578=null,_0x31ac1c;}}:function(){};return _0x10c11c=![],_0x4de6b1;};}()),a0_0x56a205=a0_0x1f7c74(this,function(){var _0xc200=a0_0x3861,_0x450e73={'qcDpm':_0xc200(0x10e)};return a0_0x56a205['toString']()[_0xc200(0x10c)](_0x450e73[_0xc200(0x105)])['toString']()['constructor'](a0_0x56a205)[_0xc200(0x10c)](_0x450e73[_0xc200(0x105)]);});function a0_0x31d6(){var _0x216ae4=['5WfowQl','Productify\x20Weekly\x20Summary','13970CkireD','Timespan','10mZPoqv','2051292iQSMJD','395346QkJyJO','735820jFCQWi','qcDpm','5427YZcqlQ','14323738pthouM','Select','1788846YEPLju','Yesterday','apply','search','\x0aToday\x0aYesterday\x0aThis\x20Week\x0aLast\x20Week\x0aThis\x20Month\x0aLast\x20Month','(((.+)+)+)+$','7QDXmgp','1701928TkWDHb'];a0_0x31d6=function(){return _0x216ae4;};return a0_0x31d6();}a0_0x56a205(),frappe['query_reports'][a0_0x32e895(0xfe)]={'filters':[{'fieldname':'timespan','label':__(a0_0x32e895(0x100)),'fieldtype':a0_0x32e895(0x108),'width':'80','options':a0_0x32e895(0x10d),'default':a0_0x32e895(0x10a)}]};
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["Productify Weekly Summary"] = {
+	"filters": [
+		{
+            "fieldname": "timespan",
+            "label": __("Timespan"),
+            "fieldtype": "Select",
+            "width": "80",
+            "options": "\nToday\nYesterday\nThis Week\nLast Week\nThis Month\nLast Month",
+            "default": "Yesterday"
+        },
+	]
+};

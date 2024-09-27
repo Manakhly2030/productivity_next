@@ -1,1 +1,32 @@
-function a0_0x68d3(){var _0x349664=['apply','828902RQFNty','Select','4182381vWNrnp','add_days','Employee','14755365aJcNLO','get_today','frequency','4472880QzpWbd','To\x20Date','Monthly','Date','2577815MHiRit','9PDhdCH','Productify\x20Activity\x20Summary','(((.+)+)+)+$','295580OxztVK','Frequency','FVRpv','datetime','query_reports','search','From\x20Date','6LhVKXk','employee','561576duJHco'];a0_0x68d3=function(){return _0x349664;};return a0_0x68d3();}function a0_0xd251(_0x76decb,_0x19efa9){var _0x74159a=a0_0x68d3();return a0_0xd251=function(_0x5cd388,_0x4f5568){_0x5cd388=_0x5cd388-0xca;var _0x68d354=_0x74159a[_0x5cd388];return _0x68d354;},a0_0xd251(_0x76decb,_0x19efa9);}var a0_0x4dc693=a0_0xd251;(function(_0x3fa862,_0x36c3ca){var _0x694d87=a0_0xd251,_0x2fcdcb=_0x3fa862();while(!![]){try{var _0x351e39=parseInt(_0x694d87(0xd2))/0x1+-parseInt(_0x694d87(0xd0))/0x2*(-parseInt(_0x694d87(0xdf))/0x3)+-parseInt(_0x694d87(0xe2))/0x4+parseInt(_0x694d87(0xde))/0x5+parseInt(_0x694d87(0xce))/0x6*(parseInt(_0x694d87(0xd4))/0x7)+-parseInt(_0x694d87(0xda))/0x8+-parseInt(_0x694d87(0xd7))/0x9;if(_0x351e39===_0x36c3ca)break;else _0x2fcdcb['push'](_0x2fcdcb['shift']());}catch(_0x15c9a6){_0x2fcdcb['push'](_0x2fcdcb['shift']());}}}(a0_0x68d3,0x7cf4e));var a0_0x4f5568=(function(){var _0x40955e=!![];return function(_0x4a6144,_0xd9d56){var _0x109241=_0x40955e?function(){var _0x3f0ead=a0_0xd251;if(_0xd9d56){var _0x1faf0c=_0xd9d56[_0x3f0ead(0xd1)](_0x4a6144,arguments);return _0xd9d56=null,_0x1faf0c;}}:function(){};return _0x40955e=![],_0x109241;};}()),a0_0x5cd388=a0_0x4f5568(this,function(){var _0x4f7a97=a0_0xd251,_0x2aec88={'FVRpv':_0x4f7a97(0xe1)};return a0_0x5cd388['toString']()[_0x4f7a97(0xcc)](_0x2aec88[_0x4f7a97(0xe4)])['toString']()['constructor'](a0_0x5cd388)[_0x4f7a97(0xcc)](_0x2aec88['FVRpv']);});a0_0x5cd388(),frappe[a0_0x4dc693(0xcb)][a0_0x4dc693(0xe0)]={'filters':[{'fieldname':'from_date','label':__(a0_0x4dc693(0xcd)),'fieldtype':a0_0x4dc693(0xdd),'default':frappe['datetime']['add_days'](frappe[a0_0x4dc693(0xca)][a0_0x4dc693(0xd8)](),-0x1)},{'fieldname':'to_date','label':__(a0_0x4dc693(0xdb)),'fieldtype':a0_0x4dc693(0xdd),'default':frappe[a0_0x4dc693(0xca)][a0_0x4dc693(0xd5)](frappe['datetime'][a0_0x4dc693(0xd8)](),-0x1)},{'fieldname':a0_0x4dc693(0xcf),'label':__('Employee'),'fieldtype':'Link','options':a0_0x4dc693(0xd6)},{'fieldname':a0_0x4dc693(0xd9),'label':__(a0_0x4dc693(0xe3)),'fieldtype':a0_0x4dc693(0xd3),'options':['Daily','Weekly',a0_0x4dc693(0xdc)],'default':'Daily'}]};
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["Productify Activity Summary"] = {
+	"filters": [
+		{
+			fieldname: "from_date",
+			label: __("From Date"),
+			fieldtype: "Date",
+			default: frappe.datetime.add_days(frappe.datetime.get_today(), -1)
+		},
+		{
+			fieldname: "to_date",
+			label: __("To Date"),
+			fieldtype: "Date",
+			default: frappe.datetime.add_days(frappe.datetime.get_today(), -1)
+		},
+		{
+			fieldname: "employee",
+			label: __("Employee"),
+			fieldtype: "Link",
+			options: "Employee"
+		},
+		{
+			fieldname: "frequency",
+			label: __("Frequency"),
+			fieldtype: "Select",
+			options: ["Daily", "Weekly", "Monthly"],
+			default: "Daily"
+		}
+	]
+};

@@ -1,1 +1,152 @@
-const a0_0x4bb82f=a0_0x3ac3;(function(_0x1d369b,_0x5d8e53){const _0x186eae=a0_0x3ac3,_0x59c80c=_0x1d369b();while(!![]){try{const _0x17c40f=-parseInt(_0x186eae(0x1a5))/0x1*(parseInt(_0x186eae(0x15c))/0x2)+-parseInt(_0x186eae(0x14d))/0x3+parseInt(_0x186eae(0x17a))/0x4+parseInt(_0x186eae(0x18e))/0x5*(parseInt(_0x186eae(0x160))/0x6)+parseInt(_0x186eae(0x148))/0x7*(-parseInt(_0x186eae(0x179))/0x8)+parseInt(_0x186eae(0x159))/0x9+parseInt(_0x186eae(0x175))/0xa*(parseInt(_0x186eae(0x161))/0xb);if(_0x17c40f===_0x5d8e53)break;else _0x59c80c['push'](_0x59c80c['shift']());}catch(_0xf6fa5){_0x59c80c['push'](_0x59c80c['shift']());}}}(a0_0x576d,0xa5ae0));const a0_0x44d68b=(function(){let _0x3bbfc0=!![];return function(_0x191736,_0x417556){const _0x64b956=_0x3bbfc0?function(){const _0x36e78e=a0_0x3ac3;if(_0x417556){const _0x3f0747=_0x417556[_0x36e78e(0x1aa)](_0x191736,arguments);return _0x417556=null,_0x3f0747;}}:function(){};return _0x3bbfc0=![],_0x64b956;};}()),a0_0x114cbe=a0_0x44d68b(this,function(){const _0x1a6654=a0_0x3ac3,_0x2a57de={'GMQBj':_0x1a6654(0x197)};return a0_0x114cbe[_0x1a6654(0x18a)]()[_0x1a6654(0x15e)](_0x2a57de['GMQBj'])[_0x1a6654(0x18a)]()[_0x1a6654(0x193)](a0_0x114cbe)[_0x1a6654(0x15e)](_0x2a57de[_0x1a6654(0x157)]);});function a0_0x3ac3(_0x50e593,_0x478080){const _0x567470=a0_0x576d();return a0_0x3ac3=function(_0x114cbe,_0x44d68b){_0x114cbe=_0x114cbe-0x145;let _0x576d8f=_0x567470[_0x114cbe];return _0x576d8f;},a0_0x3ac3(_0x50e593,_0x478080);}function a0_0x576d(){const _0x53b7ec=['error','hJTuZ','QpuSs','WXiOt','BGRVT','Dialog','20mvjOVl','Is\x20Primary\x20Mobile','SQaEJ','lVbaQ','40HRZVtR','1494580gJnahQ','Lead','First\x20Name','SBLwT','NIqGR','Customer','wEJKw','PBUVK','eval:doc.update_existing_client','TgOfE','Last\x20Name','rvnjS','Dynamic\x20Link','log','show','JbpEl','toString','RUCaP','llHmz','gIIfK','5lPwJCA','lmGvj','ySZen','form','get_value','constructor','Data','doc','client','(((.+)+)+)+$','links','KlVgN','MzIaK','OdbGx','customer_no','refresh','hide','party_type','JrdUI','get_field','fEDtt','gOVyJ','lMsgu','468823FNhSgr','myGLP','is_primary_phone','link_name','Update\x20Existing\x20Contact','apply','last_name','productivity_next.productivity_next.doctype.employee_fincall.employee_fincall.update_contact','client_no','Party','1395961NEwXgO','then','catch','Check','link_doctype','3592023qqhtpN','qxclX','FMCuN','party','update_existing_client','Fohkl','first_name','Salutation','fKkyP','Supplier','GMQBj','EHJtt','1080423FpVdcH','FVETT','SCofx','2QCvapl','dgQhw','search','is_primary_mobile_no','8043414zTmKFe','8292031yqfJgY','NgqNE','BUTTON\x20DAB\x20GAYA','Kwhqg','DPQPo','update_client','layout','vTRuJ','SQtsu','sBbDc','set_input','Create','XBIpm','Company'];a0_0x576d=function(){return _0x53b7ec;};return a0_0x576d();}a0_0x114cbe(),frappe['ui'][a0_0x4bb82f(0x191)]['on']('Employee\x20Fincall',{'create_contact'(_0x40f7b2){const _0x7b03a7=a0_0x4bb82f,_0x49e9c0={'wEJKw':'Error\x20fetching\x20document:','FVETT':function(_0x556d19,_0x5a5784){return _0x556d19===_0x5a5784;},'nyWTN':_0x7b03a7(0x177),'BGRVT':_0x7b03a7(0x166),'SQtsu':'Contact','llHmz':_0x7b03a7(0x17f),'msrXL':_0x7b03a7(0x17b),'fEDtt':_0x7b03a7(0x16e),'hJTuZ':_0x7b03a7(0x156),'kLXra':_0x7b03a7(0x145),'FMCuN':'productivity_next.productivity_next.doctype.employee_fincall.employee_fincall.create_contact','XBIpm':function(_0x9be07c,_0x570bd0){return _0x9be07c(_0x570bd0);},'KlVgN':_0x7b03a7(0x194),'DPQPo':'client_no','rvnjS':_0x7b03a7(0x14b),'gIIfK':'Is\x20Primary\x20Phone','fKkyP':_0x7b03a7(0x1a7),'TgOfE':'Section\x20Break','vTRuJ':_0x7b03a7(0x1a9),'dgQhw':_0x7b03a7(0x151),'RUCaP':'Update\x20Contact','Kwhqg':'Link','cdJzv':_0x7b03a7(0x182),'gOVyJ':function(_0x5d9e92,_0x1d2c38){return _0x5d9e92(_0x1d2c38);},'OdbGx':'Party\x20Type','WXiOt':'DocType','myGLP':_0x7b03a7(0x19f),'NgqNE':_0x7b03a7(0x17c),'xRNmM':'first_name','sBbDc':'eval:!doc.update_existing_client','QpuSs':function(_0x282ab7,_0xb77352){return _0x282ab7(_0xb77352);},'SBLwT':'salutation','PBUVK':_0x7b03a7(0x154),'nIODM':'Column\x20Break','ZwKvS':_0x7b03a7(0x147),'ySZen':_0x7b03a7(0x186),'lMsgu':_0x7b03a7(0x150),'JrdUI':_0x7b03a7(0x184),'DUeRP':_0x7b03a7(0x1ab),'LQmcl':'Create\x20Contact','lVbaQ':_0x7b03a7(0x16c)};let _0x1fe7a0=_0x40f7b2['doc'],_0x4e9606=[{'label':_0x49e9c0['XBIpm'](__,'Contact\x20No'),'fieldtype':_0x49e9c0['KlVgN'],'fieldname':_0x49e9c0[_0x7b03a7(0x165)],'default':_0x40f7b2['doc'][_0x7b03a7(0x19c)]},{'label':_0x49e9c0['XBIpm'](__,_0x7b03a7(0x176)),'fieldtype':_0x49e9c0[_0x7b03a7(0x185)],'fieldname':'is_primary_mobile_no','default':0x1},{'label':_0x49e9c0[_0x7b03a7(0x16d)](__,_0x49e9c0[_0x7b03a7(0x18d)]),'fieldtype':_0x49e9c0[_0x7b03a7(0x185)],'fieldname':_0x49e9c0[_0x7b03a7(0x155)]},{'fieldtype':_0x49e9c0[_0x7b03a7(0x183)]},{'label':_0x49e9c0[_0x7b03a7(0x16d)](__,_0x49e9c0[_0x7b03a7(0x168)]),'fieldtype':_0x49e9c0['rvnjS'],'fieldname':_0x49e9c0[_0x7b03a7(0x15d)],'default':0x1},{'label':_0x49e9c0[_0x7b03a7(0x16d)](__,_0x49e9c0[_0x7b03a7(0x18b)]),'fieldtype':_0x49e9c0[_0x7b03a7(0x164)],'options':_0x49e9c0[_0x7b03a7(0x169)],'depends_on':_0x7b03a7(0x182),'fieldname':_0x49e9c0['BGRVT'],'change':function(){const _0x404e7e=_0x7b03a7,_0x22c6f2={'eDEKV':'party','JbpEl':_0x49e9c0[_0x404e7e(0x180)]};if(_0x49e9c0[_0x404e7e(0x15a)](_0x49e9c0['nyWTN'],'SQaEJ')){let _0x3cbb53=this[_0x404e7e(0x192)](),_0x3ba0a2=this[_0x404e7e(0x167)][_0x404e7e(0x192)](_0x49e9c0[_0x404e7e(0x173)]);_0x3ba0a2&&(console[_0x404e7e(0x187)](_0x3ba0a2),frappe['db']['get_doc'](_0x49e9c0['SQtsu'],_0x3ba0a2)[_0x404e7e(0x149)](_0x592242=>{const _0x3d767a=_0x404e7e;console['log'](_0x592242),this[_0x3d767a(0x167)][_0x3d767a(0x1a1)](_0x3d767a(0x19f))[_0x3d767a(0x16b)](_0x592242[_0x3d767a(0x198)][0x0][_0x3d767a(0x14c)]),this[_0x3d767a(0x167)]['get_field'](_0x22c6f2['eDEKV'])[_0x3d767a(0x16b)](_0x592242[_0x3d767a(0x198)][0x0][_0x3d767a(0x1a8)]);})[_0x404e7e(0x14a)](_0x22de3e=>{const _0x4e761f=_0x404e7e;console['error'](_0x49e9c0[_0x4e761f(0x180)],_0x22de3e);}));}else _0x34491e[_0x404e7e(0x16f)](_0x22c6f2[_0x404e7e(0x189)],_0x1fd701);},'mandatory_depends_on':_0x49e9c0['cdJzv']},{'fieldtype':_0x49e9c0['TgOfE']},{'label':_0x49e9c0[_0x7b03a7(0x1a3)](__,_0x49e9c0[_0x7b03a7(0x19b)]),'fieldtype':_0x49e9c0['Kwhqg'],'options':_0x49e9c0[_0x7b03a7(0x172)],'fieldname':_0x49e9c0[_0x7b03a7(0x1a6)],'get_query':function(){const _0xee2b9d=_0x7b03a7;return{'filters':{'name':['in',[_0x49e9c0[_0xee2b9d(0x18c)],_0xee2b9d(0x156),_0x49e9c0['msrXL'],_0x49e9c0[_0xee2b9d(0x1a2)]]]}};},'reqd':0x1},{'label':__(_0x49e9c0[_0x7b03a7(0x162)]),'fieldtype':_0x7b03a7(0x194),'fieldname':_0x49e9c0['xRNmM'],'reqd':0x1,'default':_0x40f7b2[_0x7b03a7(0x195)][_0x7b03a7(0x196)],'depends_on':_0x49e9c0[_0x7b03a7(0x16a)],'mandatory_depends_on':_0x49e9c0[_0x7b03a7(0x16a)]},{'label':_0x49e9c0[_0x7b03a7(0x171)](__,_0x7b03a7(0x154)),'fieldtype':_0x49e9c0[_0x7b03a7(0x164)],'fieldname':_0x49e9c0[_0x7b03a7(0x17d)],'options':_0x49e9c0[_0x7b03a7(0x181)],'depends_on':_0x49e9c0[_0x7b03a7(0x16a)],'reqd':0x1,'mandatory_depends_on':_0x49e9c0[_0x7b03a7(0x16a)]},{'fieldtype':_0x49e9c0['nIODM']},{'label':_0x49e9c0['gOVyJ'](__,_0x49e9c0['ZwKvS']),'fieldtype':_0x49e9c0[_0x7b03a7(0x190)],'options':_0x7b03a7(0x19f),'fieldname':_0x49e9c0[_0x7b03a7(0x1a4)],'reqd':0x1},{'label':__(_0x49e9c0[_0x7b03a7(0x1a0)]),'fieldtype':_0x49e9c0[_0x7b03a7(0x199)],'fieldname':_0x49e9c0['DUeRP'],'depends_on':_0x49e9c0[_0x7b03a7(0x16a)]}],_0x356248=new frappe['ui'][(_0x7b03a7(0x174))]({'title':_0x49e9c0[_0x7b03a7(0x16d)](__,_0x49e9c0['LQmcl']),'fields':_0x4e9606,'primary_action_label':__(_0x49e9c0[_0x7b03a7(0x178)]),'primary_action':function(_0x549806){const _0x4d0c8e=_0x7b03a7,_0x472d1f={'KHptY':_0x49e9c0[_0x4d0c8e(0x170)],'EHJtt':_0x4d0c8e(0x17b),'qxclX':function(_0xc9842d,_0x607a23){return _0xc9842d===_0x607a23;}};console[_0x4d0c8e(0x187)](_0x549806[_0x4d0c8e(0x146)]),_0x549806[_0x4d0c8e(0x151)]?frappe['call']({'method':_0x49e9c0['kLXra'],'args':{'client_no':_0x549806[_0x4d0c8e(0x146)]||0x0,'update_client':_0x549806[_0x4d0c8e(0x166)],'is_primary_phone':_0x549806[_0x4d0c8e(0x1a7)],'is_primary_mobile_no':_0x549806[_0x4d0c8e(0x15f)],'party_type':_0x549806[_0x4d0c8e(0x19f)],'party':_0x549806[_0x4d0c8e(0x150)]},'callback':_0x466b13=>{const _0x55edd9=_0x4d0c8e,_0x1ba5f1={'lmGvj':_0x55edd9(0x17f),'NIqGR':_0x472d1f['KHptY'],'MzIaK':_0x472d1f[_0x55edd9(0x158)],'SCofx':_0x55edd9(0x16e)};if(_0x472d1f[_0x55edd9(0x14e)](_0x55edd9(0x152),_0x55edd9(0x152)))_0x356248[_0x55edd9(0x19e)](),_0x40f7b2['refresh']();else return{'filters':{'name':['in',[_0x1ba5f1[_0x55edd9(0x18f)],_0x1ba5f1[_0x55edd9(0x17e)],_0x1ba5f1[_0x55edd9(0x19a)],_0x1ba5f1[_0x55edd9(0x15b)]]]}};}}):frappe['call']({'method':_0x49e9c0[_0x4d0c8e(0x14f)],'args':{'is_primary_mobile_no':_0x549806[_0x4d0c8e(0x15f)],'client_no':_0x549806['client_no']||0x0,'first_name':_0x549806[_0x4d0c8e(0x153)],'party_type':_0x549806[_0x4d0c8e(0x19f)],'party':_0x549806['party'],'last_name':_0x549806[_0x4d0c8e(0x1ab)],'is_primary_phone':_0x549806[_0x4d0c8e(0x1a7)],'salutation':_0x549806['salutation']},'callback':_0x43b112=>{const _0x49eeb8=_0x4d0c8e;_0x356248[_0x49eeb8(0x19e)](),_0x40f7b2[_0x49eeb8(0x19d)]();}});}});_0x356248[_0x7b03a7(0x188)](),console[_0x7b03a7(0x187)](_0x7b03a7(0x163));}});
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.ui.form.on("Employee Fincall", {
+	create_contact(frm) {
+        let d = frm.doc;
+
+        let fields = [
+            {
+                label: __("Contact No"),
+                fieldtype: 'Data',
+                fieldname: 'client_no',
+                default: frm.doc.customer_no
+            },
+            {
+                label: __("Is Primary Mobile"),
+                fieldtype: 'Check',
+                fieldname: 'is_primary_mobile_no',
+                default: 1,
+            },
+            {
+                label: __("Is Primary Phone"),
+                fieldtype: 'Check',
+                fieldname: 'is_primary_phone',
+            },
+            {fieldtype: 'Section Break'},
+            {
+                label: __("Update Existing Contact"),
+                fieldtype: 'Check',
+                fieldname: 'update_existing_client',
+                default: 1,
+            },
+            {
+                label: __("Update Contact"),
+                fieldtype: 'Link',
+                options: "Contact",
+                depends_on: 'eval:doc.update_existing_client',
+                fieldname: 'update_client',
+                change: function(){
+					let merge = this.get_value();
+					let contact = this.layout.get_value('update_client');
+                    if(contact){
+                        console.log(contact)
+                        frappe.db.get_doc("Contact", contact).then(doc => {
+                            console.log(doc);
+                            this.layout.get_field('party_type').set_input(doc.links[0].link_doctype);
+                            this.layout.get_field('party').set_input(doc.links[0].link_name);
+                        }).catch(err => {
+                            console.error("Error fetching document:", err);
+                        });
+                    }
+				},
+                mandatory_depends_on: 'eval:doc.update_existing_client'
+            },
+            {fieldtype: 'Section Break'},
+            {
+                label: __("Party Type"),
+                fieldtype: 'Link',
+                options: "DocType",
+                fieldname: 'party_type',
+                get_query: function() {
+                    return {
+                        filters: {
+                            "name": ["in", ["Customer", "Supplier", "Lead","Company"]]
+                        }
+                    };
+                },
+                reqd: 1,
+            },
+            {
+                label: __("First Name"),
+                fieldtype: 'Data',
+                fieldname: 'first_name',
+                reqd: 1,
+                default: frm.doc.client,
+                depends_on: 'eval:!doc.update_existing_client',
+                mandatory_depends_on: 'eval:!doc.update_existing_client'
+            },
+            {
+                label: __("Salutation"),
+                fieldtype: 'Link',
+                fieldname: 'salutation',
+                options: "Salutation",
+                depends_on: 'eval:!doc.update_existing_client',
+                reqd: 1,
+                mandatory_depends_on: 'eval:!doc.update_existing_client'
+            },
+            {fieldtype: 'Column Break'},
+            {
+                label: __("Party"),
+                fieldtype: 'Dynamic Link',
+                options: "party_type",
+                fieldname: 'party',
+                reqd: 1,
+            },
+            {
+                label: __("Last Name"),
+                fieldtype: 'Data',
+                fieldname: 'last_name',
+                depends_on: 'eval:!doc.update_existing_client',
+            }
+        ];
+
+        let dialog = new frappe.ui.Dialog({
+            title: __("Create Contact"),
+            fields: fields,
+            primary_action_label: __("Create"),
+            primary_action: function(values) {
+                console.log(values.client_no);
+                if (values.update_existing_client){
+                    frappe.call({
+                        method: 'productivity_next.productivity_next.doctype.employee_fincall.employee_fincall.update_contact',
+                        args: {
+                            client_no: values.client_no || 0,
+                            update_client: values.update_client,
+                            is_primary_phone: values.is_primary_phone,
+                            is_primary_mobile_no: values.is_primary_mobile_no,
+                            party_type: values.party_type,
+                            party: values.party,
+                        },
+                        callback: (r) => {
+                            dialog.hide();
+                            frm.refresh();
+                        }
+                    });
+                }
+                else{
+                frappe.call({
+                    method: 'productivity_next.productivity_next.doctype.employee_fincall.employee_fincall.create_contact',
+                    args: {
+                        is_primary_mobile_no: values.is_primary_mobile_no,
+                        client_no: values.client_no || 0,
+                        first_name: values.first_name,
+                        party_type: values.party_type,
+                        party: values.party,
+                        last_name: values.last_name,
+                        is_primary_phone: values.is_primary_phone,
+                        salutation: values.salutation
+                    },
+                    callback: (r) => {
+                        dialog.hide();
+                        frm.refresh();
+                    }
+                });
+                }
+            }
+        });
+
+        dialog.show();
+        console.log("BUTTON DAB GAYA");
+    },
+});
