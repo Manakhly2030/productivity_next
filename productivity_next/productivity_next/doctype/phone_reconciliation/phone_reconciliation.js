@@ -1,1 +1,293 @@
-const a0_0x40b0b6=a0_0x5dd7;(function(_0x52d8e2,_0x50eb8e){const _0x4864e1=a0_0x5dd7,_0x1150c6=_0x52d8e2();while(!![]){try{const _0x4b3601=parseInt(_0x4864e1(0x126))/0x1+parseInt(_0x4864e1(0xe1))/0x2*(parseInt(_0x4864e1(0x14c))/0x3)+parseInt(_0x4864e1(0x1af))/0x4+parseInt(_0x4864e1(0x11c))/0x5*(-parseInt(_0x4864e1(0x173))/0x6)+parseInt(_0x4864e1(0x108))/0x7+parseInt(_0x4864e1(0xf9))/0x8*(parseInt(_0x4864e1(0x193))/0x9)+-parseInt(_0x4864e1(0xdd))/0xa;if(_0x4b3601===_0x50eb8e)break;else _0x1150c6['push'](_0x1150c6['shift']());}catch(_0x3c3df8){_0x1150c6['push'](_0x1150c6['shift']());}}}(a0_0x39d7,0x360e9));function a0_0x5dd7(_0x3bb147,_0x4300ae){const _0x324f4c=a0_0x39d7();return a0_0x5dd7=function(_0x1ec0aa,_0x2c4c64){_0x1ec0aa=_0x1ec0aa-0xd1;let _0x39d7da=_0x324f4c[_0x1ec0aa];return _0x39d7da;},a0_0x5dd7(_0x3bb147,_0x4300ae);}function a0_0x39d7(){const _0xfaf0d9=['ZzrpS','form','employee_name','contact','XvBBv','Error\x20fetching\x20document:','4|6|5|3|10|9|8|0|2|7|1','XzMwt','Supplier','productivity_next.productivity_next.doctype.phone_reconciliation.phone_reconciliation.create_contact','Create\x20Contact','170kyGwKL','last_name','BqRNc','salutation','allocate_phone_numbers','Given\x20Contact\x20is\x20ignored\x20from\x20Contact\x20creation.','Is\x20Primary\x20Phone','MFhZA','dTYwB','is_primary_mobile_no','104338UUryzK','mSluU','jNijM','update_client','contact_created','XsPxC','Salutation','wlKMP','EoXLO','is_primary_email','mFiLs','smSXt','first_name','confirm','dLUVr','BvgCO','client_no','fzvFK','disable_save','YXciP','grid','add_child','OTDQE','GiRFi','The\x20field\x20\x27phone_reconciliation_call\x27\x20is\x20not\x20initialized\x20yet.','AezNK','Update\x20Contact','LVYfS','KNdut','oGSAw','ZJOtl','Is\x20Primary\x20Mobile','GaSqV','Get\x20Unreconciled\x20Numbers','error','Contact','gdVOe','rRvYJ','1324158YbFRry','reverse','WVWro','EOfKT','fields_dict','OObrP','yZUXv','phone_reconciliation_allocation','OttEm','link_doctype','eAuzX','then','KqVYQ','eval:doc.update_existing_client','remove','iHQDN','DJyhN','call','Dynamic\x20Link','yXipi','AXaQg','vgpsJ','Contact\x20has\x20been\x20created.','ptubv','ysnrU','ZZvzi','UwCnR','HUrRO','link_name','ZSgKI','uYjIO','party_type','wrsuG','trigger','links','get_value','Lead','YOMeY','AoxBT','70806dErBlt','dialog','message','EGBLN','AKrQL','ignore_contact','party','exc','UHUoB','(((.+)+)+)+$','KYdCQ','Client\x20Email','MiSfA','yVDSf','values','XmScf','XKEVM','get_values','mVfCR','dFmJs','show','set_df_property','catch','BzccJ','lduGX','lzngX','IhYes','add_custom_button','get_field','log','aLGQh','FqCtu','3582ugUEnQ','hide','duQjc','First\x20Name','ovxos','employee','zOrWR','cannot_add_rows','phone_reconciliation_call','eval:!doc.update_existing_client','axMzP','rRJOm','client_email','get_unreconciled_numbers','MMrwS','wRBxd','iTrWi','XnYbJ','toString','set_input','client_details','Dialog','change_custom_button_type','Contact\x20has\x20been\x20updated.','uQEFl','FbgUt','OwOLm','hPfGn','1155380ToRRPG','Column\x20Break','HlFpV','UhJKi','8|12|5|3|4|2|0|1|13|14|7|11|9|6|10|15|16|17','DGcaK','UmASO','IwkFl','Link','IjIzP','Create','vLVcN','client','5842380GvKBft','Party','Riitw','set_primary_action','2JXIifa','update_existing_client','TPdbn','Contact\x20No','productivity_next.productivity_next.doctype.phone_reconciliation.phone_reconciliation.ignore_contact','uohZH','cannot_delete_rows','jCjSI','get_doc','rRtBk','Last\x20Name','msgprint','NLZOw','idx','xJTMF','Check','get_unreconciled_entries','RpoJr','layout','constructor','OyuQO','doc','STDIF','grid_rows','2712HvVQRR','mPNzB','NRqCf','Do\x20you\x20want\x20to\x20ignore\x20contact\x20from\x20sync?','nCqHF','xNUDH','qGSoG','Update\x20Existing\x20Contact','nkDAp','fkxTz','qwZbR','primary','is_primary_phone','ObwMo','Allocate','1661786btckdv','8|1|6|0|2|10|5|4|7|9|3','cvcbg','apply','YobwI','refresh_fields','Customer','split','refresh'];a0_0x39d7=function(){return _0xfaf0d9;};return a0_0x39d7();}const a0_0x2c4c64=(function(){const _0x37e3d6=a0_0x5dd7,_0x3e2c98={'EoXLO':_0x37e3d6(0x13e),'axMzP':function(_0x504cf7,_0x53f3bd){return _0x504cf7!==_0x53f3bd;}};let _0x28dd6d=!![];return function(_0x48fd1b,_0x3669af){const _0x5f221c=_0x37e3d6,_0x4ea258={'MFhZA':_0x3e2c98[_0x5f221c(0x12e)],'mVfCR':function(_0x37381c,_0x4e5b7f){const _0x44c7fc=_0x5f221c;return _0x3e2c98[_0x44c7fc(0x19d)](_0x37381c,_0x4e5b7f);},'fkxTz':_0x5f221c(0x134)},_0x441053=_0x28dd6d?function(){const _0x194265=_0x5f221c,_0x37efcc={'vgpsJ':_0x4ea258[_0x194265(0x123)]};if(_0x4ea258[_0x194265(0x185)](_0x194265(0x134),_0x4ea258[_0x194265(0x102)]))_0x240caa[_0x194265(0x190)](_0x37efcc[_0x194265(0x161)]);else{if(_0x3669af){const _0x2e6a52=_0x3669af[_0x194265(0x10b)](_0x48fd1b,arguments);return _0x3669af=null,_0x2e6a52;}}}:function(){};return _0x28dd6d=![],_0x441053;};}()),a0_0x1ec0aa=a0_0x2c4c64(this,function(){const _0x29b346=a0_0x5dd7,_0x1ea65c={'ZZvzi':_0x29b346(0x17c)};return a0_0x1ec0aa[_0x29b346(0x1a5)]()['search']('(((.+)+)+)+$')[_0x29b346(0x1a5)]()[_0x29b346(0xf4)](a0_0x1ec0aa)['search'](_0x1ea65c[_0x29b346(0x165)]);});a0_0x1ec0aa(),frappe['ui']['form']['on']('Phone\x20Reconciliation',{'refresh':function(_0x5491b9){const _0x376276=a0_0x5dd7,_0xb7f17={'OVANv':_0x376276(0xe5),'SHXfo':_0x376276(0x121),'KqVYQ':function(_0x1a9e6b,_0x4f2180){return _0x1a9e6b(_0x4f2180);},'UwCnR':function(_0x1fb86d,_0x35507e){return _0x1fb86d-_0x35507e;},'IjIzP':_0x376276(0x19b),'iTrWi':function(_0x4cdd40,_0x141255){return _0x4cdd40(_0x141255);},'iHQDN':_0x376276(0xfc),'rRvYJ':_0x376276(0xe7),'yZUXv':_0x376276(0x171),'KnTfI':_0x376276(0x141),'nGtHu':_0x376276(0x147),'qwZbR':_0x376276(0x104),'xNUDH':_0x376276(0x107)};_0x5491b9[_0x376276(0x138)](),_0x5491b9[_0x376276(0x188)](_0x376276(0x19b),_0xb7f17[_0x376276(0x14b)],!![]),_0x5491b9['set_df_property'](_0xb7f17['IjIzP'],_0x376276(0x19a),!![]);if(_0x5491b9['doc']['from_date']||_0x5491b9['doc'][_0x376276(0x198)]){if(_0xb7f17[_0x376276(0x152)]===_0xb7f17['KnTfI']){const _0x231270={'ZtFvq':_0xb7f17['SHXfo'],'hPfGn':function(_0x420947,_0x12d3e4){return _0xb7f17['KqVYQ'](_0x420947,_0x12d3e4);},'ZSgKI':function(_0xe15dec,_0x42d82d){const _0x9bdce9=_0x376276;return _0xb7f17[_0x9bdce9(0x166)](_0xe15dec,_0x42d82d);},'wlKMP':_0xb7f17[_0x376276(0xd9)],'OObrP':_0x376276(0x153)};_0xfb3563['confirm'](_0xb7f17[_0x376276(0x1a3)](_0x2d697a,_0xb7f17[_0x376276(0x15b)]),function(){const _0x2b8dfe=_0x376276;_0x66b767[_0x2b8dfe(0x15d)]({'method':_0xb7f17['OVANv'],'args':{'client_no':_0x4e4ee6[_0x2b8dfe(0x136)]},'callback':function(_0x5bf634){const _0x374ede=_0x2b8dfe;if(!_0x5bf634[_0x374ede(0x17a)]){const _0x30911d=_0x374ede(0x109)['split']('|');let _0x5e96b2=0x0;while(!![]){switch(_0x30911d[_0x5e96b2++]){case'0':_0xca71bd[_0x374ede(0x1a7)]=_0x587be0['client_details'];continue;case'1':_0xca71bd[_0x374ede(0x198)]=_0x223164[_0x374ede(0x198)];continue;case'2':_0xca71bd['client_no']=_0x27403f[_0x374ede(0x136)];continue;case'3':_0x5f0958[_0x374ede(0xec)](_0x231270['ZtFvq']);continue;case'4':_0x2442b5['get_field'](_0x374ede(0x19b))[_0x374ede(0x13a)][_0x374ede(0xf8)][_0x231270[_0x374ede(0x1ae)](_0x364c0d,_0x231270[_0x374ede(0x169)](_0x55354c[_0x374ede(0xee)],0x1))]['remove']();continue;case'5':_0xca71bd[_0x374ede(0x178)]=_0x4f4a94[_0x374ede(0x178)];continue;case'6':_0xca71bd[_0x374ede(0x113)]=_0x30fb14[_0x374ede(0x113)];continue;case'7':_0x517e31[_0x374ede(0x10d)](_0x231270[_0x374ede(0x12d)]);continue;case'8':var _0xca71bd=_0x45837a[_0x374ede(0x13b)](_0x231270[_0x374ede(0x151)]);continue;case'9':_0x5a1b56['refresh_fields'](_0x374ede(0x153));continue;case'10':_0xca71bd[_0x374ede(0x198)]=_0x2d0b56['employee'];continue;}break;}}}});});}else _0x5491b9[_0x376276(0x18e)](_0xb7f17[_0x376276(0x158)](__,_0x376276(0x147)),()=>_0x5491b9[_0x376276(0x16d)](_0x376276(0xf1))),_0x5491b9[_0x376276(0x1a9)](_0xb7f17['nGtHu'],null,_0xb7f17[_0x376276(0x103)]);}_0x5491b9[_0x376276(0xf6)][_0x376276(0x19b)][0x0]&&_0x5491b9['add_custom_button'](__(_0xb7f17[_0x376276(0xfe)]),()=>_0x5491b9[_0x376276(0x16d)]('allocate_phones'));},'get_unreconciled_entries':function(_0x37a6ad){const _0x3132d6=a0_0x5dd7,_0x5bf8d1={'TPdbn':_0x3132d6(0x19b),'NRqCf':_0x3132d6(0x153),'QDpqX':_0x3132d6(0x1a0)};_0x37a6ad['clear_table'](_0x5bf8d1[_0x3132d6(0xe3)]),_0x37a6ad['clear_table'](_0x5bf8d1[_0x3132d6(0xfb)]),_0x37a6ad['call']({'doc':_0x37a6ad[_0x3132d6(0xf6)],'method':_0x5bf8d1['QDpqX'],'callback':()=>{const _0xa8d02=_0x3132d6;_0x37a6ad[_0xa8d02(0x110)]();}});},'allocate_phones':function(_0x4910db){const _0x4f7b32=a0_0x5dd7,_0x43dc83={'wRBxd':_0x4f7b32(0x19b),'ovxos':function(_0x39beac,_0x5274b8){return _0x39beac(_0x5274b8);},'GaSqV':function(_0xc66b30,_0x54562d){return _0xc66b30!==_0x54562d;},'EGBLN':'ptubv','ysnrU':'0|4|2|3|1','AXaQg':_0x4f7b32(0x153),'UmASO':_0x4f7b32(0x120)};_0x4910db[_0x4f7b32(0x15d)]({'doc':_0x4910db[_0x4f7b32(0xf6)],'method':_0x43dc83[_0x4f7b32(0xd6)],'callback':_0x14e57e=>{const _0x5d64b1=_0x4f7b32;if(_0x43dc83[_0x5d64b1(0x146)](_0x43dc83[_0x5d64b1(0x176)],_0x5d64b1(0x163))){const _0x4d1ba8=_0x3121ac?function(){const _0x50d849=_0x5d64b1;if(_0x44d9a2){const _0x54eb04=_0x3dfc29[_0x50d849(0x10b)](_0x119129,arguments);return _0x438c6e=null,_0x54eb04;}}:function(){};return _0x49c14b=![],_0x4d1ba8;}else{const _0xf3ae0a=_0x43dc83[_0x5d64b1(0x164)]['split']('|');let _0xcf2cae=0x0;while(!![]){switch(_0xf3ae0a[_0xcf2cae++]){case'0':_0x14e57e['message'][_0x5d64b1(0x14d)]();continue;case'1':_0x4910db[_0x5d64b1(0x110)]();continue;case'2':cur_frm[_0x5d64b1(0x10d)](_0x43dc83[_0x5d64b1(0x1a2)]);continue;case'3':cur_frm[_0x5d64b1(0x10d)](_0x43dc83[_0x5d64b1(0x160)]);continue;case'4':_0x14e57e[_0x5d64b1(0x175)]['forEach'](function(_0x192422){const _0x2d2c93=_0x5d64b1;cur_frm[_0x2d2c93(0x18f)](_0x43dc83[_0x2d2c93(0x1a2)])[_0x2d2c93(0x13a)][_0x2d2c93(0xf8)][_0x43dc83[_0x2d2c93(0x197)](parseInt,_0x192422)]['remove']();});continue;}break;}}}});},'employee':function(_0x4e2109){const _0x3ca27b=a0_0x5dd7;_0x4e2109[_0x3ca27b(0x110)]();},'from_date':function(_0x2a6458){const _0x3d8d3c=a0_0x5dd7;_0x2a6458[_0x3d8d3c(0x110)]();}});cur_frm&&cur_frm[a0_0x40b0b6(0x150)]['phone_reconciliation_call']&&cur_frm[a0_0x40b0b6(0x150)][a0_0x40b0b6(0x19b)][a0_0x40b0b6(0x13a)]?cur_frm[a0_0x40b0b6(0x150)][a0_0x40b0b6(0x19b)][a0_0x40b0b6(0x13a)][a0_0x40b0b6(0x18f)](a0_0x40b0b6(0x16b))['get_query']=function(_0x32893c){const _0x1b4248=a0_0x40b0b6,_0x4f7604={'WYZFG':'Customer','XzMwt':'Supplier','OyuQO':_0x1b4248(0x170)};return{'filters':{'name':['in',[_0x4f7604['WYZFG'],_0x4f7604[_0x1b4248(0x118)],_0x4f7604[_0x1b4248(0xf5)]]]}};}:console[a0_0x40b0b6(0x190)](a0_0x40b0b6(0x13e));frappe['ui'][a0_0x40b0b6(0x112)]['on']('Phone\x20Reconciliation\x20Call',{'contact':function(_0x2343fa){const _0x465fa4=a0_0x40b0b6;_0x2343fa[_0x465fa4(0x110)]();},'create_contact':function(_0xb0db5f,_0x30a2bc,_0x9e4562){const _0x5b928c=a0_0x40b0b6,_0x53c120={'cvcbg':_0x5b928c(0x179),'OttEm':function(_0x30108a,_0x51fa1b){return _0x30108a!==_0x51fa1b;},'XmScf':'sxKeF','jCjSI':_0x5b928c(0x144),'OTDQE':_0x5b928c(0x129),'KNdut':_0x5b928c(0x10e),'gXKPt':_0x5b928c(0x119),'nkDAp':_0x5b928c(0x12b),'BqRNc':'13|0|10|12|8|5|6|9|7|4|14|2|1|11|3','FbgUt':_0x5b928c(0x153),'KYdCQ':_0x5b928c(0x19b),'mPNzB':function(_0x16572f,_0x1fe2d8){return _0x16572f(_0x1fe2d8);},'UNCRE':_0x5b928c(0xd4),'duQjc':function(_0x28bd73,_0x400683){return _0x28bd73(_0x400683);},'xJTMF':function(_0x48a8c9,_0xe97d4e){return _0x48a8c9-_0xe97d4e;},'FlfMM':'productivity_next.productivity_next.doctype.phone_reconciliation.phone_reconciliation.update_contact','yXipi':_0x5b928c(0x11a),'eAuzX':function(_0x62665f,_0x32cb60){return _0x62665f(_0x32cb60);},'KTYIQ':_0x5b928c(0xe4),'GiRFi':'Data','UlinC':function(_0x5a33ad,_0x4cab7b){return _0x5a33ad(_0x4cab7b);},'FqCtu':_0x5b928c(0x145),'fzvFK':_0x5b928c(0xf0),'smSXt':_0x5b928c(0x125),'MiSfA':_0x5b928c(0x122),'AKrQL':'is_primary_phone','XvBBv':function(_0x455642,_0x284930){return _0x455642(_0x284930);},'RuRks':_0x5b928c(0x17e),'YXciP':_0x5b928c(0x12f),'ObwMo':'Section\x20Break','DGcaK':function(_0x3730d7,_0x3a1515){return _0x3730d7(_0x3a1515);},'lzngX':_0x5b928c(0x100),'QFKCF':_0x5b928c(0xe2),'nCqHF':function(_0x501d85,_0x15e105){return _0x501d85(_0x15e105);},'UHUoB':'Link','MMrwS':_0x5b928c(0x149),'QDNvh':_0x5b928c(0x159),'tngNP':function(_0x4c4aea,_0x7e1560){return _0x4c4aea(_0x7e1560);},'IwkFl':'DocType','dTYwB':_0x5b928c(0x16b),'NLZOw':_0x5b928c(0x196),'yVDSf':_0x5b928c(0x19c),'ZzrpS':function(_0x805c3c,_0x5d268e){return _0x805c3c(_0x5d268e);},'SyNJP':_0x5b928c(0x12c),'MztBZ':_0x5b928c(0xd1),'YobwI':_0x5b928c(0xde),'AezNK':_0x5b928c(0x15e),'aLGQh':_0x5b928c(0xeb),'HlFpV':_0x5b928c(0x11d),'UhJKi':_0x5b928c(0x11b),'EOfKT':_0x5b928c(0xda)};let _0x218535=locals[_0x30a2bc][_0x9e4562],_0x4b28bb=[{'label':_0x53c120[_0x5b928c(0x156)](__,_0x53c120['KTYIQ']),'fieldtype':_0x53c120[_0x5b928c(0x13d)],'fieldname':_0x5b928c(0x136),'default':_0x218535[_0x5b928c(0x136)]},{'label':_0x53c120['UlinC'](__,_0x53c120[_0x5b928c(0x192)]),'fieldtype':_0x53c120[_0x5b928c(0x137)],'fieldname':_0x53c120[_0x5b928c(0x131)],'default':0x1},{'label':__(_0x53c120[_0x5b928c(0x17f)]),'fieldtype':_0x53c120['fzvFK'],'fieldname':_0x53c120[_0x5b928c(0x177)]},{'label':_0x53c120[_0x5b928c(0x115)](__,_0x53c120['RuRks']),'fieldtype':_0x53c120[_0x5b928c(0x13d)],'fieldname':_0x5b928c(0x19f)},{'label':__('Is\x20primary\x20Email'),'fieldtype':_0x53c120[_0x5b928c(0x137)],'fieldname':_0x53c120[_0x5b928c(0x139)],'default':0x1},{'fieldtype':_0x53c120[_0x5b928c(0x106)]},{'label':_0x53c120[_0x5b928c(0xd5)](__,_0x53c120[_0x5b928c(0x18c)]),'fieldtype':_0x53c120[_0x5b928c(0x137)],'fieldname':_0x53c120['QFKCF'],'change':function(){const _0x32a938=_0x5b928c,_0x202b1f={'skwCG':_0x32a938(0x116),'XKEVM':_0x53c120[_0x32a938(0x10a)],'STDIF':_0x32a938(0x129),'dFmJs':'Contact'};if(_0x53c120[_0x32a938(0x154)](_0x53c120[_0x32a938(0x182)],_0x53c120[_0x32a938(0xe8)])){let _0x8ae94e=this[_0x32a938(0x16f)](),_0x55be1d=this[_0x32a938(0xf3)][_0x32a938(0x16f)](_0x53c120[_0x32a938(0x13c)]);_0x55be1d&&(console[_0x32a938(0x190)](_0x55be1d),frappe['db'][_0x32a938(0xe9)]('Contact',_0x55be1d)[_0x32a938(0x157)](_0xbbb28a=>{const _0x2e82ec=_0x32a938;console[_0x2e82ec(0x190)](_0xbbb28a),this['layout'][_0x2e82ec(0x18f)]('party_type')[_0x2e82ec(0x1a6)](_0xbbb28a[_0x2e82ec(0x16e)][0x0]['link_doctype']),this[_0x2e82ec(0xf3)][_0x2e82ec(0x18f)](_0x53c120[_0x2e82ec(0x10a)])[_0x2e82ec(0x1a6)](_0xbbb28a['links'][0x0]['link_name']);})['catch'](_0x4cb37f=>{const _0x331448=_0x32a938;console[_0x331448(0x148)](_0x202b1f['skwCG'],_0x4cb37f);}));}else{const _0x345a69={'RpoJr':_0x32a938(0x16b),'MSkGZ':_0x202b1f[_0x32a938(0x183)],'mSluU':_0x32a938(0x116)};let _0x57bd75=this[_0x32a938(0x16f)](),_0x31c376=this[_0x32a938(0xf3)][_0x32a938(0x16f)](_0x202b1f[_0x32a938(0xf7)]);_0x31c376&&(_0x24c499['log'](_0x31c376),_0x499cdb['db'][_0x32a938(0xe9)](_0x202b1f[_0x32a938(0x186)],_0x31c376)[_0x32a938(0x157)](_0x8ba32b=>{const _0x13ab39=_0x32a938;_0x497068['log'](_0x8ba32b),this[_0x13ab39(0xf3)]['get_field'](_0x345a69[_0x13ab39(0xf2)])[_0x13ab39(0x1a6)](_0x8ba32b[_0x13ab39(0x16e)][0x0][_0x13ab39(0x155)]),this[_0x13ab39(0xf3)][_0x13ab39(0x18f)](_0x345a69['MSkGZ'])[_0x13ab39(0x1a6)](_0x8ba32b[_0x13ab39(0x16e)][0x0][_0x13ab39(0x168)]);})[_0x32a938(0x189)](_0x44f59b=>{const _0x1db70f=_0x32a938;_0x33d481[_0x1db70f(0x148)](_0x345a69[_0x1db70f(0x127)],_0x44f59b);}));}}},{'label':_0x53c120[_0x5b928c(0xfd)](__,_0x5b928c(0x140)),'fieldtype':_0x53c120[_0x5b928c(0x17b)],'options':_0x53c120[_0x5b928c(0x1a1)],'depends_on':_0x53c120['QDNvh'],'fieldname':_0x5b928c(0x129),'default':_0x218535[_0x5b928c(0x114)]},{'fieldtype':'Section\x20Break'},{'label':_0x53c120['tngNP'](__,'Party\x20Type'),'fieldtype':_0x53c120[_0x5b928c(0x17b)],'options':_0x53c120[_0x5b928c(0xd7)],'fieldname':_0x53c120['dTYwB'],'default':_0x218535['party_type'],'get_query':function(){const _0xdeb973=_0x5b928c;return{'filters':{'name':['in',[_0x53c120[_0xdeb973(0x142)],_0x53c120['gXKPt'],'Lead']]}};},'reqd':0x1},{'label':__(_0x53c120[_0x5b928c(0xed)]),'fieldtype':_0x53c120[_0x5b928c(0x13d)],'fieldname':'first_name','reqd':0x1,'depends_on':_0x53c120['yVDSf'],'mandatory_depends_on':_0x53c120[_0x5b928c(0x180)]},{'label':_0x53c120[_0x5b928c(0x111)](__,_0x53c120['SyNJP']),'fieldtype':_0x5b928c(0xd8),'fieldname':'salutation','options':_0x53c120['SyNJP'],'depends_on':'eval:!doc.update_existing_client'},{'fieldtype':_0x53c120['MztBZ']},{'label':_0x53c120[_0x5b928c(0x195)](__,_0x53c120[_0x5b928c(0x10c)]),'fieldtype':_0x53c120[_0x5b928c(0x13f)],'options':_0x53c120[_0x5b928c(0x124)],'fieldname':_0x5b928c(0x179),'reqd':0x1},{'label':__(_0x53c120[_0x5b928c(0x191)]),'fieldtype':_0x53c120[_0x5b928c(0x13d)],'fieldname':_0x53c120[_0x5b928c(0xd2)],'depends_on':_0x53c120[_0x5b928c(0x180)]}];!_0x218535[_0x5b928c(0x12a)]&&!_0x218535['ignore_contact']&&(_0x218535['dialog']=new frappe['ui'][(_0x5b928c(0x1a8))]({'title':_0x53c120['DGcaK'](__,_0x53c120[_0x5b928c(0xd3)]),'fields':_0x4b28bb}),_0x218535[_0x5b928c(0x174)][_0x5b928c(0xe0)](_0x53c120[_0x5b928c(0xfa)](__,_0x53c120[_0x5b928c(0x14f)]),function(){const _0x2ba47e=_0x5b928c,_0x45578d={'WVWro':_0x53c120['UNCRE'],'rRJOm':_0x53c120[_0x2ba47e(0x17d)],'IhYes':function(_0x495ba1,_0x3e7e1d){return _0x53c120['duQjc'](_0x495ba1,_0x3e7e1d);},'mFiLs':function(_0x33117e,_0x1e9f60){const _0x1fc56c=_0x2ba47e;return _0x53c120[_0x1fc56c(0xef)](_0x33117e,_0x1e9f60);},'uQEFl':'phone_reconciliation_allocation'};_0x218535['values']=_0x218535[_0x2ba47e(0x174)][_0x2ba47e(0x184)](),_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0xe2)]?frappe['call']({'method':_0x53c120['FlfMM'],'args':{'client_email':_0x218535['values']['client_email']||0x0,'client_no':_0x218535[_0x2ba47e(0x181)]['client_no']||0x0,'update_client':_0x218535[_0x2ba47e(0x181)]['update_client'],'is_primary_phone':_0x218535['values'][_0x2ba47e(0x105)],'is_primary_email':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x12f)],'is_primary_mobile_no':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x125)],'party_type':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x16b)],'party':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x179)]},'callback':_0x524749=>{const _0x159122=_0x2ba47e;if(_0x53c120[_0x159122(0x101)]!=='XsPxC')_0x31bf93[_0x159122(0x110)]();else{const _0x4b5052=_0x53c120[_0x159122(0x11e)][_0x159122(0x10f)]('|');let _0x4faa0f=0x0;while(!![]){switch(_0x4b5052[_0x4faa0f++]){case'0':_0x1e59b8[_0x159122(0x198)]=_0x218535[_0x159122(0x198)];continue;case'1':_0x218535[_0x159122(0x174)][_0x159122(0x194)]();continue;case'2':cur_frm[_0x159122(0x10d)](_0x53c120['FbgUt']);continue;case'3':_0xb0db5f['refresh']();continue;case'4':cur_frm[_0x159122(0x18f)](_0x53c120[_0x159122(0x17d)])[_0x159122(0x13a)]['grid_rows'][_0x53c120[_0x159122(0xfa)](parseInt,_0x218535[_0x159122(0xee)]-0x1)][_0x159122(0x15a)]();continue;case'5':_0x1e59b8[_0x159122(0x114)]=_0x218535[_0x159122(0x181)][_0x159122(0x129)];continue;case'6':_0x1e59b8[_0x159122(0x198)]=_0x218535[_0x159122(0x198)];continue;case'7':_0x1e59b8[_0x159122(0x179)]=_0x218535[_0x159122(0x181)]['party'];continue;case'8':_0x1e59b8[_0x159122(0x136)]=_0x218535['client_no'];continue;case'9':_0x1e59b8[_0x159122(0x16b)]=_0x218535[_0x159122(0x181)][_0x159122(0x16b)];continue;case'10':_0x1e59b8[_0x159122(0x113)]=_0x218535[_0x159122(0x113)];continue;case'11':frappe['msgprint'](_0x159122(0x1aa));continue;case'12':_0x1e59b8[_0x159122(0x1a7)]=_0x218535[_0x159122(0x181)][_0x159122(0xdc)];continue;case'13':var _0x1e59b8=cur_frm[_0x159122(0x13b)](_0x53c120[_0x159122(0x1ac)]);continue;case'14':cur_frm[_0x159122(0x10d)](_0x53c120[_0x159122(0x17d)]);continue;}break;}}}}):frappe[_0x2ba47e(0x15d)]({'method':_0x53c120[_0x2ba47e(0x15f)],'args':{'client_email':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x19f)]||0x0,'is_primary_email':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x12f)],'client_no':_0x218535[_0x2ba47e(0x136)]||0x0,'first_name':_0x218535['values'][_0x2ba47e(0x132)],'party_type':_0x218535[_0x2ba47e(0x181)]['party_type'],'party':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x179)],'last_name':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x11d)],'is_primary_mobile_no':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x125)],'is_primary_phone':_0x218535['values'][_0x2ba47e(0x105)],'salutation':_0x218535[_0x2ba47e(0x181)][_0x2ba47e(0x11f)]},'callback':_0x169443=>{const _0x493b22=_0x2ba47e,_0x20d1ee=_0x45578d[_0x493b22(0x14e)][_0x493b22(0x10f)]('|');let _0x47e69a=0x0;while(!![]){switch(_0x20d1ee[_0x47e69a++]){case'0':_0x2fcd16[_0x493b22(0x114)]=_0x169443[_0x493b22(0x175)];continue;case'1':_0x2fcd16[_0x493b22(0x198)]=_0x218535[_0x493b22(0x198)];continue;case'2':_0x2fcd16[_0x493b22(0x136)]=_0x218535[_0x493b22(0x136)];continue;case'3':_0x2fcd16['employee_name']=_0x218535[_0x493b22(0x113)];continue;case'4':_0x2fcd16[_0x493b22(0x1a7)]=_0x218535[_0x493b22(0x181)][_0x493b22(0xdc)];continue;case'5':console[_0x493b22(0x190)](_0x2fcd16);continue;case'6':cur_frm[_0x493b22(0x10d)](_0x45578d[_0x493b22(0x19e)]);continue;case'7':_0x2fcd16[_0x493b22(0x132)]=_0x218535[_0x493b22(0x181)][_0x493b22(0x132)];continue;case'8':console[_0x493b22(0x190)](_0x169443[_0x493b22(0x175)]);continue;case'9':cur_frm[_0x493b22(0x18f)](_0x45578d[_0x493b22(0x19e)])[_0x493b22(0x13a)][_0x493b22(0xf8)][_0x45578d[_0x493b22(0x18d)](parseInt,_0x45578d[_0x493b22(0x130)](_0x218535[_0x493b22(0xee)],0x1))][_0x493b22(0x15a)]();continue;case'10':cur_frm[_0x493b22(0x10d)](_0x45578d[_0x493b22(0x1ab)]);continue;case'11':_0x2fcd16[_0x493b22(0x11d)]=_0x218535[_0x493b22(0x181)][_0x493b22(0x11d)];continue;case'12':var _0x2fcd16=cur_frm[_0x493b22(0x13b)]('phone_reconciliation_allocation');continue;case'13':_0x2fcd16[_0x493b22(0x16b)]=_0x218535[_0x493b22(0x181)][_0x493b22(0x16b)];continue;case'14':_0x2fcd16[_0x493b22(0x179)]=_0x218535[_0x493b22(0x181)][_0x493b22(0x179)];continue;case'15':_0x218535[_0x493b22(0x174)]['hide']();continue;case'16':frappe[_0x493b22(0xec)](_0x493b22(0x162));continue;case'17':_0xb0db5f[_0x493b22(0x110)]();continue;}break;}}});}),_0x218535[_0x5b928c(0x174)][_0x5b928c(0x187)]());},'ignore_contact':function(_0x349cfc,_0x48b023,_0x28075e){const _0x48d267=a0_0x40b0b6,_0x19dead={'sZaGQ':'Customer','AoxBT':_0x48d267(0x170),'zOrWR':'VUaDK','XnYbJ':_0x48d267(0x117),'OwOLm':function(_0xc69c8c,_0x47b85a){return _0xc69c8c(_0x47b85a);},'DJyhN':_0x48d267(0x121),'vLVcN':_0x48d267(0x19b),'Riitw':_0x48d267(0x153),'BzccJ':_0x48d267(0xe5),'pzDmU':_0x48d267(0x119),'MnHTL':function(_0x168bae,_0x39f1cc){return _0x168bae===_0x39f1cc;},'uYjIO':function(_0x5efa20,_0x10591d){return _0x5efa20(_0x10591d);},'oGSAw':_0x48d267(0xfc)};let _0x2dce71=locals[_0x48b023][_0x28075e];if(_0x2dce71['ignore_contact']){if(_0x19dead['MnHTL'](_0x48d267(0xe6),'uohZH'))frappe[_0x48d267(0x133)](_0x19dead[_0x48d267(0x16a)](__,_0x19dead[_0x48d267(0x143)]),function(){const _0x26084f=_0x48d267,_0x1d81c3={'gdVOe':_0x19dead['sZaGQ'],'BvgCO':_0x19dead[_0x26084f(0x172)],'tKMHx':function(_0x1aea9e,_0x40e0a2){return _0x1aea9e===_0x40e0a2;},'HUrRO':_0x19dead[_0x26084f(0x199)],'WDHMX':_0x19dead[_0x26084f(0x1a4)],'rRtBk':function(_0x3feff7,_0x57a1cb){const _0x336f69=_0x26084f;return _0x19dead[_0x336f69(0x1ad)](_0x3feff7,_0x57a1cb);},'jNijM':function(_0x28707c,_0x9f62b6){return _0x28707c-_0x9f62b6;},'hqjXY':_0x19dead[_0x26084f(0x15c)],'lduGX':_0x19dead[_0x26084f(0xdb)],'BJZHG':_0x19dead[_0x26084f(0xdf)]};frappe[_0x26084f(0x15d)]({'method':_0x19dead[_0x26084f(0x18a)],'args':{'client_no':_0x2dce71[_0x26084f(0x136)]},'callback':function(_0x52bbe3){const _0x2b04e1=_0x26084f,_0x4c9392={'qGSoG':_0x1d81c3[_0x2b04e1(0x14a)],'wrsuG':_0x2b04e1(0x119),'Otyaz':_0x1d81c3[_0x2b04e1(0x135)]};if(!_0x52bbe3[_0x2b04e1(0x17a)]){if(_0x1d81c3['tKMHx'](_0x1d81c3[_0x2b04e1(0x167)],_0x1d81c3[_0x2b04e1(0x167)])){const _0x336ca1=_0x1d81c3['WDHMX'][_0x2b04e1(0x10f)]('|');let _0x267bf4=0x0;while(!![]){switch(_0x336ca1[_0x267bf4++]){case'0':cur_frm[_0x2b04e1(0x18f)](_0x2b04e1(0x19b))[_0x2b04e1(0x13a)][_0x2b04e1(0xf8)][_0x1d81c3[_0x2b04e1(0xea)](parseInt,_0x1d81c3[_0x2b04e1(0x128)](_0x2dce71[_0x2b04e1(0xee)],0x1))][_0x2b04e1(0x15a)]();continue;case'1':frappe[_0x2b04e1(0xec)](_0x1d81c3['hqjXY']);continue;case'2':cur_frm['refresh_fields'](_0x1d81c3[_0x2b04e1(0x18b)]);continue;case'3':_0x2f1717['client_details']=_0x2dce71[_0x2b04e1(0x1a7)];continue;case'4':var _0x2f1717=cur_frm[_0x2b04e1(0x13b)](_0x1d81c3['BJZHG']);continue;case'5':_0x2f1717[_0x2b04e1(0x113)]=_0x2dce71[_0x2b04e1(0x113)];continue;case'6':_0x2f1717[_0x2b04e1(0x198)]=_0x2dce71[_0x2b04e1(0x198)];continue;case'7':cur_frm[_0x2b04e1(0x10d)](_0x2b04e1(0x153));continue;case'8':_0x2f1717['ignore_contact']=_0x2dce71[_0x2b04e1(0x178)];continue;case'9':_0x2f1717[_0x2b04e1(0x198)]=_0x2dce71[_0x2b04e1(0x198)];continue;case'10':_0x2f1717[_0x2b04e1(0x136)]=_0x2dce71['client_no'];continue;}break;}}else return{'filters':{'name':['in',[_0x4c9392[_0x2b04e1(0xff)],_0x4c9392[_0x2b04e1(0x16c)],_0x4c9392['Otyaz']]]}};}}});});else return{'filters':{'name':['in',[_0x19dead['sZaGQ'],_0x19dead['pzDmU'],_0x19dead[_0x48d267(0x172)]]]}};}}});
+// Copyright (c) 2023, Finbyz Tech Pvt. Ltd. and contributors
+// For license information, please see license.txt
+
+frappe.ui.form.on('Phone Reconciliation', {
+	refresh: function(frm) {
+		frm.disable_save();
+		frm.set_df_property('phone_reconciliation_call', 'cannot_delete_rows', true);
+		frm.set_df_property('phone_reconciliation_call', 'cannot_add_rows', true);
+		if (frm.doc.from_date || frm.doc.employee) {
+			frm.add_custom_button(__('Get Unreconciled Numbers'), () =>
+				frm.trigger("get_unreconciled_entries")
+			);
+			frm.change_custom_button_type('Get Unreconciled Numbers', null, 'primary');
+		}
+		if (frm.doc.phone_reconciliation_call[0]){
+			frm.add_custom_button(__('Allocate'), () =>
+				frm.trigger("allocate_phones")
+			);
+		}
+	},
+	get_unreconciled_entries:function(frm){
+		frm.clear_table("phone_reconciliation_call");
+		frm.clear_table("phone_reconciliation_allocation");
+		frm.call({
+			doc: frm.doc,
+			method: 'get_unreconciled_numbers',
+			callback: () => {
+				frm.refresh();
+			}
+		});
+	},
+	allocate_phones: function(frm){
+		frm.call({
+			doc: frm.doc,
+			method: 'allocate_phone_numbers',
+			callback: (r) => {
+				r.message.reverse()
+				r.message.forEach(function(i){
+					cur_frm.get_field("phone_reconciliation_call").grid.grid_rows[parseInt(i)].remove()
+				})
+				// frappe.msgprint("Contact has been allocated.")
+				cur_frm.refresh_fields("phone_reconciliation_call");
+				cur_frm.refresh_fields("phone_reconciliation_allocation");
+				frm.refresh();
+			}
+		})
+	},
+	employee: function(frm) {
+		frm.refresh();
+	},
+	from_date: function(frm) {
+		frm.refresh();
+	}
+});
+if (cur_frm && cur_frm.fields_dict['phone_reconciliation_call'] && cur_frm.fields_dict['phone_reconciliation_call'].grid) {
+    cur_frm.fields_dict['phone_reconciliation_call'].grid.get_field("party_type").get_query = function(doc) {
+        return {
+            filters: {
+                "name": ["in", ["Customer", "Supplier", "Lead"]]
+            }
+        };
+    };
+} else {
+    console.log("The field 'phone_reconciliation_call' is not initialized yet.");
+}
+
+frappe.ui.form.on('Phone Reconciliation Call', {
+	contact: function(frm) {
+		frm.refresh();
+	},
+	create_contact: function(frm, cdt, cdn){
+		let d = locals[cdt][cdn]
+
+		let fields = [
+            {
+                label: __("Contact No"),
+                fieldtype: 'Data',
+                fieldname: 'client_no',
+				default: d.client_no,
+            },
+            {
+                label: __("Is Primary Mobile"),
+                fieldtype: 'Check',
+                fieldname: 'is_primary_mobile_no',
+                default: 1,
+            },
+            {
+                label: __("Is Primary Phone"),
+                fieldtype: 'Check',
+                fieldname: 'is_primary_phone',
+            },
+            {
+                label: __("Client Email"),
+                fieldtype: 'Data',
+                fieldname: 'client_email',
+            },
+            {
+                label: __("Is primary Email"),
+                fieldtype: 'Check',
+                fieldname: 'is_primary_email',
+                default: 1,
+            },
+            {fieldtype: 'Section Break'},
+            {
+                label: __("Update Existing Contact"),
+                fieldtype: 'Check',
+                fieldname: 'update_existing_client',
+				change: function(){
+					let merge = this.get_value();
+					let contact = this.layout.get_value('update_client');
+                    if(contact){
+                        console.log(contact)
+                        frappe.db.get_doc("Contact", contact).then(doc => {
+                            console.log(doc);
+                            this.layout.get_field('party_type').set_input(doc.links[0].link_doctype);
+                            this.layout.get_field('party').set_input(doc.links[0].link_name);
+                        }).catch(err => {
+                            console.error("Error fetching document:", err);
+                        });
+                    }
+				}
+            },
+            {
+                label: __("Update Contact"),
+                fieldtype: 'Link',
+                options: "Contact",
+                depends_on: 'eval:doc.update_existing_client',
+                fieldname: 'update_client',
+				default: d.contact,
+            },
+            {fieldtype: 'Section Break'},
+            {
+                label: __("Party Type"),
+                fieldtype: 'Link',
+                options: "DocType",
+                fieldname: 'party_type',
+                default: d.party_type,
+                get_query: function() {
+                    return {
+                        filters: {
+                            "name": ["in", ["Customer", "Supplier", "Lead"]]
+                        }
+                    };
+                },
+                reqd: 1,
+            },
+            {
+                label: __("First Name"),
+                fieldtype: 'Data',
+                fieldname: 'first_name',
+                reqd: 1,
+                depends_on: 'eval:!doc.update_existing_client',
+                mandatory_depends_on: 'eval:!doc.update_existing_client'
+            },
+            {
+                label: __("Salutation"),
+                fieldtype: 'Link',
+                fieldname: 'salutation',
+                options: "Salutation",
+                depends_on: 'eval:!doc.update_existing_client',
+            },
+            {fieldtype: 'Column Break'},
+            {
+                label: __("Party"),
+                fieldtype: 'Dynamic Link',
+                options: "party_type",
+                fieldname: 'party',
+                reqd: 1,
+            },
+            {
+                label: __("Last Name"),
+                fieldtype: 'Data',
+                fieldname: 'last_name',
+                depends_on: 'eval:!doc.update_existing_client',
+            }
+        ];
+
+		if (!d.contact_created && !d.ignore_contact){
+			d.dialog = new frappe.ui.Dialog({
+				title: __("Create Contact"),
+				fields: fields
+			});
+			d.dialog.set_primary_action(__("Create"), function(){
+				d.values = d.dialog.get_values();
+				if (d.values.update_existing_client){
+                    frappe.call({
+                        method: 'productivity_next.productivity_next.doctype.phone_reconciliation.phone_reconciliation.update_contact',
+                        args: {
+                            client_email: d.values.client_email || 0,
+                            client_no: d.values.client_no || 0,
+                            update_client: d.values.update_client,
+                            is_primary_phone: d.values.is_primary_phone,
+                            is_primary_email: d.values.is_primary_email,
+                            is_primary_mobile_no: d.values.is_primary_mobile_no,
+							party_type: d.values.party_type,
+                            party: d.values.party,
+                        },
+                        callback: (r) => {
+							var allocation_table = cur_frm.add_child("phone_reconciliation_allocation");
+							allocation_table.employee=d.employee
+							allocation_table.employee_name = d.employee_name
+							allocation_table.client_details = d.values.client
+							allocation_table.client_no = d.client_no
+							allocation_table.contact = d.values.update_client
+							allocation_table.employee=d.employee
+							allocation_table.party_type = d.values.party_type
+							allocation_table.party = d.values.party
+
+							cur_frm.get_field("phone_reconciliation_call").grid.grid_rows[parseInt(d.idx - 1)].remove()
+							cur_frm.refresh_fields("phone_reconciliation_call");
+							cur_frm.refresh_fields("phone_reconciliation_allocation");
+							d.dialog.hide();
+							frappe.msgprint("Contact has been updated.")
+							frm.refresh();
+						}
+                    });
+				}
+				else{
+				frappe.call({ 
+					method: 'productivity_next.productivity_next.doctype.phone_reconciliation.phone_reconciliation.create_contact',
+					args: {
+						client_email: d.values.client_email || 0,
+						is_primary_email: d.values.is_primary_email,
+						client_no: d.client_no || 0,
+						first_name : d.values.first_name,
+						party_type: d.values.party_type,
+						party: d.values.party,
+						last_name: d.values.last_name,
+						is_primary_mobile_no: d.values.is_primary_mobile_no,
+						is_primary_phone: d.values.is_primary_phone,
+						salutation: d.values.salutation
+					},
+					callback: (r) => {
+						console.log(r.message)
+						var allocation_table = cur_frm.add_child("phone_reconciliation_allocation");
+						console.log(allocation_table)
+						// allocation_table.employee=d.employee
+						allocation_table.employee_name = d.employee_name
+						allocation_table.client_details = d.values.client
+						allocation_table.client_no = d.client_no
+						allocation_table.contact = r.message
+						allocation_table.employee=d.employee
+						allocation_table.party_type = d.values.party_type
+						allocation_table.party = d.values.party
+						allocation_table.first_name = d.values.first_name
+						allocation_table.last_name = d.values.last_name
+
+						cur_frm.get_field("phone_reconciliation_call").grid.grid_rows[parseInt(d.idx - 1)].remove()
+						cur_frm.refresh_fields("phone_reconciliation_call");
+						cur_frm.refresh_fields("phone_reconciliation_allocation");
+						d.dialog.hide();
+						frappe.msgprint("Contact has been created.")
+						frm.refresh();
+					}
+				})
+			}
+			});
+			d.dialog.show();
+		}
+	},
+	ignore_contact: function(frm, cdt, cdn){
+		let d = locals[cdt][cdn]
+		if (d.ignore_contact){
+			frappe.confirm(
+				__('Do you want to ignore contact from sync?'),
+				function() {
+					frappe.call({
+						method:
+						"productivity_next.productivity_next.doctype.phone_reconciliation.phone_reconciliation.ignore_contact",
+						args: {client_no: d.client_no},
+						callback: function(data){
+							if(!data.exc){
+								var allocation_table = cur_frm.add_child("phone_reconciliation_allocation");
+								allocation_table.employee=d.employee
+								allocation_table.employee_name = d.employee_name
+								allocation_table.client_details = d.client_details
+								allocation_table.client_no = d.client_no
+								allocation_table.employee=d.employee
+								allocation_table.ignore_contact = d.ignore_contact
+								
+								cur_frm.get_field("phone_reconciliation_call").grid.grid_rows[parseInt(d.idx - 1)].remove()
+								cur_frm.refresh_fields("phone_reconciliation_call");
+								cur_frm.refresh_fields("phone_reconciliation_allocation");
+								frappe.msgprint("Given Contact is ignored from Contact creation.")
+							}
+							
+						}
+					});
+				}
+			);
+		}
+	}
+})

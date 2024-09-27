@@ -1,1 +1,45 @@
-var a0_0x3d8d66=a0_0x67df;function a0_0xf670(){var _0x25a713=['3028racWPS','From\x20Date','12JSIGAb','from_date','group_by_employee_and_domain','To\x20Date','Employee','16522uFhuJF','search','refresh','Check','xeubr','checked','input','1293quCqaJ','get_today','3242232QIpbpA','2158835YyxOir','1364410gRGnjv','Group\x20By\x20Domain','query_report','datetime','add_days','apply','4dGfYBU','constructor','get_filter','employee','toString','Date','1760eznbuY','to_date','3193640BVXciw','352174lCjhbD','query_reports'];a0_0xf670=function(){return _0x25a713;};return a0_0xf670();}(function(_0x22bbf9,_0x439ef8){var _0xd255f6=a0_0x67df,_0x2d0ad3=_0x22bbf9();while(!![]){try{var _0x36d37b=-parseInt(_0xd255f6(0x19e))/0x1*(-parseInt(_0xd255f6(0x195))/0x2)+-parseInt(_0xd255f6(0x1ae))/0x3*(-parseInt(_0xd255f6(0x1a0))/0x4)+parseInt(_0xd255f6(0x1b2))/0x5+parseInt(_0xd255f6(0x1a2))/0x6*(-parseInt(_0xd255f6(0x1b1))/0x7)+-parseInt(_0xd255f6(0x19d))/0x8+parseInt(_0xd255f6(0x1b0))/0x9+-parseInt(_0xd255f6(0x19b))/0xa*(parseInt(_0xd255f6(0x1a7))/0xb);if(_0x36d37b===_0x439ef8)break;else _0x2d0ad3['push'](_0x2d0ad3['shift']());}catch(_0xb2a08c){_0x2d0ad3['push'](_0x2d0ad3['shift']());}}}(a0_0xf670,0x5d992));var a0_0x5f3af8=(function(){var _0x500bad=!![];return function(_0x496ba8,_0x14a035){var _0x4e19e4=_0x500bad?function(){var _0x15c8e0=a0_0x67df;if(_0x14a035){var _0x5ec754=_0x14a035[_0x15c8e0(0x194)](_0x496ba8,arguments);return _0x14a035=null,_0x5ec754;}}:function(){};return _0x500bad=![],_0x4e19e4;};}()),a0_0x35c4f4=a0_0x5f3af8(this,function(){var _0xe2571c=a0_0x67df,_0x1deb50={'xeubr':'(((.+)+)+)+$'};return a0_0x35c4f4[_0xe2571c(0x199)]()['search'](_0x1deb50['xeubr'])[_0xe2571c(0x199)]()[_0xe2571c(0x196)](a0_0x35c4f4)[_0xe2571c(0x1a8)](_0x1deb50[_0xe2571c(0x1ab)]);});function a0_0x67df(_0x5b417e,_0x219900){var _0x1b735d=a0_0xf670();return a0_0x67df=function(_0x35c4f4,_0x5f3af8){_0x35c4f4=_0x35c4f4-0x193;var _0xf670b3=_0x1b735d[_0x35c4f4];return _0xf670b3;},a0_0x67df(_0x5b417e,_0x219900);}a0_0x35c4f4(),frappe[a0_0x3d8d66(0x19f)]['Domains\x20Analysis']={'filters':[{'fieldname':a0_0x3d8d66(0x1a3),'label':__(a0_0x3d8d66(0x1a1)),'fieldtype':a0_0x3d8d66(0x19a),'default':frappe[a0_0x3d8d66(0x1b5)]['add_days'](frappe[a0_0x3d8d66(0x1b5)]['get_today'](),-0x1)},{'fieldname':a0_0x3d8d66(0x19c),'label':__(a0_0x3d8d66(0x1a5)),'fieldtype':a0_0x3d8d66(0x19a),'default':frappe[a0_0x3d8d66(0x1b5)][a0_0x3d8d66(0x193)](frappe[a0_0x3d8d66(0x1b5)][a0_0x3d8d66(0x1af)](),-0x1)},{'fieldname':a0_0x3d8d66(0x198),'label':__('Employee'),'fieldtype':'Link','options':a0_0x3d8d66(0x1a6)},{'fieldname':a0_0x3d8d66(0x1a4),'label':__('Group\x20By\x20Employee\x20&\x20Domain'),'fieldtype':a0_0x3d8d66(0x1aa),'on_change':function(_0xa92c13){var _0x246ac9=a0_0x3d8d66;frappe[_0x246ac9(0x1b4)][_0x246ac9(0x197)]('group_by_domain')[_0x246ac9(0x1ad)][_0x246ac9(0x1ac)]=![],frappe[_0x246ac9(0x1b4)]['refresh']();}},{'fieldname':'group_by_domain','label':__(a0_0x3d8d66(0x1b3)),'fieldtype':'Check','on_change':function(_0x3f438b){var _0x46e7b2=a0_0x3d8d66;frappe[_0x46e7b2(0x1b4)]['get_filter']('group_by_employee_and_domain')[_0x46e7b2(0x1ad)][_0x46e7b2(0x1ac)]=![],frappe[_0x46e7b2(0x1b4)][_0x46e7b2(0x1a9)]();}}]};
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["Domains Analysis"] = {
+	"filters": [
+		{
+			"fieldname": "from_date",
+			"label": __("From Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.add_days(frappe.datetime.get_today(), -1)
+		},
+		{
+			"fieldname": "to_date",
+			"label": __("To Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.add_days(frappe.datetime.get_today(), -1)
+		},
+		{
+			"fieldname": "employee",
+			"label": __("Employee"),
+			"fieldtype": "Link",
+			"options": "Employee"
+		},
+		
+		{
+			"fieldname": "group_by_employee_and_domain",
+			"label": __("Group By Employee & Domain"),
+			"fieldtype": "Check",
+			on_change: function (query_report) {
+				frappe.query_report.get_filter('group_by_domain').input.checked = false
+				frappe.query_report.refresh();
+			},
+		
+		},
+		{
+			"fieldname": "group_by_domain",
+			"label": __("Group By Domain"),
+			"fieldtype": "Check",
+			on_change: function (query_report) {
+				frappe.query_report.get_filter('group_by_employee_and_domain').input.checked = false
+				frappe.query_report.refresh();
+			},
+		},
+	]
+};

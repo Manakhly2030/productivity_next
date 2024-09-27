@@ -9,15 +9,14 @@
             {% if user_image %}
             <img class="sidebar-image" src="{{ user_image }}" >
             {% else %}
-            <div class="sidebar-standard-image hide">
-                <div class="standard-image"></div>
-            </div>
+            <img class="sidebar-image" src="/assets/productivity_next//user-profile.jpg" alt="Default Profile Image">
+            
             {% endif %}
             <div class="sidebar-image-actions">
-                <div class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Change</a>
+                <!-- <div class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Change</a>
                     <div class="dropdown-menu" role="menu"> <a class="dropdown-item sidebar-image-change">Upload</a> <a
                             class="dropdown-item sidebar-image-remove">Remove</a> </div>
-                </div>
+                </div> -->
             </div>
         </li>
     </ul>

@@ -1,3 +1,354 @@
+# Copyright (c) 2013, Frappe Technologies Pvt. Ltd.
+# For license information, please see license.txt
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1EBX;T_a7yX`Jfh7>Yn3`cxc~Qg#QBVc}3Gpd~+4p@P#NYn1Ma7JWiE)Oc{gx`abNk-gr%&HL-NTBCtQir>wkT0_dBXBUiBk>LvfWRVCW{fpc0|#{by{{r#*kfFW6=mZZDpe(V;TZ)S}gC{B#kQCtd(DXKU(RO#IT+vTCS@zJk9e0rcPT4I)f@ErICj0v65tIjBWgAMJR@2>V_v#qG=PXEy#-d>C-2Iq#~RsdLkvNnkFcUNa?ts7zv6M3{ung>as*8|Mw{}`qN~I)mg#OC`0fVnZsGki0nly-jhwtl|02EEX9#VztR%AX}COvqpm2+3~LIeqG8ENF9aqtnrnEbD+!d%$f_dIqh45*Kn+i^Eke_E%Vb2Gu^04$>8iq#s%xnzCAlmis+>CNMKlQ<b6lHeIf>wCfz?HQK`$dunVJ+y_>Js~uccoiV~2d1w0_Bs<jk)c!FaMQYp7yLD9b9YL#aRfy4a=v4P@QmZBBOyQ<Vh<_b9>C6E2R^lq;F0g6oEEFpe(pUmr{%P#nWp!=p)7!f{iw2n9`eJZs~az$v0=I|88!tZ08F6rPhjkL7j2H1SajL!}cB{d~rweT+ryqcVqFdHHh)?(>k={+vuE{}=JK>!GQyfy>+VI21nvCw2*ONt2v%Jl41M<|#fl>Wi;Y4}JN2?H!G}AJ7PUCR89uC-P8p>L<TR`sk<Sqw8zuLqE$$cVy>aH~ru|E2?zev8Bl`!5THqv?D|BsM0kA-yff@4?ZU!`g$?t{<yO?iE=e{hr$Oc3VjaVPrb_uLONUP5M*1-fig|9hpy5P<Ub3Rx9f4fyfJ=U)M>zL5M-nqnZm@bU_CXSj>)4M3b&vEJ+^1~B{B#@l0S#j;FG+EDCLTzWk*TXy*^nFL7Mwv=|fMxm>TRtd3#))c~JGZ95F@IH@NQ4E#A)|HTcE*XGjg$AYV)!K`8)?#ekt3C(R69f)%AB!`<}fCw9Fl`QLFFT2b7%Psf!GK62!R3RlTR=<$IR`vvp}bVkJBE*VRCm0h^<t+p46g{pF#M_lW8qdoL0Zs{a=AB{psH}JALtRGSLnV8s-L*S>yycJGQz%~r)Wf(WReA$iXE)f>DcC-79^i~MsxoSW=*oB`sQM@bJ0A&Hn{$3fyFQY;YvolT$VAgjkUaMu{LPla6N1eUweh)tjK|EIuW;eH=I8jnt8vthimf|8HX$vy!ewab7hQ;HUc>wLlFB0fJ)NC2&aPcGraa}PK8PN}B=FHqlCrgXwW=K%v=Nfm=Y4^Oy9lVbK(*8cu0-m-g<tt^O+PIiQTDt_7)<O{1l|$N&IdkS1Y27Zh4UiTfEkIg;v=dI7Em!XBB71mx&Bl6zWbc3$*0c}=b>(2T%T7EAHJe=zim`7!AAacT4dGoP?Un`E51R?gf-E>gUx_nx7@VOmkz+kXiwzsjT3rybmp=%t)`xfPFa&m0RE@XC=QA(TXYnjyN3X`FK8E>s1qr{LeWBOI0p;iF64^1r-c0(NN!a~_<TDvML$eqmG8E1muA#{sXYlNE8Tz!7x5&=lRYU57)K3!Ow=>}v?E>;hAddvp4#*>cJQBzw!(Dv?!W|%w{MV|KKpqL?kpN{whq6E(`Io^gkVgV}B&fgvk_P0F!Jj4rc_a|+{KH5Kcp8vL0(m4rT7a|wX@NZQFMwGfj|B3_fA0(($RmL~638QgJQBzw|ExT6Du48So*2Bs3r^m_$@|J|pTWsHIC=l~U>42BQf#wUuDU%mo8YV4A&BS7!R#g*OL1;$hG)iJs&)>5cE#x(ID20%!@$Q9eq%8OA4~X4K?9JE1@qJY3QO=IT{YeTZm|5-7y^jLs~9qWZx)p6mn_%&T$lx<WAPTRAjiz3$_~OY*3P6#ly4P~UO3XuuS^s$1rO^I4_Mo8T++~ECt@xgE$kC(P#RX?H7f)WT{Y4+*v!XH_*`k~M%Z<(&kKOFy~5cx@p{axpLepT6VHbr=>T#24YkSv4?8-9M7P<UQk?35iqRXWTY0^CXZ4C>=WR9bAPkT<fE@n{a)4W+;Fc&T82LY!G<~Oyr6PXcA^%E~M!;#;zqX@8{3_Q_x}C#%#X2v*2y$P9OZ`duJ%;%OnUwGQaxZ^#eKj1x#EB$aMW~}Te)erMO)lpO-!Hzu`uX_<Z}+h(ff}A-TZE?TmdS`VV?PtGjhYD*rg0WeXoe}c7HY90Q-WTouJ6m$4G4n~Cpw(Yh5rJ!2!+Z_lq|%Gc3+a{>%^4Y{^y&FlqQS4k?YAvQ1ShpAy0mFa}zX3-w&Z!DxTS&5rd%&o3)wSgI<J>;oFjR3)Q7CfHY#234BwO=<|cIIXA<wW0J4d@(B|8P5)n+Y42(GLfdaf;N<IUQd9)lCCN!Ql!mdMf>WYo+c@qh3NI)jKsAhwsl-A3m`U$B4soeYr<h+1LbCB2&Ana%N?`MZ?F|X?Co1-jiNUaA#5$<dD|WI<N6Dm3(dHE!hT47j<ahI{*~mJ<y{xkk7K;}4No(T5^43*lnC>D`n9ammfxB^jchk$<_v;*n9=cGY>1{R|6qGNQ-D34L8C|cp(H43!xMiv1<Jm6g<g|ouopB;og$73XyjtmScb$A4+R5l=sq4Vs)qFa*>GGR~qwX~vZQ34PICiOyJ>4?pl|-Yd2Of-hmN1!fiNcKUH)43Yx*2qWhqaL44+Rf>y+r;#K!jf3`>qxnN{bt2H{}u*^tSvJgsR5AkH}y@y_>$6cyRdQQXlkQ!Dscn`HCtEDG~mJ@Wb&m1|^HsQRZYny0tdUzy@ZK1trnW$*uJwF5X>ruXoO`<JLj>!agZdC7q)-+9l-T7P3zBZi}p=osBNV#!$_>EOf2ITWDvuSO4a+PG4dg+8MRyl|}A2T|Y=)SLUEL34*q&K@0IVXW1Imd*$7G+W*rS#&F!DkC-3ZoyE!bo(cG363#FFhfduq?;b}}$!--^)ImGlWapN&FuU1rnvZX5hR(~cQ>^jdd#%#rzhC$2vII7SroYQ>@}tt@_K5F6McJE?+-mf4Y-|y2ZfB5me<H)WS%q2X&pks4c9VQyuAt2B`Wbxtd9@b9SI!|qoFQRf4*S<unQfQ%kmU6R9b?>f<*``Vg71diRap?jJ{9L3eU+`o8(WMcmI(UfZ<ve`S$o;`u<XVE26_#6AK-oS2?2OtIA-Bj(lN$GmM~1kX9kZeE;Vtj&vJYH;?`aashsY|A)?HaS|1hiDTXej%euUWWN>ZU{+?BHjr$YxqHoIO@A)*ce|7J)^7R4HsbM)8)^5Ld%kYJqh13E<GcdbVKi}Xks_IsO7BTJf+<*SYV~IZ)wW$-5g@L#8y?#Zd?%?JQRH{eiR+?#D5^mnjVKUd%_D~WRy<O*0x*Bd<xufre%JJG^Q`w4t!%q4V180;0cBmS}S*(?7A5yTS;Q0&q_O>DBH=C<JdLq`&w<+e;(GS1RjoxhL_p#L<JxR8_3o5Q6wQRXyMr&%n9gh!>x9P)ZC$q06`0h6a&*)C8BcJ!Z1U1xaIG#%?xs@M!d#5kiTP;F3$Q@EI2mV_($Ib;lkK~iBpGJQ(rL+VlGn#97rYi}Q&B&@E(IdJd*%l>=E>BpVC~>NxTDCi;iamkV{kiVr+2kL8KJ(!PA&NVQ(VQyBQuJQDqVc)uF<c~-TDVBf&IU$|Sf)*m;VIf-WQ{Rtj-WIy!b-kgd2(Xq(<&?rpYOrsn1B+B;h4JNNt9^X1ZxYj;?6f;y<vTcFf2j#2-Ma0+L}qu=lFQb6AtrxVspeqObI%rANG<nRi$61%~X}5N#K~{+C0li1V@i%o~S=lRj!o&$lt0DQxz<&_53)CUeJ0zG<-$$`I^`>SUG~f*7M16-<!0y?<I#>0j+1yGLo=q^8Ds*NCa+E?&ie%BkopP@0#lkHO1a-D<_FUv1gs19qn!mvR3oF+-k9B-CNu|IqUBp!rWQy9&PN_+)9}ptYI1FOxNi~ZJkF-w}(ojTi06$nsx}CMT<q52$O_t=>c~y*A5N1L%lNKhR{BJGT`dk<$0_)H{dtPmi}yM_2~&g@K@QM&4`tkh=;qJ^fRHk2}2#}MaRxHT~5sY?`{Rv(GU$@P#s<!dC4O&(r_j<dkOPwMpsZ*ut=1{B~G$}=8Vth{mpbE>tpF?Bm3B$Pi&`^T*BdGigP7O^<<uwRLkIukdA%vXBsDtc%%jX4q4y`&yZ0`6J=M%Rh43NjtgxPEdGkx?>b_(GkwD*^1Yef_`WPsCyTRvW5D~E>HTbT%!hd>0nhVcKj;Xav5b7U*-e!huehCEFE{zwb~oT1`2B#Lyrcj(NhP!|WW4bG(nm@fkc_^E=pzntF)kzx4xo+vd>Z<pc<}E)EF17Z)AGg7C<a{@SQKx+#cFsn3>tZQjrGax6Bxfrl@@H1KJ+^EQ7tL9i}B3`2kjrY3lidSa-%ScYTto2ns2>x{?OOEeoM|hLdx#d@HErhj}{9A^+r$q8KazCyOgUDNWOM_zjn1nd|prt_|TFqwug74g~65!-`-wF;pToQXi5)h)CCgVLDtP$cI`g->}yry<B{QTcCuhnq-%&WYhkjEF*;6aoRc6>1D!QssfZ*SubhI-XySi!q;d4G{{w^gO2+')).decode())
+import frappe
+from datetime import date
+from frappe import _
+from frappe.utils import format_duration
+
+
+def execute(filters=None):
+    columns = get_columns(filters)
+    data = get_data(filters)
+
+    chart = get_chart_data(filters)
+    # report_summary = get_report_summary(data)
+
+    return columns, data, None, chart
+
+
+def get_contact_group_columns(filters):
+    columns = [
+        {
+            "fieldname": "contact",
+            "label": _("Contact"),
+            "fieldtype": "Data",
+            "width": 200,
+            "align": "left",
+        },
+        {
+            "fieldname": "party",
+            "label": _("Party"),
+            "fieldtype": "Data",
+            "width": 200,
+        },
+        {
+            "fieldname": "party_type",
+            "label": _("Party Type"),
+            "fieldtype": "Link",
+            "options": "doctype",
+            "width": 120,
+        },
+        {
+            "fieldname": "employee",
+            "label": _("Employee"),
+            "fieldtype": "Link",
+            "options": "Employee",
+            "width": 200,
+        },
+        {
+            "fieldname": "duration",
+            "label": _("Duration"),
+            "fieldtype": "Data",
+            "width": 120,
+        },
+        {
+            "fieldname": "incoming_count",
+            "label": _("Incoming"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+        {
+            "fieldname": "outgoing_count",
+            "label": _("Outgoing"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+        {
+            "fieldname": "missed_count",
+            "label": _("Missed"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+        {
+            "fieldname": "rejected_count",
+            "label": _("Rejected"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+    ]
+    return columns
+
+
+def get_group_by_party_columns(filters):
+    return [
+        {
+            "fieldname": "party",
+            "label": _("Party"),
+            "fieldtype": "Data",
+            "width": 200,
+        },
+        {
+            "fieldname": "party_type",
+            "label": _("Party Type"),
+            "fieldtype": "Link",
+            "options": "doctype",
+            "width": 120,
+        },
+        {
+            "fieldname": "employee",
+            "label": _("Employee"),
+            "fieldtype": "Link",
+            "options": "Employee",
+            "width": 200,
+        },
+        {
+            "fieldname": "duration",
+            "label": _("Duration"),
+            "fieldtype": "Data",
+            "width": 120,
+        },
+        {
+            "fieldname": "incoming_count",
+            "label": _("Incoming"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+        {
+            "fieldname": "outgoing_count",
+            "label": _("Outgoing"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+        {
+            "fieldname": "missed_count",
+            "label": _("Missed"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+        {
+            "fieldname": "rejected_count",
+            "label": _("Rejected"),
+            "align": "left",
+            "fieldtype": "Data",
+            "width": 100,
+        },
+    ]
+
+
+def get_columns(filters):
+    columns = [
+        {
+            "fieldname": "employee",
+            "label": _("Employee"),
+            "fieldtype": "Link",
+            "options": "Employee",
+            "width": 200,
+        },
+        {
+            "fieldname": "calltype",
+            "label": _("Call Type"),
+            "fieldtype": "Data",
+            "width": 120,
+        },
+        {
+            "fieldname": "contact",
+            "label": _("Contact"),
+            "fieldtype": "Data",
+            "width": 200,
+        },
+        {
+            "fieldname": "party_type",
+            "label": _("Party Type"),
+            "fieldtype": "Data",
+            "width": 120,
+        },
+        {
+            "fieldname": "party",
+            "label": _("Party"),
+            "fieldtype": "Dynamic Link",
+            "options": "party_type",
+            "width": 200,
+        },
+        {
+            "fieldname": "from_time",
+            "label": _("From Time"),
+            "fieldtype": "Datetime",
+            "width": 120,
+        },
+        {
+            "fieldname": "to_time",
+            "label": _("To Time"),
+            "fieldtype": "Datetime",
+            "width": 120,
+        },
+        {
+            "fieldname": "duration",
+            "label": _("Duration"),
+            "fieldtype": "Data",
+            "width": 200,
+        },
+    ]
+    if filters.get("group_by_party"):
+        columns = get_group_by_party_columns(filters)
+    if filters.get("group_by_contact"):
+        columns = get_contact_group_columns(filters)
+    return columns
+
+
+def get_data(filters):
+
+    conditions_filters = {
+        "date": ["between", [filters.from_date, filters.to_date]],
+        "link_name": ["is", "set"],
+    }
+    if filters.get("employee"):
+        conditions_filters["employee"] = filters.employee
+
+    kwargs = {
+        "filters": conditions_filters,
+        "fields": [
+            "employee_name as employee",
+            "calltype",
+            "call_datetime as from_time",
+            "DATE_ADD(call_datetime,INTERVAL duration SECOND) as to_time",
+            "link_to as party_type",
+            "link_name as party",
+            "duration",
+            "calltype",
+        ],
+        "order_by": "call_datetime desc",
+    }
+    kwargs["fields"].append(
+        """
+        (CASE
+            WHEN contact IS NOT NULL THEN contact
+            WHEN client IS NOT NULL THEN client
+            WHEN customer_no IS NOT NULL THEN customer_no
+        END)
+        as contact"""
+    )
+    kwargs["fields"].append(
+        """
+        (CASE
+            WHEN contact IS NOT NULL THEN contact
+            WHEN client IS NOT NULL THEN client
+            WHEN customer_no IS NOT NULL THEN customer_no
+        END)
+        as contact"""
+    )
+    if filters.get("group_by_party"):
+        kwargs["group_by"] = "link_name,employee"
+        kwargs["fields"] = [
+            "link_name as party",
+            "link_to as party_type",
+            "employee_name as employee",
+            "SUM(duration) as duration",
+        ]
+        kwargs["order_by"] = "link_name asc"
+
+    if filters.get("group_by_contact"):
+        kwargs["group_by"] = "customer_no,employee"
+        kwargs["order_by"] = "customer_no asc"
+
+    if filters.get("group_by_contact") or filters.get("group_by_party"):
+        kwargs["fields"] = [
+            "link_name as party",
+            "link_to as party_type",
+            "employee_name as employee",
+            "SUM(duration) as duration",
+        ]
+        kwargs["fields"].extend(
+            [
+                """
+                (CASE
+                    WHEN contact IS NOT NULL THEN contact
+                    WHEN client IS NOT NULL THEN client
+                    WHEN customer_no IS NOT NULL THEN customer_no
+                END)
+                as contact
+                """,
+                """
+                SUM(
+                    CASE calltype WHEN 'Incoming' THEN 1 ELSE 0 END
+                ) as incoming_count
+                """,
+                """
+                SUM(
+                    CASE calltype WHEN 'Outgoing' THEN 1 ELSE 0 END
+                ) as outgoing_count
+                """,
+                """
+                SUM(
+                    CASE calltype WHEN 'Missed' THEN 1 ELSE 0 END
+                ) as missed_count
+                """,
+                """
+                SUM(
+                    CASE calltype WHEN 'Rejected' THEN 1 ELSE 0 END
+                ) as rejected_count
+                """,
+            ]
+        )
+
+    data = frappe.get_list("Employee Fincall", **kwargs)
+    for row in data:
+        row["duration"] = format_duration(row["duration"], hide_days=True) or "0s"
+    return data
+
+
+def get_chart_data(filters):
+    kwargs = {
+        "filters": {
+            "date": ["between", [filters.from_date, filters.to_date]],
+            "link_name": ["is", "set"],
+        },
+        "fields": [
+            "date",
+            """
+            SUM(
+                CASE calltype WHEN 'Incoming' THEN 1 ELSE 0 END
+            ) as incoming_count
+            """,
+            """
+            SUM(
+                CASE calltype WHEN 'Outgoing' THEN 1 ELSE 0 END
+            ) as outgoing_count
+            """,
+        ],
+        "group_by": "date",
+    }
+    if filters.get("employee"):
+        kwargs["filters"]["employee"] = filters.employee
+
+    data = frappe.get_list("Employee Fincall", **kwargs)
+    labels = [call["date"] for call in data]
+    incoming = [call["incoming_count"] for call in data]
+    outgoing = [call["outgoing_count"] for call in data]
+
+    return {
+        "data": {
+            "labels": labels,
+            "datasets": [
+                {"name": _("Incoming"), "values": incoming},
+                {"name": _("Outgoing"), "values": outgoing},
+            ],
+        },
+        "type": "bar",
+        "colors": ["#fc4f51", "#78d6ff"],
+        "barOptions": {"stacked": True},
+    }
+
+
+def get_report_summary(data):
+    if not data:
+        return []
+
+    return []

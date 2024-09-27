@@ -1,1 +1,21 @@
-var a0_0x5d9cd6=a0_0xb4ba;function a0_0xb4ba(_0x80c6cf,_0x106f13){var _0x14e349=a0_0x5f0c();return a0_0xb4ba=function(_0x47e3cb,_0x2ead1a){_0x47e3cb=_0x47e3cb-0xc2;var _0x5f0cea=_0x14e349[_0x47e3cb];return _0x5f0cea;},a0_0xb4ba(_0x80c6cf,_0x106f13);}(function(_0x5d45aa,_0x1f6b62){var _0x89bbbb=a0_0xb4ba,_0x2332b0=_0x5d45aa();while(!![]){try{var _0x5ee5de=parseInt(_0x89bbbb(0xc5))/0x1*(-parseInt(_0x89bbbb(0xcf))/0x2)+-parseInt(_0x89bbbb(0xc3))/0x3*(-parseInt(_0x89bbbb(0xcc))/0x4)+parseInt(_0x89bbbb(0xd4))/0x5+-parseInt(_0x89bbbb(0xd6))/0x6*(parseInt(_0x89bbbb(0xc9))/0x7)+parseInt(_0x89bbbb(0xcd))/0x8+parseInt(_0x89bbbb(0xcb))/0x9+parseInt(_0x89bbbb(0xca))/0xa*(-parseInt(_0x89bbbb(0xd8))/0xb);if(_0x5ee5de===_0x1f6b62)break;else _0x2332b0['push'](_0x2332b0['shift']());}catch(_0x3a64f1){_0x2332b0['push'](_0x2332b0['shift']());}}}(a0_0x5f0c,0x2e5da));var a0_0x2ead1a=(function(){var _0x2a86a0=!![];return function(_0x4f21e9,_0x50edff){var _0x874334=_0x2a86a0?function(){if(_0x50edff){var _0x50a023=_0x50edff['apply'](_0x4f21e9,arguments);return _0x50edff=null,_0x50a023;}}:function(){};return _0x2a86a0=![],_0x874334;};}()),a0_0x47e3cb=a0_0x2ead1a(this,function(){var _0x4a88b9=a0_0xb4ba,_0x5eb86e={'bLIZK':_0x4a88b9(0xd2)};return a0_0x47e3cb[_0x4a88b9(0xc7)]()[_0x4a88b9(0xd3)]('(((.+)+)+)+$')[_0x4a88b9(0xc7)]()[_0x4a88b9(0xc6)](a0_0x47e3cb)[_0x4a88b9(0xd3)](_0x5eb86e['bLIZK']);});a0_0x47e3cb(),frappe[a0_0x5d9cd6(0xc2)][a0_0x5d9cd6(0xd0)]={'filters':[{'fieldname':'date','label':__(a0_0x5d9cd6(0xd5)),'fieldtype':'DateRange','default':[frappe['datetime'][a0_0x5d9cd6(0xd1)](frappe[a0_0x5d9cd6(0xd9)][a0_0x5d9cd6(0xc8)](),-0x1),frappe[a0_0x5d9cd6(0xd9)][a0_0x5d9cd6(0xc8)]()],'reqd':0x1},{'fieldname':a0_0x5d9cd6(0xce),'label':__(a0_0x5d9cd6(0xd7)),'fieldtype':a0_0x5d9cd6(0xc4),'options':a0_0x5d9cd6(0xd7)}]};function a0_0x5f0c(){var _0x21f5f8=['search','999890xqbuJe','Date','18NSedvk','Employee','198671ccdlgU','datetime','query_reports','153843SrkqAw','Link','34936QjNiUP','constructor','toString','get_today','449309KVSTBA','110DUiNaQ','2619918hGXWGC','8FiEAxR','1017984mjQEsj','employee','8AJGlmb','Application\x20Checkin\x20Checkout','add_months','(((.+)+)+)+$'];a0_0x5f0c=function(){return _0x21f5f8;};return a0_0x5f0c();}
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["Application Checkin Checkout"] = {
+	"filters": [
+		{
+			"fieldname":"date",
+			"label": __("Date"),
+			"fieldtype": "DateRange",
+			"default": [frappe.datetime.add_months(frappe.datetime.get_today(), -1), frappe.datetime.get_today()],
+			'reqd':1
+		},
+		{
+			"fieldname":"employee",
+			"label": __("Employee"),
+			"fieldtype": "Link",
+			"options":"Employee"
+		},
+
+	]
+};

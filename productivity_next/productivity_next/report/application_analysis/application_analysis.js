@@ -1,1 +1,45 @@
-function a0_0x3f6a(_0x26719f,_0x56e07c){var _0x3b634c=a0_0x3e6f();return a0_0x3f6a=function(_0x186b28,_0x2ac4df){_0x186b28=_0x186b28-0x95;var _0x3e6f8b=_0x3b634c[_0x186b28];return _0x3e6f8b;},a0_0x3f6a(_0x26719f,_0x56e07c);}var a0_0x3d94f4=a0_0x3f6a;(function(_0x2973c6,_0x45690c){var _0x3bb367=a0_0x3f6a,_0x2b81a3=_0x2973c6();while(!![]){try{var _0x41bd11=parseInt(_0x3bb367(0x99))/0x1*(parseInt(_0x3bb367(0xb4))/0x2)+-parseInt(_0x3bb367(0xac))/0x3+-parseInt(_0x3bb367(0xb1))/0x4*(parseInt(_0x3bb367(0xa9))/0x5)+-parseInt(_0x3bb367(0x9a))/0x6*(-parseInt(_0x3bb367(0x98))/0x7)+parseInt(_0x3bb367(0x9f))/0x8+parseInt(_0x3bb367(0xa1))/0x9+-parseInt(_0x3bb367(0xa3))/0xa;if(_0x41bd11===_0x45690c)break;else _0x2b81a3['push'](_0x2b81a3['shift']());}catch(_0x48fe39){_0x2b81a3['push'](_0x2b81a3['shift']());}}}(a0_0x3e6f,0x29bc1));function a0_0x3e6f(){var _0x2b7f9e=['Group\x20By\x20Application','4765TzEBIn','Employee','employee','476730ikXODX','get_today','Group\x20By\x20Employee\x20&\x20Application','query_report','(((.+)+)+)+$','596QbXiTx','search','query_reports','54hNWNiT','Link','checked','From\x20Date','to_date','input','Date','Check','group_by_application_name','lfAkv','7tsfVOm','2547alomnm','1595976zqesIy','refresh','from_date','uCRig','datetime','1854816BdqevV','add_days','2713392EwQOHT','Application\x20Analysis','3962530oULBCK','sYGKA','To\x20Date','group_by_employee_and_application_name','AYcZW'];a0_0x3e6f=function(){return _0x2b7f9e;};return a0_0x3e6f();}var a0_0x2ac4df=(function(){var _0x1e895f={'lfAkv':'CaJTg'},_0x4f51a0=!![];return function(_0x3756ef,_0x58b4f7){var _0x576faf=a0_0x3f6a;if(_0x1e895f[_0x576faf(0x97)]===_0x576faf(0x9d))_0x48011b[_0x576faf(0xaf)]['get_filter'](_0x576faf(0x96))[_0x576faf(0xb9)][_0x576faf(0xb6)]=![],_0x57fe41[_0x576faf(0xaf)][_0x576faf(0x9b)]();else{var _0x211c02=_0x4f51a0?function(){if(_0x58b4f7){var _0x197b21=_0x58b4f7['apply'](_0x3756ef,arguments);return _0x58b4f7=null,_0x197b21;}}:function(){};return _0x4f51a0=![],_0x211c02;}};}()),a0_0x186b28=a0_0x2ac4df(this,function(){var _0x10b156=a0_0x3f6a,_0x3699cf={'AYcZW':_0x10b156(0xb0)};return a0_0x186b28['toString']()[_0x10b156(0xb2)](_0x10b156(0xb0))['toString']()['constructor'](a0_0x186b28)['search'](_0x3699cf[_0x10b156(0xa7)]);});a0_0x186b28(),frappe[a0_0x3d94f4(0xb3)][a0_0x3d94f4(0xa2)]={'filters':[{'fieldname':a0_0x3d94f4(0x9c),'label':__(a0_0x3d94f4(0xb7)),'fieldtype':a0_0x3d94f4(0xba),'default':frappe[a0_0x3d94f4(0x9e)][a0_0x3d94f4(0xa0)](frappe[a0_0x3d94f4(0x9e)]['get_today'](),-0x1)},{'fieldname':a0_0x3d94f4(0xb8),'label':__(a0_0x3d94f4(0xa5)),'fieldtype':a0_0x3d94f4(0xba),'default':frappe[a0_0x3d94f4(0x9e)]['add_days'](frappe[a0_0x3d94f4(0x9e)][a0_0x3d94f4(0xad)](),-0x1)},{'fieldname':a0_0x3d94f4(0xab),'label':__(a0_0x3d94f4(0xaa)),'fieldtype':a0_0x3d94f4(0xb5),'options':a0_0x3d94f4(0xaa)},{'fieldname':a0_0x3d94f4(0xa6),'label':__(a0_0x3d94f4(0xae)),'fieldtype':a0_0x3d94f4(0x95),'on_change':function(_0x4c4b07){var _0x288f3c=a0_0x3d94f4,_0x2b7c91={'sYGKA':'group_by_application_name'};frappe[_0x288f3c(0xaf)]['get_filter'](_0x2b7c91[_0x288f3c(0xa4)])['input'][_0x288f3c(0xb6)]=![],frappe['query_report'][_0x288f3c(0x9b)]();}},{'fieldname':a0_0x3d94f4(0x96),'label':__(a0_0x3d94f4(0xa8)),'fieldtype':a0_0x3d94f4(0x95),'on_change':function(_0x57b6bf){var _0x382c16=a0_0x3d94f4;frappe[_0x382c16(0xaf)]['get_filter']('group_by_employee_and_application_name')['input'][_0x382c16(0xb6)]=![],frappe['query_report'][_0x382c16(0x9b)]();}}]};
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["Application Analysis"] = {
+	"filters": [
+		{
+			"fieldname": "from_date",
+			"label": __("From Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.add_days(frappe.datetime.get_today(), -1)
+		},
+		{
+			"fieldname": "to_date",
+			"label": __("To Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.add_days(frappe.datetime.get_today(), -1)
+		},
+		{
+			"fieldname": "employee",
+			"label": __("Employee"),
+			"fieldtype": "Link",
+			"options": "Employee"
+		},
+		
+		{
+			"fieldname": "group_by_employee_and_application_name",
+			"label": __("Group By Employee & Application"),
+			"fieldtype": "Check",
+			on_change: function (query_report) {
+				frappe.query_report.get_filter('group_by_application_name').input.checked = false
+				frappe.query_report.refresh();
+			},
+		
+		},
+		{
+			"fieldname": "group_by_application_name",
+			"label": __("Group By Application"),
+			"fieldtype": "Check",
+			on_change: function (query_report) {
+				frappe.query_report.get_filter('group_by_employee_and_application_name').input.checked = false
+				frappe.query_report.refresh();
+			},
+		},
+	]
+};
