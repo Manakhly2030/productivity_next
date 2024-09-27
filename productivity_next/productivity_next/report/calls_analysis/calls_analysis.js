@@ -1,1 +1,65 @@
-function a0_0x5e95(_0x3682da,_0x3cd60c){var _0x57b67d=a0_0x27d7();return a0_0x5e95=function(_0x48ae12,_0x56b2e7){_0x48ae12=_0x48ae12-0x18a;var _0x27d702=_0x57b67d[_0x48ae12];return _0x27d702;},a0_0x5e95(_0x3682da,_0x3cd60c);}var a0_0x2b6d54=a0_0x5e95;function a0_0x27d7(){var _0x59125e=['3006330gWZlQU','To\x20Date','379557owhFoI','Rejected','217296IDYqXc','2568884YcHhrL','includes','msaFu','Link','TkTEl','oJIAW','Check','from_date','1616aBfDUY','54738mYcgmO','VRTkf','query_reports','LCOPj','Group\x20By\x20Party','VahiL','employee','</span>','Incoming','zFQdJ','group_by_party','refresh','From\x20Date','uZUME','Missed','SczBH','1171224lXcqVv','get_filter','ihWdb','ZzxWw','266YYTtHM','INDOG','fieldname','505MvLnst','Employee','4023dOACwv','apply','ztNwR','checked','input','Group\x20By\x20Contact','get_today','sVZVi','Calls\x20Analysis','(((.+)+)+)+$','datetime','calltype','fHJmz','add_days','tDAkA','UtKTz','<span\x20style=\x27color:rgb(224,\x2054,\x2054)\x27>','<span\x20style=\x27color:rgb(255,\x20193,\x207)\x27>','CvbqH','Date','constructor','toString','Mxanj','search','query_report','FGXIP','ARxnt'];a0_0x27d7=function(){return _0x59125e;};return a0_0x27d7();}(function(_0x353a76,_0x5a28d3){var _0x372225=a0_0x5e95,_0xbb36e5=_0x353a76();while(!![]){try{var _0x4c45ea=-parseInt(_0x372225(0x1bf))/0x1+parseInt(_0x372225(0x1c2))/0x2+-parseInt(_0x372225(0x1a2))/0x3*(parseInt(_0x372225(0x1ca))/0x4)+-parseInt(_0x372225(0x1a0))/0x5*(-parseInt(_0x372225(0x1cb))/0x6)+-parseInt(_0x372225(0x19d))/0x7*(parseInt(_0x372225(0x1c1))/0x8)+parseInt(_0x372225(0x199))/0x9+parseInt(_0x372225(0x1bd))/0xa;if(_0x4c45ea===_0x5a28d3)break;else _0xbb36e5['push'](_0xbb36e5['shift']());}catch(_0x1bea17){_0xbb36e5['push'](_0xbb36e5['shift']());}}}(a0_0x27d7,0xa6c95));var a0_0x56b2e7=(function(){var _0x556fb3=!![];return function(_0x3058dc,_0x490828){var _0x94b952=_0x556fb3?function(){var _0x2271e7=a0_0x5e95;if(_0x490828){var _0x18d57c=_0x490828[_0x2271e7(0x1a3)](_0x3058dc,arguments);return _0x490828=null,_0x18d57c;}}:function(){};return _0x556fb3=![],_0x94b952;};}()),a0_0x48ae12=a0_0x56b2e7(this,function(){var _0x1c3fd6=a0_0x5e95,_0xff8f58={'fHJmz':_0x1c3fd6(0x1ab)};return a0_0x48ae12['toString']()['search'](_0xff8f58[_0x1c3fd6(0x1ae)])[_0x1c3fd6(0x1b7)]()[_0x1c3fd6(0x1b6)](a0_0x48ae12)[_0x1c3fd6(0x1b9)](_0xff8f58[_0x1c3fd6(0x1ae)]);});a0_0x48ae12(),frappe[a0_0x2b6d54(0x18b)][a0_0x2b6d54(0x1aa)]={'filters':[{'fieldname':a0_0x2b6d54(0x1c9),'label':__(a0_0x2b6d54(0x195)),'fieldtype':a0_0x2b6d54(0x1b5),'default':frappe[a0_0x2b6d54(0x1ac)][a0_0x2b6d54(0x1af)](frappe[a0_0x2b6d54(0x1ac)]['get_today'](),-0x7)},{'fieldname':'to_date','label':__(a0_0x2b6d54(0x1be)),'fieldtype':'Date','default':frappe['datetime'][a0_0x2b6d54(0x1a8)]()},{'fieldname':a0_0x2b6d54(0x18f),'label':__(a0_0x2b6d54(0x1a1)),'fieldtype':a0_0x2b6d54(0x1c5),'options':'Employee'},{'fieldname':a0_0x2b6d54(0x193),'label':__(a0_0x2b6d54(0x18d)),'fieldtype':a0_0x2b6d54(0x1c8),'on_change':function(_0x20931c){var _0xcc8172=a0_0x2b6d54,_0x24d160={'LCOPj':'group_by_contact'};frappe['query_report']['get_filter'](_0x24d160[_0xcc8172(0x18c)])['input'][_0xcc8172(0x1a5)]=![],frappe[_0xcc8172(0x1ba)][_0xcc8172(0x194)]();}},{'fieldname':'group_by_contact','label':__(a0_0x2b6d54(0x1a7)),'fieldtype':'Check','on_change':function(_0x367e7e){var _0x483ac2=a0_0x2b6d54;frappe['query_report']['get_filter']('group_by_party')[_0x483ac2(0x1a6)][_0x483ac2(0x1a5)]=![],frappe[_0x483ac2(0x1ba)]['refresh']();}}],'formatter':function(_0x999808,_0x4fc499,_0x2f12a3,_0x28e92d,_0x322ecc){var _0x426e8b=a0_0x2b6d54,_0x15b0ab={'tDAkA':function(_0x170eb6,_0x1ede72,_0x1c6404,_0x9479f1,_0x471685){return _0x170eb6(_0x1ede72,_0x1c6404,_0x9479f1,_0x471685);},'ARxnt':_0x426e8b(0x1ad),'zFQdJ':function(_0x50c98a,_0x10c28e){return _0x50c98a===_0x10c28e;},'oJIAW':'pQQEP','ypGdf':_0x426e8b(0x1c6),'vUPpO':function(_0x4c5622,_0x33124c){return _0x4c5622==_0x33124c;},'xmLvp':function(_0x46fc6e,_0x37ab67){return _0x46fc6e!==_0x37ab67;},'Eekjd':'ztNwR','szsGj':function(_0x26a081,_0x241d4a){return _0x26a081+_0x241d4a;},'CvbqH':'<span\x20style=\x27color:rgb(40,\x20167,\x2069)\x27>','INDOG':function(_0x30ede2,_0x114dd1){return _0x30ede2==_0x114dd1;},'FGXIP':'Outgoing','ZzxWw':function(_0x309821,_0x5d4066){return _0x309821+_0x5d4066;},'UtKTz':_0x426e8b(0x190),'yuuDJ':_0x426e8b(0x197),'VahiL':function(_0xbd9891,_0x2b43dc){return _0xbd9891!==_0x2b43dc;},'uZUME':'sVZVi','msaFu':function(_0x50be69,_0x5daa2d){return _0x50be69+_0x5daa2d;},'SczBH':_0x426e8b(0x1b3),'QvQxv':function(_0x2d2f58,_0x2a8fd0){return _0x2d2f58==_0x2a8fd0;},'pduKI':_0x426e8b(0x1c0),'ihWdb':function(_0x3f1d83,_0x1397aa){return _0x3f1d83+_0x1397aa;},'VRTkf':function(_0x319fe0,_0xc13d74){return _0x319fe0+_0xc13d74;},'Mxanj':_0x426e8b(0x1b2)};_0x999808=_0x15b0ab[_0x426e8b(0x1b0)](_0x322ecc,_0x999808,_0x4fc499,_0x2f12a3,_0x28e92d);if(_0x2f12a3[_0x426e8b(0x19f)][_0x426e8b(0x1c3)](_0x15b0ab[_0x426e8b(0x1bc)])){if(_0x15b0ab[_0x426e8b(0x192)](_0x15b0ab[_0x426e8b(0x1c7)],_0x15b0ab['ypGdf']))_0xb05d8c['query_report'][_0x426e8b(0x19a)](_0x426e8b(0x193))[_0x426e8b(0x1a6)][_0x426e8b(0x1a5)]=![],_0x20e142[_0x426e8b(0x1ba)][_0x426e8b(0x194)]();else{if(_0x15b0ab['vUPpO'](_0x28e92d[_0x2f12a3[_0x426e8b(0x19f)]],_0x426e8b(0x191))){if(_0x15b0ab['xmLvp'](_0x426e8b(0x1a4),_0x15b0ab['Eekjd'])){var _0x5ebafe=_0x2f9ced?function(){if(_0x3fcf21){var _0x4d3eeb=_0x27853a['apply'](_0x1d8c76,arguments);return _0x2c22f3=null,_0x4d3eeb;}}:function(){};return _0x32a2e1=![],_0x5ebafe;}else _0x999808=_0x15b0ab['szsGj'](_0x15b0ab['szsGj'](_0x15b0ab[_0x426e8b(0x1b4)],_0x999808),'</span>');}else{if(_0x15b0ab[_0x426e8b(0x19e)](_0x28e92d[_0x2f12a3['fieldname']],_0x15b0ab[_0x426e8b(0x1bb)]))_0x999808=_0x15b0ab['ZzxWw']('<span\x20style=\x27color:#78d6ff\x27>'+_0x999808,_0x15b0ab[_0x426e8b(0x1b1)]);else{if(_0x28e92d[_0x2f12a3[_0x426e8b(0x19f)]]==_0x15b0ab['yuuDJ']){if(_0x15b0ab[_0x426e8b(0x18e)](_0x426e8b(0x1a9),_0x15b0ab[_0x426e8b(0x196)])){var _0x148a79=_0xbcf511[_0x426e8b(0x1a3)](_0x355e40,arguments);return _0x4fd803=null,_0x148a79;}else _0x999808=_0x15b0ab[_0x426e8b(0x1c4)](_0x15b0ab[_0x426e8b(0x19c)](_0x15b0ab[_0x426e8b(0x198)],_0x999808),_0x15b0ab['UtKTz']);}else _0x15b0ab['QvQxv'](_0x28e92d[_0x2f12a3['fieldname']],_0x15b0ab['pduKI'])&&(_0x999808=_0x15b0ab[_0x426e8b(0x19b)](_0x15b0ab[_0x426e8b(0x18a)](_0x15b0ab[_0x426e8b(0x1b8)],_0x999808),_0x15b0ab['UtKTz']));}}}}return _0x999808;}};
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["Calls Analysis"] = {
+
+	"filters": [
+		{
+			"fieldname": "from_date",
+			"label": __("From Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.add_days(frappe.datetime.get_today(), -7)
+		},
+		{
+			"fieldname": "to_date",
+			"label": __("To Date"),
+			"fieldtype": "Date",
+			"default": frappe.datetime.get_today()
+		},
+		{
+			"fieldname": "employee",
+			"label": __("Employee"),
+			"fieldtype": "Link",
+			"options": "Employee"
+		},
+		{
+			"fieldname": "group_by_party",
+			"label": __("Group By Party"),
+			"fieldtype": "Check",
+			on_change: function (query_report) {
+				frappe.query_report.get_filter('group_by_contact').input.checked = false
+				frappe.query_report.refresh();
+			}
+		},
+		{
+			"fieldname": "group_by_contact",
+			"label": __("Group By Contact"),
+			"fieldtype": "Check",
+			on_change: function (query_report) {
+				frappe.query_report.get_filter('group_by_party').input.checked = false
+				frappe.query_report.refresh();
+			}
+		},
+
+	],
+	formatter: function (value, row, column, data, default_formatter) {
+		value = default_formatter(value, row, column, data);
+
+		if (column.fieldname.includes("calltype")) {
+			if (data[column.fieldname] == "Incoming") {
+				value = "<span style='color:rgb(40, 167, 69)'>" + value + "</span>";
+			} else if (data[column.fieldname] == "Outgoing") {
+				value = "<span style='color:#78d6ff'>" + value + "</span>";
+			}
+			else if (data[column.fieldname] == "Missed") {
+				value = "<span style='color:rgb(255, 193, 7)'>" + value + "</span>";
+			}
+			else if (data[column.fieldname] == "Rejected") {
+				value = "<span style='color:rgb(224, 54, 54)'>" + value + "</span>";
+			}
+		}
+
+		return value;
+	},
+
+};

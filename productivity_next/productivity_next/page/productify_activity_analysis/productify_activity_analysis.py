@@ -1,3 +1,1004 @@
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1D$YjfL1lHc_!W|4A{T+@tfZ<0G+m^ww0H`=nLoF#8+i=|>9VkjXd0WAPp*1GiHue;|x7=WNGJI>vzc4Gq5)6>)4)6?Daz|Nw`S1gGuUZpF}($#fdRQh?S|C8`#74OL6MG;?L^Bt-xeyfV>DqWU#!HC|d;w-;uE{v08w#u{WsvKVO3P}*K^L)AF^D50V4Vv&pyk1sGI<G=h%oL%&m3bxru8TZb1Cn=Xbvw)W`)U+lrwV=^FX!teG&rmBDqhZR^5SipUCyrZby4o@>}Vb#y`$^6D0!jk($mh)SL`%R_(fc>J=qF7h^rWgPdF>9xTwmV|CYVJxk@X(Ov|btFPHhv>~hV^YI0Vr`Ctcn#-R7JSkXGag1R$kJnpZd*&*S=XFfU3Gd^TIOU&b7yu;uxT`&Y@lL?FVl2w{PV?|u$MI_4cui(|X$k>NFdh-=~!K?WdOOqvMqzcRYvJ}YR)eK(|6>Oq}mt2g>e=hrrD2g=F)5DjC`)3RpMpal`ir&-HkX5;UjdbI0UH8T7lUMB5D!w>eT`%)n&e;(Xa|STKYM@_!I(&UdvS2?<Snq>j$6b%@9Uq9I@3BZRMiy{|70Zx2cRj)i<PU+K87h+$g2RzTnt^^SJ*LRFTk?gf=)vakX7AwO?C8~D-vJsz)&1Go$&8AUHAoQ#!eG#mgD(V`pNN0-p6IP^Vf6h8N?xU9$rDlH6ujoY!61gBK_{-SICMX|^tdkHZpn33i-xhsbd51@=jbZ|_bWoJbn)L#j*jhOwx6%A<Ls8b=GO%;c~*hA-f>ZDUa*s6wi;#e3YiGcXi5Oa6V7Vn5bTSI?e320e}c&d8oJ=hjXirl{^md7e+n|m=YXhMm(cuE@eYXCeqcZ^FVYMY7=}fbXHUpzT=OE$lalo%Jtd2?gmj=3A_vGB*%Adg35=r0bs39Rg=MDtC7<UR)!!9mi@abKW|n52(K1#~AV6+Hb*s*_XSAYs?t%kDePE?10IFf*<hOMR8t$T}hdPXf6Mh;b*cHVn?1#^^G1H(9PgR@hMMHm_I)VmMBh)D=@GCxlOSI+hc(IJHNw%Uh%#nUPpXWsa@>||IIABKdXa!w$xPcfQ(tenDEFC)-H)EA=9ISO5LDAV&y0q$c<@?DtZMtIc6vk@PBk~8Ae;qq!R|(d*D0uwV$RA{{oFi6Uai(S<mM`d8;j^{C9X-0ng!P?1Kk=v=jKmn1!@EB)corV2AK0$j-+*;^JaH@eR)l7j2`ln-mh|iO2h6rRYEJGp;W(t7zIkQlZMJtRF*;=7-zS^AabRt0;{}b%6yLw&=(V8t0!|G5J~(>uqHiXwp))rR1_AysR_D+cIT<6HyG_Odvh!rjS|x>Xgc8v7-1U+KBRjiEqgF?0^oMqpK2AFH&XLYW;oxg>ezq0E7ak)ZE4DE+^gbLTDF1Ma7y(}c1DENX`nWA`KQ1oaGYzvhWqe72$tPl4w=qA$4#V_SAMt}Qps$e)U||-kDG{b)V|74o)9Lw;iT|IEZP(!ixD6H0$Wg!==rp8R#fx|GvNSF)K+W`PG-K+4JkD}`L3P0yHm#D!ub`kr0-f8fpJIB(;JvsN5@(KZ-Nr{H)ak$Fx07YOx=3R7e$3vxuJpie;uSAI3#3ncjaIGRy%oYFZU>D+K3^AT*K{$eu|v{y_uP#R>~4FYPsiu3Ta+4pyS*T_GeySp7lYCx$_5BJ;SG&|u5X7*aP{np7ZCiEim^jh=7No+Np%+6e{BuoR1&}Mw}A|UTp84w;>(gZ(SMvfl*dUzbjxOq0AUu=BLmqk)H7xozhQaCgV=p-(gWM;Q=Q@vb1(#zKOK0!Y!qs})1R)x_wQ_5N3HRDkY~LLN7W^-kUB;AGA^q+XMiU@UY8r)>1__M$lSU%N?2eSujpjF6(9L#!KdS6jY3`K7D<mMVMFqyp%uhs_22EBeh9{b?x1sO?lLQGv8OM};kP>nCCBvzm_t@ppaz~mL!d^kW(R-ZhRoPQ`UCja9<fmb`w6?;mYV-;{S6D+$}==*0ZgSMFSvxU(4;a**cOONmgN=0H5gJ;w(Co!MxT*Y8)2424Mpu$+ej&I%ZjhGinOrtNr-rf30@Nha1LkXRemEU*5}Xuvb#I92Bsq`T+!lQ%QSkOmgo&tQwvl^6-=FIY$E{kw>$K~?4D|Hr~AQbnh0ITkQJ<;Q$xCfeiIN*5QUv*(OB%4T@l$l)`%R&hx?p)75f1ZW6c4`s^4!wJ7AAlKg6=Zpw^<H&~Hb8-h~!a_i-)t5T*lMZv7=M-m)W@VX{(}oi?qrigi_7)}=|2s?c((Ttn@;sEXqXtJPLfrAIH|R15daoBee1=5?P&4_aho&d>!o*!#!v9z^;YCW&un`C@j%`P-obi77aUW@cqo<ZpRtnRs|BUk>Y8yHyUIoXx=|ytV7tuj}oI(sEwpxZ>m2lJDz5wJS$Inr@pJ@DI~wq-QOuAEqT!tJRnUs)1WV`SI}Vm&3zj_8k>Gd#+*s`ugO}&+Ny4NSRquX^rN=4dn}5PDA&PzrUsw2-YsiQzjUCg21tNy3Tq-)_axHKWA%>|NO!edb(QUKQD?D|2d5-wUA@dgR;RF>5?2p6;6pUM2l?*fc_--tHmv?q&ezrG#@(&NC|G*!zXK<$*7kB@f8nzM6?bjP`1>|uVt5o>q!L*SCoZ*P4G?Es9F}ak6khzv#|Pp1$L-hle?pZj1w<-s}KmG{4kohxG4C$G{#3@smX=fl{CH9%ij5P{QMkS*(<?C!@Ppmjxalb7lzqljmxmH6)@PToT*So>Z+rY=UV+_S8z2~SaWjszQZm&d(L8v#k2WxorrEQ9?!23ky--M3XX-O6`(amoL%z%cSH8<F9V}92!S;L05!T6m!N%(v)g_G6CQ3}A#CJ2PM^^WtV~D*iYgw|W0OGdcd6&5$ER|WQ;b<5#7VBz70*PAH)(YR_*F;s7z(9_`q+_CnkD>w|2<GS7_#?3{Xn)Q=LZ^E;YmwPXeXdJD1x7PfyxqRbKYrI%SAn0AXfGI%52_adQ(;F8-*N3N6YvEoJ*L(r|0fm5Rs~h5?yd-^5LB(L`wYcoidU2_ogT}Lk>{%f;zcvhFnz!hPb^@Y#371GTcAedwF=e4`}nO0?%j2z(5dX^L1I}5OB}3oF+X)$3f*(V*7I^-l0hTwx-IH*9V8Mab}`jbtI*R$w+VBXqA##GHMl+w>$%2>RAfQS&^}dQ5;YRNMV#9Qzf%kBg!dc#y!Sb>fP{Q@9ePeHY)ui5TQ$%wU{$>o@Ur1Y$-1;<1GD`@U~-gam}+PZboYtP->p+Ud093!DMzp-3Yv{tA}1bLw@Mu&dX<5OD>=3RWl6FM$QcJdoQ1{&1&ikvQ=$q_rXUS7PCBrTBSE*nB^h$dV{&>YeZW8TFk(<yBxcxQrcKdW5v+f%3Uiz(9L`&H|2G^X^2M-v+WFo<as=@xNeu%m`|-)62QkW&wrM?fETx7Dn4DWR&jAlqXw(hhg(ApX662<c8nt~Hseimz?Z2aj$QByJf|!q-I`RL9&R2z4g;EmdJ&g;52c)`(X#?hqi<!4+_(a|j`pwIso&yC<jM%((Z#KBiKSjp6aPjiXxxU8D>S+nv||^#K^{kU`u73cBOEb=DHkQi_h>2isC7$u(OiZTiWOEV4;H(qCP2#fi%Hws=D1KVr#&@2`g!~f%pisw$+}EVJ05fJPq!1|kptjN{+%ELd<()^6KX5G@FTqakk;y6eO0dulMdg1(M&S(ZvnEsn^r*M=xi^U5Zh_(O6}O~K2mYg^!S{HxeKq&RNhn=HYc`;#L$l?ef?_4{A~iyWGz{NLbQ@s{VBw2tLf8o(N*}3z14WUNYTo63lNw9Ay@<}9F3<vl?uiDj`ANU*Fy`b=tEEm%ot~4HQQiw5!scsBXS&jbu^LD*!0^%NhLaKbk`QdiYRxB7?!5~<*gseT0ty^>Yq7)mFa_hk>wG|0&s?LgkAE2N@ZFMUiI;(*)#8~^2(KOblBkkGLceV^Le^Rc|u4uHobRu5q-et@$R$aPB`X~0TR220fd@mkJ-}!d&Hjo#ev?!oAWc%_T;NPI}s|G?9K*{P6M_$b_R%oHuL!M@Wq+CFDb2-0Pr8X10RnpajUM2r3R+oy7;=taod^oCN0agji8E4E3ppnb6%D+?cH_RAZB^==)OtcPU5T`uQA@84N?;U?wM<cI67s=Cui*V&C8cIT;EdoKBcy;h-Jb^&F%)^QMSQ-FX62GcrJ^6&^RQ52a4Xd3eY|-?y{uRK|FP~c4zEIvUU@5|F}svcK@u~5T@Vkt=y_Cf68~%OZC=?(6-CaH7dw<`r)u_qmFpcbv@Zi5-r+<f8DZ%RM0JL_+@4doyJ>Jh!2rAOwtmRx0Iy`FXu&iO@$s4{tx6AgUs~CO-o)dbZT+qc&azoI-q>;`iQc%t?Phsv9_9Lbbm{jwat<5zCQac#4WX+wENF-aamexUS?w*=A7hkAC*;cjX(PEqc6@@4O#T)A5R{wo;*s}qo2l)UX34}Mpob}_w6-e0f0?7^bg~-DxBtFRPgI%Jm=)4PQ>cmD$Um5)$c-AX}jNKci`f(sPl0@wl+l4;^pLNfFcMDtUBNOSlp1`q1=PCF>0!QaH({$`Lx%L7x-byG$ek(JIXB&hR(?ah3_0#A?_4F4Y_}c&uJa%ML!n#P05Rhjv!(h&h~$M=ZI+<&96Yu`G~)VpqxdEwBU>Uy?R`gJh{|`IRtsJdPw<u8102FyeQ&#`k{;$agnO0cPYeWiGHLO)AdR>lFo~~%omkz>s;)9bCQzH`2}wbIx=)6;ubwf`Z5SZVNCCQM3nU-_Jl<PTo+ez2*8RSQ+Qm*4N*_e)D}-|@G>s4>X<ie^(cC>YN_Y8Iv8PDRpet^4WWI;2wRy^soxtCN^JrUrI$os8Z$|zm}DCytZP=fm9)kj_2<Y$hf1Y;-BQ>htB22Gw=s_xxJ^#`_fJ_{9^&???ZH;5?Twt<Cei)J;asQuxMJ_UGUJ25eEga6$*e7*%pNSG%<hp=X3aTevlS7O%6oRg@(nl>8}>zoZ&k9V%QYtF$Zh(VUBI}Rkp4|enx#Hj#<`Z(+j>uNEqf}$)o0(-lBZrymk@4ygTcofl)cv-PWY#H-!}KP9;kVn>JJW2_chSVqgO{~?CEZM_}0O@CIXCdnDqm%^(trPpoa*G%#KraZUPq;gpcG@25;%>ui5i&cdgh-qL7suYCRH_*w^ga-9Y5zEL_mhG_h$m%_K#*SCUmXIRvuvbOq%U-Wj^p9$RtGhN$zH^%ZT@EC?siv^_O>BMBJ_qow8sXP&tsV4?t^#THn%Or1lZf4wqEB9!{FxC?IXY%o*$zyiNu6icDIgU0k;cf;NAi`j+5VhkAYmn@cV!MYl-$>ft6uq0o_Y1aKHgn%DPeQ`|B*Qlw(XKe@7I-8(}JgX)u5Z!V~#(E)7V`b~*vTmvb%qKNVzFo59G2V8liMovgENEbcwNVooIt^ok%b|0YU$dXD@I2c-EoOAt7G34nvumtF$Fa%>J?-PMNQ6$agjaDI9v*X%Om#r4aY8>OmiGDGp4<2LP7jT>gh}<-THvr3{&40rB|<~b9B_^0@Fn2vom4P9N-?z_LS<aAp#>M3Nk!voX+~G=t2Mf`C@ayF9*z5A{pMFW^~*kL9DFg-D?IpH=I!yPwa#OmBHOYi)f<S#K`6&H_Cg>7K($Z=r3GKil6)@mZd48f_4t6S5I`D3^zANAS#?)P@#f9(S^v*wp=%DdOq}CsUSa}LcBCBf+|y#zV4O4$$RCnmo}uz#8ZQ;nhG<KM4mIPn_WZQ>_oL&#GM`oK2bkaqpw+mwEnb?TWgIPUKv||PC*8GA+luDN>cND-FY_WLr|3g(Uv`NCo;A)G;`d7)(}60v2GYCJMigw6O5n(`Y8wZwJ>>7)OncTVD>C;OAYpyOX^zN)DY9{6s>JP#8`m#z<^-%SVhH)Yl7b12Q72p;1~2vyWh&c-eu70w`2Gu3g=Ph)^LWxUS%-*5*#`l{y>uRVXrZZQka$NRp!!<eVZuFrgy%#1PjF@In2ly&!H;p!Vub!8aYmmfFk3Wo<*t79Mf1%hze@)<kzFU(AHj76Y8dFkW%S-tY@ud!zm9W{U?=t{mZ&+><%i~h*O2W4iKf=HYAQ^Vu&kIWDTAS8(Av0`v4itwroQ_+a0DxeJ;L*DP{Yh@o>;9uS(i#pd&ZBjZ`Bd}c#P}24Y{kDkLA9wGDvk_%X?$P8Y&UaJn7t1(DhUy-5FYzlf^b(Db&CNn8qjlf<rgGYeHSqd%yGSwmYOSk-%L-LIK~mUBkVW9Xk&m>GhSzI58dq6{z=C$k)C#i@*OjgWDMVC!52d@HT_nn2WF7#9TPQRrXOY30Vso+9(D`!F2b$$x_}8y0oa4QbH{T)uOe<U{D>fPRek-dHoVM=j>5{aC&rb_~YJd@nZkv;E<i3?Y%xb?VOWZ;EnCGb+O#`GX?Kpj>NPbZu&?mZ-zHjfYj;*K2~iX1-H}7EHAj_eouQZ(k1T=Bha7KI@5=eBB{UZWqt`y!X*Ty=F0>g5Ar#34Sr!p;^+7hf9~NOh6(OTkIn;)Ns@cR-srbH&0x6pK0wi3FB1NCKBvWKr_Ml`^ExVP^;48-9?<q~6qxPTVvv7y%=#bdnC=F`Y`7j)0Ba;ShJTzD(pxX@W1DpR>6oV>+x?PmOumP4!ap5kJ4eEsZv#2XKrrz#{TCO0k#+HtzJ6PNnIi+&hIX0RoCS*Wb#<AC3RZOWYVCC)FJ7$`IJa1-)@nCd>E@iMTXqL5U4d)Lbcuz$x|42J5MR}h5pB#c_lH-A$7QJ<V70nwYo_Z0%i&H-qM;LWsv`ox>7E5;(JcUL!MK97gL2b8sKSxtju%`uipcex+qqoRe7c{}Y5qitz-zuy5t^D0iLyiU@=9OtI>fNDxlPw`>05wZY>hf9@I9o*`v1g~ZQ;j$7Gox5*EnP}M59*kx|kXiP?v8odm65JWO^W<+z<v8{Euc4H_5qfn>tA1{x)*6T5TlgA+6>n?Y*b@+^qEC-?qQn`9ZmnM&3@g*~%Uqot_;X;}1L;@GIJ=U&$<z?W$YDPqLAu!6g1y*pdy|^>RIbI}vA#8@^ISY@jQxs95b(`zY@CCli{v<eca*<=Y<V&=td<USJ;Ezu3=I1tq3#u_sY1c}6?w8Z`NFK!Ae*`uI=X(@rxTsawQ#JWq?>fxCihvG<sTKb&GQap(yE4|B0yv95cM$~7uzC3x4R?(q1)a$@uarM0CD;VEf#7RofRPbdXeMC+dod6-XzY^|=;_9xR>c|lU`M4ECsw1Z{WZ*{V?Hfo&z*2XVa8+X1a3)-xWPw%OXc&Yw;z2fNV@6GX`5Kk-%yw1{pt|?8mQ8_)iK@}l5+_0*@j#`)8-$m|FcnKfEDMqor@xjl9-EHVu-5q(EqaI)kNGnB8cd_?9wf!$HlG5tC41hYg0*;>d!~F2~Jq|XxO%LlX4Vb@km?q0%3+aCz)TPuYp@4KmlLp@QgB_tg9q6y7+;{t-yXU#KKr*cFnI?MrqP{qj?hyF9__V*{&O{}Y`pS$tKbR)OINFM1A0Qk@f6a4@fcNQLG<41rj-yxkztZJ0W-r8BD7Ow6La{ms$PN?A-<t!6<LCr`!#n5P;aIN!aHt|)7XV_8B95aU@i)A)P9%<_Q+j~6_Q}L?^mp+D@0}xx<7i(#BEhx8iZ#0L<cdzYURE>uVv4ghAZ^^siK`0J$XCzEJ2n+KQsB#FbO|nU5Y=dz-|(XE&C}_kWz)OWu4>N*c3{K1SghJ%$_9!wb!w8Bi{@Z7kFV2;GEx1u-6vKP(VOgTmfvI%zSlsONE&us2(jSOVdIurcNhuK4I3|NogHghYr9Rs@CckTt>bLM#ecp6ucazd{*E*Gv2(edAI68i5E;hzDL4@YUAl}O3Vi?+lnoE=5E{Jt8LyPCe{lrAVJ;F`Gg{W{_pF-~PuCabXx5PRobRpUB~Tc0$&bL5l7feA0}tv-#418GjmutPTgyDI`c5wgsON6K>6q$wqi-xU7JiM!?Fr%WI!B0}0U{|Q|LBDyD#4vOSS!rkw0*(e?9rt~RQ+VFrkVjE=M?j%#uvZH>MNBro<FNO3+9U%<QchVIS9fzJLb&%wYpBJQ!kuoq^12(fmJh{5rmrI0;^^yc}FKn>aVR@;oMv_Zdm*Xe8|H~jGB*__$9TvwH&6dTPtyR+nUX__fKr(_J%~PjcX(STeGM(rVSF=kT$h3ZIscbEVhkov(z@FpzGM$<Y@9^TI~2xgD~-%hBL2dkBS?ci9`Lh*iU?ysD_<B*p6cux2!+|8#llpa%Zit0kNMQ(76&Ela2Wk^VuE0zI8M`ly})c1#zZ32~M?-YgzYSWiIW;YuU_>{jX<1JN3Ua3C;cQ&@ygI!Y^c~L&ui;HXT3RwdV<%OaX-crPp`OS5~6)fw(Wgi(1HyPjUy;u=@@u1fRj6C~iANr*v^)?KrLpN=2LvP$mF%BUQR5q-#v-XZ$}wP)ctl+d^k~p{yQ*x(ska(1y)`bzdaWcb5wGOL1@98h3bnaJqwA=zap<XL&0(*X@B0-j)zh_m496N}LuQblMPnMQDV<o5d21*zDHroZ46H^nYG5p+Z&8E{lA9jbAmXU73gXkC-DoTKn4duKhcKQo+ond)OQQjym}btGd#C)?HiH%D7pWX7WxJRiGD$O@OHR8MuBg@R1KM4Mp$iKk?;d!7pQU4<y$?`Y~7{gzSrJAI9uMPtW*b_8jA<YkGR()-UfY)Sv+szh=+IY)>^}z9cG*rrv8nm&0QGM&X@9Kb>#lVEgpPb!s1b62-NzJ<(YkQDQb6wCw@#xItg(IiLESr?W!}vDF)^Wm^7jXuDy#zoBi9#~a$V8UK824)g=t4SxBBp?Ln5z6PZ~fsG=EffVD>EnhiQrbm<fK`?tPKPpyN5EcLU%nRv_g7rIlr<+sXa2l%ZI=Cgp<=6-}gs4xlI_&tl;JC_Rwzn+tvu5)v7`+W<*c?m1OXkuk9mtQ)2ahAXuh?X|JPtY6kU(Q4uLy}F==!-PYrnVPRp0^}>pX<mFb_nztc}j;)&e>K+DM>-_iosgFr~8{33KIm55n}5&Cw;lM6;U7V=+^UT^5C)U`)@NU1!5X>qPf=dZkF$=<i?Q)jlQOAC9H8S6Z9}?{M5Zk?8I<k7o20Q;B_D;h8FUrHy@GZ`n53>i51_WfRs%luxYt2{E9WJpcBa!2s`8ToBrxx>2zg`oyt=Pmy9@%%~GM%tF+RUG+gRpxy&rGC__6F|h!lR<$~rI;XUeNM@+q`fPxm&SD);2QdG50CUd=Fz<i>GbaR?bwq%<X9NOme#9Yxk3R(vK4>6sM~n>1J1>%TUYQ-*RMtH}XQ`GfW7~2q0fd)q@lVGLp(b_g;L=CIgLP3nEns~|&yAiOO=p2yHPgD+WI**-EYf;{WSDvf#n0Ugs=;zE!>P~w;AuhqE#0G4jNn~D6dYapR=8P86+2m0h&dJun3^ZMR<vsr3?pb5Y5nMQUf_q2#6RU#Udh3?NS6@amy-{Xa_eC>qJ|^+f#zu>KgJ5sQ*b>>*Cv9&rQ0Y(BsgRO!k8ns{QUe5qof3SdvQCVCg^@<z)ewreoLf*Jt!yBsMJKG84#tB{4_H3GV;H2;;q$9smcsyZp{|@00u3*5w>$QI?|*@PBbeuqFJs=^80!)p&xp|MMgk;qZEW7-8Ed`k;4z*;)|toK@kh72P6I1d|0dfniV?6`lksP(FB|fKn!taUPRX9vcek+{FNWE<P)hV64)<vQXc@OYLR`&*fybZ3r?QU7dP+%ZE^WD)R8eGNLHQ_Z{L`s;hHw(gpOf_h<U&U9s8l0`e;=U_wlr*#N-vRGoE3!q_49SFY`DN3y8{gL3Kb(1|1i*u6cpEczqtg*&>9f;YHgDpU^QmKUm1zod-mmx|0krj^sO=VGh{N{{j)}hk*')).decode())
+from datetime import datetime,time,timedelta
+import frappe
+from frappe import utils
+from frappe.utils import now
+from frappe.utils import add_months,getdate
+from collections import defaultdict
+from frappe import _
+import json
+from productivity_next.api import calculate_total_working_hours
+
+
+from dateutil.parser import parse
+
+# Sidebar Activity Data code starts
+@frappe.whitelist(allow_guest=True)
+def get_activity_chart_data(user,start_date=None, end_date=None):
+    if user == "Administrator":
+        return {}
+    # Fetch idle time logs
+    idle_time_data = frappe.db.sql(f"""
+        SELECT from_time as start_time, to_time as end_time
+        FROM `tabEmployee Idle Time`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' AND employee = '{user}'
+    """, as_dict=True)
+
+    # Fetch fincall time logs
+    fincall_time_data = frappe.db.sql(f"""
+        SELECT call_datetime as start_time, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end_time
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' AND employee = '{user}' AND (calltype != 'Missed' AND calltype != 'Rejected')
+    """, as_dict=True)
+
+    # Fetch meeting time logs
+    meeting_time_data = frappe.db.sql(f"""
+        SELECT meeting_from as start_time, meeting_to as end_time
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' AND m.meeting_to <= '{end_date} 23:59:59' AND m.docstatus = 1 AND mcr.employee = '{user}'
+    """, as_dict=True)
+
+    # Combine all non-idle periods (meetings and calls)
+    non_idle_periods = fincall_time_data + meeting_time_data
+
+    total_idle_seconds = 0
+
+    for idle_period in idle_time_data:
+        idle_start = idle_period['start_time']
+        idle_end = idle_period['end_time']
+
+        adjusted_start = idle_start
+        adjusted_end = idle_end
+
+        for non_idle in non_idle_periods: 
+            non_idle_start = non_idle['start_time']
+            non_idle_end = non_idle['end_time']
+
+            # Check for overlap and adjust idle periods accordingly
+            if non_idle_start <= adjusted_end and non_idle_end >= adjusted_start:
+                if non_idle_start <= adjusted_start < non_idle_end:
+                    adjusted_start = non_idle_end
+                if non_idle_start < adjusted_end <= non_idle_end:
+                    adjusted_end = non_idle_start
+                if adjusted_start >= adjusted_end:
+                    adjusted_start = adjusted_end
+                    break
+
+        # Calculate the duration of the adjusted idle period
+        idle_duration = (adjusted_end - adjusted_start).total_seconds()
+        if idle_duration > 0:
+            total_idle_seconds += idle_duration
+    total_idle_time = round(total_idle_seconds) 
+
+    total_call_data = frappe.db.sql(f"""
+        SELECT 
+            SUM(duration) AS total_duration
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}'
+    """, as_dict=True)
+
+    total_meeting_data = frappe.db.sql(f"""
+        SELECT 
+            SUM(TIME_TO_SEC(TIMEDIFF(meeting_to, meeting_from))) AS total_duration  
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' and m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 AND mcr.employee = '{user}' 
+    """, as_dict=True)
+
+    list_data = []
+    meeting_total_data = frappe.db.sql(f"""
+        SELECT m.meeting_from as start_time, m.meeting_to as end_time
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' and m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 and mcr.employee ='{user}' 
+    """, as_dict=True)
+    calls_total_data = frappe.db.sql(f"""
+        SELECT call_datetime as start_time, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end_time
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{user}' and (calltype != 'Missed' and calltype != 'Rejected')
+    """, as_dict=True)
+    application_total_data = frappe.db.sql(f"""
+        SELECT from_time as start_time, to_time as end_time
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{user}'
+    """, as_dict=True)
+
+    list_data.append(meeting_total_data)
+    list_data.append(calls_total_data)
+    list_data.append(application_total_data) 
+
+    if list_data != [[], [], []]:
+
+        # Flatten the list of intervals
+        flat_intervals = [interval for sublist in list_data for interval in sublist]
+
+        # Sort intervals by start time
+        flat_intervals.sort(key=lambda x: x['start_time'])
+
+        # Merge overlapping intervals
+        merged_intervals = []
+        current_interval = flat_intervals[0]
+
+        for interval in flat_intervals[1:]:
+            if interval['start_time'] and interval['end_time'] and current_interval['end_time']:
+                if interval['start_time'] <= current_interval['end_time']:
+                    # There is overlap, so merge the intervals
+                    current_interval['end_time'] = max(current_interval['end_time'], interval['end_time'])
+                else:
+                    # No overlap, so add the current interval to the list and start a new one
+                    merged_intervals.append(current_interval)
+                    current_interval = interval
+            elif interval['start_time']:
+                # No overlap, so add the current interval to the list and start a new one
+                merged_intervals.append(current_interval)
+                current_interval = interval
+
+        # Don't forget to add the last interval
+        if current_interval:
+            merged_intervals.append(current_interval)
+
+
+        # Calculate the total time
+        total_time = timedelta()
+        for interval in merged_intervals:
+            if interval['start_time'] and interval['end_time']:
+                total_time += interval['end_time'] - interval['start_time']
+   
+
+
+        total_time = total_time.total_seconds()
+    else:
+        total_time = 0 
+    total_application_hours = frappe.db.sql(f"""
+        select sum(duration) as total_duration
+        from `tabApplication Usage log`
+        where date >= '{start_date}' and date <= '{end_date}' and employee = '{user}'
+        """, as_dict=True)
+
+    total_idle_hours = frappe.db.sql(f"""
+        select sum(duration) as total_duration
+        from `tabEmployee Idle Time`
+        where date >= '{start_date}' and date <= '{end_date}' and employee = '{user}'
+        """, as_dict=True)
+    total_application_duration = total_application_hours[0].total_duration if total_application_hours and total_application_hours[0].total_duration is not None else 0
+    total_idle_duration = total_idle_hours[0].total_duration if total_idle_hours and total_idle_hours[0].total_duration is not None else 0
+    total_system_hours = total_application_duration - total_idle_duration
+    toal_hours_to_show = max(32400, total_time)
+    total_active_hours = total_time - total_idle_time
+    weekday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_per_day')
+    saturday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_on_saturday')
+    return {
+        "total_time": total_time or 0,
+        "total_system_hours": total_system_hours or 0,
+        "total_idle_time": total_idle_time or 0,
+        "total_call_data": total_call_data[0].total_duration or 0,
+        "total_meeting_data": total_meeting_data[0].total_duration or 0,
+        "total_active_hours": total_active_hours or 0,
+        "total_inactive_hours": (toal_hours_to_show or 0) - ((total_active_hours or 0) + (total_idle_time or 0)),
+        "total_hours": toal_hours_to_show,
+    }
+# Sidebar Activity Code Ends
+
+# Work Intensity Code Starts
+@frappe.whitelist()
+def work_intensity(user=None, start_date=None, end_date=None):
+    if not user:
+        return []
+    
+    intensity_data = frappe.db.sql(f"""
+        SELECT 
+            HOUR(time) as hour, 
+            DAYNAME(time) as day_of_week,
+            SUM(key_strokes) as total_keystrokes, 
+            SUM(mouse_clicks) as total_mouse_clicks,
+            SUM(mouse_scrolls) as total_mouse_scrolls
+        FROM `tabWork Intensity`
+        WHERE employee = '{user}'
+            AND time >= '{start_date} 00:00:00'      
+            AND time <= '{end_date} 23:59:59' 
+            AND HOUR(time) BETWEEN 7 AND 23
+        GROUP BY hour, day_of_week
+    """, as_dict=True)
+
+    # Define the expected days list
+    days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+
+    data = []
+
+    # Fill in the intensity data
+    for entry in intensity_data:
+        hour = entry['hour']
+        keystrokes = entry['total_keystrokes'] or 0
+        mouse_clicks = entry['total_mouse_clicks'] or 0
+        mouse_scrolls = entry['total_mouse_scrolls'] or 0
+        value = keystrokes + mouse_clicks + mouse_scrolls
+        # Ensure day_of_week is converted to abbreviated form
+        day_of_week = entry['day_of_week'][:3]  # Assuming day_of_week is returned as full name
+        data.append([hour, value, day_of_week])
+
+    # Ensure all hours from 7 to 23 are included for each day of the week
+    for hour in range(7, 24):
+        for day in days:
+            if not any(d[0] == hour and d[2] == day for d in data):
+                data.append([hour, 0, day])
+
+    # Sort data by day and then hour within each day
+    data.sort(key=lambda x: (days.index(x[2]), x[0]))
+
+    return data
+# Work Intensity Code Ends
+
+# Overall Performance Code Starts
+@frappe.whitelist()
+def overall_performance(employee=None, start_date=None, end_date=None):
+    if not employee:
+        return {
+            "labels": [],
+            "values": []
+        }
+    calls = frappe.db.sql(f"""
+        SELECT name AS parent, 
+            call_datetime AS call_start, ADDTIME(call_datetime, SEC_TO_TIME(duration)) AS call_end,
+            employee, date,COALESCE(contact, client, customer_no) as caller, calltype
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee ='{employee}'
+        ORDER BY date
+    """, as_dict=True)
+
+    meetings = frappe.db.sql(f"""
+         SELECT m.name AS parent, 
+            m.meeting_from AS meeting_start, m.meeting_to AS meeting_end, m.party as client, m.internal_meeting AS internal,DATE(m.meeting_from) as date,
+            mcr.employee, mcr.employee_name, m.organization as organization, m.party_type as party_type, m.meeting_arranged_by as meeting_arranged_by
+        FROM `tabMeeting` AS m
+        JOIN `tabMeeting Company Representative` AS mcr ON mcr.parent = m.name
+        WHERE m.meeting_from >= '{start_date} 00:00:00' and m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 and mcr.employee = '{employee}'
+        ORDER BY date(m.meeting_from)
+    """, as_dict=True)
+
+    idle = frappe.db.sql(f"""
+        SELECT name AS parent, 
+            from_time AS idle_start, to_time AS idle_end,
+            employee, date(from_time) as date
+        FROM `tabEmployee Idle Time`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{employee}'
+        ORDER BY DATE(from_time)
+    """, as_dict=True)
+
+    applications = frappe.db.sql(f"""
+        SELECT dwsp.name AS parent, 
+            a.from_time AS application_start, a.to_time AS application_end,
+            dwsp.employee, dwsp.date
+        FROM `tabProductify Work Summary` AS dwsp
+        JOIN `tabProductify Work Summary Application` AS a ON a.parent = dwsp.name
+        WHERE dwsp.date between '{start_date}' and '{end_date}' and dwsp.employee = '{employee}'
+        ORDER BY dwsp.date
+    """, as_dict=True)
+
+    base_data = []
+    for app in applications:
+        base_data.append([
+            "Application",
+            app['date'],
+            app['application_start'],
+            app['application_end'],
+        ])
+    
+    for call in calls:
+        base_data.append([
+            "Call",
+            call['date'],
+            call['call_start'],
+            call['call_end'],
+            call['caller'],
+            call['calltype']
+        ])
+
+    for meeting in meetings:
+        if meeting['internal']:
+            base_data.append([
+                "Internal Meeting",
+                meeting['date'],
+                meeting['meeting_start'],
+                meeting['meeting_end'],
+                meeting['meeting_arranged_by'],
+                meeting['client']
+            ])
+        else:
+            base_data.append([
+                "External Meeting",
+                meeting['date'],
+                meeting['meeting_start'],
+                meeting['meeting_end'],
+                meeting['internal'],
+                meeting['organization'],
+                meeting['party_type'],
+                meeting['meeting_arranged_by']
+            ])
+    for i in idle:
+        base_data.append([
+            "Idle",
+            i['date'],
+            i['idle_start'],
+            i['idle_end'],
+        ])
+    base_data = sorted(base_data, key=lambda x: x[2])
+    data = list(set([item[1] for item in base_data]))
+
+    return{
+        "base_dimensions":['Activity', 'Employee', 'Start Time', 'End Time'],
+        "dimensions":['Employee', 'Employee Name'],
+        "base_data":base_data,
+        "data":data
+    }
+# Overall Performance Code Ends
+
+@frappe.whitelist()
+def overall_performance_timely(employee=None, date=None, hour=None):
+    if not employee:
+        return {
+            "labels": [],
+            "values": []
+        }
+    
+    # Convert hour to integer
+    hour = int(hour)
+
+    # Calculate the start and end of the specified hour
+    hour_start = f"{hour:02d}:00:00"
+    hour_end = f"{(hour + 1) % 24:02d}:00:00"
+
+    applications = frappe.db.sql(f"""
+    SELECT 
+        application_name AS name, 
+        from_time AS application_start, 
+        to_time AS application_end, 
+        date, 
+        LEFT(application_title, 80) AS application_title, 
+        LEFT(url, 80) AS url, 
+        project, 
+        issue, 
+        task,
+        process_name
+    FROM `tabApplication Usage log`
+    WHERE date = '{date}' 
+      AND employee = '{employee}' 
+      AND application_name != '' 
+      AND application_name IS NOT NULL 
+      AND (
+          (HOUR(from_time) = {hour}) OR
+          (HOUR(from_time) < {hour} AND HOUR(to_time) >= {hour})
+      )
+    """, as_dict=True)
+
+    idle = frappe.db.sql(f"""
+        SELECT from_time AS idle_start, to_time AS idle_end, date
+        FROM `tabEmployee Idle Time`
+        WHERE date = '{date}' AND employee = '{employee}' 
+        AND (
+            (HOUR(from_time) = {hour}) OR
+            (HOUR(from_time) < {hour} AND HOUR(to_time) >= {hour})
+        )
+    """, as_dict=True)
+
+    calls = frappe.db.sql(f"""
+        SELECT name AS parent, 
+            call_datetime AS call_start, ADDTIME(call_datetime, SEC_TO_TIME(duration)) AS call_end,
+            employee, date, COALESCE(contact, client, customer_no) as caller, calltype, link_to as link_to, link_name as link_name
+        FROM `tabEmployee Fincall`
+        WHERE date = '{date}' AND employee ='{employee}' 
+        AND (
+            (HOUR(call_datetime) = {hour}) OR
+            (HOUR(call_datetime) < {hour} AND HOUR(ADDTIME(call_datetime, SEC_TO_TIME(duration))) >= {hour})
+        )
+        ORDER BY date
+    """, as_dict=True)
+
+
+    meetings = frappe.db.sql(f"""
+        SELECT m.name AS parent, 
+            m.meeting_from AS meeting_start, m.meeting_to AS meeting_end, m.party as client, m.internal_meeting AS internal,
+            DATE(m.meeting_from) as date, mcr.employee, mcr.employee_name, m.organization as organization, m.discussion as description,
+            m.party_type as party_type, m.meeting_arranged_by as meeting_arranged_by
+        FROM `tabMeeting` AS m
+        JOIN `tabMeeting Company Representative` AS mcr ON mcr.parent = m.name
+        WHERE DATE(m.meeting_from) = '{date}' AND mcr.employee = '{employee}' AND m.docstatus = 1
+        AND (
+            (HOUR(m.meeting_from) = {hour}) OR
+            (HOUR(m.meeting_from) < {hour} AND HOUR(m.meeting_to) >= {hour})
+        )
+        ORDER BY m.meeting_from
+    """, as_dict=True)
+
+    def split_activity(activity_type, start, end, *args):
+        start_time = datetime.strptime(str(start), "%Y-%m-%d %H:%M:%S")
+        end_time = datetime.strptime(str(end), "%Y-%m-%d %H:%M:%S")
+        
+        hour_start_time = start_time.replace(hour=hour, minute=0, second=0)
+        hour_end_time = hour_start_time + timedelta(hours=1)
+        
+        if start_time < hour_start_time:
+            start_time = hour_start_time
+        if end_time > hour_end_time:
+            end_time = hour_end_time
+        
+        return [activity_type, start_time.date(), start_time, end_time] + list(args)
+
+    base_data = []
+    for app in applications:
+        activity_type = "Browser" if app['process_name'] in ["chrome.exe", "firefox.exe", "msedge.exe", "opera.exe", "iexplore.exe", "brave.exe", "safari.exe", "vivaldi.exe", "chromium.exe", "microsoftedge.exe"] else "Application"
+        base_data.append(split_activity(
+            activity_type,
+            app['application_start'],
+            app['application_end'],
+            app['application_title'].split(" - ")[0] if app['application_title'] else None,
+            app['url'] if app['url'] else None,
+            app['project'] if app['project'] else None,
+            app['issue'] if app['issue'] else None,
+            app['task'] if app['task'] else None,
+            app['name']
+        ))
+
+    for app in idle:
+        base_data.append(split_activity(
+            "Idle",
+            app['idle_start'],
+            app['idle_end']
+        ))
+
+    for call in calls:
+        base_data.append(split_activity(
+            "Call",
+            call['call_start'],
+            call['call_end'],
+            call['caller'],
+            call['calltype'],
+            call['link_to'],
+            call['link_name']
+        ))
+
+    for meeting in meetings:
+        if meeting['internal']:
+            base_data.append(split_activity(
+                "Internal Meeting",
+                meeting['meeting_start'],
+                meeting['meeting_end'],
+                meeting['meeting_arranged_by'],
+                meeting['description'],
+                meeting['client']
+            ))
+        else:
+            base_data.append(split_activity(
+                "External Meeting",
+                meeting['meeting_start'],
+                meeting['meeting_end'],
+                meeting['meeting_arranged_by'],
+                meeting['description'],
+                meeting['internal'],
+                meeting['client'],
+                meeting['party_type'],
+            ))
+
+    base_data = sorted(base_data, key=lambda x: x[2])
+    data = list(set([item[1] for item in base_data]))
+
+    return {
+        "base_dimensions": ['Activity', 'Employee', 'Start Time', 'End Time'],
+        "dimensions": ['Employee', 'Employee Name'],
+        "base_data": base_data,
+        "data": data
+    }
+
+# Applications Used Code Starts
+@frappe.whitelist(allow_guest=True)
+def application_usage_time(user=None, start_date=None, end_date=None):
+    if not user or user is None:
+        return {
+            "labels": [],
+            "values": []
+        }
+    
+    application_name = frappe.db.sql(f"""
+        SELECT 
+            LEFT(application_name, 25) AS application_name, 
+            SUM(duration) AS total_duration
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' AND employee = '{user}'
+        GROUP BY LEFT(application_name, 25)
+        ORDER BY total_duration DESC
+        LIMIT 10
+    """, as_dict=True)
+
+    data = []
+    for app in application_name:
+        # Convert total_duration to hours and minutes
+        hours = int(app['total_duration'] // 3600)
+        minutes = int((app['total_duration'] % 3600) / 60)
+        
+        # Calculate total value in hours with two decimal places
+        value = round(hours + (minutes / 60), 2)
+        
+        data.append({
+            "name": app['application_name'],
+            "value": value,
+            "hours": hours,
+            "minutes": minutes
+        })
+
+    return data
+# Applications Used Code Ends
+
+# Web Browsing Time code starts
+@frappe.whitelist(allow_guest=True)
+def web_browsing_time(user = None,start_date=None,end_date=None):
+    if not user or user == None:
+        return {
+            "labels": [],
+            "values": []
+        }
+    domain_data = frappe.db.sql(f"""
+        SELECT domain, round(SUM(duration)/3600,2) as total_duration
+        FROM `tabApplication Usage log`
+        Where date >= '{start_date}' and date <= '{end_date}' and employee = '{user}' and domain != '' and domain is not null
+        GROUP BY domain
+        ORDER BY total_duration DESC
+        LIMIT 10
+    """, as_dict=True)
+
+    data = []
+
+    for app in domain_data:
+        data.append({
+            "name": app['domain'],
+            "value": app['total_duration'],
+        })
+
+    
+    return data
+# Web Browsing Time code ends
+
+# Top Phone Calls Code Starts
+@frappe.whitelist()
+def top_phone_calls(user=None, start_date=None, end_date=None):
+    if not user:
+        return {
+            "caller_details": [],
+            "company_details": []
+        }
+
+    caller_name = frappe.db.sql(f"""
+    SELECT 
+    CASE 
+        WHEN link_name IS NOT NULL AND link_name != '' THEN link_name
+        ELSE 'Others'
+    END AS customname,
+    COALESCE(
+        (SELECT first_name FROM `tabContact` WHERE name = COALESCE(ef.contact, ef.client, ef.customer_no)),
+        COALESCE(ef.contact, ef.client, ef.customer_no)
+    ) AS identifier,
+    ef.link_to AS ref_doctype, 
+    ROUND(SUM(ef.duration)/60, 2) AS total_duration,
+    COUNT(*) AS call_count
+    FROM `tabEmployee Fincall` ef
+    WHERE ef.date >= '{start_date}' 
+        AND ef.date <= '{end_date}'
+        AND ef.employee = '{user}' 
+    GROUP BY COALESCE(ef.contact, ef.client, ef.customer_no), ef.link_name
+    HAVING SUM(ef.duration) > 60
+    ORDER BY total_duration DESC
+""", as_dict=True)
+
+    caller_details = []
+    company_details = []
+
+    others_duration = 0
+    main_categories = {'Customer', 'Supplier', 'Lead', 'Company'}
+    for row in caller_name:
+        ref_doctype = row['ref_doctype']
+        total_duration = row['total_duration']
+
+        if ref_doctype in main_categories:
+            found = False
+            for detail in company_details:
+                if detail['name'] == ref_doctype:
+                    detail['value'] += total_duration
+                    found = True
+                    break
+            if not found:
+                if ref_doctype == 'Customer':
+                    company_details.append({
+                        'name': ref_doctype,
+                        'value': total_duration,
+                        "selected": True
+                    })
+                else:
+                    company_details.append({
+                        'name': ref_doctype,
+                        'value': total_duration
+                    })
+        else:
+            others_duration += total_duration
+
+    others_duration = round(others_duration, 2)
+
+    if others_duration > 0:
+        company_details.append({
+            'name': 'Others',
+            'value': others_duration
+        })
+    count = 0
+    customNames = []
+    for app in caller_name:
+        caller_details.append({
+            "name": app['identifier'],
+            "value": app['total_duration'],
+            "customIndex": count
+        })
+        customNames.append(app['customname'])
+        count += 1
+
+    return {
+        "caller_details": caller_details,
+        "company_details": company_details,
+        "customNames": customNames
+    }
+# Top Phone Calls Code Ends
+
+# Type Of Calls Code Starts
+@frappe.whitelist()
+def type_of_calls(user = None,start_date=None,end_date=None):
+    if not user or user == None:
+        return {
+            "labels": [],
+            "values": []
+        }
+    internal_fincall_data = frappe.db.sql(f"""
+        SELECT 
+            COUNT(*) AS fincall_count,
+            round(SUM(duration)/60,2) as total_duration
+        FROM `tabEmployee Fincall`
+        Where date >= '{start_date}' and date <= '{end_date}' and employee = '{user}' and (link_to = 'Company' and link_to is not null)
+    """, as_dict=True)
+
+    external_fincall_data = frappe.db.sql(f"""
+        SELECT 
+            COUNT(*) AS fincall_count,
+            round(SUM(duration)/60,2) as total_duration
+        FROM `tabEmployee Fincall`
+        Where date >= '{start_date}' and date <= '{end_date}' and employee = '{user}' and (link_to != 'Company' or link_to is null)
+    """, as_dict=True)
+    data = []
+    data.append({
+        "name": "Internal",
+        "value": internal_fincall_data[0]['total_duration'],
+    })
+    data.append({
+        "name": "External",
+        "value": external_fincall_data[0]['total_duration'],
+    })  
+    return data
+# Type Of Calls Code Ends
+
+# URL DATA AND SIDEBAR DATA CODE STARTS
+@frappe.whitelist(allow_guest=True)
+def fetch_url_data(user,start_date=None, end_date=None):
+    version_conditions_str = version_conditions(user,start_date,end_date)
+    ignore_doctype = ['File',"Communication","Fincall Log","Custom Field","DocType","Web Page","Attendance"]
+    ignore_doctype_str = ','.join(f"'{doc}'" for doc in ignore_doctype)
+    if ignore_doctype_str:
+        ignore_condition = f"AND ref_doctype NOT IN ({ignore_doctype_str})"
+    else:
+        ignore_condition = ""
+
+    fincall_data = frappe.db.sql(f"""
+        SELECT 
+            calltype,
+            COUNT(*) AS fincall_count,
+            COALESCE(SUM(duration), 0) AS total_duration
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}' and (link_to != 'Company' or link_to is null)
+        GROUP BY calltype
+    """, as_dict=True)
+
+    # Initialize counts and total durations
+    incoming_fincall_count = outgoing_fincall_count = missed_fincall_count = rejected_fincall_count = 0
+    total_incoming_duration = total_outgoing_duration = 0
+
+    # Extracting data for each call type in a single pass
+    for item in fincall_data:
+        calltype = item['calltype']
+        count = item['fincall_count']
+        duration = item['total_duration']
+        
+        if calltype == 'Incoming':
+            incoming_fincall_count = count
+            total_incoming_duration = duration
+        elif calltype == 'Outgoing':
+            outgoing_fincall_count = count
+            total_outgoing_duration = duration
+        elif calltype == 'Missed':
+            missed_fincall_count = count
+        elif calltype == 'Rejected':
+            rejected_fincall_count = count
+
+    internal_fincall_data = frappe.db.sql(f"""
+        SELECT 
+            calltype,
+            COUNT(*) AS fincall_count,
+            COALESCE(SUM(duration), 0) AS total_duration
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}' and link_to = 'Company' and link_to is not null
+        GROUP BY calltype
+    """, as_dict=True)
+
+    # Initialize counts and total durations
+    internal_incoming_fincall_count = internal_outgoing_fincall_count = 0
+    internal_missed_fincall_count = internal_rejected_fincall_count = 0
+    internal_total_incoming_duration = internal_total_outgoing_duration = 0
+
+    # Extracting data for each call type in a single pass
+    for item in internal_fincall_data:
+        calltype = item['calltype']
+        count = item['fincall_count']
+        duration = item['total_duration']
+        
+        if calltype == 'Incoming':
+            internal_incoming_fincall_count = count
+            internal_total_incoming_duration = duration
+        elif calltype == 'Outgoing':
+            internal_outgoing_fincall_count = count
+            internal_total_outgoing_duration = duration
+        elif calltype == 'Missed':
+            internal_missed_fincall_count = count
+        elif calltype == 'Rejected':
+            internal_rejected_fincall_count = count                             
+
+    application_usage_days = frappe.db.sql(f"""
+        SELECT DISTINCT DATE(`date`) AS date 
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}';
+    """, as_dict=True, pluck='date')
+
+    # Fetch meeting usage days
+    meeting_usage_days = frappe.db.sql(f"""
+        SELECT DISTINCT DATE(m.meeting_from) AS date 
+        FROM `tabMeeting` AS m 
+        JOIN `tabMeeting Company Representative` AS mcr 
+        ON m.name = mcr.parent 
+        WHERE m.meeting_from >= '{start_date} 00:00:00' AND m.meeting_to <= '{end_date} 23:59:59' AND m.docstatus = 1 AND mcr.employee = '{user}'
+    """, as_dict=True, pluck='date')
+
+    total_days = len(set(application_usage_days + meeting_usage_days)) or 1
+
+    meetings_external_employee = frappe.db.sql(f"""
+    SELECT 
+        SUM(CASE 
+                WHEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from)) > 0 THEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from))
+                ELSE 0 
+            END) AS total_meeting_duration,
+        COUNT(DISTINCT m.name) as meeting_count
+    FROM `tabMeeting` as m
+    JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent WHERE m.meeting_from >= '{start_date} 00:00:00' 
+    AND m.meeting_to <= '{end_date} 23:59:59' AND m.docstatus = 1 AND mcr.employee = '{user}' and m.internal_meeting = 0
+    GROUP BY mcr.employee
+    """, as_dict=True)
+
+    meetings_internal_employee = frappe.db.sql(f"""
+    SELECT 
+        SUM(CASE 
+                WHEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from)) > 0 THEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from))
+                ELSE 0 
+            END) AS total_meeting_duration,
+        COUNT(DISTINCT m.name) as meeting_count
+    FROM `tabMeeting` as m
+    JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent 
+    WHERE m.meeting_from >= '{start_date} 00:00:00' AND m.meeting_to <= '{end_date} 23:59:59' AND m.docstatus = 1 AND mcr.employee = '{user}' and m.internal_meeting = 1
+    GROUP BY mcr.employee
+    """, as_dict=True)
+
+    # Documents Accessed
+    total_unique_doc = frappe.db.sql(f"""
+    SELECT COUNT(DISTINCT docname) AS activity_count
+    FROM `tabVersion`
+    {version_conditions_str}
+    {ignore_condition}
+    """, as_dict=True)
+
+    # Application Usage Log Count, Top 10 Doc's Used Cards
+    total_counts = frappe.db.sql(f"""
+        SELECT
+            (SELECT COUNT(DISTINCT application_name) FROM `tabApplication Usage log` WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}')  AS application_usage,
+            (SELECT COUNT(*) FROM `tabVersion` {version_conditions_str} {ignore_condition})  AS version_count
+        """, as_dict=1)[0]
+
+    domain_data = frappe.db.sql(f"""
+        SELECT domain, SUM(duration) as total_duration, application_name,count(domain) as count
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}' and domain != '' and domain is not null
+        GROUP BY domain
+        ORDER BY total_duration DESC
+        LIMIT 10
+        """,as_dict=True)
+    process_id_names = {"chrome.exe":"Google Chrome","firefox.exe":"Mozilla Firefox","msedge.exe":"Microsoft Edge","opera.exe":"Opera","iexplore.exe":"Internet Explorer","brave.exe":"Brave","safari.exe":"Safari","vivaldi.exe":"Vivaldi","chromium.exe":"Chromium","microsoftedge.exe":"Microsoft Edge"}
+    result_list = []
+    for i in domain_data:
+        if i["application_name"]:
+            application_name = process_id_names.get(i["application_name"].lower())
+            if application_name:
+                app_name = application_name
+            else:
+                app_name = (i["application_name"]).lower().split(".exe")[0].capitalize()
+        else:
+            app_name = "Unknown"    
+        result_list.append({
+            "domain": i['domain'],
+            "total_duration": i['total_duration'],
+            "application_name": app_name,
+            "count": i['count'],
+        })
+    # Retrieve working hours per day and on Saturday from the database
+    weekday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_per_day')
+    saturday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_on_saturday')
+
+    hours_per_weekday = float(weekday_hours) if weekday_hours else 7.5
+    hours_on_saturday = float(saturday_hours) if saturday_hours else 2.5
+
+    # Calculate total working hours
+    score = calculate_total_working_hours(
+        user,
+        start_date,
+        end_date,
+        hours_per_weekday,
+        hours_on_saturday
+    )
+
+    return {
+        "application_usage": total_counts['application_usage'],
+        "version_count": total_counts['version_count'],
+        "incoming_fincall_count": incoming_fincall_count,
+        "outgoing_fincall_count": outgoing_fincall_count,
+        "missed_fincall_count": missed_fincall_count,
+        "rejected_fincall_count": rejected_fincall_count,
+        "total_incoming_duration": total_incoming_duration,
+        "total_outgoing_duration": total_outgoing_duration,
+        "internal_incoming_fincall_count": internal_incoming_fincall_count,
+        "internal_outgoing_fincall_count": internal_outgoing_fincall_count,
+        "internal_missed_fincall_count": internal_missed_fincall_count,
+        "internal_rejected_fincall_count": internal_rejected_fincall_count,
+        "internal_total_incoming_duration": internal_total_incoming_duration,
+        "internal_total_outgoing_duration": internal_total_outgoing_duration,
+        "total_days": total_days,
+        "total_unique_doc": total_unique_doc[0]['activity_count'] if total_unique_doc else 0,
+        "total_time_on_calls": fincall_data[0]['total_duration'] if fincall_data else 0,
+        "total_meeting_duration_internal": meetings_internal_employee[0].total_meeting_duration if meetings_internal_employee else 0,
+        "total_meeting_count_internal": meetings_internal_employee[0].meeting_count if meetings_internal_employee else 0,
+        "total_meeting_duration_external": meetings_external_employee[0].total_meeting_duration if meetings_external_employee else 0,
+        "total_meeting_count_external": meetings_external_employee[0].meeting_count if meetings_external_employee else 0,
+        "url_full_data": result_list[:10],
+        "score": score
+    }
+
+@frappe.whitelist()
+def get_url_brief_data(url_data,user,start_date=None, end_date=None):
+    data_query = frappe.db.sql(f"""
+        SELECT url, SUM(duration) AS duration, COUNT(url) as count, application_title
+        FROM `tabApplication Usage log` 
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}' and domain = '{url_data}'
+        GROUP BY url
+        ORDER BY SUM(duration) DESC
+        """, as_dict=True)
+    return {
+        "data":data_query
+    }
+# URL DATA AND SIDEBAR DATA CODE ENDS
+
+
+# Hourly Calls Analysis (In Minutes) Code Starts
+@frappe.whitelist()
+def hourly_calls_analysis(user, start_date=None, end_date=None):
+    # SQL query to group by contact, client, or customer_no
+    data = frappe.db.sql(f"""
+        select sum(duration) as total_count, calltype, hour(call_datetime) as hour
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee = '{user}' and (calltype = 'Incoming' or calltype = 'Outgoing')
+        group by HOUR(call_datetime), calltype
+        """, as_dict=1)
+    
+    aggregated_data = defaultdict(lambda: {'incoming_count': 0, 'outgoing_count': 0})
+    
+    # Step 2: Aggregate the total_count for each hour based on calltype
+    for record in data:
+        hour = record['hour']
+        if record['calltype'] == 'Incoming':
+            aggregated_data[hour]['incoming_count'] += record['total_count']
+        elif record['calltype'] == 'Outgoing':
+            aggregated_data[hour]['outgoing_count'] += record['total_count']
+    
+    # Step 3: Convert the aggregated data back to a list of dictionaries
+    aggregated_list = [
+        {'hour': hour, 'incoming_count': counts['incoming_count'], 'outgoing_count': counts['outgoing_count']}
+        for hour, counts in aggregated_data.items()
+    ]
+    
+    # Prepare data for line chart
+    return {
+        "labels": [str(i["hour"])+":00" for i in aggregated_list],
+        "datasets": [
+            {
+                "name": "Incoming",
+                "values": [round(i["incoming_count"] / 60, 2) for i in aggregated_list]
+            },
+            {
+                "name": "Outgoing",
+                "values": [round(i["outgoing_count"] / 60, 2) for i in aggregated_list]
+            }
+        ],
+        "legend_names": ["Incoming", "Outgoing"],  
+    }
+# Hourly Calls Analysis (In Minutes) Code Ends
+
+# Top 7 Document Analysis(Changes Per Doctype) code Starts
+@frappe.whitelist()
+def top_document_analysis(user, start_date=None, end_date=None):
+    now = frappe.utils.now_datetime()
+    if start_date is None:
+        start_date = (now - timedelta(days=365)).strftime('%Y-%m-%d')
+    else:
+        start_date = datetime.strptime(start_date, '%Y-%m-%d').strftime('%Y-%m-%d')
+    
+    if end_date is None:
+        end_date = now.strftime('%Y-%m-%d') 
+    else:
+        end_date = datetime.strptime(end_date, '%Y-%m-%d').strftime('%Y-%m-%d') 
+    
+    version_conditions_str = version_conditions(user, start_date, end_date)
+    ignore_doctype = ['File', "Communication", "Fincall Log", "Custom Field", "DocType", "Web Page", "Attendance"]
+
+    ignore_doctype_str = ','.join(f"'{doc}'" for doc in ignore_doctype)
+    ignore_condition = f"AND ref_doctype NOT IN ({ignore_doctype_str})" if ignore_doctype_str else ""
+    
+    data = frappe.db.sql(f"""
+        SELECT COUNT(DISTINCT docname) AS activity_count, ref_doctype
+        FROM `tabVersion`
+        {version_conditions_str}
+        {ignore_condition}
+        GROUP BY ref_doctype
+        ORDER BY activity_count DESC 
+        LIMIT 7
+    """, as_dict=1)
+    
+    chart_data = []
+    for i in data:
+        chart_data.append([i['activity_count'],i['ref_doctype']])
+
+    return chart_data
+# Top 7 Document Analysis(Changes Per Doctype) code Ends
+
+# User Activity Images Code Starts
+@frappe.whitelist()
+def user_activity_images(user, start_date=None, end_date=None, offset=0):
+    data = frappe.get_all("Screen Screenshot Log", filters={"employee": user,"time": ["BETWEEN", [parse(start_date, dayfirst=True), parse(end_date, dayfirst=True)]]}, order_by="time desc", group_by="time", fields=["screenshot", "time","active_app"])
+    for i in data:
+        i["time_"] = frappe.format(i["time"], "Datetime")
+    return data
+# User Activity Images Code Ends
+
+# Conditions to be applied to get data from versions table code starts 
+@frappe.whitelist() 
+def version_conditions(user,start_date=None, end_date=None):
+    if user != "Administrator":
+        email = frappe.db.get_value("Employee", user, "company_email")
+        condition = f"WHERE modified_by = '{email}' and creation >= '{start_date} 00:00:00' AND creation <= '{end_date} 23:59:59'"
+    else:
+        condition = f"WHERE creation >= '{start_date} 00:00:00' AND creation <= '{end_date} 23:59:59'"
+
+    return condition
+# Conditions to be applied to get data from versions table code ends
+
+
+@frappe.whitelist()
+def get_project_enabled():
+    # Load the document while ignoring permissions
+    doc = frappe.get_doc('Productify Subscription', None, ignore_permissions=True)
+    project_value = doc.project
+    return project_value

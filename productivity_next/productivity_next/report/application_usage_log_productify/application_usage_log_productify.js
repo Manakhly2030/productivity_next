@@ -1,1 +1,18 @@
-function a0_0x4f80(_0x39c62a,_0x5f2f77){var _0x297697=a0_0x1ceb();return a0_0x4f80=function(_0x49f6b4,_0x4ec593){_0x49f6b4=_0x49f6b4-0x16c;var _0x1ceb53=_0x297697[_0x49f6b4];return _0x1ceb53;},a0_0x4f80(_0x39c62a,_0x5f2f77);}var a0_0x1acd5d=a0_0x4f80;function a0_0x1ceb(){var _0x378abc=['search','toString','11ECEZoh','Date','4026694ykiUlY','11498gSNcrZ','Application\x20Usage\x20Log\x20Productify','Employee','1678610dbffDr','108NnaTDs','employee','Link','59468AMkNhd','9580860GdXcvO','query_reports','(((.+)+)+)+$','8903480sxGzIM','3ZnqHet','2332542EBPwQu','5DzxmYu'];a0_0x1ceb=function(){return _0x378abc;};return a0_0x1ceb();}(function(_0x325893,_0x400e1e){var _0xc0e419=a0_0x4f80,_0x3e3807=_0x325893();while(!![]){try{var _0x470804=-parseInt(_0xc0e419(0x17d))/0x1*(-parseInt(_0xc0e419(0x179))/0x2)+parseInt(_0xc0e419(0x171))/0x3*(-parseInt(_0xc0e419(0x16c))/0x4)+parseInt(_0xc0e419(0x173))/0x5*(-parseInt(_0xc0e419(0x172))/0x6)+parseInt(_0xc0e419(0x178))/0x7+-parseInt(_0xc0e419(0x170))/0x8+parseInt(_0xc0e419(0x16d))/0x9+parseInt(_0xc0e419(0x17c))/0xa*(-parseInt(_0xc0e419(0x176))/0xb);if(_0x470804===_0x400e1e)break;else _0x3e3807['push'](_0x3e3807['shift']());}catch(_0x1cb493){_0x3e3807['push'](_0x3e3807['shift']());}}}(a0_0x1ceb,0x8cafe));var a0_0x4ec593=(function(){var _0x1d3cf7=!![];return function(_0x174d7d,_0x19dd8c){var _0x50676e=_0x1d3cf7?function(){if(_0x19dd8c){var _0x529053=_0x19dd8c['apply'](_0x174d7d,arguments);return _0x19dd8c=null,_0x529053;}}:function(){};return _0x1d3cf7=![],_0x50676e;};}()),a0_0x49f6b4=a0_0x4ec593(this,function(){var _0x10cec7=a0_0x4f80,_0x288759={'QMlPo':_0x10cec7(0x16f)};return a0_0x49f6b4[_0x10cec7(0x175)]()[_0x10cec7(0x174)]('(((.+)+)+)+$')[_0x10cec7(0x175)]()['constructor'](a0_0x49f6b4)['search'](_0x288759['QMlPo']);});a0_0x49f6b4(),frappe[a0_0x1acd5d(0x16e)][a0_0x1acd5d(0x17a)]={'filters':[{'fieldname':a0_0x1acd5d(0x17e),'label':__(a0_0x1acd5d(0x17b)),'fieldtype':a0_0x1acd5d(0x17f),'options':a0_0x1acd5d(0x17b)},{'fieldname':'date','label':__(a0_0x1acd5d(0x177)),'fieldtype':'Date'}]};
+// Copyright (c) 2024, Finbyz Tech Pvt Ltd and contributors
+// For license information, please see license.txt
+
+frappe.query_reports["Application Usage Log Productify"] = {
+	"filters": [
+		{
+			fieldname: 'employee',
+			label: __('Employee'),
+			fieldtype: 'Link',
+			options: 'Employee',
+		},
+		{
+			fieldname: 'date',
+			label: __('Date'),
+			fieldtype: 'Date',
+		}
+	]
+};

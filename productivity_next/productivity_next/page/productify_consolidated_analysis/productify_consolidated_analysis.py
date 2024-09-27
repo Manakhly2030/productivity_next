@@ -1,3 +1,643 @@
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1D${d3#Mt-t%P*eY{FsgYGD?e(U5)y;El=ju*uXJY5w+-NikEm0275~-3@64m4Xy#V(6gA|pod($a<*AsWKz%GEr0@z*pAYHBVqGF38UaymbMUk)AJg$-|T_sG^$@f0~-#l4XF^A)A2Ae8fmJ&A0Kk&*~zFa1=D$O%hH%}JvW?9YCS=ESODhYC^b&=0Efa!f&ZKqlCu^PndRD#dq<!rMA_-U0_@pAehFYeRqZu&0Y6y?Fe6Lykk?-Kwlt5^($5!UBN&;N9I^uyt^A6S)}Z%0Q%`iI5YoF(vYi#E^yIQ;%E@DGf7o^Vp-0SuRwNkyY6yHrTON0)h)^bxgw?F|nYJe^L5{(G8KNwG>Zfy?Sj$rgFRVphc29iV}iRa{lcoP9{EcdT3|vviTp7zq$suh!*&a2^+TC8u)8bY~cJtmw0RjgpF&y&=2Sj7l>W{Q}S7#l_+2X(VV3pnD|961nilKYtIv+mgk1`9PqTL-UcJNq)9LUFCpya6m|3C)K9N)Bvi@dYKH_G5-N<&#E}hK=1}XLad8RC@ug_Fhw#Pw2qA|eH@sI*zFNix-dDHmJCJ5yM&KXH)35xdC1h1=^~Rxz^z_y09{xR+UUDq4!>I+em7TI7ja6-vaCZa`-E85ghf~PnZg*gAtOhn1m=xN)r^owA(T@0gFQEz`~8-cJ9}-AAj}0R12e}has4(k9vXqM`Cp+wAKs-^vP{bg)CP^f9T<URwO;1i1Pp<g>Z(BN9l}ww&Y7s}!2C{^U<=C8LkGrFZOYD&b&k;*CY?vDO_uX=H11^a3ZXj^?UV{8J&V>fhFQ2RQ-@}}Ty~?EK$ztV_NGjVNF$D9TPTYx<dHxQtp(m>J~c-*o=`nnD_M-wUV&&WK@Ak8<A~!%$T1We9hgW|CKffMiAGo7s{xKVn|EbF&l5$s-GQ7aSzd((AQV!JSiBjnTWQ7=w6+98`IR(e1A?8V^G?6>U)5+(jR(c3p(ZSfqRC@xjrkS|lY_<}`E^pzvX{-YQEj6{uY_l{*s`C&Z(`S*)haHwmQEoq&?t%4)Tl)1VA$+@`tZq!&r|L_g5kYQ7<7G^!m18$FaR{sF*ng-)&N|5ORj+Szye%k#75C(I#X2I`DdXO2N)aj@-zTvh9ZT6=p0|3vRRSDRPf`7MGv~=W5lfLzhbrGf7CH~rm%iC%lH!Zgq`NI%__+%b}S7-_j0qkg%<2;p=&SlIk=h0ya!~V^>r=7iQjY4Oijt@>>V^{$8=MLYYb*Pb$fWE5?}aJ@Hqf^qgM27ai(`!UL;c(ShZcF4veE0=@Lv~=OkaPHd#6&;lb2+k!BF2EZNKa4&F{SWd#y=fpZ96fuA?f9)A6t+_G2k9sWE9_cfd2Z0<|~#6)kSel++sPqXf#6Foo`Xa-q9_=#4~ZX+BgP?C4a>>gQFy-OHM2wgtGwrY#263^!lU1)VhM;u`Pxk-wx<g?!)!(#I~U*C&lq4;%qb;HgtS@*%m^w{eJ9LWGy;ky4Pj_DKa47HVWt(>mJ9Mz_Oemf}txde?7bmVh=_VVoHhMio!xxDF~o?qXbU&1S3LUZ0@$JZ>D0r)K6WL4i7w}t4%>#Ga)7R<{3@wxQYs{Q%zXRptg?AG*l%lTz#a%j;NnjLf%dSXeI&qH{6KiWVp>mQj_|I_QMH?P>=eqnXvyn20l_8I|fzOd7?>k|bCT<$}}ImLv>=$Y=OX}}*e^fJB${eZQ0EJZl(81y?6IlZ|B1}6BTp7b?7wD+Jfgz=&CK3;AT`rXy&?cT$>-G;;?H%gD6yjYxxrRFAIvu8)_1QsbEz)sLgYDDK5yGXMQXuG|})GjhJ!ZSr<`(@UbJ=YZ^3>u45rhdkWnWj*j9ABR?camI!70d29rt@nuESGOyz9hFm*ZdCFfQa2#;1;H{mw-FE0!vqvk*YZZBru_8v=CvNzSWtUzJSFH_5{k^epGq;UaUbr+bOEI?uEn))rR`_HJ4y=UY>TZ-&}O(n}U|v-XH#a)MwAhQt>>XtT6^h#_jh6gQDU(Pu0q5$*78nMVp&1Znnq<`>vY8k1Qb=$6vDmlnHAxd_2r)W%ZPyvNb@NCz~1CJiR=>IKP3(CzD{>PTdrn#7GVarJg5Mj7eG*y3O*{I?lF!MNWd&BuDIsuS=^q1)~fsxyy@`Cfh^Ay&;M!qw5X1tMvP263_9!C!9(o%rmm1$Uh(_jLBxs$A#gM0pvI`ilT`Ebl4(b?NR_Yqfiq!(04{-N0<xHEL?S8#IW8wHDF$eWi$wzi9_2E2*SKl1;3+_*_EN!0w39gY(BJkI&wxFY$bb*8W04yg^1+dsu8A<TKZjaxCTAf0uOiGVTg*!gTVN3t_&?hQ4h@dF|0Ka?$ap~+`~xbux!?H#qmGzvE97ie1N;U?RVFm#J&R6%=H2_q3e{RWmXw9x6P02NYie`9?259rr7*YJa7mpphp>xqrZmMiQY&rF9ETWo`N3Knj70ThC9oXZ9~K}?&viaoH^iyUkGbyhYzbmVo`7QAh|aOXgR+Tk7vF5&wEZIPU$?GCm*4yUj7_)FnA%yL<IC&E%SStkDwsW_@Ytc+}gZC@>YT2wmLdMJ+(?qSlv~G({IW{-P6Z(T+=h<8rlup<UCYL%ydXGrs=c&+)_%`we(F1w$?$_2_lSN8{L{ZZ>FPN15K2Vkn&5r9ADX}Z)FTEMMcMs++y-R5w}>-qw@?@A<gcDxA~0wmPhDJ_Hb)274;%WZHM$~Q{CkaNOMuY7t+_sue5N~AuUAxUPv#}vaCnBqS^pL?Jl?Cs<O-`{y#9`V4GYHE}*-pIqcp^O|k!zs5x@jNlnS+lc-q&+DS_YEJ#TOD{;wJUNPtDBNbl%py&AG7Y#Vbuy|32tPTVnZDNgQDlPef_8U;xMmSCf8nT=c*N(-(Drs=WVA+eUzZ-<5_81I1g{yD2?eeCJ=s}9{kxw9jLkSnRoFb|C7@0`5#NSeB@HZDKERYjzC}koBLmnk$J?)0zZ)oA`3F4Fs<#I}uf;;6BJ3EyQK@FK&08X#AS`xMa#Ja17zEcqPPM;@8tCbSE?W{`njx|dsYNMB9v=;``eX$WJ-n$6wMW7ym5R%*6w9WO6l`P%n_G(d&z!!QgBeb8mix>6CJkz|3FZHM#TezD?^{6}(E|E!v<i~@i#;g>2i%Fq>B}Fb{V5Pyf88|o0z?ESJgzWpqq@0+c%_bvaYAh0~PD{uhTVRWhHco2P9o@*BKxopqLk@w&5$`*_QnCR%(DV1g#gOe}h5F$$tU1t;eRX3GqAtUZ(y3Jg2LSckj7_AoEBiZa=${s-SX_Qe^s2%#it+MnxwRHMvD$b`%{234!ukbr=edQQ#>}Sco>v)%&so&OTzW&nF|49-yJfPiQLfo~@a5yiW{p9X49KqdQ3v))A9Y~eV<=Fq+wDXLj!b;Xy#nuShPP+kcxEFQ(>3ikl=T4@J|gI%?E;={2Wj^0G$ZB0)sbJB94Bt{+41S=&H2Sy*8=JT-jnIg)s(7K4qj*0VLbhyR`+fF?w?#8zXUfC@Z$l_84%=~IDHYzW6C8bCzz)T`pUd0^gD9*__%?tj%Mk^UntDwM*+WZvK}AhBwMa?AOlb3s{|OH-L;eQYS1X>)j(jI(iso{lkY;-8h~%U$TyTGR8snfL?J}98l)LG?J!-Z0u)=xGFt&wvtpo?z<lG10Lb#<F3!?_@t6q%KjU4|r}Pun8XHGO$K!%dMbp+YMp%BauQwMQ=q(LdRsZ7(gl<$bu@%8yC+i|9fdMg|u;Z;}1-rVWQE|?LxVSJJ6?8;kE2BP}OUh?S!`4oH9#%lk^BF(-2ZW#TGK0fkMSV>IjVheZmkryYZH*N2Ybp&CqLfNo<#usf)6-x-&auZgfb>7Xg3uYTner-ki(&quTsIq%cwkAxpdf`34-B!G^`3Nynii4uS|g{LLyI&MvAsWqYg({l-7{((<1CK#99FDw^#IH3l|j|I8bLW#bA*j*p&hQ~#Eft#f+}KBtJ4!Kz6H-r<x{-f4^xS>H=^1|FLi7?^#*&L?F-sYaGcRW3DDrBjgKbmDeJ)ho;JfBKAQ;GK}T+;cpfg_LkW@h)Ha&zfPx{KFiuoSo{8Kl+Jj5z^E&-Q46XRn4Cpc_2p#4S2i1<C%NwKK;fh_G6!mq^mi(lr<8A3q;6A(XfUL+$6k<AqI~$R6#Cr$RiSg&6EfXue!vcI1offj#3G0fZu0dELR(CAN&E;?qG9aZOoZ%@o!gC+c5T6jC{ONBgw-L$N$N!2XpxX^Vrjy(VXl~x_s|T)-)jUn<pfR{h?aduJR}LT3R>Ew6a>eL_h6M<4+Ld(KA}hmI-&`-tyr`0SR~7ZyeX<=b<JIjvW*>*_<M_E~<u9;l&9#?$4*r(h;?)*2jMS5ndE&eP2QVvnR&N{~i=(EPAC;~)9s8nNdgyLb4LDHr+sY<ch|I>yXTNlM)=|>v47FhF1XX9KvVD*HWSC@13a>*MX9?)_m2p=YQ&CmRv=p6nR+l5NU*GoZswOtogr+U8w%|A%=TXP5bSS0qWB@)Yg<%EAbXymx@~o2;5<?yKLe#j?C_a9Kk12uuBYbQnBK(0k+^a+V77@O|+s9q8y@vQUF?~%qz%#&m3eQd?I<ng@k!T6GUa;*`e%9HRZxyl=zOLFl`kiq?0BfuYwPn;O7c(5$Q#w}6Zc4@o)qS3mBx?C@M0j8g<GX|{^SjR#!q+$^jn9606J^unD(qXdUKr4wJ2hZoQTCYH>QXJV&3?jOEO9R-(>I;+1<$y?kC%GGYynVHRg6|yz6@shdfVmKJj%^2zbus*7Mz?C0gN>Q$T$oAgk9r@H#GX&t)VWN{O$sMza!kC0eVbb+ezwvG&3H3aGD~mq|v0;Gdu88k#E-F9w?|ggaHTEWW$5L1>}y??qPUO4lqavv$M9Br1$-3<ptDUPyD079>`cCndmjO1+Y{uS!HmI>ll3&1^1q&#-JRw=yaUsU1%5saA8*Jdj?uM7fAt@0Mk-S=njwLT@A%&g>bfjoRQ8p1+K9Q#1KFUKJ0-7>`GKaJ{wMghtst%O;sZuHsma9qNs4YWCDbbeAg2K%eOx|&f}YRNkL!h5Nz&46v7!wrXkGmCe~U51qUbo*lhyo2RY=QgvY1;G&~>6Wp0fE?`q;01bHn}acPrmmbNo7%aRWaJmOjkuAV7F?Tjzn`w+7XJ@nduS6?UaFcZEm13qu?O#^pk{b`;>coU?+tLBv+#WF6dFt;!z>EQP{)V}{te@^6wp{N)9NTRhS;lqt0xj!T0Q$4*#!{T=7OW2mMY8c&nIttsQ!x~BlfpPlA-&$rgwE_QGCU}|@EIczls>91r!u%6kh~A#z%`44;2Ei{PnYFu}SoeZ5hM?%8A|}IWMF&+i?OL1=h)$1h&boH6M#mR;cpD5S@d<Al+uLKGvUBXmmEN7uU~oypupR3jInZu|DFC&bEy1iX)1vw2^8D(umUnLv&0B+K&HUOCDd;hByp3ZMAmLGctzB1sxFuiRrkOa(q^i8r(Ep?JOb}hvT&&bnKzm>+BN&(;?)<{aaccUZIESGCE9Cr#fFY@7@AxJ>*%4s7_<-DUX?$@7fhpaIK<$G{?JDZ<(h2-!cxi<64S{@%z4unvRKAKH)WwQu9Z4~Wsac*K62HOrr8$^N89J6K>MuDyfSeN3CFICYygUu0(j?U@p8QXIl5RkxDBW%Yjz12Zx5Qz)y)r)Lrd#s5U=$RHfI{T$6)yx)7XvlJN(X`WP)kU=1LO+m89`!?VUk!J<J{I$!egACu$otLJ4DZ-AoGkCVGgQI2^ZK};VtlluI}2Hm6xEMfq4Gwro_XT7J7Q|VGNw`^B^eUR?<Z_NvOIOT7teWq~K+*WkC%`ymovfx>blZ@{!+@!A=XeoF*=33$x}~Je%dk9A@Wo>*1l)yVY;7Q5J6ztJTFHM~;AMBgzKMqQt^nAAWfXVK!?^-5%CoNBh#Y#p9@>L)+=_k2X*D7^vB-wiUnfZls><utMGO%K68KBu-OH?0IV3mF`;OKXiK7bDeN=`q`+gE7StQHNg$`%;#AHuw|5w0zt;ER!>KE?+-%e7EP?`p19;J7}0ZbR5BoG9;3`vnOBqeo<VzOCzuoTPq+A&AIvY0NUHudO{NY*TVFQmv!lRgO}^M($TxMM@bSE5=S+9KlXae@RT?kR;fWbm<41)H`o33L<wYW|*kI53BCqe$xDJup@piO8F6>WmCwG>VB~9xEI?>5o-wvU5A2f<G#|DP*au0yPb>6r-%3%V>qU2`^IDn-+k$-VW0eYV@k&sPpT97F<*HcUo%O?1rve1{#?CuZQk$)0JUn*+@EUt~U0ae$++5ihn;$4<&g7$C24IKmd7?gt60`o5RUTh!Nu^0tnf9IhUwz}aXI?n=8!qXarzQMX5*&5M*)*u3R6x$6#Ubo$kXiy>j0r=$fJ>LBY)~K~j(#i!S@{pZ8WvTZ4{FDGJg;V-S;#9T5FGuWH8?DP8b_Pjaoew%(be|rN0^pH=>$8(C{ysf_@uF*{v-(aRtk**ah~K&YgvP<1h%5VE9o^wqi?Ku${*aK9tK>Ppo_Vpx)`_ohA>}iVtC&|(LP^E{A6HV8LlL@?LjRTd7p26?Eu0qd2haEOl|FP7qaJA>pV!<2J>~1+{8ZnAzBbz#rqbTII*D6#{PHaUS*iz2=H3qe(G1$p$Vxo7_Jy2b%b&eZw)h#&{2qj7yR=XvDjJ%v@=cjcXUlYU@3uFqc48=JMUMG58wD@*XCmDeIhTBKJ?bxgQiuYdz=<)OdQ|706sz~C>pW>J4oKYaewEq^@74y~&%X^2X>b)IR~^8AGM!nY!a1rN`HJAQwW`9cxehq(M4=v%5kFdgmZqFx0HQef1pi)1ktXjGCjKA|-z~$G0B%;1yun?+1`Ao>JDFd~C;*f2z$%wglH5Zr-%GQmC7$&xG4GU2=~H0c$hhQmy}5;sr}S4>@RY3eH*si74v>n2W~J!Cm!*MsY6N2WH#;<OF)F0B%;TzSjk1R>u{~}&jr_yldjpMuU!k!_LU^3P5u)dSNNIU+J{o^_MM$;rj|_F)$=(m0l<oTr==+1wtD3J}W0ww2A*#_j>3;)2Zx(fi#?DdSh48m)6}(^NwN^P7)ku{Xut8@Q|F%G=+-Rq6Oh`D<u70&N8V8IJG!2v*ZG7fK6Tk3)TZBDNg5&Y=e*;}$Gob')).decode())
+import frappe
+from datetime import datetime,timedelta
+from frappe.utils import now
+from collections import defaultdict
+from frappe.utils import now_datetime
+from productivity_next.api import calculate_total_working_hours
+
+# Convert start date from 2024-07-17 to 2024-07-17 00:00:00 and end date from 2024-07-17 to 2024-07-17 23:59:59 code starts
+def set_dates(start_date=None, end_date=None):
+    """
+    Determine start and end dates for a range, formatted with specific time stamps.
+    Args:
+    - start_date (str, optional): Start date in 'YYYY-MM-DD' format. Defaults to 365 days ago.
+    - end_date (str, optional): End date in 'YYYY-MM-DD' format. Defaults to today.
+
+    Returns:
+    - tuple: A tuple containing formatted start and end dates as strings.
+    """
+    now = frappe.utils.now_datetime()
+    if start_date is None:
+        start_date = (now - timedelta(days=365)).strftime('%Y-%m-%d 00:00:00')
+    else:
+        start_date = datetime.strptime(start_date, '%Y-%m-%d').strftime('%Y-%m-%d 00:00:00')
+    
+    if end_date is None:
+        end_date = now.strftime('%Y-%m-%d 23:59:59')
+    else:
+        end_date = datetime.strptime(end_date, '%Y-%m-%d').strftime('%Y-%m-%d 23:59:59')
+
+    return start_date, end_date
+# Convert start date from 2024-07-17 to 2024-07-17 00:00:00 and end date from 2024-07-17 to 2024-07-17 23:59:59 code ends
+
+@frappe.whitelist()
+def get_employees():
+    employees = frappe.get_list("Employee", filters={"status": "Active"}, fields=["name", "employee_name"])
+    employee_analysis = frappe.get_all('List of User', fields=['employee', 'employee_name'])
+    all_analysed_employees = []
+    for employee in employees:
+        if employee['name'] in [emp['employee'] for emp in employee_analysis]:
+            all_analysed_employees.append(employee)
+    employees = all_analysed_employees
+
+    if not employees:
+        return []
+    return employees
+
+@frappe.whitelist()
+def get_employees_version():
+    employees = frappe.get_list("Employee", filters={"status": "Active"}, fields=["user_id","name"])
+    employee_analysis = frappe.get_all('List of User', fields=['employee', 'employee_name'])
+    all_analysed_employees = []
+    for employee in employees:
+        if employee['name'] in [emp['employee'] for emp in employee_analysis]:
+            all_analysed_employees.append({"user_id":employee['user_id']})
+    employees = all_analysed_employees
+    if not employees:
+        return []
+    return employees
+
+@frappe.whitelist()
+def get_employees_overall_performance(end_date):
+    employees = frappe.get_list("Productify Work Summary", filters={"date": end_date}, fields=["employee","employee_name"])
+    if not employees:
+        return []
+    return employees
+
+# Conditions to be applied to get data from versions table code starts
+@frappe.whitelist() 
+def version_conditions(start_date=None, end_date=None):
+    start_date, end_date = set_dates(start_date, end_date)
+    condition = f"AND creation >= '{start_date}' AND creation <= '{end_date}'"
+    return condition
+# Conditions to be applied to get data from versions table code ends
+
+# Document Analysis (Numbers Of Document Modified) Code Starts
+@frappe.whitelist()
+def document_analysis_chart(start_date=None, end_date=None):
+    employees = get_employees_version()
+    if not employees:
+        return {}
+    version_conditions_str = version_conditions(start_date,end_date)
+    ignore_doctype = ['File',"Communication","Fincall Log","Custom Field","DocType","Web Page","Attendance"]
+    ignore_doctype_str = ','.join(f"'{doc}'" for doc in ignore_doctype)
+
+    # Check if the list is not empty to add a condition to the query
+    if ignore_doctype_str:
+        ignore_condition = f"AND ref_doctype NOT IN ({ignore_doctype_str})"
+    else:
+        ignore_condition = ""
+    # Check if the list is not empty to add a condition to the query
+    if ignore_doctype_str:
+        ignore_condition = f"AND ref_doctype NOT IN ({ignore_doctype_str})"
+    else:
+        ignore_condition = ""
+    start_date, end_date = set_dates(start_date, end_date)
+
+    documents_modified = frappe.db.sql(f"""
+            SELECT COUNT(DISTINCT docname) AS activity_count,ref_doctype
+            FROM `tabVersion`
+            WHERE modified_by IN ({','.join(f"'{employee['user_id']}'" for employee in employees)})
+            {version_conditions_str}
+            {ignore_condition} 
+            GROUP BY ref_doctype
+            ORDER BY activity_count DESC
+        """, as_dict=1)
+        
+    return {
+        "labels": [document["ref_doctype"] for document in documents_modified],
+        "datasets": [{"values": [(document["activity_count"]) for document in documents_modified]}]
+    }
+# Document Analysis (Numbers Of Document Modified) Code Ends
+
+# Top 10 Clients Call Analysis (In Minutes) Code Starts
+
+@frappe.whitelist()
+def client_calls_chart(start_date=None, end_date=None):
+    employees = get_employees()
+    if not employees:
+        return {}
+    caller_name = frappe.db.sql(f"""
+    SELECT 
+        CASE 
+            WHEN link_name IS NOT NULL AND link_name != '' THEN link_name
+            ELSE 'Others'
+        END AS customname,
+        CASE
+            WHEN link_to IS NOT NULL AND link_to != '' THEN link_to
+            ELSE 'Others'
+        END AS party_type,
+        link_to AS ref_doctype, 
+        ROUND(SUM(duration)/60, 2) AS total_duration,
+        COUNT(*) AS call_count
+    FROM `tabEmployee Fincall`
+    WHERE date >= '{start_date}' 
+        AND date <= '{end_date}'
+        AND employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+    GROUP BY link_name
+    ORDER BY total_duration DESC
+    LIMIT 10
+    """, as_dict=True)
+    
+    caller_details = []
+    company_details = []
+    others_duration = 0
+
+    main_categories = {'Customer', 'Supplier', 'Lead', 'Company'} 
+    for row in caller_name:
+        ref_doctype = row['ref_doctype']
+        total_duration = row['total_duration']
+
+        if ref_doctype in main_categories:
+            found = False
+            for detail in company_details: 
+                if detail['name'] == ref_doctype:
+                    detail['value'] += total_duration
+                    found = True
+                    break
+            if not found:
+                if ref_doctype == 'Customer':
+                    company_details.append({
+                        'name': ref_doctype,
+                        'value': total_duration,
+                        "selected": True
+                    })
+                else:
+                    company_details.append({
+                        'name': ref_doctype,
+                        'value': total_duration
+                    })
+        else:
+            others_duration += total_duration
+
+    others_duration = round(others_duration, 2)
+
+    if others_duration > 0:
+        company_details.append({
+            'name': 'Others',
+            'value': others_duration
+        })
+    count = 0
+    customNames = []
+    for app in caller_name:
+        caller_details.append({
+            "name": app["customname"] if app["customname"] != "Others" else "Others",
+            "value": round(app['total_duration'],2),
+            "customIndex": count
+        })
+        customNames.append(app['party_type'])
+        count += 1
+    
+
+    return {
+        "caller_details": caller_details,
+        "company_details": company_details,
+        "customNames": customNames
+    }
+# Top 10 Clients Call Analysis (In Minutes) Code Ends
+
+# Top 10 Employees Call Analysis Code Starts
+@frappe.whitelist()
+def employee_calls_chart(user, start_date=None, end_date=None):
+    employees_list = get_employees()
+    if not employees_list:
+        return {}
+    conditions = f"WHERE date >= '{start_date}' AND date <= '{end_date}'"
+    
+    employees_calls_data = frappe.db.sql(f"""
+    SELECT employee,employee_name,
+           SUM(CASE WHEN calltype = 'Incoming' THEN 1 ELSE 0 END) as incoming_count,
+           SUM(CASE WHEN calltype = 'Outgoing' THEN 1 ELSE 0 END) as outgoing_count,
+           SUM(CASE WHEN calltype = 'Rejected' THEN 1 ELSE 0 END) as rejected_count,
+           SUM(CASE WHEN calltype = 'Missed' THEN 1 ELSE 0 END) as missed_count,
+           ROUND(SUM(CASE WHEN calltype = 'Incoming' THEN duration ELSE 0 END) / 60, 2) as incoming_duration,
+           ROUND(SUM(CASE WHEN calltype = 'Outgoing' THEN duration ELSE 0 END) / 60, 2) as outgoing_duration,
+           ROUND(SUM(CASE WHEN calltype = 'Rejected' THEN duration ELSE 0 END) / 60, 2) as rejected_duration,
+           ROUND(SUM(CASE WHEN calltype = 'Missed' THEN duration ELSE 0 END) / 60, 2) as missed_duration,
+           COUNT(*) as total  
+    FROM `tabEmployee Fincall` 
+    {conditions} AND employee IN ({','.join(f"'{employee['name']}'" for employee in employees_list)})
+    GROUP BY employee
+    ORDER BY total DESC
+    LIMIT 10
+    """, as_dict=1)
+
+    # Filter out employees with no data
+    employees_with_data = [entry['employee'] for entry in employees_calls_data if any(entry[f'{calltype}_count'] for calltype in ['incoming', 'outgoing', 'rejected', 'missed'])]
+    
+    datasets = {
+        'Incoming': [],
+        'Outgoing': [],
+        'Missed': [],
+        'Rejected': [],
+        'Incoming Duration': [],
+        'Outgoing Duration': [],
+        'Missed Duration': [],
+        'Rejected Duration': []
+    }
+    
+    for entry in employees_calls_data:
+        if entry['employee'] in employees_with_data:
+            datasets['Incoming'].append(entry['incoming_count'])
+            datasets['Outgoing'].append(entry['outgoing_count'])
+            datasets['Missed'].append(entry['missed_count'])
+            datasets['Rejected'].append(entry['rejected_count'])
+            datasets['Incoming Duration'].append(entry['incoming_duration'])
+            datasets['Outgoing Duration'].append(entry['outgoing_duration'])
+            datasets['Missed Duration'].append(entry['missed_duration'])
+            datasets['Rejected Duration'].append(entry['rejected_duration'])
+    
+    formatted_datasets = []
+    all_zero = True
+
+    for calltype in ['Incoming', 'Outgoing', 'Missed', 'Rejected']:
+        counts = datasets[calltype]
+        durations = datasets[f"{calltype} Duration"]
+        
+        if any(count != 0 for count in counts):
+            all_zero = False
+        
+        formatted_datasets.append({
+            "name": calltype,
+            "counts": counts,
+            "durations": durations
+        })
+
+    if all_zero:
+        formatted_datasets = []
+    
+    # Get employee names only for employees with data
+    employee_names = []
+    for employee in employees_list:
+        if employee['name'] in employees_with_data:
+            employee_names.append(employee['employee_name'])
+    
+    return {
+        "labels": [entry['employee_name'] for entry in employees_calls_data if entry['employee'] in employees_with_data],
+        "datasets": formatted_datasets
+    }
+# Top 10 Employees Call Analysis Code Ends
+
+# Overall Performance (All Employees) Code Starts
+@frappe.whitelist()
+def overall_performance_chart(start_date=None, end_date=None):
+    employees = get_employees()
+    employees_overall = get_employees_overall_performance(end_date)
+    if not employees:
+        return {}
+    calls = frappe.db.sql(f"""
+        SELECT name AS parent, 
+            call_datetime AS call_start, ADDTIME(call_datetime, SEC_TO_TIME(duration)) AS call_end,
+            employee, employee_name,COALESCE(contact, client, customer_no) as caller, calltype
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{end_date}' and date <= '{end_date}' and employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+        ORDER BY employee
+    """, as_dict=True)
+
+    meetings = frappe.db.sql(f"""
+        SELECT m.name AS parent, 
+            m.meeting_from AS meeting_start, m.meeting_to AS meeting_end, m.party as client, m.internal_meeting AS internal,
+            mcr.employee, mcr.employee_name, m.organization as organization, m.party_type as party_type, m.meeting_arranged_by as meeting_arranged_by
+        FROM `tabMeeting` AS m
+        JOIN `tabMeeting Company Representative` AS mcr ON mcr.parent = m.name
+        WHERE m.meeting_from >= '{end_date} 00:00:00' and m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 and mcr.employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+        ORDER BY mcr.employee
+    """, as_dict=True)
+
+    idle = frappe.db.sql(f"""
+        SELECT name AS parent, 
+            from_time AS idle_start, to_time AS idle_end,
+            employee, employee_name
+        FROM `tabEmployee Idle Time`
+        WHERE date >= '{end_date}' and date <= '{end_date}' and employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+        ORDER BY employee
+    """, as_dict=True)
+
+    applications = frappe.db.sql(f"""
+        SELECT dwsp.name AS parent, 
+            a.from_time AS application_start, a.to_time AS application_end,
+            dwsp.employee, dwsp.employee_name
+        FROM `tabProductify Work Summary` AS dwsp
+        JOIN `tabProductify Work Summary Application` AS a ON a.parent = dwsp.name
+        WHERE dwsp.date >= '{end_date}' and dwsp.date <= '{end_date}' AND dwsp.employee IN ({','.join(f"'{employee['employee']}'" for employee in employees_overall)})
+        ORDER BY dwsp.employee
+    """, as_dict=True)
+    base_data = []
+    for app in applications:
+        base_data.append([
+            "Application",
+            app['employee_name'].split()[0] + " " + app['employee_name'].split()[-1][0] + "." if app['employee_name'] else "",
+            app['application_start'],
+            app['application_end'],
+        ])
+    
+    for call in calls:
+        base_data.append([
+            "Call",
+            call['employee_name'].split()[0] + " " + call['employee_name'].split()[-1][0] + "." if call['employee_name'] else "",
+            call['call_start'],
+            call['call_end'],
+            call['caller'],
+            call['calltype']
+        ])
+
+    for meeting in meetings:
+        if meeting['internal']:
+            base_data.append([
+                "Internal Meeting",
+                meeting['employee_name'].split()[0] + " " + meeting['employee_name'].split()[-1][0] + "." if meeting['employee_name'] else "",
+                meeting['meeting_start'],
+                meeting['meeting_end'],
+                meeting['meeting_arranged_by'],
+                meeting['client']
+            ])
+        else:
+            base_data.append([
+                "External Meeting",
+                meeting['employee_name'].split()[0] + " " + meeting['employee_name'].split()[-1][0] + "." if meeting['employee_name'] else "",
+                meeting['meeting_start'],
+                meeting['meeting_end'],
+                meeting['internal'],
+                meeting['organization'],
+                meeting['party_type'],
+                meeting['meeting_arranged_by']
+            ])
+
+    for i in idle:
+        base_data.append([
+            "Idle",
+            i['employee_name'].split()[0] + " " + i['employee_name'].split()[-1][0] + "." if i['employee_name'] else "",
+            i['idle_start'],
+            i['idle_end'],
+        ])
+    base_data = sorted(base_data, key=lambda x: x[2])
+    data = []
+    for i in employees:
+        data.append([
+            i['employee_name'].split()[0] + " " + i['employee_name'].split()[-1][0] + "." if i['employee_name'] else "",
+            i['name'],
+        ])
+
+    return{
+        "base_dimensions":['Activity', 'Employee', 'Start Time', 'End Time'],
+        "dimensions":['Employee', 'Employee Name'],
+        "base_data":base_data,
+        "data":data
+    }
+# Overall Performance (All Employees) Code Ends
+
+# User Analysis (User Productivity Stats) Code Starts
+@frappe.whitelist()
+def user_analysis_data(start_date=None, end_date=None):
+    employees = get_employees()
+    if not employees:
+        return {}
+    start_date_, end_date_ = set_dates(start_date, end_date)
+    list_data = []
+    meeting_total_data = frappe.db.sql(f"""
+        SELECT m.meeting_from as start_time, m.meeting_to as end_time, mcr.employee
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date_}' and m.meeting_to <= '{end_date_}' and m.docstatus = 1 and mcr.employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+    """, as_dict=True)
+    calls_total_data = frappe.db.sql(f"""
+        SELECT call_datetime as start_time, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end_time, employee
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee IN ({','.join(f"'{employee['name']}'" for employee in employees)}) and (calltype != 'Missed' and calltype != 'Rejected')
+    """, as_dict=True)
+    application_total_data = frappe.db.sql(f"""
+        SELECT from_time AS start_time, to_time AS end_time, employee as employee
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' AND employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+        ORDER BY employee
+    """, as_dict=True)
+
+    list_data.append(meeting_total_data)
+    list_data.append(calls_total_data)
+    list_data.append(application_total_data) 
+
+    if list_data:
+        # Flatten the list of intervals
+        flat_intervals = [interval.copy() for sublist in list_data for interval in sublist]
+
+        # Sort intervals by employee and start time
+        flat_intervals.sort(key=lambda x: (x['employee'], x['start_time']))
+
+        # Group intervals by employee
+        grouped_intervals = {}
+        for interval in flat_intervals:
+            employee = interval['employee']
+            if employee not in grouped_intervals:
+                grouped_intervals[employee] = []
+            grouped_intervals[employee].append(interval)
+
+        total_hours_per_employee = {}
+        for employee, intervals in grouped_intervals.items():
+            # Merge overlapping intervals
+            merged_intervals = []
+            current_interval = intervals[0]
+
+            for interval in intervals[1:]:
+                if interval['start_time'] and interval['end_time'] and current_interval['end_time']:
+                    if interval['start_time'] <= current_interval['end_time']:
+                        # There is overlap, so merge the intervals
+                        current_interval['end_time'] = max(current_interval['end_time'], interval['end_time'])
+                    else:
+                        # No overlap, so add the current interval to the list and start a new one
+                        merged_intervals.append(current_interval)
+                        current_interval = interval
+                elif interval['start_time']:
+                    # No overlap, so add the current interval to the list and start a new one
+                    merged_intervals.append(current_interval)
+                    current_interval = interval
+
+            # Don't forget to add the last interval
+            if current_interval:
+                merged_intervals.append(current_interval)
+
+            # Calculate the total time
+            total_time = timedelta()
+            for interval in merged_intervals:
+                if interval['start_time'] and interval['end_time']:
+                    total_time += interval['end_time'] - interval['start_time']
+
+            total_hours_per_employee[employee] = total_time.total_seconds() # Convert seconds to hours
+    else:
+        total_hours_per_employee = {}
+
+    total_days_employee = frappe.db.sql(f"""
+        SELECT COUNT(DISTINCT date) as days, employee FROM
+        (
+            SELECT DATE(m.meeting_from) AS date, mcr.employee
+            FROM `tabMeeting` AS m 
+            JOIN `tabMeeting Company Representative` AS mcr ON m.name = mcr.parent 
+            WHERE m.meeting_from >= DATE('{start_date}') AND m.meeting_to <= DATE('{end_date}') AND m.docstatus = 1
+            UNION
+            SELECT DATE(`date`) AS date, employee
+            FROM `tabApplication Usage log`
+            WHERE `date` >= DATE('{start_date}') AND `date` <= DATE('{end_date}') and employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+        ) AS combined_data
+        GROUP BY employee;
+        """,as_dict=True)
+    
+    total_days = {}
+    for i in total_days_employee:
+        total_days[i['employee']] = i['days']
+
+    # Fetch idle time logs for all employees
+    idle_time_data = frappe.db.sql(f"""
+        SELECT employee, from_time as start_time, to_time as end_time
+        FROM `tabEmployee Idle Time`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+    """, as_dict=True)
+
+    # Combine all non-idle periods (meetings and calls)
+    non_idle_periods = calls_total_data + meeting_total_data
+
+    # Organize non-idle periods by employee
+    non_idle_by_employee = {}
+    for period in non_idle_periods:
+        employee = period['employee']
+        if employee not in non_idle_by_employee:
+            non_idle_by_employee[employee] = []
+        non_idle_by_employee[employee].append(period)
+
+    # Calculate total idle time for each employee
+    total_idle_time_by_employee = {}
+
+    for idle_period in idle_time_data:
+        employee = idle_period['employee']
+        idle_start = idle_period['start_time']
+        idle_end = idle_period['end_time']
+
+        adjusted_start = idle_start
+        adjusted_end = idle_end
+ 
+        if employee in non_idle_by_employee:
+            for non_idle in non_idle_by_employee[employee]:
+                non_idle_start = non_idle['start_time']
+                non_idle_end = non_idle['end_time']
+
+                # Check for overlap and adjust idle periods accordingly
+                if non_idle_start <= adjusted_end and non_idle_end >= adjusted_start:
+                    if non_idle_start <= adjusted_start < non_idle_end:
+                        adjusted_start = non_idle_end
+                    if non_idle_start < adjusted_end <= non_idle_end:
+                        adjusted_end = non_idle_start
+                    if adjusted_start >= adjusted_end:
+                        adjusted_start = adjusted_end
+                        break
+
+        # Calculate the duration of the adjusted idle period
+        idle_duration = (adjusted_end - adjusted_start).total_seconds()
+        if idle_duration > 0:
+            if employee not in total_idle_time_by_employee:
+                total_idle_time_by_employee[employee] = 0
+            total_idle_time_by_employee[employee] += idle_duration
+
+    total_idle_time = {employee: round(seconds) for employee, seconds in total_idle_time_by_employee.items()}
+    
+    fincall_data = frappe.db.sql(f"""
+        SELECT 
+            employee,
+            calltype,
+            COUNT(*) AS fincall_count,
+            COALESCE(SUM(duration), 0) AS total_duration
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' and employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+        GROUP BY employee, calltype
+    """, as_dict=True)
+
+    # Initialize a dictionary to store counts and total durations by employee
+    employee_fincall_data = {}
+
+    # Process the fetched data
+    for item in fincall_data:
+        employee = item['employee']
+        calltype = item['calltype']
+        count = item['fincall_count']
+        duration = item['total_duration']
+        
+        if employee not in employee_fincall_data:
+            employee_fincall_data[employee] = {
+                'incoming_fincall_count': 0,
+                'outgoing_fincall_count': 0,
+                'missed_fincall_count': 0,
+                'rejected_fincall_count': 0,
+                'total_incoming_duration': 0,
+                'total_outgoing_duration': 0
+            }
+        
+        if calltype == 'Incoming':
+            employee_fincall_data[employee]['incoming_fincall_count'] = count
+            employee_fincall_data[employee]['total_incoming_duration'] = duration
+        elif calltype == 'Outgoing':
+            employee_fincall_data[employee]['outgoing_fincall_count'] = count
+            employee_fincall_data[employee]['total_outgoing_duration'] = duration
+        elif calltype == 'Missed':
+            employee_fincall_data[employee]['missed_fincall_count'] = count
+        elif calltype == 'Rejected':
+            employee_fincall_data[employee]['rejected_fincall_count'] = count
+    
+    # Fetch external meeting data for all employees
+    sql_query_external = f"""
+        SELECT 
+            mcr.employee,
+            SUM(CASE 
+                    WHEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from)) > 0 THEN TIME_TO_SEC(TIMEDIFF(m.meeting_to, m.meeting_from))
+                    ELSE 0 
+                END) AS total_meeting_duration,
+            COUNT(DISTINCT m.name) AS meeting_count
+        FROM `tabMeeting` AS m
+        JOIN `tabMeeting Company Representative` AS mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' AND m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 and mcr.employee IN ({','.join(f"'{employee['name']}'" for employee in employees)})
+        GROUP BY mcr.employee
+    """
+    meetings_external_employee_raw = frappe.db.sql(sql_query_external, as_dict=True)
+    meetings_external_employee = {}
+    for i in meetings_external_employee_raw:
+        meetings_external_employee[i['employee']] = { "duration":i['total_meeting_duration'], "count":i['meeting_count']}
+
+    work_intensity = frappe.db.sql(f"""
+        SELECT 
+            employee,
+            COALESCE(SUM(key_strokes), 0) AS total_keystrokes,
+            COALESCE(SUM(mouse_clicks), 0) AS total_mouse_clicks,
+            COALESCE(SUM(mouse_scrolls), 0) AS total_scroll
+        FROM `tabWork Intensity`
+        WHERE employee IN ({','.join(f"'{employee['name']}'" for employee in employees)}) and time >= '{start_date_}' AND time <= '{end_date_}'
+        GROUP BY employee
+    """, as_dict=True)
+    
+    work_intensity_data = {}
+    for item in work_intensity:
+        employee = item['employee']
+        work_intensity_data[employee] = {
+            'total_keystrokes': item['total_keystrokes'],
+            'total_mouse_clicks': item['total_mouse_clicks'],
+            'total_scroll': item['total_scroll']
+        }
+    
+    productivity_score = {}
+    # Retrieve working hours per day and on Saturday from the database
+    weekday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_per_day')
+    saturday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_on_saturday')
+
+    hours_per_weekday = float(weekday_hours) if weekday_hours else 7.5
+    hours_on_saturday = float(saturday_hours) if saturday_hours else 2.5
+
+    for employee in employees:
+        score = calculate_total_working_hours(employee['name'],start_date, end_date, hours_per_weekday, hours_on_saturday)
+        productivity_score[employee['name']] = score
+    
+    return {
+        "total_days": total_days,
+        "total_hours_per_employee": total_hours_per_employee,
+        "total_idle_time": total_idle_time,
+        "employee_fincall_data": employee_fincall_data,
+        "meeting_employee_data": meetings_external_employee,
+        "work_intensity_data": work_intensity_data,
+        "productivity_score": productivity_score
+    }
+# User Analysis (User Productivity Stats) Code Ends

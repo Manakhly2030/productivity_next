@@ -1,1 +1,229 @@
-const a0_0x39f815=a0_0x1ed8;(function(_0x22f2b5,_0x3c216d){const _0x1dd05f=a0_0x1ed8,_0x1255fd=_0x22f2b5();while(!![]){try{const _0x5919e0=parseInt(_0x1dd05f(0x21c))/0x1+parseInt(_0x1dd05f(0x1b4))/0x2+parseInt(_0x1dd05f(0x195))/0x3*(parseInt(_0x1dd05f(0x22b))/0x4)+parseInt(_0x1dd05f(0x199))/0x5+-parseInt(_0x1dd05f(0x1c3))/0x6*(parseInt(_0x1dd05f(0x1f8))/0x7)+parseInt(_0x1dd05f(0x1c2))/0x8+parseInt(_0x1dd05f(0x236))/0x9*(-parseInt(_0x1dd05f(0x20c))/0xa);if(_0x5919e0===_0x3c216d)break;else _0x1255fd['push'](_0x1255fd['shift']());}catch(_0x41c6ae){_0x1255fd['push'](_0x1255fd['shift']());}}}(a0_0x2d70,0xed445));function a0_0x2d70(){const _0x2bf2e3=['2034hRfQfT','Employees','get_user_default','email_id','8230815OcvfhQ','application_usage','RFnXf','sales_person','Fin\x20Call','body','organization_name','indexOf','AZFID','Email\x20ID','Link','DJZsu','CtPWL','name','EKuCz','Vehtv','Gezqf','contact_person','POST','location','domain','origin','WzxXc','IKgMD','issue','WUAhA','cfrah','1762858ImfmFQ','apply','then','CzvKx','user','RaZrT','docstatus','small','Subscription\x20for\x20Call','RzVbj','Phone\x20No','project','DMJGk','data','15004216xSYTqJ','6737034AOySrq','Administrator','roles','BQpXy','application_sub','last_name','MREuN','status','dydHj','mkbqi','rrZxj','Application\x20Usage','set','oGzJl','jyCuE','gZtJA','fcxZU','Employee','XTFjV','OHnTi','This\x20detail\x20will\x20be\x20shared\x20with\x20Finbyz.\x20Do\x20you\x20want\x20to\x20submit?','confetti','You\x20have\x20successfully\x20registered\x20for\x20Productify.\x20Please\x20ask\x20your\x20Users\x20to\x20download\x20<a\x20target=\x22_blank\x22\x20href=\x27https://productivity.finbyz.tech/files/Productify.exe\x27>Productify\x20App</a>\x20and\x20<a\x20target=\x22_blank\x22\x20href=\x22https://play.google.com/store/apps/details?id=com.finbyzfincall.productify&pcampaignid=web_share\x22>Fincall\x20App</a>\x20\x20to\x20start\x20activity\x20analysis.\x0aLogin\x20on\x20both\x20places\x20will\x20be\x20through\x20their\x20own\x20ERP\x20email\x20id\x20and\x20password','BnuFR','QkPZY','RXuLD','range','defaults','employee','/app','push','xcvud','message','list_of_users','boot','Data','Iovfv','rSOTz','ikMGR','(((.+)+)+)+$','KYgLT','productivity_next.api.organization_signup','wjpDW','Table','Contact\x20Person','VFehw','extra-large','uvZyA','fincall','wQpex','ZEwHK','subscription_call','GYNUN','7OeaZjK','bzjqA','Dialog','email','Active','mzUXX','ywezL','KMuMd','diBBa','User\x20ID','fields_dict','constructor','ZcUbZ','PBRza','cell_number','EJZSu','hide','EIBqA','LVRql','string','60AymddL','call','subscription','Email','Guest','mobile_no','/app/home','XssOP','HtBiN','YgXZm','ZBfpt','search','LZqOE','display','uSBWx','msgprint','669671EEhVuX','toString','Productify\x20Subscription','Subscription\x20done\x20but\x20no\x20users','employee_name','forEach','pathname','assets/productivity_next/productivity_next/party.min.js','length','WhsfI','iKcbH','UmRva','fScKc','variation','FtdiL','780FnSzPP','qdyHx','afKKH','log','iDCMq','kpWLa','Submit','HKhpU','rtFtD','get_list','BFicv','4665474texfsx','show','kaSQC','IILjD','zYblj','bkpQy','JmYfa','zZHLA','nIDau','AqhRe','get_doc','user_id','LhHto','refresh','eAXBi','Organization\x20Name','table'];a0_0x2d70=function(){return _0x2bf2e3;};return a0_0x2d70();}function a0_0x1ed8(_0x114464,_0x2e587d){const _0x2f7c8d=a0_0x2d70();return a0_0x1ed8=function(_0x66635d,_0x2eacab){_0x66635d=_0x66635d-0x195;let _0x2d7028=_0x2f7c8d[_0x66635d];return _0x2d7028;},a0_0x1ed8(_0x114464,_0x2e587d);}const a0_0x2eacab=(function(){const _0x39aa87={'dydHj':function(_0x8bfe64,_0x5e382c){return _0x8bfe64===_0x5e382c;},'DKCHB':function(_0x559233,_0x5dd887){return _0x559233>_0x5dd887;},'uSBWx':function(_0x1392e8,_0x15fa8f){return _0x1392e8!==_0x15fa8f;},'HtBiN':'aXSWF'};let _0x23317a=!![];return function(_0x595b3f,_0x1b216e){const _0x194ea0=a0_0x1ed8,_0x3548cf={'KalHJ':function(_0x3928fe,_0x4c2e75){const _0x306855=a0_0x1ed8;return _0x39aa87[_0x306855(0x1cb)](_0x3928fe,_0x4c2e75);},'IKgMD':function(_0x19a2f7,_0x2e9f1b){return _0x39aa87['DKCHB'](_0x19a2f7,_0x2e9f1b);}};if(_0x39aa87[_0x194ea0(0x21a)](_0x39aa87[_0x194ea0(0x214)],_0x39aa87[_0x194ea0(0x214)]))_0x21acbc[_0x194ea0(0x1e3)]&&(_0x58ba8d[_0x194ea0(0x21b)](_0x194ea0(0x1d9)),_0x3bd33c[_0x194ea0(0x1d8)](_0x9e2776[_0x194ea0(0x19e)],{'count':_0x528334[_0x194ea0(0x229)][_0x194ea0(0x1dd)](0xc8,0x12c)}),_0x2a1667[_0x194ea0(0x208)](),_0x4883f7['db'][_0x194ea0(0x240)](_0x194ea0(0x21e))[_0x194ea0(0x1b6)](_0x1ef5fa=>{const _0x153480=_0x194ea0;_0x1482ec=_0x1ef5fa,_0x15dbfe[_0x153480(0x20e)]=_0x1ef5fa;if(_0x3548cf['KalHJ'](_0x1ef5fa['docstatus'],0x1)&&_0x3548cf[_0x153480(0x1b0)](_0x1ef5fa[_0x153480(0x1e4)][_0x153480(0x224)],0x0))return;}));else{const _0x5d1d40=_0x23317a?function(){const _0x5d77a5=_0x194ea0;if(_0x1b216e){const _0x57a48d=_0x1b216e[_0x5d77a5(0x1b5)](_0x595b3f,arguments);return _0x1b216e=null,_0x57a48d;}}:function(){};return _0x23317a=![],_0x5d1d40;}};}()),a0_0x66635d=a0_0x2eacab(this,function(){const _0x59b055=a0_0x1ed8,_0x5ee237={'mzUXX':_0x59b055(0x1ea)};return a0_0x66635d[_0x59b055(0x21d)]()[_0x59b055(0x217)](_0x5ee237[_0x59b055(0x1fd)])['toString']()[_0x59b055(0x203)](a0_0x66635d)['search'](_0x59b055(0x1ea));});a0_0x66635d(),frappe['require'](a0_0x39f815(0x223)),document['addEventListener']('DOMContentLoaded',function(){const _0x57a867=a0_0x39f815,_0x22eaed={'TiRIA':'Guest','KYgLT':function(_0x1806bb,_0x51c859){return _0x1806bb!==_0x51c859;},'wQpex':_0x57a867(0x23d),'IILjD':function(_0x40da34,_0x5b7d7b){return _0x40da34==_0x5b7d7b;},'CtPWL':_0x57a867(0x20b),'WUAhA':function(_0x4a74e6,_0x4a6972){return _0x4a74e6!==_0x4a6972;},'mkbqi':'cpCHS','qdyHx':function(_0x209c83,_0x14f13c){return _0x209c83!=_0x14f13c;},'BQpXy':function(_0x2ea12e,_0x35cbc8){return _0x2ea12e===_0x35cbc8;},'gZtJA':function(_0x3c40cc,_0x477fcc){return _0x3c40cc>_0x477fcc;},'wjpDW':'Subscription\x20not\x20done','xcvud':function(_0x3dda57,_0x355ef2){return _0x3dda57!==_0x355ef2;},'rPnGi':_0x57a867(0x1fe),'YgXZm':'productivity_next.api.send_user_list','FtdiL':_0x57a867(0x227),'afKKH':_0x57a867(0x1d7),'hQlpQ':function(_0x28c93c,_0x222ea1){return _0x28c93c===_0x222ea1;},'Iovfv':'Productify\x20Subscription','bkpQy':function(_0x5ce182,_0x268e16){return _0x5ce182>_0x268e16;},'CzvKx':function(_0x41e925,_0x4a0ed8){return _0x41e925!==_0x4a0ed8;},'Vehtv':_0x57a867(0x22f),'HKhpU':'vxKQb','OHnTi':'POST','JmYfa':function(_0x313e55,_0x5a6598){return _0x313e55===_0x5a6598;},'RzVbj':_0x57a867(0x212),'ikMGR':_0x57a867(0x1d3),'QkPZY':function(_0x32f7c9,_0x564cec){return _0x32f7c9===_0x564cec;},'PPQOc':_0x57a867(0x1d0),'ozzvg':_0x57a867(0x21f),'SVpHr':'System\x20Manager','EJZSu':'User\x20is\x20not\x20System\x20Manager','JpLSX':'company','ZBfpt':function(_0x47725b,_0xbb89c6){return _0x47725b+_0xbb89c6;},'eAXBi':'Organization\x20Signup\x20for\x20Productivity\x20Next','kRjOK':_0x57a867(0x1ee),'cfrah':_0x57a867(0x1d4),'QkGbr':_0x57a867(0x241),'DJZsu':_0x57a867(0x1e6),'MREuN':_0x57a867(0x201),'zYblj':_0x57a867(0x206),'VKcIO':_0x57a867(0x1be),'LXKvG':_0x57a867(0x1f3),'uvZyA':'Check','kpWLa':_0x57a867(0x19d),'lshIo':_0x57a867(0x19a),'jyCuE':_0x57a867(0x1ce),'YtiAk':'Sales\x20Person','LVRql':_0x57a867(0x1b1),'rSOTz':'Domain','ZEwHK':_0x57a867(0x245),'rjDnr':_0x57a867(0x19f),'BnuFR':_0x57a867(0x1a3),'nIDau':'Company','tqiKK':_0x57a867(0x1ef),'kaSQC':'contact_person','txmBV':function(_0x51a669,_0x65c543){return _0x51a669==_0x65c543;},'iKcbH':_0x57a867(0x198),'GYNUN':_0x57a867(0x20f),'ruQno':function(_0x27e2b2,_0x40839b){return _0x27e2b2==_0x40839b;},'RaZrT':_0x57a867(0x1c4),'fScKc':'Mobile\x20No','AqhRe':'mobile_no','DMJGk':_0x57a867(0x1bc),'rrZxj':_0x57a867(0x1f6),'bzjqA':_0x57a867(0x1fc),'LhHto':_0x57a867(0x1cf),'dtrXS':_0x57a867(0x231),'WzxXc':function(_0x5b1e90,_0xf1a2d0){return _0x5b1e90===_0xf1a2d0;}};function _0x1a1324(_0x549dff){const _0x29d6ad=_0x57a867,_0x42de53={'RXuLD':_0x22eaed['TiRIA']};if(_0x22eaed['KYgLT'](_0x22eaed[_0x29d6ad(0x1f4)],_0x22eaed[_0x29d6ad(0x1f4)])){if((_0x175433['boot']?_0x23b094[_0x29d6ad(0x1e5)][_0x29d6ad(0x1b8)]['roles']:[_0x42de53[_0x29d6ad(0x1dc)]])['indexOf'](_0x33f01c[_0x131f42])!=-0x1)return!![];}else{if(_0x22eaed[_0x29d6ad(0x239)](typeof _0x549dff,_0x22eaed[_0x29d6ad(0x1a5)]))_0x549dff=[_0x549dff];for(var _0x291a2a in _0x549dff){if(_0x22eaed[_0x29d6ad(0x1b2)](_0x22eaed[_0x29d6ad(0x1cc)],'cpCHS'))return;else{if(_0x22eaed[_0x29d6ad(0x22c)]((frappe[_0x29d6ad(0x1e5)]?frappe[_0x29d6ad(0x1e5)][_0x29d6ad(0x1b8)][_0x29d6ad(0x1c5)]:[_0x29d6ad(0x210)])[_0x29d6ad(0x1a0)](_0x549dff[_0x291a2a]),-0x1))return!![];}}}}if(!_0x1a1324(_0x22eaed['SVpHr'])){console[_0x57a867(0x22e)](_0x22eaed[_0x57a867(0x207)]);return;}let _0x4e36d9;frappe['db'][_0x57a867(0x240)](_0x22eaed[_0x57a867(0x1e7)])[_0x57a867(0x1b6)](_0x5d6ff3=>{const _0x17d5b0=_0x57a867;_0x4e36d9=_0x5d6ff3,window['subscription']=_0x5d6ff3;if(_0x22eaed[_0x17d5b0(0x1c6)](_0x5d6ff3[_0x17d5b0(0x1ba)],0x1)&&_0x22eaed[_0x17d5b0(0x1d2)](_0x5d6ff3[_0x17d5b0(0x1e4)]['length'],0x0))return;});let _0xff03b3={'domain':window[_0x57a867(0x1ae)]||'','organization_name':frappe[_0x57a867(0x1de)][_0x57a867(0x197)](_0x22eaed['JpLSX'])||'','contact_person':frappe[_0x57a867(0x1e5)][_0x57a867(0x1b8)]['first_name']||_0x22eaed['ZBfpt'](_0x22eaed[_0x57a867(0x216)]('','\x20'),frappe[_0x57a867(0x1e5)][_0x57a867(0x1b8)][_0x57a867(0x1c8)])||'','email_id':frappe[_0x57a867(0x1e5)][_0x57a867(0x1b8)][_0x57a867(0x1fb)]||'','mobile_no':''},_0x4d801b=new frappe['ui'][(_0x57a867(0x1fa))]({'title':_0x22eaed[_0x57a867(0x244)],'size':_0x57a867(0x1f1),'fields':[{'label':_0x57a867(0x196),'fieldname':_0x57a867(0x246),'fieldtype':_0x22eaed['kRjOK'],'cannot_add_rows':!![],'in_place_edit':![],'data':[],'fields':[{'fieldname':_0x57a867(0x1df),'fieldtype':_0x57a867(0x1e6),'in_list_view':0x1,'label':_0x22eaed[_0x57a867(0x1b3)],'read_only':0x1},{'fieldname':_0x22eaed['QkGbr'],'fieldtype':_0x22eaed[_0x57a867(0x1a4)],'in_list_view':0x1,'label':_0x22eaed[_0x57a867(0x1c9)],'read_only':0x1},{'fieldname':_0x22eaed[_0x57a867(0x23a)],'fieldtype':_0x22eaed[_0x57a867(0x1a4)],'in_list_view':0x1,'label':_0x22eaed['VKcIO']},{'fieldname':_0x22eaed['LXKvG'],'fieldtype':_0x22eaed[_0x57a867(0x1f2)],'in_list_view':0x1,'label':_0x22eaed[_0x57a867(0x230)]},{'fieldname':_0x22eaed['lshIo'],'fieldtype':'Check','in_list_view':0x1,'label':_0x22eaed[_0x57a867(0x1d1)]},{'fieldname':_0x57a867(0x19c),'fieldtype':_0x22eaed[_0x57a867(0x1f2)],'in_list_view':0x1,'label':_0x22eaed['YtiAk']},{'fieldname':_0x57a867(0x1bf),'fieldtype':_0x22eaed[_0x57a867(0x1f2)],'in_list_view':0x1,'label':'Project\x20Tracking'},{'fieldname':_0x22eaed[_0x57a867(0x20a)],'fieldtype':_0x22eaed[_0x57a867(0x1f2)],'in_list_view':0x1,'label':'Issue\x20Tracking'}]}],'primary_action_label':_0x57a867(0x231),'primary_action'(_0x13f038){const _0x53e3db=_0x57a867,_0xa015a1={'rtFtD':'Productify\x20Subscription','ZcUbZ':function(_0x21bcf6,_0x30eb39){const _0x5e219c=a0_0x1ed8;return _0x22eaed[_0x5e219c(0x1e2)](_0x21bcf6,_0x30eb39);},'VFehw':_0x22eaed['rPnGi'],'XssOP':_0x22eaed[_0x53e3db(0x215)]};_0x22eaed[_0x53e3db(0x1e2)]('WVMeE',_0x22eaed[_0x53e3db(0x22a)])?frappe['confirm'](_0x22eaed[_0x53e3db(0x22d)],()=>{const _0x5a7c2a=_0x53e3db,_0x46c714={'diBBa':function(_0x3bdd94,_0x1ea9db){return _0x3bdd94>_0x1ea9db;},'KMuMd':function(_0x30cdd8,_0x31ee42){return _0x30cdd8===_0x31ee42;},'EIBqA':_0xa015a1[_0x5a7c2a(0x233)]};if(_0xa015a1[_0x5a7c2a(0x204)](_0xa015a1[_0x5a7c2a(0x1f0)],_0xa015a1[_0x5a7c2a(0x1f0)])){if(_0x1fcf5f){const _0x4e3fbf=_0x1ee4ce['apply'](_0xdc590d,arguments);return _0x2c304f=null,_0x4e3fbf;}}else frappe[_0x5a7c2a(0x20d)]({'method':_0xa015a1[_0x5a7c2a(0x213)],'type':_0x5a7c2a(0x1ab),'args':{'user_list':_0x13f038[_0x5a7c2a(0x246)]},'callback':function(_0x56a11f){const _0x4368d0=_0x5a7c2a,_0x5bbe1d={'Gezqf':function(_0x21a2d4,_0xd93a40){const _0x289b0e=a0_0x1ed8;return _0x46c714[_0x289b0e(0x200)](_0x21a2d4,_0xd93a40);},'RFnXf':function(_0x507ab1,_0x46fa07){const _0x31bd61=a0_0x1ed8;return _0x46c714[_0x31bd61(0x1ff)](_0x507ab1,_0x46fa07);},'WmIiw':_0x4368d0(0x1a1)};_0x56a11f['message']&&(frappe[_0x4368d0(0x21b)](_0x4368d0(0x1d9)),party['confetti'](document[_0x4368d0(0x19e)],{'count':party[_0x4368d0(0x229)][_0x4368d0(0x1dd)](0xc8,0x12c)}),_0x4d801b['hide'](),frappe['db'][_0x4368d0(0x240)](_0x46c714[_0x4368d0(0x209)])['then'](_0x23c894=>{const _0x3961fd=_0x4368d0,_0x4b307a={'LZqOE':function(_0x10f782,_0x499c7d){const _0xab063c=a0_0x1ed8;return _0x5bbe1d[_0xab063c(0x1a9)](_0x10f782,_0x499c7d);},'PBRza':function(_0x2d6203,_0x3d7960){const _0x3083db=a0_0x1ed8;return _0x5bbe1d[_0x3083db(0x19b)](_0x2d6203,_0x3d7960);}};_0x4e36d9=_0x23c894,window['subscription']=_0x23c894;if(_0x5bbe1d[_0x3961fd(0x19b)](_0x23c894[_0x3961fd(0x1ba)],0x1)&&_0x23c894[_0x3961fd(0x1e4)]['length']>0x0){if(_0x5bbe1d['RFnXf'](_0x5bbe1d['WmIiw'],_0x5bbe1d['WmIiw']))return;else{const _0x33f84c={'WhsfI':function(_0xc612fb,_0x54c7fc){return _0xc612fb===_0x54c7fc;},'EKuCz':function(_0x578952,_0x55811b){const _0x1b2bba=_0x3961fd;return _0x4b307a[_0x1b2bba(0x218)](_0x578952,_0x55811b);}};if(_0x4b307a[_0x3961fd(0x205)](_0x52d509['status'],0x190)){_0x48f491['msgprint'](_0x11c8f3[_0x3961fd(0x1e3)]);return;}_0x29daaa[_0x3961fd(0x208)](),_0x148d73[_0x3961fd(0x237)](),_0x337dab['db'][_0x3961fd(0x240)](_0x3961fd(0x21e))['then'](_0x24e7db=>{const _0xec4de6=_0x3961fd;_0x401de4=_0x24e7db,_0x31cd9e[_0xec4de6(0x20e)]=_0x24e7db;if(_0x33f84c[_0xec4de6(0x225)](_0x24e7db[_0xec4de6(0x1ba)],0x1)&&_0x33f84c[_0xec4de6(0x1a7)](_0x24e7db[_0xec4de6(0x1e4)][_0xec4de6(0x224)],0x0))return;});}}}));}});}):(_0x2580d7[_0x53e3db(0x237)](),_0xac2887[_0x53e3db(0x22e)](_0x22eaed['wjpDW']));}}),_0x20f599=[{'label':_0x22eaed[_0x57a867(0x1e8)],'fieldname':'domain','fieldtype':_0x22eaed[_0x57a867(0x1a4)],'reqd':0x1,'default':window[_0x57a867(0x1ae)]},{'label':_0x22eaed[_0x57a867(0x1f5)],'fieldname':_0x22eaed['rjDnr'],'fieldtype':_0x22eaed[_0x57a867(0x1da)],'options':_0x22eaed[_0x57a867(0x23e)],'reqd':0x1,'default':_0xff03b3[_0x57a867(0x19f)]},{'label':_0x22eaed['tqiKK'],'fieldname':_0x22eaed[_0x57a867(0x238)],'fieldtype':_0x22eaed[_0x57a867(0x1a4)],'default':_0x22eaed['txmBV'](frappe[_0x57a867(0x1e5)][_0x57a867(0x1b8)][_0x57a867(0x1a6)],'Administrator')?'':_0xff03b3[_0x57a867(0x1aa)]},{'label':_0x57a867(0x1a2),'fieldname':_0x22eaed[_0x57a867(0x226)],'fieldtype':_0x22eaed[_0x57a867(0x1a4)],'reqd':0x1,'options':_0x22eaed[_0x57a867(0x1f7)],'default':_0x22eaed['ruQno'](frappe[_0x57a867(0x1e5)][_0x57a867(0x1b8)][_0x57a867(0x1a6)],_0x22eaed[_0x57a867(0x1b9)])?'':_0xff03b3[_0x57a867(0x198)]},{'label':_0x22eaed[_0x57a867(0x228)],'fieldname':_0x22eaed[_0x57a867(0x23f)],'fieldtype':_0x57a867(0x1e6),'reqd':0x1,'default':_0xff03b3[_0x57a867(0x211)]},{'label':_0x22eaed[_0x57a867(0x1c0)],'fieldname':_0x22eaed[_0x57a867(0x1cd)],'fieldtype':_0x22eaed[_0x57a867(0x1f2)]},{'label':_0x22eaed[_0x57a867(0x1d1)],'fieldname':_0x57a867(0x1c7),'fieldtype':_0x22eaed[_0x57a867(0x1f2)]}];frappe['db'][_0x57a867(0x234)](_0x22eaed[_0x57a867(0x1b3)],{'fields':[_0x57a867(0x220),'name',_0x57a867(0x241),_0x22eaed[_0x57a867(0x23a)]],'filters':{'status':_0x22eaed[_0x57a867(0x1f9)],'user_id':['is',_0x22eaed[_0x57a867(0x242)]]},'limit':0x7a120})[_0x57a867(0x1b6)](_0x51451a=>{const _0x4f3472=_0x57a867;let _0xd6a124=[];_0x51451a[_0x4f3472(0x221)](_0x1d2579=>{const _0x3d5c0f=_0x4f3472;_0xd6a124[_0x3d5c0f(0x1e1)]({'employee':_0x1d2579[_0x3d5c0f(0x220)],'user_id':_0x1d2579['user_id'],'cell_number':_0x1d2579[_0x3d5c0f(0x206)],'fincall':0x1,'application_usage':0x1,'sales_person':0x0,'name':_0x1d2579['name']});}),_0x4d801b[_0x4f3472(0x202)][_0x4f3472(0x246)]['df'][_0x4f3472(0x1c1)]=_0xd6a124,_0x4d801b[_0x4f3472(0x202)][_0x4f3472(0x246)][_0x4f3472(0x243)]();});let _0xb93fe1=new frappe['ui'][(_0x57a867(0x1fa))]({'title':_0x22eaed['eAXBi'],'fields':_0x20f599,'size':_0x57a867(0x1bb),'primary_action_label':_0x22eaed['dtrXS'],'primary_action'(_0x16a92f){const _0x52918a=_0x57a867,_0xd8eca1={'XTFjV':function(_0xd1881b,_0x4c187b){const _0xc83fa2=a0_0x1ed8;return _0x22eaed[_0xc83fa2(0x1c6)](_0xd1881b,_0x4c187b);},'BFicv':function(_0x4d44b4,_0x231e7a){const _0x47c712=a0_0x1ed8;return _0x22eaed[_0x47c712(0x23b)](_0x4d44b4,_0x231e7a);}};if(_0x22eaed[_0x52918a(0x1b7)](_0x22eaed[_0x52918a(0x1a8)],_0x22eaed[_0x52918a(0x232)]))frappe[_0x52918a(0x20d)]({'method':_0x52918a(0x1ec),'type':_0x22eaed[_0x52918a(0x1d6)],'args':{'domain':_0x16a92f[_0x52918a(0x1ad)],'organization_name':_0x16a92f[_0x52918a(0x19f)],'contact_person':_0x16a92f[_0x52918a(0x1aa)],'email':_0x16a92f[_0x52918a(0x198)],'mobile_no':_0x16a92f[_0x52918a(0x211)],'application':_0x16a92f[_0x52918a(0x1c7)],'fincall':_0x16a92f[_0x52918a(0x1f3)]?0x1:0x0,'application_usage':_0x16a92f[_0x52918a(0x19a)]?0x1:0x0,'sales_person':_0x16a92f[_0x52918a(0x19c)]?0x1:0x0,'project':_0x16a92f['project']?0x1:0x0,'issue':_0x16a92f[_0x52918a(0x1b1)]?0x1:0x0},'callback':function(_0x3065a9){const _0x44c06=_0x52918a;if(_0x22eaed['hQlpQ'](_0x3065a9[_0x44c06(0x1ca)],0x190)){frappe[_0x44c06(0x21b)](_0x3065a9[_0x44c06(0x1e3)]);return;}_0xb93fe1['hide'](),_0x4d801b[_0x44c06(0x237)](),frappe['db'][_0x44c06(0x240)](_0x22eaed[_0x44c06(0x1e7)])[_0x44c06(0x1b6)](_0x673969=>{const _0x33e5e8=_0x44c06;_0x4e36d9=_0x673969,window[_0x33e5e8(0x20e)]=_0x673969;if(_0xd8eca1[_0x33e5e8(0x1d5)](_0x673969[_0x33e5e8(0x1ba)],0x1)&&_0xd8eca1[_0x33e5e8(0x235)](_0x673969[_0x33e5e8(0x1e4)]['length'],0x0))return;});}}),_0xb93fe1[_0x52918a(0x208)]();else{if(typeof _0x1876b6==_0x22eaed[_0x52918a(0x1a5)])_0x2d08ee=[_0x370c5d];for(var _0x5a31e1 in _0x2d0f38){if((_0x586ea2['boot']?_0x519478[_0x52918a(0x1e5)]['user'][_0x52918a(0x1c5)]:[_0x22eaed['TiRIA']])[_0x52918a(0x1a0)](_0xd1cdbb[_0x5a31e1])!=-0x1)return!![];}}}});(window['location'][_0x57a867(0x222)]==='/app'||_0x22eaed[_0x57a867(0x1af)](window[_0x57a867(0x1ac)][_0x57a867(0x222)],_0x22eaed[_0x57a867(0x1bd)]))&&(_0x4e36d9&&!_0x4e36d9['organization_name']&&(_0xb93fe1[_0x57a867(0x237)](),console[_0x57a867(0x22e)](_0x22eaed['wjpDW']))),setInterval(()=>{const _0x43da74=_0x57a867;if(_0x22eaed[_0x43da74(0x23c)](window['location'][_0x43da74(0x222)],_0x43da74(0x1e0))||_0x22eaed[_0x43da74(0x1c6)](window[_0x43da74(0x1ac)][_0x43da74(0x222)],_0x22eaed[_0x43da74(0x1bd)])){if(_0x22eaed[_0x43da74(0x1eb)](_0x22eaed[_0x43da74(0x1e9)],_0x22eaed[_0x43da74(0x1e9)])){_0x5be54d[_0x43da74(0x21b)](_0x26e696[_0x43da74(0x1e3)]);return;}else{if(_0x4e36d9&&!_0x4e36d9[_0x43da74(0x19f)]&&!_0xb93fe1[_0x43da74(0x219)]){_0xb93fe1[_0x43da74(0x237)](),console[_0x43da74(0x22e)](_0x22eaed[_0x43da74(0x1ed)]);return;}if(_0x4e36d9&&_0x4e36d9[_0x43da74(0x19f)]&&_0x22eaed[_0x43da74(0x1db)](_0x4e36d9[_0x43da74(0x1e4)][_0x43da74(0x224)],0x0)&&!_0x4d801b[_0x43da74(0x219)]){if(_0x22eaed[_0x43da74(0x1b2)](_0x22eaed['PPQOc'],_0x22eaed['PPQOc'])){_0x58953a[_0x43da74(0x237)](),_0x52fa05[_0x43da74(0x22e)](_0x22eaed[_0x43da74(0x1ed)]);return;}else _0x4d801b[_0x43da74(0x237)](),console[_0x43da74(0x22e)](_0x22eaed['ozzvg']);}}}},0x7530);});
+frappe.require('assets/productivity_next/productivity_next/party.min.js');
+
+document.addEventListener("DOMContentLoaded", function () {
+    function hasrole(rl) {
+		if (typeof rl == "string") rl = [rl];
+		for (var i in rl) {
+			if ((frappe.boot ? frappe.boot.user.roles : ["Guest"]).indexOf(rl[i]) != -1)
+				return true;
+		}
+	}
+    if (!hasrole('System Manager')) {
+        console.log('User is not System Manager');
+        return;
+    }
+    let subscription;
+    frappe.db.get_doc('Productify Subscription')
+        .then(doc => {
+            subscription = doc;
+            window.subscription = doc;
+            if (doc.docstatus === 1 && doc.list_of_users.length > 0) {
+                return;
+            }
+        }
+    )
+
+    let data = {
+        'domain': window.origin || '',
+        'organization_name': frappe.defaults.get_user_default('company') || '',
+        'contact_person': frappe.boot.user.first_name || '' + ' ' + frappe.boot.user.last_name || '',
+        'email_id': frappe.boot.user.email || '',
+        'mobile_no': '',
+    }
+
+    let dialog = new frappe.ui.Dialog({
+        title: 'Organization Signup for Productivity Next',
+        size: "extra-large",
+        fields: [
+            {
+                label: 'Employees',
+                fieldname: 'table',
+                fieldtype: 'Table',
+                cannot_add_rows: true,
+                in_place_edit: false,
+                data: [],
+                fields: [
+                    { fieldname: 'employee', fieldtype: 'Data', in_list_view: 1, label: 'Employee', read_only: 1 },
+                    { fieldname: 'user_id', fieldtype: 'Data', in_list_view: 1, label: 'User ID', read_only: 1 },
+                    { fieldname: 'cell_number', fieldtype: 'Data', in_list_view: 1, label: 'Phone No' },
+                    { fieldname: 'fincall', fieldtype: 'Check', in_list_view: 1, label: 'Fin Call' },
+                    { fieldname: 'application_usage', fieldtype: 'Check', in_list_view: 1, label: 'Application Usage' },
+                    { fieldname: 'sales_person', fieldtype: 'Check', in_list_view: 1, label: 'Sales Person' },
+                    { fieldname: 'project', fieldtype: 'Check', in_list_view: 1, label: 'Project Tracking' },
+                    { fieldname: 'issue', fieldtype: 'Check', in_list_view: 1, label: 'Issue Tracking' },
+                ],
+            },
+        ],
+        primary_action_label: 'Submit',
+        primary_action(values) {
+            frappe.confirm('This detail will be shared with Finbyz. Do you want to submit?', () => {
+                frappe.call({
+                    method: "productivity_next.api.send_user_list",
+                    type: 'POST',
+                    args: {
+                        user_list: values.table
+                    },
+                    callback: function (r) {
+                        if (r.message) {
+                            frappe.msgprint(`You have successfully registered for Productify. Please ask your Users to download <a target="_blank" href='https://productivity.finbyz.tech/files/Productify.exe'>Productify App</a> and <a target="_blank" href="https://play.google.com/store/apps/details?id=com.finbyzfincall.productify&pcampaignid=web_share">Fincall App</a>  to start activity analysis.\nLogin on both places will be through their own ERP email id and password`);
+                            party.confetti(document.body, {
+                                count: party.variation.range(200, 300),
+                            });
+                            dialog.hide();
+                            frappe.db.get_doc('Productify Subscription')
+                                .then(doc => {
+                                    subscription = doc;
+                                    window.subscription = doc;
+                                    if (doc.docstatus === 1 && doc.list_of_users.length > 0) {
+                                        return;
+                                    }
+                                }
+                                )
+                        }
+                    }
+                });
+            });
+
+        }
+
+    });
+
+    let organization_fields = [
+        {
+            label: 'Domain',
+            fieldname: 'domain',
+            fieldtype: 'Data',
+            reqd: 1,
+            default: window.origin
+        },
+        {
+            label: 'Organization Name',
+            fieldname: 'organization_name',
+            fieldtype: 'Link',
+            options: 'Company',
+            reqd: 1,
+            default: data.organization_name
+        },
+        {
+            label: 'Contact Person',
+            fieldname: 'contact_person',
+            fieldtype: 'Data',
+            default: frappe.boot.user.name == 'Administrator' ? '' : data.contact_person
+        },
+        {
+            label: 'Email ID',
+            fieldname: 'email_id',
+            fieldtype: 'Data',
+            reqd: 1, // Required field
+            options: 'Email',
+            default: frappe.boot.user.name == 'Administrator' ? '' : data.email_id
+        },
+        {
+            label: 'Mobile No',
+            fieldname: 'mobile_no',
+            fieldtype: 'Data',
+            reqd: 1, // Required field
+            default: data.mobile_no
+        },
+        {
+            label: 'Subscription for Call',
+            fieldname: 'subscription_call',
+            fieldtype: 'Check'
+        },
+        {
+            label: 'Application Usage',
+            fieldname: 'application_sub',
+            fieldtype: 'Check'
+        },
+    ]
+    frappe.db.get_list('Employee', {
+        fields: ['employee_name', 'name', 'user_id', 'cell_number'],
+        filters: {
+            'status': 'Active',
+            'user_id': ['is', 'set']
+        },
+        limit: 500000
+    }).then((employees) => {
+        let table_data = [];
+        employees.forEach((employee) => {
+            table_data.push({
+                'employee': employee.employee_name,
+                'user_id': employee.user_id,
+                'cell_number': employee.cell_number,
+                'fincall': 1,
+                'application_usage': 1,
+                'sales_person': 0,
+                'name': employee.name
+            });
+        });
+        dialog.fields_dict.table.df.data = table_data;
+        dialog.fields_dict.table.refresh();
+    });
+    let d = new frappe.ui.Dialog({
+        title: 'Organization Signup for Productivity Next',
+        fields: organization_fields,
+        size: 'small',
+        primary_action_label: 'Submit',
+        primary_action(values) {
+            frappe.call({
+                method: 'productivity_next.api.organization_signup',
+                type: 'POST',
+                args: {
+                    domain: values.domain,
+                    organization_name: values.organization_name,
+                    contact_person: values.contact_person,
+                    email: values.email_id,
+                    mobile_no: values.mobile_no,
+                    application: values.application_sub,
+                    fincall: values.fincall ? 1 : 0,
+                    application_usage: values.application_usage ? 1 : 0,
+                    sales_person: values.sales_person ? 1 : 0,
+                    project: values.project ? 1 : 0,
+                    issue: values.issue ? 1 : 0,
+                },
+                callback: function (r) {
+                    if (r.status === 400) {
+                        frappe.msgprint(r.message);
+                        return;
+                    }
+
+                    d.hide();
+                    dialog.show();
+
+                    frappe.db.get_doc('Productify Subscription')
+                        .then(doc => {
+                            subscription = doc;
+                            window.subscription = doc;
+                            if (doc.docstatus === 1 && doc.list_of_users.length > 0) {
+                                return;
+                            }
+                        }
+                        )
+                }
+            });
+            d.hide();
+        }
+    });
+    if (window.location.pathname === '/app' || window.location.pathname === '/app/home') {
+        if (subscription && !subscription.organization_name) {
+            d.show();
+            console.log('Subscription not done');
+        }
+    }
+    setInterval(() => {
+        if (window.location.pathname === '/app' || window.location.pathname === '/app/home') {
+            if (subscription && !subscription.organization_name && !d.display) {
+                d.show();
+                console.log('Subscription not done');
+                return;
+            }
+            if (subscription && subscription.organization_name && subscription.list_of_users.length === 0 && !dialog.display) {
+                dialog.show();
+                console.log('Subscription done but no users');
+            }
+        }
+
+    }, 30000);
+
+});
+
