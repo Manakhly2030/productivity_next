@@ -3,8 +3,8 @@
  "creation": "2024-07-17 10:03:22.160123",
  "docstatus": 0,
  "doctype": "Page",
- "idx": 14,
- "modified": "2024-10-10 15:02:36.427206",
+ "idx": 12,
+ "modified": "2024-09-19 16:33:14.928423",
  "modified_by": "Administrator",
  "module": "Productivity Next",
  "name": "Productify Consolidated Analysis",
@@ -13,9 +13,6 @@
  "roles": [
   {
    "role": "Administrator"
-  },
-  {
-   "role": "System Manager"
   },
   {
    "role": "Employee"
