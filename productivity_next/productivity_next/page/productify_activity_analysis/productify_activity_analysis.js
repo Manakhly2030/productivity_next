@@ -1874,6 +1874,7 @@ _rawData.flight.data = _rawData.flight.data.map(item => {
 				end_date: this.selected_end_date,
 			})
 			.then((r) => {
+				console.log(r);
 				const containerElement = document.getElementById('calls');
 				if (r.caller_details.length === 0) {
 					if (containerElement) containerElement.style.display = 'none';
@@ -2847,11 +2848,17 @@ _rawData.flight.data = _rawData.flight.data.map(item => {
 					}
 					slotImages[date][hour][slot] = image;
 				});
-				Object.keys(slotImages).reverse().forEach(date => {
-					Object.keys(slotImages[date]).reverse().forEach(hour => {
+				
+				// Sort dates in reverse chronological order
+				const sortedDates = Object.keys(slotImages).sort((a, b) => new Date(b) - new Date(a));
+				
+				sortedDates.forEach(date => {
+					// Sort hours in descending order
+					const sortedHours = Object.keys(slotImages[date]).sort((a, b) => b - a);
+					
+					sortedHours.forEach(hour => {
 						if (lastPrintedDate !== date || lastPrintedHour !== hour) {
-							// console.log("hiii performance-chart-",this.formattedDate_,hour);
-							const hourHeader = `<div class="col-md-1"><h5><b>${date} ${hour}:00</b></h5></div><br><div class="col-md-11">
+							const hourHeader = `<div class="col-md-1"><h5><b>${date} ${hour.padStart(2, '0')}:00</b></h5></div><br><div class="col-md-11">
 							<div class="overall-performance-timely" id="performance-chart-${this.formattedDate_}-${hour}" style="min-height: 50px; max-height: 50px;">
 								<!-- Overall Performance Chart Container -->
 							</div>
@@ -2861,7 +2868,7 @@ _rawData.flight.data = _rawData.flight.data.map(item => {
 							lastPrintedHour = hour;
 	
 							// Call the function to display chart for this hour
-							this.overall_performance_timely(this.formattedDate_,hour);
+							this.overall_performance_timely(this.formattedDate_, hour);
 						}
 	
 						for (let slot = 11; slot >= 0; slot--) {
@@ -2869,7 +2876,7 @@ _rawData.flight.data = _rawData.flight.data.map(item => {
 							const slotTime = new Date(date);
 							slotTime.setHours(hour);
 							slotTime.setMinutes(slot * 5);
-							const slotTimeString = slotTime.toLocaleTimeString('en-US',{ hour: '2-digit', minute: '2-digit', hour12: false });
+							const slotTimeString = slotTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
 	
 							if (image) {
 								const imgElement = `
@@ -2911,7 +2918,6 @@ _rawData.flight.data = _rawData.flight.data.map(item => {
 	
 					showImageDialog(imgSrc, activeApp);
 				});
-	
 			});
 			return flag;
 		};
@@ -3003,6 +3009,7 @@ _rawData.flight.data = _rawData.flight.data.map(item => {
 	
 		// this.overall_performance_timely(); // If this is to be called at the end of all operations, ensure it is properly implemented
 	}
+	
 	
 	
 	// User Activity Images code ends
